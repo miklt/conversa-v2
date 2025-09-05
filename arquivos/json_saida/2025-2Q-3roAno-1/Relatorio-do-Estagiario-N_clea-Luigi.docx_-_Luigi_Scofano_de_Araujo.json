@@ -1,0 +1,80 @@
+{
+  "estagiario": {
+    "nome_completo": "Luigi Scofano de Araujo",
+    "nusp": "13680334",
+    "curso": "Engenharia de Computação",
+    "telefone": "(21) 99737-1055",
+    "email": "luigi.scofano@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Mariana Marques Ciari",
+    "telefone": "(11) 98649-0458",
+    "email": "mariana.ciari@nuclea.com.br"
+  },
+  "estagio": {
+    "razao_social_empresa": "CIP S.A",
+    "cnpj": "44.393.564/0001-07",
+    "periodo_inicio": "04/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "30 horas",
+    "carga_horaria_total": "480 horas"
+  },
+  "sobre_empresa": "A Núclea é uma empresa de tecnologia que opera em uma posição estratégica no ecossistema financeiro brasileiro. Atua com soluções críticas em infraestrutura para transações financeiras, dados e registros, oferecendo robustez, confiabilidade e segurança para um sistema altamente regulado e dinâmico. No entanto, por trás de todo esse aparato técnico, encontra-se uma forte valorização do fator humano – é nesse contexto que a área de Desenvolvimento Humano (DH) se insere como um alicerce indispensável da sua cultura.\n\nO DH da Núclea não se limita às funções administrativas típicas. Trata-se de uma área estruturada, estratégica e multidisciplinar, onde se articulam políticas de remuneração, desenvolvimento, gestão de desempenho, diversidade, bem-estar e cultura. É nesse cenário que tive a oportunidade de realizar meu estágio, especificamente na equipe de Remuneração e Benefícios, em um papel focado em dados, análises, visualização e inteligência organizacional.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Estruturação e Governança de Dados em Excel e MySQL",
+      "tarefas_realizadas": "• Realização de diagnóstico da qualidade dos dados existentes.\n• Normalização de colunas com nomes divergentes.\n• Eliminação de redundâncias e consolidação de registros históricos.\n• Criação de tabelas estruturadas e documentadas no Excel com lógica de chave primária e relacionamento.\n• Desenvolvimento de queries em SQL para extrair informações específicas de diferentes períodos, segmentadas por tipo de vínculo, área, gestor e evento de movimentação.\n• Montagem de um dicionário de dados técnico, com definição de campos, periodicidade de atualização e regras de transformação.",
+      "papel_exercido": null,
+      "duracao": "1 mês",
+      "comentarios": "Essa etapa foi crucial para estabelecer um alicerce confiável para os dashboards. Trabalhar diretamente na base me deu uma visão sistêmica dos dados da empresa e mostrou a importância da governança desde o nível mais granular. Foi também um momento de grande aprendizado técnico.",
+      "aprendizados": "Excel avançado; normalização de dados; modelagem relacional; controle de versionamento."
+    },
+    {
+      "numero": "2",
+      "descricao": "Construção de Dashboard Estratégico em Power BI",
+      "tarefas_realizadas": "• Criação de modelo relacional no Power BI Desktop, conectando múltiplas fontes (Excel, SQL, CSV).\n• Desenvolvimento de medidas e KPIs utilizando DAX, com funções como CALCULATE, DATESYTD, IF, SWITCH, entre outras.\n• Estruturação de páginas temáticas: turnover, remuneração, diversidade, desempenho, promoções, headcount, contratações e mais.\n• Implementação de filtros hierárquicos por diretoria, área, gestor, tipo de contrato e período.\n• Otimização da performance do dashboard para atualização em tempo hábil.\n• Testes com usuários-chave para garantir usabilidade e legibilidade dos visuais.",
+      "papel_exercido": null,
+      "duracao": "2 meses",
+      "comentarios": "Esse projeto representou o coração do meu estágio. Pude ver o resultado das análises ganhando vida e sendo utilizadas pela liderança. Também tive que pensar não só em como calcular os dados corretamente, mas em como apresentá-los de forma clara e visualmente elegante.",
+      "aprendizados": "Power BI completo; DAX básico; Power Query; usabilidade; UX de dados; storytelling visual; arquitetura de dashboards corporativos."
+    },
+    {
+      "numero": "3",
+      "descricao": "Automatização da Integração de Dados",
+      "tarefas_realizadas": "• Definição de pastas padrão para recebimento de arquivos.\n• Programação de parâmetros dinâmicos no Power Query para ingestão automática de novos arquivos.\n• Criação de verificação de integridade estrutural (colunas esperadas, número de linhas, formato de data).\n• Desenvolvimento de alertas visuais no dashboard para inconsistências ou falhas na atualização.\n• Documentação do fluxo de atualização automatizada.",
+      "papel_exercido": null,
+      "duracao": "3 semanas",
+      "comentarios": "Automatizar esse processo trouxe um ganho imediato de eficiência para a equipe e reduziu o tempo gasto com conferência manual. Foi um dos momentos em que percebi como a engenharia de dados pode atuar diretamente para melhorar o dia a dia de um time.",
+      "aprendizados": "Automação de ETL; Power Query; lógica condicional; design de pipelines manuais e semiautomáticos; manutenção de integridade de dados."
+    },
+    {
+      "numero": "4",
+      "descricao": "Estudo da Relação entre Distância e Desligamentos",
+      "tarefas_realizadas": "• Anonimização de endereços com base em faixas de CEP.\n• Estimativa de distâncias médias até a empresa com ferramentas de georreferenciamento.\n• Classificação dos colaboradores em grupos de distância e sua chance de desligamento.\n• Ideia de criar uma análise da taxa de desligamento por faixa e comparação com a média geral.\n• Apresentação dos achados e sugestão de políticas de flexibilização.",
+      "papel_exercido": null,
+      "duracao": "1 mês",
+      "comentarios": "Essa atividade me mostrou como uma hipótese simples pode ser testada com dados e gerar recomendações com impacto real. A análise foi levada a reuniões estratégicas e teve efeito direto nas discussões sobre modelos híbridos.",
+      "aprendizados": "Georreferenciamento; análise correlacional; estatística descritiva; inferência causal em dados organizacionais."
+    },
+    {
+      "numero": "5",
+      "descricao": "Construção de Linha do Tempo de Políticas Internas",
+      "tarefas_realizadas": "• Mapeamento de eventos históricos relevantes junto à equipe de DH.\n• Definição de layout visual e lógica de exibição dos marcos temporais.\n• Conexão das datas com indicadores do período correspondente.\n• Implementação de visuais no Power BI para navegação temporal.\n• Teste de aderência com usuários internos.",
+      "papel_exercido": null,
+      "duracao": "4 semanas",
+      "comentarios": "Essa aba do dashboard foi muito requisitada por permitir leituras mais profundas. Ao mostrar que os números têm contexto, conseguimos fortalecer a cultura de decisões baseadas em evidência e memória institucional.",
+      "aprendizados": "Aplicação de cronologia em BI; visualização contextualizada; design de narrativa com dados; construção de análises comparativas temporais."
+    },
+    {
+      "numero": "6",
+      "descricao": "Apresentação Final de Resultados e Reflexão Profissional",
+      "tarefas_realizadas": "• Preparação de apresentação com estrutura narrativa clara.\n• Seleção de exemplos de impacto e momentos de aprendizado.\n• Integração de gráficos, imagens e linha do tempo.\n• Compartilhamento de visão pessoal sobre valores e conceitos assimilados.\n• Realização da apresentação para toda a equipe de remuneração e benefícios.",
+      "papel_exercido": null,
+      "duracao": "2 semanas",
+      "comentarios": "Foi um momento muito especial de fechamento do ciclo. Pude perceber, com clareza, como evoluí durante o estágio e como minha contribuição teve valor. Receber feedbacks positivos e ser ouvido como protagonista foi marcante.",
+      "aprendizados": "Comunicação institucional; construção de narrativa; reflexão sobre identidade profissional; exposição em público; escuta e troca com a equipe."
+    }
+  ],
+  "conclusao": "O estágio que realizei na Núclea, especificamente na área de Desenvolvimento Humano, foi uma experiência verdadeiramente transformadora em múltiplas dimensões. Desde o primeiro dia, percebi que não se tratava apenas de aplicar conhecimentos técnicos, mas de mergulhar em um universo organizacional vivo, dinâmico e repleto de nuances.\n\nVivenciei um processo intenso de amadurecimento profissional. Aprendi a escutar antes de propor, a observar padrões antes de modelar indicadores, a respeitar os diferentes ritmos e linguagens das áreas com as quais interagia. Aprendi a transformar dados brutos em informações úteis, e mais do que isso, em ferramentas de tomada de decisão que influenciam diretamente a vida de centenas de pessoas.\n\nAlém das ferramentas como Power BI, DAX, SQL e Excel avançado, o estágio me ensinou sobre responsabilidade, clareza e impacto. Os dashboards que produzi não eram apenas gráficos — eram representações de jornadas reais dentro da empresa.\n\nCresci imensamente como profissional, aprendendo a trabalhar em equipe, a comunicar ideias com clareza, a aceitar e incorporar feedbacks e a tomar decisões com base em dados. Desenvolvi uma postura mais crítica, proativa e colaborativa, compreendendo como o engenheiro pode atuar como agente de transformação humana dentro de uma organização.\n\nSou grato à minha gestora, Mariana Ciari Marques, e a toda equipe, por me oferecerem autonomia, escuta ativa e confiança. A frase que escolhi para encerrar minha jornada na apresentação final resume bem esse momento:\n\n\"Talvez no meu próximo ciclo de estágio tudo esteja diferente — talvez estejamos usando outras tecnologias, mas o que fica são os conceitos, e os conceitos não mudam. E isso, eu pude aprender aqui.\"\n\nA jornada continua, mas os valores que assimilei, as habilidades que desenvolvi e as conexões que formei na Núclea permanecerão comigo como fundação sólida para todos os caminhos que ainda virão."
+}

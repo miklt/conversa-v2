@@ -1,0 +1,21 @@
+# PDF Processing
+pdfplumber==0.11.7
+
+# AI APIs
+openai==1.106.1
+anthropic==0.66.0
+
+# Database
+sqlalchemy==2.0.43
+psycopg2-binary==2.9.10
+pgvector==0.4.1
+
+# Backend Framework
+fastapi==0.111.0
+uvicorn[standard]==0.35.0
+pydantic==2.11.7
+pydantic-settings==2.10.1
+
+# Utils
+python-dotenv==1.1.1
+python-multipart==0.0.20

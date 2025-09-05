@@ -1,0 +1,44 @@
+{
+  "estagiario": {
+    "nome_completo": "Arthur Macedo de Alencar",
+    "nusp": "14754219",
+    "curso": "Engenharia de Computação",
+    "telefone": "(98) 98262-3557",
+    "email": "arthurmacdale@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Gabriel Marques Carvalho",
+    "telefone": "(14) 98157-1511",
+    "email": "gabriel-m.carvalho@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A. - SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40h",
+    "carga_horaria_total": "680h"
+  },
+  "sobre_empresa": "O BTG Pactual é o maior banco de investimentos da América Latina com quase 3 mil colaboradores e escritórios distribuídos em países da América Latina e Europa. Com uma cultura de meritocracia, inovação e gestão horizontal, o BTG se destaca entre a concorrência por ser um ambiente de refinamento técnico. O banco sempre busca estar a par das novas tecnologias para oferecer produtos e soluções relevantes e modernas a seus clientes.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Implementação de Fluxo de Consolidação Automática de Dados de Movimentação de Fundos Líquidos para projeto de Dashboard",
+      "tarefas_realizadas": "● Criação de endpoints do tipo get em padrão Rest para recuperação de dados em bases de outros times\n● Administração de queries usando PostgreSQL no DBeaver\n● Depuração e correção de erros por meio de ferramentas inatas do Visual Studio\n● Criação de testes unitários usando bibliotecas XUnit, NSubstitute e Mock\n● Configuração de Pipeline Azure\n● Realização de testes em ambiente de DEV e UAT para validação do fluxo esperado",
+      "papel_exercido": "Desenvolvedor .NET",
+      "duracao": null,
+      "comentarios": "Esta fase de desenvolvimento foi importante para mim, pois pude aprender sobre o funcionamento de projeto de API, em específico no padrão Minimal API. Também aprendi técnicas de debug para projetos .NET. Por fim, tive a oportunidade de entender como ocorre a comunicação entre times de desenvolvimento diferentes dentro do banco.",
+      "aprendizados": "Aprendizado sobre padrão Minimal API, técnicas de debug e comunicação entre times de desenvolvimento"
+    },
+    {
+      "numero": "2",
+      "descricao": "Implementação de Fluxo de Cadastro Manual de Cotista em base do time",
+      "tarefas_realizadas": "● Criação de endpoint para retorno de dados requisitados ao front-end\n● Integração com APIs externas\n● Criação de endpoint do tipo post para receber dados do front-end referentes ao cotista\n● Criação de lógica de validação de dados para possibilitar cadastro\n● Criação de queries de inserção de dados em base do time\n● Realização da persistência de tais informações em base legada\n● Realização de testes e depuração em ambiente de UAT",
+      "papel_exercido": "Desenvolvedor .NET",
+      "duracao": null,
+      "comentarios": "Esta etapa em específico foi diferencial, pois, além de realizar todas as tarefas de desenvolvimento listada, foi a que mais tive contato sobre relacionamento com cliente. Pude participar de reuniões com o cliente e produzir documentação de evidências de teste.",
+      "aprendizados": "Aprendizado sobre relacionamento com cliente e produção de documentação de testes"
+    }
+  ],
+  "conclusao": "Tendo completado o estágio no BTG Pactual, pude aprender conceitos e tendências do mercado financeiro em um banco moderno. Trabalhando no setor de IT Funds & AM, especificamente no time de RTA Offshore, aprendi sobre o funcionamento de movimentações de fundos líquidos, sobre a relação entre cotistas e fundos e os diferentes tipos de cargos que existem ao se relacionar um fundo de investimento com um agente.\n\nNesse período, tive minha primeira experiência profissional com engenharia de software, sendo analista no time. Como desenvolvedor .NET, aprendi na prática padrões e etapas de projeto de software, especificamente sobre arquitetura limpa. Além de ter aprendido uma nova linguagem de programação, tive contato direto com tecnologias novas como sistemas de gerência de banco de dados, micro-serviços, pipelines, filas de integração etc.\n\nEm suma, tive uma experiência profissional inédita estagiando no BTG. Além de aperfeiçoar minhas habilidades técnicas como desenvolvedor, aprendi bastante sobre regras de negócio e fundos de investimento atuando como analista. Certamente, é uma experiência que agregou à minha formação como engenheiro da computação, apresentando-me os desafios do mercado de trabalho."
+}

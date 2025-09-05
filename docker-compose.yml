@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: conversa-postgres
+    environment:
+      POSTGRES_USER: conversa_user
+      POSTGRES_PASSWORD: conversa_senha_2024
+      POSTGRES_DB: conversa_estagios
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U conversa_user -d conversa_estagios"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    name: conversa_estagios_postgres_data

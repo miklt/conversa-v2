@@ -1,0 +1,80 @@
+{
+  "estagiario": {
+    "nome_completo": "Arthur Soares Galimberti",
+    "nusp": "14559799",
+    "curso": "Engenharia de Computação",
+    "telefone": "(27) 99876-9600",
+    "email": "arthurgalimberti@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Lucas Picazio",
+    "telefone": "(11) 33833993",
+    "email": "lucas.picazio@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A. - SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "560 horas"
+  },
+  "sobre_empresa": "Realizei meu estágio no BTG Pactual, um dos maiores bancos de investimentos da América Latina, com forte atuação nos mercados financeiro e de capitais. A instituição é reconhecida por sua excelência em inovação tecnológica, foco em performance e presença estratégica nos principais centros financeiros do país e do mundo. Atuei em modelo híbrido, com parte das atividades realizadas presencialmente na sede localizada na Avenida Faria Lima, em São Paulo – SP.\n\nFiz parte do time de IT PRODUCTS, mais especificamente do setor IT FTS (FronTrade Systems), que é responsável pelo desenvolvimento, manutenção e evolução de sistemas voltados para as áreas de negociação de ativos do banco. Esses sistemas são fundamentais para dar suporte a operações de compra e venda de ativos, contribuindo diretamente para a eficiência e performance das mesas de operação e dos times de front office.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Projetar o backend de uma aplicação de consulta em banco de dados através de IA",
+      "tarefas_realizadas": "Desenvolvimento de uma API em Python usando o framework FastAPI e o Amazon Bedrock para invocar os serviços de inteligência artificial",
+      "papel_exercido": "Atuar na programação do software necessário para possibilitar a consulta em banco de dados por meio do processamento da IA",
+      "duracao": "3 semanas",
+      "comentarios": "A atividade consistia em primeiramente implementar o processamento de mensagens em linguagem natural para transformá-las em querys SQL, e após isso, conectando a um bando de dados como SQL Server ou PostgreSQL, executar a query gerada pela IA e retornar os dados obtidos",
+      "aprendizados": "Como utilizar Python para desenvolver um backend, especificando rotas/endpoints que são disponibilizados; Como conectar com banco de dados; Como utilizar serviço de IA da AWS (Bedrock)"
+    },
+    {
+      "numero": "2",
+      "descricao": "Projetar o frontend de uma aplicação de consulta em banco de dados através de IA",
+      "tarefas_realizadas": "Desenvolvimento de uma tela em Typescript usando o framework React e os componentes do DevExpress",
+      "papel_exercido": "Atuar na programação do software necessário para possibilitar a interação e visualização do backend de consulta em banco de dados por meio de IA",
+      "duracao": "2 semanas",
+      "comentarios": "A atividade consistia em criar uma tela web para poder utilizar o backend desenvolvido previamente de maneira amigável ao usuário final. Com campos para inserção de dados, por exemplo, a consulta em linguagem natural, e campos para o retornod e dados, por exemplo, o resultado da execução da query no banco de dados mostrado numa tabela",
+      "aprendizados": "Como utilizar Typescript para desenvolver um frontend, especificando rotas/endpoints que são utilizados; Como criar uma UI/UX utilizando React e componentes do DevExpress"
+    },
+    {
+      "numero": "3",
+      "descricao": "Projetar o backend de uma aplicação de exibição e processamento de dados com IA, voltada para notícias",
+      "tarefas_realizadas": "Desenvolvimento de uma API em Python usando o framework FastAPI , Amazon Bedrock para invocar os serviços de inteligência artificial e Amazon S3 Bucket para adquirir os dados",
+      "papel_exercido": "Atuar na programação do software necessário para possibilitar o armazenamento e a consulta das notícias em um determinado dia",
+      "duracao": "2 semanas",
+      "comentarios": "A atividade consistia em primeiramente implementar métodos para acessar os dados armazenados num Bucket S3 filtrados por uma data, posteriormente processar os dados utilizando IA, e assim, salvar num banco de dados os dados adquiridos. Nesse sentido, um script de agendamento é executado para garantir que a cada dado novo inserido no S3, resulte em novos registros numa tabela no banco de dados",
+      "aprendizados": "Melhorias no desenvolvimento de um backend em Python; Como utilizar serviço de armazenamento da AWS (Bucket S3); Como agendar a execução de uma função periodicamente usando a biblioteca Schedule"
+    },
+    {
+      "numero": "4",
+      "descricao": "Projetar o frontend de uma aplicação de exibição e processamento de dados com IA, voltada para notícias",
+      "tarefas_realizadas": "Desenvolvimento de uma tela em C# WinForms usando os componentes do DevExpress",
+      "papel_exercido": "Atuar na programação do software necessário para possibilitar a interação e visualização do backend de exibição e processamento de dados com IA, voltada para notícias",
+      "duracao": "1 semana",
+      "comentarios": "A atividade consistia em criar uma tela desktop para poder utilizar o backend desenvolvido previamente de maneira amigável ao usuário final. Nessa tela, o usuário inicializa a aplicação carregando as notícias do dia atua e do dia anterior automaticamente. As notícias são disponibilizadas como retângulos contendo título e descrição (dados gerados pelo backend com IA) e a notícia completa. Além disso, possibilita também a seleção via calendário para consultas das noticias em dadas prévias",
+      "aprendizados": "Como utilizar C# para desenvolver um frontend, especificando rotas/endpoints que são utilizados; Como criar uma UI/UX utilizando Winforms e componentes do DevExpress"
+    },
+    {
+      "numero": "5",
+      "descricao": "Projetar um novo frontend de uma aplicação de consulta em banco de dados através de IA",
+      "tarefas_realizadas": "Desenvolvimento de uma tela em C# WinForms usando os componentes do DevExpress",
+      "papel_exercido": "Atuar na programação do software necessário para possibilitar a interação e visualização do backend de consulta em banco de dados por meio de IA",
+      "duracao": "2 semanas",
+      "comentarios": "A atividade consistia em criar uma tela nova para o mesmo projeto de consulta em banco de dados através de IA, mas dessa vez sendo uma aplicação desktop, e não uma aplicação web como previamente. Assim, em linhas gerais, se manteve a estrutura já comentada no projeto de frontend anterior, mas dessa vez utilizando C# WinForms para criar a solução. Servindo como um aprimoramento do que já foi realizado antes",
+      "aprendizados": "Melhorias no desenvolvimento de um frontend em C#. Melhorias na UI/UX utilizando Winforms e componentes do DevExpress"
+    },
+    {
+      "numero": "6",
+      "descricao": "Alterar uma biblioteca já existente em C# WinForms com arquitetura MDI (Multiple Documents Interface) para atender novos requisitos",
+      "tarefas_realizadas": "Realizar alterações na biblioteca de modo a implementar uma nova funcionalidade para os usuários finais",
+      "papel_exercido": "Atuar na compreensão do funcionamento da biblioteca e desenvolver um método capaz de salvar",
+      "duracao": "4 semanas",
+      "comentarios": "A biblioteca em questão serve como a base para um sistema agrupador de módulos de telas desktop, servindo como um hub para as soluções disponibilizadas. A atividade consistia em entender o funcionamento da biblioteca, para posteriormente implementar uma solução que permitisse ao usuário final salvar suas telas de interesse, para que ao abrir a aplicação novamente, as mesmas telas fossem reabertas. Dado o modo como a biblioteca funciona, com injeção de dependências e reflexão, essa tarefa foi consideravelmente demorada e desafiadora dado o meu desconhecimento desses conceitos",
+      "aprendizados": "Conceitos a respeito de arquitetura MDI, injeção de dependências e reflexão de classes e objetos. Técnicas de debugg avançadas. Manipulação de arquivos xml em C#"
+    }
+  ],
+  "conclusao": "O estágio foi ótimo para aprender na prática como é realizado o desenvolvimento de software, onde aprendi os conceitos basilares de acerca de backend, frontend e banco de dados. Além disso, durante esse período também pude assimilar diversos conceitos de DevOps, como controle de versionamento, pipelines e releases que realmente esclareceram como funciona o fluxo para tornar uma aplicação disponível para o usuário final, respeitando sempre as etapas de desenvolvimento.\n\nInicialmente, trabalhei em novas aplicações, tanto o projeto de consulta no banco de dados com IA, e o de exibição e processamento de dados com IA, fizeram com que eu saísse do zero até um nível onde eu consigo desenvolver, sem muito esforço, uma nova aplicação web/desktop utilizando as ferramentas que aprendi. E além disso, posteriormente começou a atividade de alterar a biblioteca já existente, e isso também me ensinou muito acerca de técnicas de debugg e conceitos que nunca tinha visto antes.\n\nEm suma, o estágio foi de ótimo proveito para consolidar habilidades de engenharia de software e também uma amostra de como funciona o ambiente corporativo bancário. Desse modo, houve tanto a ampliação de hard skills, quanto o melhoramento também das soft skills, pois diariamente era necessário a comunicação clara com o gestor e os demais companheiros do time. Assim, considero que o estágio cumpriu seu propósito com excelência."
+}

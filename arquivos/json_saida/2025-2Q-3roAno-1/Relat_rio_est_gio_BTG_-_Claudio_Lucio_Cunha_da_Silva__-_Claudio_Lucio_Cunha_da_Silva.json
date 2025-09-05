@@ -1,0 +1,71 @@
+{
+  "estagiario": {
+    "nome_completo": "Claudio Lucio Cunha da Silva",
+    "nusp": "14565003",
+    "curso": "Engenharia de Computação",
+    "telefone": "(21) 98404-2200",
+    "email": "claudiolcsilva@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Bruno Dantas de Almeida",
+    "telefone": "(11) 99651-6112",
+    "email": "Bruno.Almeida@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "Banco BTG PACTUAL S.A. - SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40h",
+    "carga_horaria_total": "3000h"
+  },
+  "sobre_empresa": "O Banco BTG Pactual S.A. é o maior banco de investimentos da América Latina atualmente. Fundada em 1983, a empresa tem forte atuação nas áreas de Investment Banking, Sales & Trading, Corporate & SME Lending, Asset Management e Wealth Management & Consumer Banking e possui um time de tecnologia que dá suporte e permite estabilidade e escalabilidade para todos os os seus negócios.\n\nO setor da empresa em que realizei esse estágio foi a área de IT Products, responsável pelos produtos internos do Banco, mais especificamente, no meu caso, com os produtos da área de Equities e Derivativos, na qual fui alocado para participar junto ao time de desenvolvedores que trabalham com a Necton Investimentos, uma corretora de investimentos adquirida pelo BTG Pactual em 2020.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Familiarização com as principais tecnologias utilizadas pelo time e com a cultura da empresa",
+      "tarefas_realizadas": "- Requisição de acesso aos ambientes necessários;\n- Integração institucional com a empresa;\n- Estudo das tecnologias utilizadas pela equipe.",
+      "papel_exercido": "- Leitura de documentação e utilização de ferramentas internas para requisição de acessos e licenças das aplicações necessárias;\n- Participação em eventos de Onboarding da área de Recursos Humanos e participação nos treinamentos internos da empresa;\n- Leitura de documentação, fóruns e artigos relacionados à biblioteca React.js, ao Framework Next.js, à linguagem de programação C#, ao Framework .NET e s banco de dados PostgreSQL e Oracle;\n- Leitura de textos de artigos sobre qualidade do código, os princípios SOLID da programação orientada a objetos e padrões de design;\n- Desenvolvimento de um curto projeto simulado para entender a conexão do Front-end e Back-end com os quais trabalhei nas atividades posteriores.",
+      "duracao": "05/05/2025 - 23/05/2025",
+      "comentarios": "Durante esse período pude aprender bastante do conhecimento técnico que posteriormente utilizei para desenvolver minhas atividades nesse estágio, além de ser apresentado ao ambiente da empresa, sua cultura, suas diferentes áreas de atuação e às condutas necessárias aos seus colaboradores.",
+      "aprendizados": "- Condutas corretas no ambiente corporativo do Banco, desenvolvimento seguro e uso correto, responsável e eficiente de Inteligência Artificial generativa no trabalho;\n- Utilização de APIs: Criação de rotas com ASP.NET Core, integração com o Front-end."
+    },
+    {
+      "numero": "2",
+      "descricao": "Pequenas alterações nas páginas em portal interno da empresa",
+      "tarefas_realizadas": "- Inclusão de campos em grids de tabelas para adicionar dados;\n- Mudanças em designs de telas para melhor exibição e visualização de dados e inserção de dados pelos usuários.",
+      "papel_exercido": "- Entendimento do fluxo das mudanças nos repositórios git e Deploys no ambiente do Banco;\n- Desenvolvimento das telas em Typescript, utilizando Next.js e estilização com CSS, para o Front-end;\n- Alterações nas tabelas do Banco de Dados PostgreSQL para armazenar novos dados advindos de interações de usuários ou de outros bancos de dados como a base do Sinacor (Sistema Integrado de Administração de Corretoras – da B3, a Bolsa de Valores do Brasil);\n- Adaptação e criação de consultas em Bancos de Dados: Utilização de Dapper como ORM (sigla para mapeador relacional de objetos, em inglês) no .NET.",
+      "duracao": "26/05/2025 - Fim do período de estágio",
+      "comentarios": "Essas foram atividades paralelas que desenvolvi para me acostumar mais com os fluxos internos do Banco e obter mais prática com as tecnologias necessárias para seguir com as demais atividades, que demandaram um entendimento maior das tecnologias usadas.",
+      "aprendizados": "- Utilização das Pipelines de Deploy via Azure e releases de features e fixes;\n- Alterações de tabelas no banco de dados PostgreSQL;\n- Uso do Dapper e querys parametrizadas para evitar vulnerabilidades como SQL injections;\n- Uso do banco de dados Oracle para realizar consultas;\n- Classes em CSS, utilizando DevTools para auxiliar a escolher os elementos e suas respectivas propriedades corretas para estilização;"
+    },
+    {
+      "numero": "3",
+      "descricao": "Criação de funcionalidade para favoritar itens do menu de portal interno da empresa",
+      "tarefas_realizadas": "- Desenvolvimento em .NET, Next.js e criação da estrutura no banco de dados",
+      "papel_exercido": "- Criação de tabelas em banco de dados PostgreSQL para armazenar dados de páginas favoritadas pelos usuários do portal;\n- Desenvolvimento em .NET de estrutura no Back-end para criar as rotas da API para buscar os itens favoritados pelos usuários, inserir novos itens aos favoritos, assim como removê-los;\n- Desenvolvimento em Next.js para criar a interface de interação do usuário com essa funcionalidade, sendo o status das páginas como favoritas atualizado dinamicamente com base na lista das favoritas do usuário e mostrado com uma estrela sem preenchimento (não favorita) ou com preenchimento (favorita) ao lado do nome da página. Também adaptei a página inicial do portal para exibir para o usuário, caso ele tenha páginas favoritadas, cards - que, ao clicados, redirecionam para as respectivas páginas - com o nome dessas páginas, a qual categoria do menu elas pertencem e um ícone representando essa categoria.",
+      "duracao": "28/05/2025 - 15/07/2025",
+      "comentarios": "Essa foi minha maior atividade em duração total, devido ao fato de antes de me focar completamente nela eu ter sido alocado para algumas das tarefas descritas na Atividade 2, que acabaram me ajudando bastante a ser capaz de fazer bem essa funcionalidade em um período mais curto quando totalmente focado nela.",
+      "aprendizados": "Creio que com essa atividade pude consolidar melhor os conceitos que vinha aprendendo desde o início do estágio, de modo a ser mais confiante ao desenvolver outras tarefas com maior grau de complexidade e agilizar tarefas mais simples."
+    },
+    {
+      "numero": "4",
+      "descricao": "Adição de consumer para uma fila no RabbitMQ para gerar disparar um e-mail periódico para uso interno, contendo um grid com informações referentes a clientes da corretora",
+      "tarefas_realizadas": "- Criação da estrutura do consumer;\n- Geração dinâmica do corpo do e-mail e envio do e-mail",
+      "papel_exercido": "- Criação da estrutura da mensagem a ser recebida pelo consumer, para que o serviço chamado fosse o da geração e envio de e-mail, passados certos parãmetros. Tal mensagem foi adaptada para um scheduler, que dispara a mensagem para a fila do RabbitMQ;\n- Desenvolvimento em .NET para que esse tipo de mensagem inicie o serviço que gera o corpo do e-mail e o envia;\n- Desenvolvimento de template HTML, que com método Replace de string do C#, se torna dinâmico, com dados advindos de uma consulta em um banco de dados Oracle;\n- Configuração do e-mail e chamada do serviço de envio já desenvolvido pelo time.",
+      "duracao": "11/06/2025 - 26/06/2025",
+      "comentarios": "Essa foi uma tarefa bem interessante, pude entender um outro fluxo dos produtos desenvolvidos pelo time, tendo uma noção mais completa de como funcionam softwares integrados via mensageria, ao invés de APIs. Além de ser capaz de entender melhor sobre estilização com CSS e armazenamento de arquivos em buckets (nesse caso, imagens de cabeçalho e rodapé do e-mail) no desenvolvimento do conteúdo do e-mail em si.",
+      "aprendizados": "Com essa atividade consegui obter um grau inicial de entendimento de como funciona uma arquitetura orientada a eventos e mensagens e interagir com outras tecnologias, como o próprio RabbitMQ e o scheduler de mensagens interno do time, além dos Buckets S3 na AWS."
+    },
+    {
+      "numero": "5",
+      "descricao": "Melhorias na funcionalidade de transmissões de relatórios por e-mail via portal interno",
+      "tarefas_realizadas": "- Acréscimos nos logs referentes ao tipo e formato de arquivos na execução de transmissões, permitindo dados mais completos para exibição em tela;\n- Criação de funcionalidade de agrupar transmissões para execução em grupo;\n- Criação de funcionalidade de clonar transmissões existentes.",
+      "papel_exercido": "- Alterações nas tabelas de logs e nos serviços que inserem e buscam dados nelas para garantir a inclusão e busca das informações necessárias no banco de dados PostgreSQL;\n- Criação da estrutura no banco de dados PostgreSQL para agrupar transmissões;\n- Design das telas em rascunho, com storyboard dos fluxos necessários para lidar com os grupos de transmissões;\n- Criação das telas para agrupar as transmissões no Front-end em Next.js;\n- Criação da estrutura no Back-end .NET para que as rotas da API referentes aos grupos de transmissões sejam chamadas via Front-end e executem as chamadas necessárias no banco de dados.\n- Adaptação somente no Front-end, mais especificamente na maneira que é montada uma requisição pra API de inserir uma nova transmissão ou atualizar uma existente para permitir a clonagem de transmissões.",
+      "duracao": "07/07/2025 - Fim do estágio",
+      "comentarios": "Essa é a última grande atividade que fui alocado para realizar, tem sido muito interessante ver como sou bem mais capaz de desenvolver um trabalho completo com bem mais fluidez e de maneira menos dependente de meus colegas mais experientes. Nessa atividade fui capaz de trabalhar no nível de projetar soluções com maior liberdade criativa, interagindo com as necessidades específicas do cliente (no caso, um cliente interno), chegando, por fim, a bons resultados.",
+      "aprendizados": "O maior aprendizado nessa atividade foi entender como o que eu desenvolvi nas anteriores se aplicava a esse contexto de maneira muito relevante e que, com um bom projeto, o caminho para desenvolvimento em si fica bem mais claro e, com o tempo de trabalho, dúvidas que surgem no caminho são bem mais fáceis de comunicar e, portanto, resolver."
+    }
+  ],
+  "conclusao": "Nessa minha primeira experiência como estagiário posso afirmar que aprendi bastante, obtive muito conhecimento técnico com aplicações práticas no dia-a-dia de um engenheiro de computação, como o uso do Framework .NET (C#) para construir aplicações, melhor uso de Next.js (Junto a React.js e HTML/CSS) para desenvolvimento Front-end, mais prática com uso de Bancos de Dados, um melhor entendimento de arquitetura de software, uso e desenvolvimento de APIs, conceitos de mensageria, boas práticas na escrita de código, uso real de padrões de design e práticas eficientes para depuração de código. Por um viés mais pessoal percebo que, com o tempo no estágio, aprendi também a lidar melhor com as pessoas no ambiente de trabalho, entender melhor o que os desenvolvedores mais experientes do time me passavam e as perguntas mais adequadas as quais as respostas realmente resolviam os problemas de maneira mais eficiente e rápido.\n\nPor fim, destaco também o programa que o time de Recursos Humanos do BTG desenvolveu junto ao time de IT Portfolio Management para passar para os estagiários da Escola Politécnica da USP conceitos do mercado financeiro, de modo a tornar mais compreensível os termos específicos desse tipo de negócio com os quais trabalhei durante esse meu período no Banco. Portanto, noto que com essa experiência no BTG Pactual, no time de IT Products – Equities & Derivatives, fui capaz de me desenvolver tanto em Hard Skills quanto em Soft Skills, o que entendo como muito positivo."
+}

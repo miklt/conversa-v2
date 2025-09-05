@@ -1,0 +1,89 @@
+{
+  "estagiario": {
+    "nome_completo": "Ábner Effgen de Almeida",
+    "nusp": "13676691",
+    "curso": "Engenharia de Computação",
+    "telefone": "(12)98855-0675",
+    "email": "effgen@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "João Marcos de Mattos Barguil",
+    "telefone": "(11)97516-6272",
+    "email": "jbarguil@opus-software.com.br"
+  },
+  "estagio": {
+    "razao_social_empresa": "Everify Opus Software Serviços de Informática LTDA",
+    "cnpj": "22.960.668/0001-13",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "680 horas"
+  },
+  "sobre_empresa": "Opus Software é uma empresa com trajetória longa, especializada em transformar tecnologia em grandes negócios por meio do desenvolvimento ágil de soluções digitais. Ao longo de mais de 35 anos de história, construiu expertise em áreas como Open Finance, Open Insurance, inteligência artificial, modernização de sistemas, cloud, DevSecOps, data & analytics e microsserviços\n\nA Opus Software possui porte médio (~200 colaboradores) e adota predominantemente o modelo home-office, com algumas exceções em regime híbrido. A equipe atua em múltiplas frentes e projetos, entregando soluções para clientes de médio e grande porte, como McDonald's, Agência Estado Broadcast, Goodyear, Nubank, PagBem, Banco Digio e Adecoagro.\n\nA cultura da empresa se destaca pelo apreço à instrução, com todos os colaboradores sendo receptivos e solícitos; o aprendizado, seja acadêmico ou profissional, é sempre incentivado. O ambiente de trabalho é leve e saudável, com respeito às limitações individuais e estímulo ao aprimoramento intelectual, social e físico.\n\nO setor em que atuei era composto por aproximadamente cinco profissionais: dois a três estagiários, dois desenvolvedores e um Product Leader, com foco em IA generativa e aplicações baseadas em inteligência artificial. As atividades se organizavam em duas frentes: demanda, voltada à manutenção de software, criação de ferramentas digitais para clientes e resolução de problemas; e exploração, dedicada ao estudo e pesquisa de novas soluções, como bibliotecas de código, avaliação de modelos LLM, prospecção de plataformas para criação de agentes de IA, configuração de servidores MCP e desenvolvimento de PoCs (provas de conceito) para validação de ideias.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Capacitação e Fundamentos",
+      "tarefas_realizadas": "● Investigação e compreensão de modelos generativos e suas aplicações no mundo real.\n● Análise e escolha das ferramentas mais adequadas para integração de modelos.\n● Estudo e prática no uso de APIs.\n● Montagem e gerenciamento de ambientes utilizando Docker.\n● Gestão de versões e trabalho colaborativo com Git.\n● Desenvolvimento e experimentação com bibliotecas Python.\n● Avaliação de arquiteturas de sistemas para incorporação de soluções de IA.",
+      "papel_exercido": "Suporte técnico na investigação, desenvolvimento e validação de soluções de inteligência artificial, atuando tanto na fase de pesquisa quanto na implementação prática.",
+      "duracao": "Aproximadamente 2 semanas, correspondendo à fase inicial do estágio",
+      "comentarios": "Todo o conhecimento adquirido foi documentado em um repositório interno da empresa, organizado em pastas para aplicação prática em projetos e em guias, orientando outros estagiários e colaboradores sobre o uso das ferramentas.",
+      "aprendizados": "● Entendimento do funcionamento e das possíveis aplicações de modelos generativos.\n● Definição de critérios para a seleção de ferramentas de integração.\n● Experiência prática no desenvolvimento com APIs, Docker e Git.\n● Aplicação de bibliotecas Python na criação de agentes e integração de LLMs.\n● Conhecimento sobre arquiteturas de sistemas voltadas para soluções de inteligência artificial."
+    },
+    {
+      "numero": "2",
+      "descricao": "Criação de Agentes de IA",
+      "tarefas_realizadas": "● Estudo e aplicação de bibliotecas e tecnologias para desenvolvimento de agentes, incluindo LangChain, Langraph, n8n, Flowise, Agno, protocolos MCP e A2A, entre outros.",
+      "papel_exercido": "Atuação ativa no desenvolvimento dos agentes, incluindo geração de código, implementação e realização de testes.",
+      "duracao": "Permeou todo o estágio, com tempo líquido aproximado de 1 mês e meio",
+      "comentarios": "Diversos agentes foram criados, testados e aprimorados ao longo do projeto, contribuindo para soluções internas e produtos da empresa.",
+      "aprendizados": "● Aperfeiçoamento na escrita e melhoria de código em Python.\n● Experiência prática com LLMs e integração em agentes.\n● Adequação e utilização eficiente de bibliotecas, frameworks e ferramentas de IA.\n● Engenharia de Prompt"
+    },
+    {
+      "numero": "3",
+      "descricao": "Provas de Conceito (PoCs)",
+      "tarefas_realizadas": "● Desenvolvimento de um sistema de pizzaria composto exclusivamente por agentes de inteligência artificial.\n● Criação de uma API gateway para permitir que agentes de IA fossem acessados via requisições HTTP.\n● Implementação de servidores MCP com autenticação OAUTH.\n● Testes de ferramentas de depuração, monitoramento e rastreamento de modelos generativos, incluindo o uso do Langfuse.",
+      "papel_exercido": "Atuou como desenvolvedor e arquiteto de soluções de inteligência artificial, sendo responsável por todo o ciclo de vida das provas de conceito. Isso envolveu pesquisa de ferramentas e arquiteturas, design de sistemas, implementação de agentes e serviços em Python e Node.js, além da configuração de ambientes de implantação utilizando Docker.",
+      "duracao": "Durante o estágio, foram realizadas diversas provas de conceito, variando desde experimentos rápidos de um ou dois dias até projetos maiores",
+      "comentarios": "As provas de conceito foram essenciais para explorar novas tecnologias e validar hipóteses antes da aplicação em projetos maiores. Com esses conceitos testados, problemas futuros dos clientes da empresa podem ser resolvidos de maneira mais rápida e eficiente.",
+      "aprendizados": "● Experiência prática no desenvolvimento de sistemas multiagentes e compreensão das interações entre eles.\n● Implementação de APIs e gateways para expor serviços de IA de forma segura e escalável.\n● Uso de Docker para containerização e orquestração de aplicações.\n● Conhecimento em ferramentas de observabilidade, depuração e análise de custos de modelos de linguagem (LLMs).\n● Aplicação de conceitos de arquitetura de software no design de soluções de IA."
+    },
+    {
+      "numero": "4",
+      "descricao": "AE Boost",
+      "tarefas_realizadas": "Desenvolvimento e implementação de agentes de IA.",
+      "papel_exercido": "Responsável pelo desenvolvimento dos agentes de inteligência artificial.",
+      "duracao": "Aproximadamente 2 semanas",
+      "comentarios": "A atividade transcorreu de forma satisfatória; os novos agentes foram incorporados ao projeto ou utilizados como base para melhorias futuras.",
+      "aprendizados": "Aprimoramento na utilização de ferramentas já conhecidas, consolidando experiência prática no desenvolvimento de agentes de IA."
+    },
+    {
+      "numero": "5",
+      "descricao": "BoostChat",
+      "tarefas_realizadas": "● Atuação no frontend, realizando ajustes e melhorias na interface.\n● Atuação no backend, implementando funcionalidades e integrando serviços.\n● Pesquisa, análise e implementação de funcionalidades do projeto Open Source.",
+      "papel_exercido": "Contribuição integral nas atividades de desenvolvimento, tanto no frontend quanto no backend, e na adaptação de funcionalidades do projeto Open Source para a plataforma.",
+      "duracao": "Aproximadamente 1 mês",
+      "comentarios": "O projeto transcorreu de forma satisfatória, com todas as etapas concluídas dentro do prazo. A plataforma foi entregue aos clientes com sucesso e, posteriormente, forneci suporte contínuo à aplicação, garantindo seu funcionamento e estabilidade.",
+      "aprendizados": "● Experiência prática no manuseio e contribuição em projetos Open Source.\n● Aperfeiçoamento das habilidades em Git e controle de versões.\n● Capacidade de gerenciar e manipular repositórios de grande porte."
+    },
+    {
+      "numero": "6",
+      "descricao": "Produção de vídeos de capacitação",
+      "tarefas_realizadas": "● Produção de vídeos de capacitação.\n● Preparação de materiais de apoio, como slides para apresentação.",
+      "papel_exercido": "Apresentador – os conteúdos produzidos foram apresentados aos colaboradores interessados da empresa.",
+      "duracao": "Os vídeos e apresentações foram desenvolvidos e apresentados ao longo de duas semanas",
+      "comentarios": "Atividade realizada com sucesso, sem observações adicionais.",
+      "aprendizados": "Soft Skills: Desenvolvimento de habilidades de comunicação, trabalho em equipe, gestão do tempo, organização e planejamento, reforçadas durante a execução desta atividade."
+    },
+    {
+      "numero": "7",
+      "descricao": "Criação de Framework",
+      "tarefas_realizadas": "● Estudo das bibliotecas existentes;\n● Desenvolvimento de servidor MCP para testes;\n● Criação do framework;\n● Implementação dos agentes na plataforma da empresa.",
+      "papel_exercido": "Desenvolvedor",
+      "duracao": "Aproximadamente duas semanas",
+      "comentarios": "Minha parte no projeto foi concluída com sucesso, devidamente documentada e estruturada de forma que possa ser aprimorada e utilizada pela própria empresa.",
+      "aprendizados": "● Criação de frameworks;\n● Programação orientada a objetos em Python;\n● Aprimoramento da documentação técnica."
+    }
+  ],
+  "conclusao": "De forma geral, durante o estágio, tive a oportunidade de trabalhar com uma variedade de ferramentas e tecnologias, o que contribuiu significativamente para o meu crescimento técnico. Aprofundei meus conhecimentos em Git, Docker, WSL, APIs REST e bancos de dados, além de aprimorar minhas habilidades em linguagens como Python, Node.js, JavaScript e React. No campo da inteligência artificial generativa, adquiri experiência prática na criação de agentes, implementação de protocolos MCP e A2A, e no uso de plataformas como OpenAI, Gemini e Claude. Essa diversidade de tecnologias e práticas proporcionou uma sólida base para o desenvolvimento de soluções inovadoras e eficientes.\n\nEm uma esfera mais particular, o estágio também foi enriquecedor em termos pessoais. Tive a chance de expressar minhas ideias e explorar áreas de interesse, trabalhando em uma equipe coesa, descontraída e solícita. Apesar do ambiente leve, todos estavam comprometidos em criar soluções inovadoras e ágeis. Essa combinação de profissionalismo e acolhimento tornou o ambiente de trabalho estimulante e propício ao aprendizado contínuo."
+}

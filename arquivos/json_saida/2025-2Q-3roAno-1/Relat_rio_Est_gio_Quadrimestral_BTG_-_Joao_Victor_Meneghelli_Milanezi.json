@@ -1,0 +1,71 @@
+{
+  "estagiario": {
+    "nome_completo": "João Victor Meneghelli Milanezi",
+    "nusp": "14583000",
+    "curso": "Engenharia de Computação",
+    "telefone": "(27) 998022501",
+    "email": "milanezi@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Eric Keiiti Mitsuuti",
+    "telefone": "(11) 970621919",
+    "email": "Eric.Mitsuuti@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "Banco BTG Pactual S.A.",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/25",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "584 horas"
+  },
+  "sobre_empresa": "O BTG Pactual é um dos principais bancos de investimentos do Brasil, e o maior da América Latina. Fundado em 1983 como Pactual DVTM, com foco em trading e corretagem, sofreu diversas transformações ao longo dos anos até ser comprado pelo grupo BTG Investments em 2009, tornando então BTG Pactual.\n\nAtualmente o banco atua principalmente nas áreas de Investment Banking, Sales & Trading e Asset Management, e está presente em mais de 10 países, incluindo Chile, Colômbia, Estados Unidos, Reino Unido e Portugal. Sua estrutura segue a cultura de Partnership meritocrático, dando a oportunidade para colaboradores mais competentes se tornarem acionistas do banco.\n\nDurante meu estágio, fiz parte da área de Buy & Sell Market (BSM), que conta com cerca de 25 funcionários, consiste em desenvolver o software utilizado pelos traders das diferentes mesas do banco, para que consigam atuar e precificar sob suas operações de compra e vendas de ativos. Em meu time, junto a 2 analistas e um diretor associado, operei na parte de Cross-Assets, atuando com derivativos, como opções e futuros de commodities e dolar, e swaps.\n\nAs principais atividades da área são o desenvolvimento de front e back end da aplicação, utilizando C# como linguagem de programação, bancos de dados como Redis e MongoDB, softwares de mensagerias como RabbitMQ e conhecimento da área de métodos numéricos.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Migração parcial do software Price Feeder para AWS",
+      "tarefas_realizadas": "● Criação da pipeline e arquivos Docker e yaml para configurações de diferentes ambientes (desenvolvimento, homologação e produção).\n● Adaptação do código para funcionar tanto em Windows (como já funcionava localmente) e em Linux na AWS.\n● Criação de uma automação para notificar quando o programa apresentar algum erro e notificar no Teams.",
+      "papel_exercido": "Responsável por todo processo de porte da aplicação, e criação da automação utilizando Microsoft Power Automate e Datadog. Atuou fortemente na parte de testes, visto que era uma aplicação bem robusta e o porte parcial envolvia uma cadeia de eventos desconhecida até então.",
+      "duracao": "1 mês",
+      "comentarios": "Devido a grande quantidade de classes e processos no Price Feeder, foi necessário um grande tempo para entender o seu funcionamento. Além disso, foi necessário realizar alguns processos burocráticos como solicitação de vários acessos e instalações a equipe de redes e Service Desk do banco. O porte foi bem complexo inicialmente, mas foi bem importante para aprender sobre o fluxo de dados de toda área. Ao final dessa atividade, uma parte estava rodando em nuvem, enquanto outros produtos foram deixados para outro momento. Como nunca houve contato anterior do estagiário com C#, também foi uma boa oportunidade de entender suas particularidades, seus pontos fortes e a própria estrutura da linguagem.",
+      "aprendizados": "● Funcionamento de uma pipeline, e a importância de seus diferentes ambientes de desenvolvimento.\n● Utilização do RabbitMQ para compartilhar mensagens (Json) para compartilhar informações entre diferentes softwares internos.\n● Funcionamento da linguagem C#, juntamente com suas funcionalidades como Tasks assíncronas e Handles.\n● Funcionamento e importância de utilização de computação em nuvem.\n● Entendimento de design patterns de projetos, como Injeção de Dependências e Factory."
+    },
+    {
+      "numero": "2",
+      "descricao": "Porte de outros produtos para o Price Feeder e estabelecimento do protocolo FIX com a Bloomberg",
+      "tarefas_realizadas": "● Validação do fluxo dos demais produtos simultaneamente pelas filas do Rabbit.\n● Comunicação entre os setores de Redes e Infraestrutura do banco, juntamente da Bloomberg, para organizar IP's e portas para que as conexões sejam estabelecidas.\n● Criação de Jobs dentro do programa para verificar a cada 1 minuto se a conexão FIX caiu, e reconectar em caso positivo.\n● Criação de CronJobs dentro do Rancher da AWS, para reiniciar o pod do Price Feeder toda manhã antes da bolsa abrir, garantindo que nenhum dado do dia anterior seja distribuído.",
+      "papel_exercido": "Responsável por realizar a comunicação com áreas diversas do banco, estabelecendo padrões e validação das conexões. Além disso, também realizar os testes das diversos produtos simultaneamente, verificando se o desempenho estava dentro do previsto.",
+      "duracao": "1 mês",
+      "comentarios": "Essa atividade foi uma continuação da anterior, e foi importante para ter contato com outras áreas do banco, e entender que o papel de um desenvolvedor vai muito além de apenas escrever código, é necessário saber se comunicar, entender e explicar suas demandas para pessoas que não necessariamente participam e estão por dentro do que você está desenvolvendo.",
+      "aprendizados": "● O que é e como usar o protocolo Financial Information eXchange (FIX)\n● Criação de Jobs internos ao C#, usando a biblioteca de Hangfire\n● Criação de CronJobs no Rancher da AWS, ferramenta para verificar e alterar o estado do pod com uma rotina, a cada uma quantidade de tempo."
+    },
+    {
+      "numero": "3",
+      "descricao": "Criação de dashboard no DataDog para monitorar as conexões FIX das Dropcopy on-premise e demais serviços na AWS",
+      "tarefas_realizadas": "● Configurar o agente Datadog em cada computador on-premise que tem serviços Drop Copy internos, mudando os parâmetros de cada conexão.\n● Criação de monitores que detectam se alguma conexão não emitiu nenhum dado num período de 1 minuto.\n● Criação de um dashboard para juntar todas as informações de forma simples e prática.\n● Conexão com o Teams para avisar os determinados grupos e emails em caso de alerta, e configuração de data e hora para evitar enviar alertas quando a bolsa estiver fechada (falsos positivos).\n● Criação de um serviço que rode paralelamente nos softwares que estão em nuvem para emitir um log com estado da conexão periodicamente.",
+      "papel_exercido": "Responsável por verificar o comportamento das Drop copys, elaborar e planejar como fazer o dashboard de maneira prática e visual.",
+      "duracao": "3 semanas",
+      "comentarios": "A atividade trouxe uma demanda bem diferente a área, visto que era algo que não havia sido explorado anteriormente, foi uma atividade de bastante pesquisa e testes. A maior dificuldade foi estipular qual a melhor maneira para ler e validar os logs, visto que não havia um gabarito, apenas um refinamento e testes sucessivos para validar qual estava menos sujeito a erros.",
+      "aprendizados": "● Criação de dashboards no Datadog\n● Melhora no uso do Microsoft Power Automate\n● Entendimento sobre Dropcopy e como elas se comunicam com demais serviços\n● Aprendizado sobre os diferentes tipos de serviços que uma classe do C# oferece, como Singleton, Transient e Scooped"
+    },
+    {
+      "numero": "4",
+      "descricao": "Adição da publicação de Dolar NDF e Euro Spot no Price Feeder",
+      "tarefas_realizadas": "● Programação dos produtos desde o fluxo de ler as filas no rabbit, tratar os dados e publicar em outras filas.\n● Verificação de endpoint utilizando Swagger.",
+      "papel_exercido": "Responsável por toda programação dos novos produtos e cadeia de testes, garantindo o funcionamento das novas funcionalidades e que as antigas continuam operando corretamente.",
+      "duracao": "1 semana",
+      "comentarios": "Apesar de ser semelhante ao que foi feito anteriormente, aqui não foi uma migração de algo que já existia, e sim a criação de filas e tratamento de dados novos e independentes, o que foi importante para consolidar o entendimento do projeto quando o projeto foi migrado.",
+      "aprendizados": "● Aprendizado sobre as diferentes características que cada Dolar NDF e Euro Spot pode ter, entender o que é relevante para as demais áreas do banco, e tratar e modificar os dados conforme as regras de negócio.\n● Utilização de Endpoints para transporte de informações."
+    },
+    {
+      "numero": "5",
+      "descricao": "Refatoração das telas de cotação utilizadas pelos traders",
+      "tarefas_realizadas": "● Refatoração da tela que as cotações são feitas.\n● Refatoração da tela de negociação entre o trader e os clientes.",
+      "papel_exercido": "Responsável por avaliar quais funções eram relevantes para manter na versão atualizada, e modificar o funcionamento de lógicas arcaicas ou complexas.",
+      "duracao": "2 semanas",
+      "comentarios": "Foi uma atividade muito importante para entender melhor toda lógica de negócio da área. Entendendo o fluxo desde que um produto é selecionado, até quando é precificado e a negociação é encerrada (sendo aceita ou cancelada).",
+      "aprendizados": "● Desenvolvimento de tela utilizando a biblioteca DevExpress.\n● Lógica de tela guiada a eventos .\n● Lógica de backend utilizando API's para comunicação entre a tela e outros serviços que precificaram a cotação."
+    }
+  ],
+  "conclusao": "O estágio no BTG Pactual foi muito importante para o meu crescimento profissional, o cotidiano numa empresa tão grande, que é muito adaptada e atualizada com as novas tecnologias, e com uma grande infraestrutura, me fez ter muito mais noção do ambiente corporativo, crescendo não apenas no quesito técnico, mas também na comunicabilidade, e interação com diferentes áreas simultaneamente.\n\nNa área de computação, o estágio me proporcionou a oportunidade de aprender sobre o desenvolvimento em nuvem de aplicações, utilizando a pipeline, e também sobre os diferentes ambientes para utilizar um software (desenvolvimento, homologação e produção), além das diferenças de c# para outras linguagens. Essas etapas fizeram com que a curva de aprendizado fosse maior, ocasionando em uma demora inicial para conseguir produzir de fato, mas é observado como algo natural visto as diferenças entre um estágio numa grande empresa e o mundo acadêmico de sala de aula.\n\nApós esse desafio inicial de aprendizado, pude me concentrar nas atividades propostas, encontrei dificuldades, mas nunca estive sozinho, o que me proporcionou poder tirar dúvidas com os colegas do time sempre que fosse necessário, e concomitantemente desenvolvendo autonomia. O equilíbrio das duas coisas impulsionou a minha evolução.\n\nDesenvolved grande conhecimento na área de programação, fluxos de mensagens entre diferentes sistemas, entender as demandas, organizar prioridades e prazo. Dessa forma, o pensamento nunca era exclusivo no que estava sendo digitado no código, e sim todo impacto e usabilidade que outras pessoas de outras áreas e do mesmo time podem ter futuramente.\n\nAdemais, não foi só em computação que obtive experiência, a necessidade da área Tech de saber sobre finanças é essencial para uma boa comunicabilidade entre as áreas, no caso do BSM, principalmente com os traders, entender as regras de negócio e o que são os derivativos que estava operando pareceu confuso inicialmente, mas se tornou muito positivo para mim que já tinha um interesse inicial na área. O banco também ofereceu aulas para os estagiários sobre os diversos produtos, o que contribuiu bastante.\n\nOs 4 meses de estágio foram muito enriquecedores em meu aprendizado, visto que é um lugar onde sempre estão aberto a perguntas e mais que isso, sempre estão dispostos a ouvir ideias e debater. Isso foi fundamental para o desenvolvimento próprio, pois podia verificar se minhas próprias ideias eram boas ou não, e em caso negativo, entender o que faltou para evoluir. Concluo esse estágio com a sensação de que falta muito para ser desenvolvido ainda, mas com muito aprendizado e com aumento do meu interesse de combinar setor financeiro com a computação."
+}

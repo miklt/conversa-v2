@@ -1,0 +1,44 @@
+{
+  "estagiario": {
+    "nome_completo": "Roberto Hiraoka",
+    "nusp": "14606280",
+    "curso": "Engenharia de Computação",
+    "telefone": "(11) 99727-7061",
+    "email": "robertohiraoka@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Vinícius Berchielli",
+    "telefone": "(11) 96504-4367",
+    "email": "vinicius.berchielli@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A. - SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05 de maio de 2025",
+    "periodo_fim": "29 de agosto de 2025",
+    "carga_horaria_semanal": "De 05/05/2025 a 07/07/2025: 30h; de 08/07/2025 a 29/08/2025: 40h",
+    "carga_horaria_total": "582"
+  },
+  "sobre_empresa": "O BTG Pactual é o maior banco de investimentos da América Latina. Atua oferecendo diversos serviços financeiros, como gestão de ativos, consultoria de investimentos e serviços bancários. Atende a diversos tipos de clientes, desde clientes institucionais e de alta renda até pequenos investidores e empresas de menor porte. Atuei na área BTG Empresas, mais especificamente no setor IT-PME, responsável pelo desevolvimento de tecnologias voltadas para pequenas e médias empresas. Minha equipe era dedicada aos serviços de conta corrente para essas empresas.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Calcular o saldo de entradas e saídas da conta",
+      "tarefas_realizadas": "- Familizariação com o repositório do backend de Conta Corrente\n- Busca dos dados de entrada e saída da conta a partir de uma consulta num banco de dados em Postgres utilizando o mapeador objeto-relacional Drizzle\n- Cálculo do saldo final mês a mês da conta selecionada, utilizando Typescript\n- Depuração de erros de cálculo por ponto flutuante\n- Validação de implementações por testes unitários com a biblioteca Jest e execução de requisições HTTP via Insomina, aliados ao NodeJS",
+      "papel_exercido": null,
+      "duracao": null,
+      "comentarios": "Nesta atividade, aprendi principalmente sobre o funcionamento do projeto de Conta Corrente que gerenciamos. Me familiarizei com a linguagem TypeScript, sua integração com bancos de dados em Posgres e sua integração com o FrontEnd.",
+      "aprendizados": null
+    },
+    {
+      "numero": "2",
+      "descricao": "Remover o destaque \"Novidade\" do atalho \"Gestão de Caixa\"",
+      "tarefas_realizadas": "- Familiarização com o repositório do FrontEnd de Conta Corrente\n- Remoção do indicador de \"Novidade\" de um atalho da tela utilizando TypeScript com ReactJS, aplicando CSS e HTML\n- Validação da mudança por testes locais e em UAT",
+      "papel_exercido": null,
+      "duracao": null,
+      "comentarios": "Nesta atividade, estudei a implementação do frontend do site do BTG Empresas. Me familiarizei com processos de implementação e homologação de mudanças em grandes projetos com o uso de ambientes de teste de aceitação de usuário.",
+      "aprendizados": null
+    }
+  ],
+  "conclusao": "Ao fim deste estágio, sinto-me muito mais próximo não só de um engenheiro de computação, mas de um profissional de verdade. Trabalhando em um banco moderno, pude ter um grande contato tanto com o mercado financeiro quanto com o mundo de TI. No ramo do mercado financeiro, a realização das aulas chamadas QuadriLab, realizadas pela equipe de investimentos, repassou bastante conhecimneto aos estagiários sobre a área. Aprendizados básicos, como juros, até mais avançados, como derivativos, foram bastante interessantes de se aprender, tanto para conhecimento próprio quanto para entendermos melhor sobre o contexto em que estamos inseridos. Também aprendi muito sobre o mundo bancário, tanto trabalhando quanto conversando com colegas. Assim, as tecnologias que desenvolvemos aqui de fato parecem ter um impacto e uso real por clientes e outros setores do banco.\n\nJá no quesito tecnológico, trabalhar numa corporação de grandes proporções foi uma experiência totalmente única. Ter que lidar com repositórios imensos, computação na nuvem, gerenciamento de versões, devops, procedimentos de deploy e semelhantes é algo que eu nunca tive contato antes, e nunca teria caso me limitasse ao que é trabalhado na faculdade. Tive muitos aprendizados técnicos, como programação em TypeScript e C#, o uso de várias bibliotecas, integrações com a nuvem e consultas a bancos de dados. Também pude desenvolver boas práticas de código, como Arquitetura Limpa, APIs REST e padrões de design.\n\nPor fim, o que acredito ter sido o que mais desenvolvi e foi mais importante durante meu estágio, foi o desenvolvimento de soft skills e aprendizado de fluxos de trabalho reais. Habilidades comunicativas, comportamentais e profissionais foram muito importantes ao longo dos 4 meses. Participando de reuniões com meu time e colegas de outros setores, utilizando metodologia ágil Scrum, com sprints, dailies, plannings e reviews, tive contato com um ambiente de trabalho real. Realizar apresentações das entregas que fiz, dar ideias de desenvolvimento, consultar outros profissionais e seus projetos, implementar alterações conforme demandas dos usuários são todas tarefas que eu nunca tive, mas que pude aprender gradualmente ao longo do estágio."
+}

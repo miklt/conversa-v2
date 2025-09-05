@@ -1,0 +1,53 @@
+{
+  "estagiario": {
+    "nome_completo": "Yasmin Francisquetti Barnes",
+    "nusp": "13828230",
+    "curso": "Engenharia (Habilitação: de Computação) - integral",
+    "telefone": "(11) 96546-5682",
+    "email": "yasminfrancisquetti@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Vinicius Oliveira Santos",
+    "telefone": "(11) 94399-6914",
+    "email": "vinicius-o.santos@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A. - SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40 horas de 05/05 a 01/08 e 30 horas de 04/08 a 29/08",
+    "carga_horaria_total": "580 horas"
+  },
+  "sobre_empresa": "O Banco BTG Pactual, fundado em 1983, é um banco de investimentos de grande influência na América Latina, possuindo sedes em São Paulo e Rio de Janeiro no Brasil e presença em centros financeiros de Nova York (Estados Unidos), Londres (Reino Unido), Lima (Peru), Santiago (Chile), Buenos Aires (Argentina) e Cidade do México (México). O BTG Pactual atua principalmente nas áreas de Investment Banking (investimento), Wealth Management (gestão de patrimônio), Asset Management (gestão de ativos), oferecendo também diversas soluções no mercado como contas empresariais e varejo digital. Com um modelo de partnership meritocrático, o banco é controlado por seus sócios, o que garante alinhamento de interesses e uma cultura de alto desempenho entre seus colaboradores.\n\nMediante a grande variedade de serviços oferecidos, a empresa possui divisões no que tange a área de tecnologia, para melhor distribuição de tarefas e organização. O estágio a qual o presente relatório se refere foi realizado na área denominada pela empresa de Data Analytics, mais especificamente Data Engineering, ou Engenharia de Dados. A Engenharia de Dados é uma área da computação responsável pelo desenvolvimento, construção e manutenção de sistemas e infraestrutura que coletam, armazenam, organizam e disponibilizam dados de maneira eficiente, segura e inteligente para análise e utilização para segmentos dentro e fora da área. O bom desempenho da área garante que grandes volumes de dados estejam sendo transmitidos e movimentados mediante os interesses da instituição e da melhor maneira possível.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "O projeto consistiu na migração e otimização de um serviço já em uso dentro da organização, responsável pela transcrição de ligações entre clientes e agentes do banco. O principal objetivo era possibilitar análises sobre o desempenho dos atendentes, com base em parâmetros definidos pela equipe de Análise de Dados.",
+      "tarefas_realizadas": "Foi desenvolvido um script de ingestão de dados em PySpark, responsável por inserir os metadados das chamadas em uma tabela. Também foi criada uma AWS Lambda para organizar as chamadas em lotes (\"batches\") e armazená-las no serviço Amazon S3. Em seguida, outra AWS Lambda foi implementada para enviar esses lotes ao serviço de transcrição, monitorando todo o processo até sua conclusão (sucesso, falha ou cancelamento), quando uma transcrição é bem sucedida, ela é armazenada também no Amazon S3.\n\nApós a transcrição, um novo script em PySpark foi elaborado para transferir os dados das chamadas já transcritas para tabelas, garantindo melhor organização e disponibilidade para análise.\n\nAlém disso, a aluna participou da implementação de DAGs (Directed Acyclic Graphs) no Airflow, responsáveis por orquestrar e administrar a execução das Lambdas criadas.",
+      "papel_exercido": "Atuou como Engenheira de Dados, sendo responsável pelo desenvolvimento de pipelines de ingestão, transformação e organização de dados. Contribuiu diretamente para a automação de processos de transcrição de chamadas por meio da implementação de funções Lambda e da orquestração dessas funções com DAGs no Airflow, garantindo escalabilidade, confiabilidade e melhor aproveitamento das transcrições para análises e utilizações posteriores.",
+      "duracao": "420 horas",
+      "comentarios": "Essa foi a tarefa principal desenvolvida pela estagiária, tendo ocupado a maior parte do tempo de estágio e sendo acompanhada por diversos outros colaboradores da área.",
+      "aprendizados": "AWS Lambda (predominantemente em Python), criação de Queries SQL para o AWS Athena, manuseio de arquivos no AWS S3, Scripts em PySpark, desenvolvimento em Jupyter Notebooks, Airflow DAGs para orquestração das Lambdas criadas, utilização dos serviços de DevOps da Azure para criação de Git Branches e Pipelines."
+    },
+    {
+      "numero": "2",
+      "descricao": "O projeto consistiu na otimização de um script PySpark utilizado pela área de Inteligência Artificial, responsável por preparar dados sobre propostas de crédito em diferentes janelas de tempo. Esses dados eram utilizados no treinamento de um modelo de IA capaz de prever a quantidade de atendentes necessária em dias específicos, com foco principal em finais de semana e feriados (dias não úteis).",
+      "tarefas_realizadas": "Desenvolvimento de um script em PySpark otimizado para preparação de dados, gerando uma tabela com os dados necessários para o modelo, garantindo melhor desempenho e confiabilidade no processamento. Além disso, atuou na comunicação direta com o time responsável pela utilização dos dados, alinhando requisitos e validando a consistência das informações.",
+      "papel_exercido": "Atuou como Engenheira de Dados, com responsabilidade na otimização de scripts de preparação de dados, assegurando eficiência no processamento e adequação às necessidades do time de Inteligência Artificial.",
+      "duracao": "100 horas",
+      "comentarios": "Esta foi uma tarefa secundária atribuída à estagiária, a ser executada durante os períodos em que a continuidade da atividade principal (Atividade 1) dependia de outros serviços ou colaboradores.",
+      "aprendizados": "Desenvolvimento de scripts em PySpark, elaboração de queries SQL, e utilização dos serviços de DevOps da Azure para criação de Git Branches e Pipelines."
+    },
+    {
+      "numero": "3",
+      "descricao": "No contexto da avaliação da conduta de atendentes em conversas de atendimento (sejam essas chats ou chamadas) por meio de inteligência artificial, está sendo implementada, pela equipe, uma plataforma de teste de prompts que essa IA utiliza. A partir do momento que um prompt é testado e se demonstra eficiente, é necessário realizar o seu envio para o ambiente de produção através de um script Pandas que o valide e o deixe o mais otimizado possível, para seu uso em massa. Esse script foi realizado incluindo a validação de todas as informações julgadas necessárias para a utilização desse prompt.",
+      "tarefas_realizadas": "Desenvolvimento de um script que recebe múltiplos IDs de prompts registrados em uma tabela, identificando os registros correspondentes. O script realiza a validação dos dados associados a cada prompt, conferindo sua completude, e executa a limpeza necessária para padronizar e organizar as informações.\n\nApós essa preparação, os prompts validados são enviados para outra tabela, de onde seguem para a inteligência artificial, que os utiliza na avaliação de chamadas e conversas. Esse fluxo garante que apenas prompts corretos e bem estruturados sejam processados, aumentando a confiabilidade do sistema e contribuindo para o melhor desempenho do modelo de avaliação.",
+      "papel_exercido": "A estagiária atuou diretamente no desenvolvimento e automação do fluxo de promoção de prompts da fase de testes para o ambiente de produção. Foi responsável por implementar um script robusto que realiza a identificação, validação, limpeza e transferência dos prompts aprovados, garantindo a integridade e a padronização dos dados.",
+      "duracao": "60 horas",
+      "comentarios": "Essa foi a última tarefa técnica realizada pela estagiária e foi intercalada com as apresentações atreladas à Atividade 1 e o seu estágio como um todo.",
+      "aprendizados": "Desenvolvimento de Scripts em Pandas, utilização de AWS ECS (Elastic Container Service), elaboração de queries SQL e utilização dos serviços de DevOps da Azure para criação de Git Branches e Pipelines."
+    }
+  ],
+  "conclusao": "O estágio realizado no Banco BTG Pactual, na área de Data Engineering do time de Data Analytics, representou uma etapa fundamental para o desenvolvimento profissional da estagiária. Ao longo do período, foram adquiridos conhecimentos sólidos em tecnologias amplamente utilizadas no mercado, como Pandas, PySpark, AWS (Lambda, S3, ECS), Airflow, SQL e Azure DevOps, por meio da atuação prática em projetos de automação, ingestão e organização de dados.\n\nAlém do aprendizado técnico, o estágio proporcionou um forte desenvolvimento de habilidades interpessoais, como comunicação clara, organização, autonomia, proatividade e colaboração com diferentes times. A estagiária também aprimorou suas habilidades de apresentação, participando de reuniões e alinhamentos técnicos, onde foi necessário expor soluções e justificar decisões de forma objetiva e acessível.\n\nEssa experiência permitiu não apenas a aplicação prática dos conhecimentos acadêmicos, mas também a ampliação da visão sobre a atuação em ambientes corporativos e em times de alta performance. O aprendizado obtido durante o estágio foi essencial para o crescimento pessoal e profissional, consolidando o interesse e a preparação da estagiária para seguir na área de engenharia de dados."
+}

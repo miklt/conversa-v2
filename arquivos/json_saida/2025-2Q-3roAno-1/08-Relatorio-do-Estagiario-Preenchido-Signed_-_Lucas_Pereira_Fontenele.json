@@ -1,0 +1,44 @@
+{
+  "estagiario": {
+    "nome_completo": "Lucas Pereira Fontenele",
+    "nusp": "14681427",
+    "curso": "Engenharia da Computação",
+    "telefone": "(85) 98924-8392",
+    "email": "lucaspfonte@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Stefan Radzyckyj",
+    "telefone": "(11) 99469-8974",
+    "email": "Stefan.Radzyckyj@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A. - SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40h",
+    "carga_horaria_total": "600h"
+  },
+  "sobre_empresa": "O BTG é hoje o maior banco de investimentos da América Latina e vem aumentando a cada ano sua força de trabalho e presença no mercado financeiro brasileiro e global. O banco possui mais de 7 mil colaboradores divididos em 3 prédios em São Paulo e mais outros escritórios em diversas capitais brasileiras e em diversos países como EUA, Inglaterra, Chile e outros.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Market Maker para Equities",
+      "tarefas_realizadas": "Implementação da lógica da estratégia em C#, ampliação do sistema de backtesting para suportar a alteração do book histórico com as ordens simuladas e adaptação dos sistemas auxiliares para a inserção da nova estratégia.",
+      "papel_exercido": null,
+      "duracao": "2 meses e meio",
+      "comentarios": null,
+      "aprendizados": "Pude aprender demais sobre estratégias quantitativas no mercado financeiro, sentir o medo de subir uma estratégia para a B3, aprender sobre código otimizado em C#, backtests confiáveis, gerenciamento de portfólio, fluxos de processamento de eventos em dataframes, linguagem FIX, canais de comunicação com a B3, telas de monitoramento e comando, debug e benchmarking de código em alta frequência, projetos complexos em C# e muito mais."
+    },
+    {
+      "numero": "2",
+      "descricao": "Estudo sobre clusterização de dias do mercado com base na volatilidade",
+      "tarefas_realizadas": "Pude ler diversos papers sobre como clusterizar dias do mercado, aprendendo técnicas de machine learning para clustering (como K-Means, BayesianGMM, GMM...), estudando as melhores features que descrevem a volatilidade dos ativos (WDO – mini futuro de dólar e WIN – mini futuro de ibovespa) e implementando uma ETL para aquisição desses dados.",
+      "papel_exercido": "Eu implementei do começo ao fim o projetinho, criando a pipeline para teste das diversas opções de features/approaches e analisando os resultados após as execuções.",
+      "duracao": "1 mês aproximadamente",
+      "comentarios": "Apesar de ter chegado a conclusão final de que o clustering não era eficiente para a otimização de parâmetros, o estudo colaborou para entender melhor quais faziam o algoritmo performar pior e ajudou o time a ficar mais atento em dias muito voláteis com drawdowns espaçados.",
+      "aprendizados": "Aprendi bastante sobre a estratégia específica (Retail Liquidity Provider – RLP), aprendi a utilizar LazyFrames para o processamento de dataframes muito pesados, aprendi sobre métricas de book (como Vol jumps, liquidez, order flow...) e como adquiri-las de dados brutos e aprendi muito sobre fluxos de machine learning e backtesting destes."
+    }
+  ],
+  "conclusao": "O estágio me surpreendeu bastante pela quantidade de coisas diferentes que pude aprender no período, mas, a melhor parte foram as pessoas que conheci e como me ajudaram a me desenvolver como pessoa e profissional. Todos os meus colegas da equipe me ensinaram e ajudaram demais, me mostrando muito sobre a vida e como encarar a carreira profissional que vem pela frente. Além disso, pude dar ótimas risadas com eles e ter uma experiência de vida sensacional nesses 4 meses, a qual vou levar para sempre por ser meu primeiro emprego de fato."
+}

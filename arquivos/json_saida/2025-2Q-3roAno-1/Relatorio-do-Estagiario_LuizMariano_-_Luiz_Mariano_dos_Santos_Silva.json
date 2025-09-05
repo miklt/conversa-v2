@@ -1,0 +1,44 @@
+{
+  "estagiario": {
+    "nome_completo": "Luiz Mariano dos Santos Silva",
+    "nusp": "13684467",
+    "curso": "Engenharia de computação",
+    "telefone": "+55(11)982553531",
+    "email": "luizmariano@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Jose Leonardo Takahashi",
+    "telefone": "+55(11)982838287",
+    "email": "jltakahashi@stefanini.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "UZTECH SOLIÇÕES E INFORMATICA S. A.",
+    "cnpj": "08.747.563/0001-50",
+    "periodo_inicio": "02/06/2025",
+    "periodo_fim": "29/09/2025",
+    "carga_horaria_semanal": "30",
+    "carga_horaria_total": "330"
+  },
+  "sobre_empresa": "A Stefanini Data & Analytics (antiga Scala) é uma empresa do Grupo Stefanini especialista na criação de soluções tecnológicas em dados. É centrada na integração de sistemas, hiperautomação, no uso estratégico de dados & ai e na observabilidade, proporcionando uma visão completa e otimizada.\n\nAlice é uma plataforma de inteligência artificial (IA) projetada para auxiliar empresas na tomada de decisões estratégicas por meio de análises de dados avançadas. A solução se destaca por oferecer um ciclo completo de inteligência, abrangendo desde o diagnóstico de problemas até a prescrição de ações, com foco em transformar dados brutos em insights acionáveis.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Auxílio na preparação de POC (Proof of Concept) para cliente do setor financeiro",
+      "tarefas_realizadas": "Criação de Datasets modelados às regras de negócios do Cliente; Realização de análise de dados e previsões temporais",
+      "papel_exercido": "Criar, organizar, testar e validar modelos de Datasets propostos para a validação do caso de uso da Plataforma Alice para o Cliente; Melhoria iterativa dos modelos de Datasets; Alinhar com a área de pré-vendas expectativas e prazos.",
+      "duracao": "2,5 meses",
+      "comentarios": "Obtive orientação e apoio de profissionais mais sêniores, além de participar de reuniões com cliente e área de vendas.",
+      "aprendizados": "e Estruturação e Limpeza de dados a fim de serem utilizados em modelos de ML (Machine Learning) da Plataforma Alice; Principais ferramenta e bibliotecas para análise de dados"
+    },
+    {
+      "numero": "2",
+      "descricao": "Análise de dados internos a fim de gerar Insights",
+      "tarefas_realizadas": "Realizar apresentação interna com análise de dados fornecidos com insights.",
+      "papel_exercido": "Entender dados e atuais dores área de chamados de suporte da consultoria; Análise de dados e criação de gráficos.",
+      "duracao": "0,5 mês",
+      "comentarios": "Em parceria com outro estagiário, supervisão e direcionamento apresentamos o relatório sobre a análise feita indicando a distribuição e os outliers, com intenção futura de previsão e análise de gargalos.",
+      "aprendizados": "Como utilizar dados para exemplificar uma narrativa, entender a perspectiva e expectativa do Stakeholder, ferramentas com Pandas, ProfileReport e Jupyter para criação de notebooks."
+    }
+  ],
+  "conclusao": "A experiência na Stefanini Data & Analytics proporcionou uma formação completa e integrada, que uniu o profundo conhecimento técnico em dados à aplicação estratégica em um ambiente de negócios dinâmico. A atuação direta na preparação de uma Prova de Conceito (POC) para um cliente do setor financeiro foi essencial para desenvolver habilidades práticas em todo o ciclo de vida dos dados, desde a estruturação e limpeza até a modelagem e validação de datasets para a plataforma de Inteligência Artificial Alice.\n\nAlém da proficiência técnica, a vivência permitiu desenvolver uma forte visão de negócios e habilidades de comunicação. A interação com equipes de pré-vendas e a participação em reuniões com o cliente refinaram a capacidade de alinhar soluções de dados às expectativas e dores do mercado. Adicionalmente, a análise de dados internos e a apresentação de resultados para stakeholders internos solidificaram a competência de transformar análises complexas em narrativas claras e acionáveis, demonstrando como os dados podem guiar decisões estratégicas.\n\nEm suma, o estágio ofereceu uma base sólida e uma visão completa do produto e dos processos, capacitando não apenas a manipular e analisar dados com eficiência, mas também a compreender e comunicar seu valor estratégico para o negócio."
+}

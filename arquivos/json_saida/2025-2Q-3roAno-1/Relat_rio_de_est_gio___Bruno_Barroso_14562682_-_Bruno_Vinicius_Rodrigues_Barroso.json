@@ -1,0 +1,35 @@
+{
+  "estagiario": {
+    "nome_completo": "Bruno Vinicius Rodrigues Barroso",
+    "nusp": "14562682",
+    "curso": "Engenharia de Computação",
+    "telefone": "+5512997486976",
+    "email": "bruno.barroso2@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": null,
+    "telefone": "+5521998882423",
+    "email": "tiagosimoes@bocombbm.com.br"
+  },
+  "estagio": {
+    "razao_social_empresa": "BOCOM BBM",
+    "cnpj": "15.114.366/0001-69",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "25/08/2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "592 horas"
+  },
+  "sobre_empresa": "O BOCOM BBM é uma instituição financeira brasileira de origem tradicional, com forte atuação no segmento de atendimento a empresas e investidores institucionais. Fundado em 1851 como Banco da Bahia, passou por diversas transformações ao longo de sua história. Em 2016, tornou-se o primeiro banco no Brasil a ter o controle adquirido por um banco chinês — o Bank of Communications (BOCOM), uma das maiores instituições financeiras da China. Atualmente, o BOCOM BBM combina tradição e inovação, com foco em operações de crédito, tesouraria, gestão de recursos e investimentos corporativos, aproveitando a sólida estrutura do grupo asiático e sua expertise no mercado local.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Batimento de usuários",
+      "tarefas_realizadas": "● Extração dos dados do Senha Segura em formato CSV;\n● Obtenção das credenciais de acesso ao banco de dados em produção por meio de contato com o time de Infraestrutura (SRE);\n● Execução de comando em PowerShell para coleta das credenciais do Active Directory;\n● Desenvolvimento de um script em Python para processamento dos três arquivos CSV, realizando o batimento dos dados e indicando a presença ou ausência dos usuários em cada sistema;",
+      "papel_exercido": "Responsável por conduzir toda a parte técnica da atividade, desde a coleta dos dados até o desenvolvimento do script de batimento e análise dos resultados. Também atuou na interlocução com outros times, como o SRE, para viabilizar o acesso às informações necessárias.",
+      "duracao": "Aproximadamente 2 semanas",
+      "comentarios": "Por estar alocado inicialmente na unidade do Rio de Janeiro, foi possível interagir presencialmente com diferentes áreas do banco, o que proporcionou um melhor entendimento dos processos internos e dinamizou a comunicação para a execução da atividade.",
+      "aprendizados": "● Conhecimento prático sobre ferramentas de gerenciamento de credenciais e diretórios;\n● Aprimoramento em automação de tarefas com Python e manipulação de arquivos CSV;\n● Experiência na comunicação intersetorial e colaboração com outros times;\n● Entendimento da importância da consistência de credenciais entre sistemas como prática fundamental de segurança da informação."
+    }
+  ],
+  "conclusao": "O estágio no BOCOM BBM representou uma experiência extremamente enriquecedora, tanto no desenvolvimento técnico quanto no aprimoramento de competências interpessoais. A vivência prática no ambiente corporativo, aliado ao contato direto com equipes de diferentes áreas — como Data Center, Infraestrutura e Segurança da Informação —, permitiu não apenas a ampliação dos conhecimentos técnicos, mas também o fortalecimento das habilidades de comunicação e trabalho em equipe.\n\nA integração física ao ambiente de trabalho foi particularmente valiosa, proporcionando interações dinâmicas e construtivas com profissionais de diferentes perfis e níveis de experiência. Essa troca constante de conhecimentos e perspectivas contribuiu para um crescimento significativo em soft skills, como colaboração, adaptabilidade e clareza na comunicação, e também em hard skills, por meio do uso de ferramentas de investigação, execução de testes de ataque e compreensão aprofundada de processos e tecnologias voltados à segurança da informação.\n\nAlém das atividades realizadas no banco, o interesse pessoal pela área levou à realização de estudos e testes adicionais fora do ambiente corporativo, aplicando sugestões e metodologias discutidas com o time. Isso reforçou o aprendizado prático e expandiu a visão sobre ameaças e soluções de segurança.\n\nA experiência evidenciou a importância do domínio de áreas como redes e ferramentas de segurança, bem como a necessidade de aprofundamento contínuo nesses temas. Embora haja consciência de que ainda há muito a ser aprendido, o estágio solidificou o interesse pela área de segurança da informação e a intenção de seguir carreira nesse campo, contribuindo de forma efetiva para a proteção e fortalecimento das operações do banco."
+}

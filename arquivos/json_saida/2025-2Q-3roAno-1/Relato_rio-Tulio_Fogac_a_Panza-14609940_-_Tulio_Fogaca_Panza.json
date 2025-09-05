@@ -1,0 +1,80 @@
+{
+  "estagiario": {
+    "nome_completo": "Tulio Fogaça Panza",
+    "nusp": "14609940",
+    "curso": "Engenharia de Computação",
+    "telefone": "(12)982164061",
+    "email": "tuliofpanza@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Arthur Mergulhão",
+    "telefone": "(12) 98153-5254",
+    "email": "Arthur.Mergulhao@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "Banco BTG Pactual S.A.",
+    "cnpj": "30.306.294/0001-45",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "50 horas",
+    "carga_horaria_total": "700 horas"
+  },
+  "sobre_empresa": "O BTG Pactual é um banco de investimentos brasileiro fundado em 1983, reconhecido como um dos maiores e mais influentes da América Latina. Atua em diversas áreas do mercado financeiro, como investment banking, gestão de ativos, gestão de fortunas, crédito corporativo e banco digital. Com presença global e uma cultura baseada na meritocracia e no alinhamento de interesses entre sócios e colaboradores, o BTG se destaca pela inovação, excelência técnica e estratégia de crescimento sustentável. Sua atuação combina tradição no setor financeiro com soluções modernas e tecnológicas, consolidando sua posição como referência no mercado.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Desenvolvimento de uma API para uso das assessorias a fim de garantir que a distribuição de contratos ocorreu com sucesso",
+      "tarefas_realizadas": "- Criação de uma API do zero utilizando o framework NestJS.\n- Configuração e deploy da API em pods no Rancher com infraestrutura provisionada no Azure.\n- Armazenamento dos dados da distribuição utilizando o sistema de gerenciamento de banco de dados MongoDB.\n- Desenvolvimento da documentação técnica da API para usuários",
+      "papel_exercido": "Responsável pelo desenvolvimento, implementação e monitoramento",
+      "duracao": "1 mês",
+      "comentarios": null,
+      "aprendizados": null
+    },
+    {
+      "numero": "2",
+      "descricao": "Auditoria da distribuição de contratos",
+      "tarefas_realizadas": "- Desenvolvimento de um serviço que realiza a verificação do resultado das distribuições para todas as assessorias.\n- Implementação de um CronJob, orquestrado em Kubernetes, responsável por executar esse serviço diariamente.\n- Geração de relatórios de resultados em formato CSV armazenados no Amazon S3, posteriormente enviados via Kafka como parte do fluxo de notificações.\n- Desenvolvimento do template de e-mail utilizando HTML",
+      "papel_exercido": "Responsável pelo desenvolvimento, implementação e monitoramento",
+      "duracao": "1 mês",
+      "comentarios": null,
+      "aprendizados": null
+    },
+    {
+      "numero": "3",
+      "descricao": "Integração de funcionalidades utilizando micro frontend",
+      "tarefas_realizadas": "- Implementação de um novo campo no front-end em Vue 3 para consumo de um endpoint específico.\n- Configuração de integrações automáticas com o endpoint, realizando requisições diretas.\n- Recuperação e exibição de opções pré-selecionadas no micro front.\n- Exibição dinâmica das informações na interface",
+      "papel_exercido": "Responsável pelo desenvolvimento, implementação e monitoramento",
+      "duracao": "14 dias",
+      "comentarios": null,
+      "aprendizados": null
+    },
+    {
+      "numero": "4",
+      "descricao": "Monitoramento automatizado de endpoints",
+      "tarefas_realizadas": "- Desenvolvimento de um serviço agendado para ser executado diversas vezes ao dia, responsável por realizar requisições a todos os endpoints cadastrados e validar suas respostas.\n- Notificação via Datadog, integrado ao Microsoft Teams, ao time notificando sobre os casos de falha",
+      "papel_exercido": "Responsável pelo desenvolvimento, implementação e monitoramento",
+      "duracao": "14 dias",
+      "comentarios": null,
+      "aprendizados": null
+    },
+    {
+      "numero": "5",
+      "descricao": "Monitoramento das marcações escolhidas",
+      "tarefas_realizadas": "Desenvolvimento de um serviço agendado para execução duas vezes ao dia, responsável por validar um grande volume de marcações, assegurando que estejam entre aquelas retornadas pelo endpoint",
+      "papel_exercido": "Responsável pelo desenvolvimento, implementação e monitoramento",
+      "duracao": "14 dias",
+      "comentarios": null,
+      "aprendizados": null
+    },
+    {
+      "numero": "6",
+      "descricao": "Evento MongoDB Local",
+      "tarefas_realizadas": "Participação em palestras de:\n- Modelagem de dados para banco de dados relacional e não relacional\n- Migração de banco de dados relacional para NoSQL\n- Vetorização do banco de dados",
+      "papel_exercido": "Participante",
+      "duracao": "1 dia",
+      "comentarios": "Esse evento, proporcionado pelo BTG, foi organizado pelos representantes do MongoDB, possibilitando a interação direta, com os profissionais responsáveis pelo serviço. As palestras foram ministradas em inglês e português, o que enriqueceu ainda mais a experiência ao permitir o contato com diferentes formas de apresentação do conteúdo técnico.",
+      "aprendizados": null
+    }
+  ],
+  "conclusao": "O período de estágio proporcionou uma evolução significativa no meu aprendizado técnico e profissional. Ao longo das atividades, tive a oportunidade de atuar em todo o ciclo de desenvolvimneto de software, desde a criação de APIs do zero utilizando NestJS, até a implementação de integrações front-end em Vue 3 e o monitoramento automatizado de serviços e endpoints. Além disso, desenvolvi soluções que envolviam a geração de relatórios e notificações em tempo real, explorando ferramentas modernas como Kubernetes, Rancher, Datadog e Azure.\n\nA participação em eventos técnicos, como o MongoDB Local, também contribuiu para ampliar minha visão sobre banco de dados relacionais e não relacionais, reforçando a importância da atualização contínua diante das transformações do mercado, assim como já havia sido visto em sala de aula.\n\nEssas experiências me permitiram adquirir não apenas conhecimentos técnicos de alto valor, como também competências essenciais para o ambiente corporativo, incluindo trabalho em equipe, resolução de problemas, comunicação clara de resultados e gestão de tempo. Tais habilidades serão aplicadas tanto no contexto acadêmico quanto no mercado de trabalho.\n\nPortanto, o estágio consolidou-se como um marco relevante em minha trajetória acadêmica e profissional, proporcionando uma base sólida para os próximos desafios."
+}

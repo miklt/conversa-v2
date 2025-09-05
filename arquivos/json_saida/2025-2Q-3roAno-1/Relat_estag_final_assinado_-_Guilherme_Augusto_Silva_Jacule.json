@@ -1,0 +1,89 @@
+{
+  "estagiario": {
+    "nome_completo": "Guilherme Augusto Silva Jacule",
+    "nusp": "14575637",
+    "curso": "Engenharia de Computação",
+    "telefone": "19988053720",
+    "email": "Guilherme_jacule@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Danilo Brandão Souza",
+    "telefone": "11983223164",
+    "email": "Danilo.brandao@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "Banco BTG Pactual S.A.",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "600 horas"
+  },
+  "sobre_empresa": "O BTG Pactual é um banco de investimento brasileiro que atua em diversas áreas financeiras, como gestão de ativos, gestão de patrimônio, crédito corporativo e operações de trading. Fundado em 1983, é um dos maiores e mais importantes bancos da América Latina, com presença internacional e foco em oferecer soluções financeiras para empresas, investidores e famílias de alta renda. Além das operações tradicionais, o BTG Pactual também possui uma plataforma digital de investimentos e programas de apoio a startups.\n\nA área de IT Banking, na qual estagiei, é responsável pelo desenvolvimento e manutenção do aplicativo bancário tradicional, que permite aos clientes realizar operações como consultas de saldo, transferências, pagamentos e financiamentos de forma prática e segura pelo celular ou internet. Dentro dessa área, existem diversos times dedicados ao desenvolvimento de serviços específicos de Banking, e o time em que trabalhei foi o de Financiamentos, que foca em criar e aprimorar funcionalidades relacionadas a operações de financiamentos, parcelamentos de fatura e de compras, garantindo uma experiência eficiente para os clientes.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Ajuste na implementação da autenticação utilizando o Amazon Cognito, pensando na otimização do uso de tokens nos Microsserviços",
+      "tarefas_realizadas": "• Implementação de caches dinâmicos em diversos microsserviços que consumiam tokens do Cognito.\n• Ajuste no controle de expiração dos tokens, tornando-o dinâmico de acordo com o tempo de expiração real de cada token.\n• Redução da quantidade de requisições desnecessárias à API.",
+      "papel_exercido": "Atuação como desenvolvedor responsável por implementar os ajustes",
+      "duracao": "1 semana",
+      "comentarios": "A melhoria trouxe ganhos de eficiência, reduzindo significativamente o número de chamadas à API do Cognito e diminuindo o gasto com a AWS.",
+      "aprendizados": "• Compreensão prática do funcionamento do AWS Cognito e sua integração com micro-serviços.\n• Experiência no uso de caches dinâmicos para reduzir custos de chamadas externas.\n• Importância de alinhar arquitetura de autenticação com o tempo de expiração real dos tokens, evitando sobrecarga desnecessária."
+    },
+    {
+      "numero": "2",
+      "descricao": "Ajuste no processo de recuperação do valor total que o cliente estava devendo no cartão para o time de cobrança, garantindo o repasse correto do valor devido",
+      "tarefas_realizadas": "• Correção da lógica responsável pela recuperação do valor total devido no cartão;\n• Implementação da atualização do repasse para o time de cobrança com os valores corretos.",
+      "papel_exercido": "Desenvolvedor responsável por corrigir a lógica de recuperação e assegurar que os dados repassados ao time de cobrança fossem consistentes",
+      "duracao": "1 semana",
+      "comentarios": "A correção eliminou inconsistências que impactavam diretamente a área de cobrança.",
+      "aprendizados": "• Importância da precisão em cálculos financeiros;\n• Comunicação com outros times do banco, fora de IT Banking\n• Impacto direto das soluções técnicas no fluxo de trabalho de áreas de negócio."
+    },
+    {
+      "numero": "3",
+      "descricao": "Normalização dos HTTP Reason Codes utilizados pela API, corrigindo inconsistências no retorno de erros para melhor interpretação por outros micro-serviços, diminuindo os alertas de erro no Datadog",
+      "tarefas_realizadas": "• Identificação de inconsistências nos códigos de resposta HTTP;\n• Ajuste do retorno de erros incorretamente marcados como 400 Bad Request para o código correto 422 Unprocessable Entity;\n• Criação de uma nova classe de erro (BusinessException) para tratar erros dentro do código e não retornar uma Bad Request",
+      "papel_exercido": "Desenvolvedor responsável por revisar, corrigir e padronizar os códigos de resposta da API, garantindo maior clareza e confiabilidade nos logs",
+      "duracao": "4 dias",
+      "comentarios": "A normalização trouxe clareza no uso da API, evitando interpretações erradas dos erros, permitindo melhor integração dos micro-serviços e diminuindo os alertas de erro no Datadog.",
+      "aprendizados": "• Diferença prática entre códigos HTTP de erro (400 vs 422);\n• Importância da padronização de respostas em APIs;\n• Impacto da clareza na comunicação entre os diversos Micro-serviços.\n• Uso do Datadog e Mordekaiser para verificação de logs"
+    },
+    {
+      "numero": "4",
+      "descricao": "Atualização dos dados das parcelas (installments) para o time de cobrança, com implementação de integração via SNS e SQS e documentação por meio de diagramas de software",
+      "tarefas_realizadas": "• Elaboração de diagramas de engenharia de software para detalhar a lógica da implementação;\n• Configuração de conexões com o SNS utilizando uma fila SQS para captura dos pagamentos realizados;\n• Implementação de um SNS dedicado para o time de cobrança, enviando os installments processados;\n• Repasse automatizado dos dados para que o time de cobrança pudesse executar sua lógica de negócio.",
+      "papel_exercido": "Desenvolvedor responsável por aplicar a arquitetura da solução e implementar a integração entre serviços AWS (SNS e SQS) para atender às necessidades do time de cobrança",
+      "duracao": "3 semanas",
+      "comentarios": "A entrega facilitou o acesso do time de cobrança às informações corretas de parcelas pagas, criando um fluxo automatizado, organizado e separado do restante dos micro-serviços.",
+      "aprendizados": "• Experiência prática com integração de serviços AWS (SNS e SQS);\n• Importância da modelagem com diagramas antes da implementação;\n• Visão sobre a comunicação assíncrona entre micro-serviços;\n• Impacto da documentação clara para alinhamento técnico."
+    },
+    {
+      "numero": "5",
+      "descricao": "Implementação de lógica no back-end para disparo de eventos quando a compra do cliente era elegível para parcelamento pós-compra, incluindo integrações com filas SQS, timeline do usuário e push notifications",
+      "tarefas_realizadas": "• Desenvolvimento da lógica para identificar compras elegíveis ao parcelamento pós-compra;\n• Elaboração de diagramas de engenharia de software para validação da arquitetura junto à diretoria de produtos;\n• Implementação de comunicação assíncrona via filas SQS entre micro-serviços;\n• Disparo de eventos na timeline do usuário e envio de push notifications informando a possibilidade de parcelamento no aplicativo BTG;\n• Otimização do fluxo para garantir performance e evitar lentidão na experiência do usuário.",
+      "papel_exercido": "Desenvolvedor responsável por modelar, documentar e implementar a solução técnica, além de apresentar diagramas de arquitetura à diretoria para validação do fluxo",
+      "duracao": "4 semanas",
+      "comentarios": "A solução proporcionou uma experiência mais transparente ao usuário, aumentando a usabilidade do recurso de parcelamento pós e integrando diversos canais de comunicação de forma unificada. A preocupação com otimização foi essencial, dado que se tratava de um fluxo crítico na jornada do cliente.",
+      "aprendizados": "• Experiência prática em comunicação assíncrona com SQS;\n• Importância da documentação e validação de arquitetura;\n• Implementação de eventos multicanais (timeline e push notification);\n• Visão sobre impacto direto da tecnologia na experiência do cliente;\n• Atenção especial à performance em fluxos críticos para o usuário."
+    },
+    {
+      "numero": "6",
+      "descricao": "Migração de uma API utilizada no micro-serviço responsável pelo cálculo de taxas do cartão e taxas do usuário, incluindo implementação de autenticação via Azure e preservação do fluxo existente para não impactar outros serviços dependentes",
+      "tarefas_realizadas": "• Configuração da autenticação com a Azure para obtenção de tokens de acesso;\n• Integração da nova API no micro-serviço;\n• Adaptação da lógica de comunicação garantindo compatibilidade com os fluxos anteriores;\n• Testes para assegurar que a migração não afetasse outros micro-serviços conectados.",
+      "papel_exercido": "Desenvolvedor responsável por realizar a migração da API, implementar a autenticação necessária e garantir a continuidade do funcionamento do sistema sem interrupções ou mudanças para serviços dependentes",
+      "duracao": "1 semana",
+      "comentarios": "A migração ocorreu de forma transparente para o restante da arquitetura, evitando impactos em serviços que dependiam do micro-serviço. A autenticação com a Azure foi implementada com sucesso, assegurando a segurança no acesso à nova API.",
+      "aprendizados": "• Experiência com autenticação de APIs na Azure;\n• Boas práticas de migração sem interrupção de serviços;\n• Visão sobre impacto indireto em múltiplos micro-serviços ao alterar integrações críticas."
+    },
+    {
+      "numero": "7",
+      "descricao": "Correção de bug em produção no qual o parcelamento da compra-pós era invalidado, mas o cliente não era avisado sobre",
+      "tarefas_realizadas": "• Criação da lógica para alerta que o parcelamento foi invalidado, enviando para outro serviço por meio de uma FIFO do SQS\n• Integração com outros micro-serviços de notificação push e de eventos na timeline\n• Regra de negócio para validar quando deve mandar o evento e a notificação.",
+      "papel_exercido": "Desenvolvedor responsável por entender o funcionamento da lógica de invalidação e repassar o alerta para outro serviço",
+      "duracao": "1 semana",
+      "comentarios": "A correção ocorreu de forma rápida, permitindo que o QA testasse o funcionamento no ambiente de homologação e permitisse a subida para o ambiente de produção.",
+      "aprendizados": "• Verificação de logs para busca de erros no Datadog e Mordekaiser\n• Práticas de comunicação assíncronas entre microsserviços"
+    }
+  ],
+  "conclusao": "O estágio no BTG proporcionou um aprendizado profundo no desenvolvimento de back-end com micro-serviços utilizando Kotlin e Spring Framework, além de um grande uso de integrações com serviços em nuvem (AWS e Azure) e ferramentas de DevOps (Datadog e Mordekaiser). As atividades realizadas abrangeram desde ajustes em autenticação e padronização de APIs até a implementação de fluxos críticos de negócios, exigindo atenção a performance, escalabilidade e experiência do usuário.\n\nDurante esse período, foi possível compreender na prática os desafios de arquiteturas distribuídas, a importância da padronização em sistemas que se comunicam entre si e o impacto direto da otimização de fluxos na jornada do cliente. O uso de serviços como SNS, SQS, Secret Manager e Cognito, aliado à modelagem de diagramas de engenharia de software para validação com equipes técnicas e com diretores, desenvolveu tanto habilidades técnicas quanto de comunicação. Além disso, a experiência reforçou a necessidade de precisão em cálculos financeiros, boas práticas de versionamento e integração contínua, e a visão sistêmica de como o back-end sustenta decisões de negócio e a experiência final do usuário.\n\nApesar de ser um período de estágio relativamente pequeno, foi possível obter diversos conhecimentos técnicos sobre back-end, Clean Archtecture, ferramentas de DevOps, e outros, e me ajudou a desenvolver soft skills, principalmente na parte de comunicação. Além disso, um dos aprendizados mais interessantes foi poder observar como grandes sistemas de software são projetados, visando a eficiência e escalabilidade acima de tudo, para não afetar o usuário final."
+}

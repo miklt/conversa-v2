@@ -1,0 +1,53 @@
+{
+  "estagiario": {
+    "nome_completo": "Luis Henrique Cerveira Cavada",
+    "nusp": "14592400",
+    "curso": "Engenharia de Computação",
+    "telefone": "(11) 96342-0015",
+    "email": "lhcavada@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Rodolfo Ota",
+    "telefone": null,
+    "email": null
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A. - SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "560 horas"
+  },
+  "sobre_empresa": "O BTG Pactual é um banco de investimentos que se divide em vários setores de tecnologia especializados em determinado produto. Eu fui alocado na área de IT Credit, responsável por cuidar de todos os produtos de crédito e os serviços relacionados. Eu fui alocado mais especificamente no time de FIDC, que atende as demandas dos Fundos de Investimento em Direitos Creditórios.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Projeto para registro e verificação de templates de documentos bancários em uma tela feita em microfrontend em React e substituição dos campos presentes no template em C#, com infraestrutura em AWS, usando Lambdas, S3 e DynamoDB.",
+      "tarefas_realizadas": "• Criação completa da tela de registro, com CRUD dos templates e possibilidade de ver um preview em pdf com dados falsos de exemplo e integração com um backend também desenvolvido do zero.\n• Refatoração quase completa do sistema de substituição dos campos no template e adição de diversos tipos novos de documento.\n• Implantação do sistema em ambiente de produção.",
+      "papel_exercido": null,
+      "duracao": "2 meses, aproximadamente",
+      "comentarios": "Esse foi o projeto mais importante do estágio, onde aprendi a mexer no React, C#, requisições HTTP e AWS, além de Git Flow e pipelines de CI/CD de automação.",
+      "aprendizados": "• Hard skills: React, C#, Computação em Núvem, Ferramentas do AWS (Lambdas, DynamoDB, S3, CloudFormation, CloudWatch), HTTP, Microfrontend, Git Flow, arquiteturas de códigos (serviços, estratégias, Domain Driven Design).\n• Soft Skills: Comunicação empresarial, proatividade, criatividade e planejamento"
+    },
+    {
+      "numero": "2",
+      "descricao": "Projeto para inclusão das informações de demissão de um cliente com contrato de consignado privado em aberto com o BTG a partir de dados enviados pela DataPrev.",
+      "tarefas_realizadas": "• Microfrontend em React para mostrar os eventos da operação, como demissão ou escrituração de parcela;\n• AWS Glue para tratar os dados de grandes arquivos da DataPrev, produzindo uma chamada a uma lambda para cada caso de demissão;\n• Lambda para receber e tratar os dados, incluindo as informações da demissão no trade do cliente.",
+      "papel_exercido": null,
+      "duracao": "1 mês, aproximadamente",
+      "comentarios": "Esse projeto foi mais curto, mas muito importante para entender melhor o funcionamento dos sistemas internos do banco, como as integrações via mensageria.",
+      "aprendizados": "• Hard Skills: SQS, SNS, Glue, Lambdas e tratamento de grandes arquivos.\n• Soft Skills: Trabalho com equipes diferentes."
+    },
+    {
+      "numero": "3",
+      "descricao": "Projeto para trazer o extrato de um contrato para o sistema desenvolvido na Atividade 1 a pedido de um cliente.",
+      "tarefas_realizadas": "• Adaptação do código que gerava o documento originalmente;\n• Criação da estratégia para criação do extrato por parcelas dentro do sistema criado anteriormente.",
+      "papel_exercido": null,
+      "duracao": "1 mês, aproximadamente",
+      "comentarios": "Esse projeto foi mais curto, por estar mais próximo do fim do meu estágio e me permitiu ver quanto evoluí durante o estágio. Já adquiri mais velocidade e confiança ao desenvolver.",
+      "aprendizados": "• Aprofundamento das hard e soft skills da atividade 1."
+    }
+  ],
+  "conclusao": "Durante o meu estágio no BTG eu tive um aprendizado profundo sobre o cotidiano de um dev. Aprendi a programar em C# e React, a usar a infraestrutura em AWS e me acostumei com as técnicas de Git Flow e CI/CD com pipelines em Azure DevOps. Além disso tudo, aprendi a me comunicar melhor, me organizar melhor e a trabalhar em equipe. Em suma, o estágio foi uma excelente forma de me desenvolver e a aprender habilidades fundamentais para minha carreira."
+}

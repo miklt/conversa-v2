@@ -1,0 +1,80 @@
+{
+  "estagiario": {
+    "nome_completo": "Asaffe Apolinário Duarte",
+    "nusp": "14560001",
+    "curso": "Engenharia de Computação",
+    "telefone": "(99) 99199-9066",
+    "email": "asaffeduarte@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "João Marcos de Mattos Barguil",
+    "telefone": "(11) 97516-6272",
+    "email": "jbarguil@opus-software.com.br"
+  },
+  "estagio": {
+    "razao_social_empresa": "Everify Opus Software Serviços de Informática LTDA",
+    "cnpj": "22.960.668/000 1-13",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "680 horas"
+  },
+  "sobre_empresa": "A Opus é uma empresa de soluções digitais com cerca de 35 anos de experiência, especializada no desenvolvimento de software sob medida e reconhecida por estabelecer parcerias duradouras e bem-sucedidas com organizações no Brasil e no exterior, como McDonald's, Banco Digio e Agência Estado. Atuando junto a corporações e startups, tem como propósito transformar ideias em grandes negócios por meio de tecnologia de ponta. Atualmente, oferece uma ampla gama de serviços, contando com equipes especializadas no desenvolvimento de soluções para Open Finance e Insurance, transformação digital, inteligência artificial, big data, microsserviços e integrações.\n\nDito isso, o estágio foi realizado no setor de inovação da Opus, responsável por desenvolver soluções mais inteligentes para diferentes desafios. Atualmente, essa área concentra-se na criação de produtos baseados em inteligência artificial, com destaque para uma plataforma chamada Boost que integra modelos generativos de diversos provedores, como OpenAI, Google e Anthropic. A solução incorpora práticas de governança de dados alinhadas à LGPD, assegurando rastreabilidade de métricas — como uso, produtividade e segurança — e disponibilizando agentes de IA. Esses agentes são modelos de linguagem configurados com regras específicas para executar tarefas, como, por exemplo, um agente jornalista capaz de transformar um texto em uma manchete.\n\nNa unidade de estágio, há um gerente de projetos que coordena uma equipe composta por cerca de dois desenvolvedores — responsáveis pela construção e manutenção das plataformas de serviços de IA — e três estagiários. Estes, por sua vez, desempenham funções tanto na área de exploração, que envolve a realização de provas de conceito para definição da arquitetura do sistema, testes com modelos generativos e validação de protocolos de fornecimento de contexto a LLMs, por exemplo o protocolo MCP, quanto na área de demanda, que abrange manutenção de software e resolução de problemas para clientes.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Capacitação e fundamentos para o Boost",
+      "tarefas_realizadas": "● Pesquisa e estudo sobre modelos generativos e suas aplicações práticas.\n● Avaliação e seleção de ferramentas para integração de modelos.\n● Aprendizado e utilização de APIs.\n● Configuração e uso de ambientes em Docker.\n● Controle de versão e colaboração via Git.\n● Implementação e testes de bibliotecas em Python.\n● Análise de arquiteturas de aplicações para integração de IA.",
+      "papel_exercido": "Apoio técnico na pesquisa, implementação e validação de soluções baseadas em inteligência artificial, contribuindo tanto para a fase exploratória quanto para o desenvolvimento prático.",
+      "duracao": "Aproximadamente 2 semanas, correspondendo à fase inicial do estágio",
+      "comentarios": "Todo o aprendizado foi registrado em um repositório interno da empresa, com pastas para aplicação do conhecimentos em projetos e para guias, ensinando como outros estagiários ou, até mesmo, funcionários poderiam utilizar certas ferramentas.",
+      "aprendizados": "● Compreensão do funcionamento e aplicações de modelos generativos.\n● Critérios para escolha de ferramentas de integração.\n● Práticas de desenvolvimento com APIs, Docker e Git.\n● Uso de bibliotecas em Python para construção de agentes e integração de LLMs\n● Noções de arquitetura de aplicações voltadas a soluções de IA."
+    },
+    {
+      "numero": "2",
+      "descricao": "Estudo e aplicação do protocolo MCP",
+      "tarefas_realizadas": "● Estudo do protocolo MCP\n● Provas de conceito com a aplicação de MCP\n● Integração de MCP Servers à plataforma Boost\n● Criação de MCP Servers para clientes\n● Pesquisa da aplicação de MCP em diferentes frameworks de criação de agentes, como Langgraph, Langchain, N8N e Flowise",
+      "papel_exercido": "Pesquisa e desenvolvimento – contribuição para a adaptação de ferramentas de clientes ao protocolo e avaliação da aplicação do MCP em diferentes frameworks de criação de agentes, apoiando a equipe na construção de soluções baseadas em modelos generativos.",
+      "duracao": "O estudo do protocolo MCP teve início na segunda semana do estágio e se estendeu até o presente momento de elaboração deste relatório, dada sua relevância e utilidade como ferramenta facilitadora no desenvolvimento de soluções.",
+      "comentarios": "Diversos repositórios da empresa foram atualizados ou criados com base no uso do protocolo MCP, incluindo a conversão de ferramentas de clientes — antes integradas diretamente nos agentes — para MCP Servers. Essa abordagem permite incorporá-las aos modelos generativos de forma mais simples, eliminando tarefas complexas ou de difícil implementação.",
+      "aprendizados": "● Estruturas de dados, essenciais para organizar e manipular informações de forma eficiente.\n● Protocolos de comunicação, que garantem a troca confiável de dados entre sistemas.\n● Boas práticas de programação, com ênfase em JavaScript e Python.\n● Noção de contexto em modelos generativos, compreendendo como informações adicionais influenciam diretamente a qualidade e a precisão das respostas."
+    },
+    {
+      "numero": "3",
+      "descricao": "Estudo e aplicação do protocolo A2A",
+      "tarefas_realizadas": "● Estudo do protocolo A2A\n● Provas de conceito utilizando o protocolo A2A",
+      "papel_exercido": "Pesquisa – apresentação do protocolo ao setor de inovação, seguida da análise de sua viabilidade e utilidade para os produtos da empresa.",
+      "duracao": "Cerca de 4 semanas",
+      "comentarios": "Durante o estudo, o protocolo demonstrou grande potencial para sistemas multiagente. No entanto, devido à complexidade de sua implementação e ao curto tempo desde seu lançamento, ainda não incorporamos o protocolo à plataforma Boost.",
+      "aprendizados": "● Reforço dos conhecimentos de API\n● Sistemas multiagente - Centralizados e descentralizados\n● Protocolos de comunicação\n● Geradores e iteradores - a comunicação entre agentes ocorrem por eventos gerados em tempo de execução"
+    },
+    {
+      "numero": "4",
+      "descricao": "Estudo de Agentes e como construí-los",
+      "tarefas_realizadas": "● Estudo de frameworks e plataformas de construção de agentes: Langchain, Langgraph, N8N e Flowise\n● Integração de MCP e A2A nesses frameworks e plataformas de construção de agentes\n● Leitura de artigos e de documentações\n● Provas de conceito\n● Manutenção e criação de agentes para clientes da Opus",
+      "papel_exercido": "Pesquisa e desenvolvimento – Agentes foram criados e testados, tanto na plataforma Boost, quanto em outras plataformas, seja de clientes, seja sites internos próprios.",
+      "duracao": "Durante todo o período do estágio foi realizado o estudo de construção de agentes",
+      "comentarios": "Nada a comentar",
+      "aprendizados": "● N8n, Flowise, Langgraph e Langchain, sendo os dois últimos frameworks disponíveis tanto em Python, quanto em Javascript\n● Reforço do conhecimento de APIs\n● Alucinação de modelos generativos\n● Engenharia de prompt"
+    },
+    {
+      "numero": "5",
+      "descricao": "Produção de vídeos de capacitação",
+      "tarefas_realizadas": "● Produção dos vídeos de capacitação\n● Preparação de slides da aula",
+      "papel_exercido": "Apresentador – O trabalho foi apresentado aos colaboradores interessados da empresa.",
+      "duracao": "Os vídeos e apresentações ocorreram em um período de duas semanas",
+      "comentarios": "Nada a comentar",
+      "aprendizados": "● Soft Skills: habilidades de comunicação, trabalho em equipe, gestão de tempo, organização e planejamento foram reforçados durante essa atividade"
+    },
+    {
+      "numero": "6",
+      "descricao": "Provas de Conceito (POCs)",
+      "tarefas_realizadas": "● Construção de um sistema de pizzaria composto somente por agentes de IA\n● Construção de uma API gateway que permite acessar agentes de IA via requisições HTTP\n● Construção de MCP servers com autenticação OAUTH\n● Teste de ferramentas de debug, análise e rastreamento de modelos generativos, como Langfuse",
+      "papel_exercido": "Atuação como desenvolvedor e arquiteto de soluções de IA, sendo responsável pelo ciclo de vida completo das provas de conceito. Isso incluiu a pesquisa de ferramentas e arquiteturas, o design de sistemas, a implementação de agentes e serviços em Python e Node.js, e a configuração de ambientes de implantação com Docker.",
+      "duracao": "Ao longo do estágio, foram realizadas diversas provas de conceito, variando desde experimentos rápidos de um ou dois dias até projetos maiores, como o sistema de pizzaria, desenvolvido ao longo de duas semanas.",
+      "comentarios": "As provas de conceito foram fundamentais para a exploração de novas tecnologias e para a validação de hipóteses antes da implementação em projetos maiores. Com esses conceitos implementados, futuros problemas de clientes da empresa podem ser resolvidos mais rapidamente e de maneira mais inteligente.",
+      "aprendizados": "● Desenvolvimento prático de sistemas multiagentes e compreensão de suas interações.\n● Implementação de APIs e gateways para expor serviços de IA de forma segura e escalável.\n● Uso de Docker para conteinerização e orquestração de aplicações.\n● Conhecimento em ferramentas de observabilidade e rastreamento para depuração e análise de custos de LLMs.\n● Aplicação de conceitos de arquitetura de software no design de soluções de IA."
+    }
+  ],
+  "conclusao": "O estágio na Opus proporcionou uma visão completa do ciclo de vida de soluções baseadas em IA generativa, desde pesquisa e definição de arquitetura até implementação, testes e documentação. Consolidei fundamentos de desenvolvimento de software (APIs, Docker, Git, Python e Node.js) e aprofundei conhecimentos específicos de IA aplicada, com ênfase em agentes, engenharia de prompts, governança de dados e observabilidade.\n\nDo ponto de vista acadêmico e profissional, o estágio alinhou-se diretamente à minha formação em Engenharia de Computação, integrando conceitos de arquitetura de software, protocolos de comunicação e segurança com aplicações reais de IA. Sigo com maior autonomia técnica, visão sistêmica e capacidade de avaliar trade-offs de implementação. Considero que os objetivos do estágio foram plenamente atingidos e que as contribuições realizadas deixaram bases reutilizáveis para evoluções futuras das plataformas de IA da empresa e de projetos de clientes."
+}

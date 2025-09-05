@@ -1,0 +1,71 @@
+{
+  "estagiario": {
+    "nome_completo": "Mariana Souza Silva",
+    "nusp": "14615801",
+    "curso": "Engenharia de Computação",
+    "telefone": "+55 11 95070-5073",
+    "email": "mariana.silva.a46@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Fernando José Correia",
+    "telefone": "+55 11 99911-7383",
+    "email": "fernando.correia@taqtile.com.br"
+  },
+  "estagio": {
+    "razao_social_empresa": "Indigo Produção e Gerenciamento de Software S/A",
+    "cnpj": "09.158.300/0001-78",
+    "periodo_inicio": "05 de Maio de 2025",
+    "periodo_fim": "29 de Agosto de 2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "560 horas"
+  },
+  "sobre_empresa": "A Taqtile é uma software house especializada no desenvolvimento de soluções digitais sob medida, abrangendo aplicações mobile e web para diversos setores. A empresa atua em parceria com grandes clientes, nacionais e internacionais, oferecendo serviços de arquitetura, desenvolvimento e manutenção de sistemas, com foco em qualidade, escalabilidade e aderência a boas práticas de engenharia de software.\n\nO estágio foi realizado em regime remoto na área de desenvolvimento de software, especificamente na equipe de backend, que é responsável pela implementação e manutenção de servidores e integrações para aplicações. Os projetos dos quais participei eram destinados a clientes do setor varejista.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Onboarding e treinamento técnico",
+      "tarefas_realizadas": "● Estudo de princípios SOLID, programação assíncrona, ambientes, tratamento de erros.\n● Treinamento em Node.js, TypeScript, Fastify, Prisma e GraphQL e uso de ferramentas de desenvolvimento como o GraphQL Playground/Sandbox, Postman, Docker e TablePlus.\n● Revisão de conceitos de APIs SOAP e REST, protocolo HTTP e integração com Git.\n● Implementação de um servidor com operações CRUD em um banco de dados de usuários.",
+      "papel_exercido": "Estagiária em desenvolvimento backend em treinamento, absorvendo conhecimentos e realizando projetos práticos",
+      "duracao": "2 semanas",
+      "comentarios": "O treinamento permitiu o contato com novos conceitos e práticas relacionados a desenvolvimento de software enquanto aplicando-os continuamente em um projeto ao longo das 2 semanas. Ao final, houve um feedback positivo sobre o desempenho apresentado ao longo do período, tendo atingido os resultados esperados pelos supervisores.",
+      "aprendizados": "Conceitos de arquitetura de software, ferramentas modernas de desenvolvimento, sobretudo backend (Node.js, TypeScript, Fastify e GraphQL) e padrões e fluxos de trabalho da empresa."
+    },
+    {
+      "numero": "2",
+      "descricao": "Desenvolvimento backend para aplicações mobile e web",
+      "tarefas_realizadas": "● Utilização de tecnologias de desenvolvimento backend, como GraphQL, Zod, Pothos, Mocha (para testes automatizados).\n● Compreensão e aplicação dos padrões seguidos nos projetos, como a Arquitetura Limpa (Clean Architecture), incluindo entendimento das regras de negócio dos clientes.\n● Desenvolvimento de aplicação estruturada em microsserviços.\n● Familiarização com processos de Integração contínua (CI), como GitHub Actions e workflows de automação.\n● Implementação de novas funcionalidades para o servidor.\n● Correção de bugs.",
+      "papel_exercido": "Desenvolvedora backend, atuando em features de produção sob supervisão da equipe",
+      "duracao": "12 semanas",
+      "comentarios": "As integrações exigiram entendimento de dados externos e padrões de comunicação definidos pelo cliente, além de cuidados para evitar a quebra de compatibilidade entre diferentes versões das aplicações em produção. Também houve um feedback positivo no período final do estágio.",
+      "aprendizados": "Desenvolvimento de APIs GraphQL, boas práticas de código limpo, uso de padrões arquiteturais como a Clean Architecture e integração com sistemas de terceiros. Práticas para evitar quebra de compatibilidade entre versões."
+    },
+    {
+      "numero": "3",
+      "descricao": "Criação de runners de teste para o servidor do site",
+      "tarefas_realizadas": "● Configuração de runners para execução de testes dentro de cada microsserviço.\n● Escrita e manutenção de testes automatizados.\n● Uso de ferramentas de integração contínua (CI) para orquestrar a automação dos testes em múltiplos serviços.",
+      "papel_exercido": "Desenvolvedora backend, estruturando testes para features antigas e novas",
+      "duracao": "2 semanas",
+      "comentarios": "A automação reduziu o tempo de validação e aumentou a cobertura de testes.",
+      "aprendizados": "Boas práticas de testes automatizados e uso de ferramentas de integração contínua (CI)."
+    },
+    {
+      "numero": "4",
+      "descricao": "Introdução ao desenvolvimento frontend web",
+      "tarefas_realizadas": "● Familiarização com tecnologias como React e TailwindCSS para frontend.\n● Estudo do conceito de Atomic Design para modularização de componentes de interface.\n● Implementação de alterações e correções em interfaces web.",
+      "papel_exercido": "Estagiária em atuação em tarefas introdutórias de frontend, apoiando o time no desenvolvimento e manutenção de interfaces",
+      "duracao": "2 semanas",
+      "comentarios": "Expansão do escopo de atuação para além do backend, explorando novas tecnologias por interesse próprio.",
+      "aprendizados": "Fundamentos de desenvolvimento frontend (React, Tailwind, Atomic Design)."
+    },
+    {
+      "numero": "5",
+      "descricao": "Estudo e experimentação com LLMs (Large Language Models)",
+      "tarefas_realizadas": "● Estudo e experimentação de LLMs para integração a soluções backend.\n● Exploração de bibliotecas em Python, como LangChain, para orquestração de aplicações com LLMs.\n● Desenvolvimento de projetos práticos com chatbots.",
+      "papel_exercido": "Estagiária em capacitação e experimentação com LLMs",
+      "duracao": "2 semanas",
+      "comentarios": "A prática com LLMs ampliou o repertório técnico para além das responsabilidades principais de backend por iniciativa própria, com foco em aprendizado e inovação.",
+      "aprendizados": "Integração de IA generativa em sistemas backend por meio de frameworks em Python (LangChain)."
+    }
+  ],
+  "conclusao": "O estágio na Taqtile proporcionou uma experiência completa no desenvolvimento de software, desde a arquitetura e implementação de APIs backend até a automação de testes e contato com tecnologias emergentes como LLMs, além de ter permitido também familiaridade com desenvolvimento frontend. A vivência em um ambiente de software house, com metodologias ágeis e padrões de código bem definidos, ampliou meu repertório técnico e fortaleceu minhas habilidades práticas, especialmente em Node.js, TypeScript e GraphQL.\n\nA cultura da empresa, forte em troca de conhecimento e aprendizado contínuo, proporcionou um ambiente propício para um grande e rápido desenvolvimento e integração no time, junto com o desenvolvimento de habilidades de trabalho em equipe, adaptabilidade e comunicação e o espaço para demonstrar engajamento e proatividade nos projetos. Além disso, também houve o acompanhamento do processo de pitch de novas soluções e oportunidades aos clientes, contato que foi muito enriquecedor também para softskills de comunicação, pensamento crítico e capacidade de negociação."
+}

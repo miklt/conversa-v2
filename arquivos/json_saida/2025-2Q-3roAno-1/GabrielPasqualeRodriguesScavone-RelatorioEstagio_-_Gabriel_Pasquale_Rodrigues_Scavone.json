@@ -1,0 +1,53 @@
+{
+  "estagiario": {
+    "nome_completo": "Gabriel Pasquale Rodrigues Scavone",
+    "nusp": "14572273",
+    "curso": "Engenharia de Computação",
+    "telefone": "(11) 970920089",
+    "email": "gabriel.prscavone@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Renata Valeri de Freitas",
+    "telefone": "(11) 996976996",
+    "email": "renata.valfreitas@usp.br"
+  },
+  "estagio": {
+    "razao_social_empresa": "TEB Tecnologia Eletrônica Brasileira Ltda.",
+    "cnpj": "46.055.703.001-18",
+    "periodo_inicio": "5 de Maio",
+    "periodo_fim": "29 de Agosto",
+    "carga_horaria_semanal": "40 horas semanais",
+    "carga_horaria_total": "540 horas"
+  },
+  "sobre_empresa": "O estágio foi realizado na empresa TEB - Tecnologia Eletrônica Brasileira - em parceria com o Laboratório de Engenharia Biomédica do departamento de Telecomunicações e Controle (PTC) da Escola Politécnica da USP. A TEB é uma empresa de fabricação de equipamentos médicos, como eletrocardiógrafos. O setor trabalhado foi o de pesquisa e desenvolvimento em engenharia de hardware para uso médico. A unidade em que o trabalho foi feito foi o Laboratório de Engenharia Biomédica, onde foi feito o desenvolvimento e pesquisa do projeto com auxílio do laboratório da POLI e com visitas eventuais à unidade principal da TEB no endereço da avenida Diederichsen, 1057. Todos os ambientes trabalhados demonstraram profissionalismo.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Desenvolvimento de extensão para o 3DSlicer",
+      "tarefas_realizadas": "Desenvolvimento da extensão em Python seguindo a documentação do 3D Slicer",
+      "papel_exercido": "Desenvolvedor",
+      "duracao": "2 Semanas",
+      "comentarios": "A extensão funcionou como especificado",
+      "aprendizados": "Trabalho com extensões em python para o '3D Slicer', funcionamento das bibliotecas de C++ para visualização gráfica utilizadas pelo software (principalmente a 'VTK') e algoritmos para reconstrução de superfícies a partir de nuvens de pontos."
+    },
+    {
+      "numero": "2",
+      "descricao": "Construção do Hardware de coleta de dados",
+      "tarefas_realizadas": "Montagem do hardware, criação dos arquivos esquemáticos em CAD, teste do hardware, adaptações no design original para atingir as necessidades, adaptações no circuito para redução de ruído, desenvolvimento de código para sistema embarcado que realiza a comunicação do hardware analógico de coleta de dados com um computador via USB.",
+      "papel_exercido": "Engenheiro de Hardware",
+      "duracao": "2 Meses e 2 Semanas",
+      "comentarios": "Essa foi a principal atividade do estágio, que contou com ótima direção e ajuda dos supervisores e funcionários.",
+      "aprendizados": "Conceitos fundamentais do design de hardware eletrônicos e PCBs sobre compatibilidade eletromagnética, eliminação de ruido, filtragem e estabilização da fonte. Desenvolvimento para microprocessadores com comunicação USB e conversores analógico-digital."
+    },
+    {
+      "numero": "3",
+      "descricao": "Desenvolvimento de aplicativo",
+      "tarefas_realizadas": "Desenvolvimento do aplicativo em C#",
+      "papel_exercido": "Desenvolvedor",
+      "duracao": "2 Semanas",
+      "comentarios": "O aplicativo foi desenvolvido em C# com o framework 'Avalonia', permitindo ser utilizado em Windows e Linux",
+      "aprendizados": "Desenvolvimento de aplicativos no modelo MVVM (Model-View-ViewModel) e desenvolvimento no framework multiplataforma 'Avalonia'"
+    }
+  ],
+  "conclusao": "Durante o estágio, realizei diversas tarefas distintas, tanto no campo de hardware como de software. Por conta dessa grande gama de experiências, obtive um imenso aprendizado sobre diferentes áreas. No campo de hardware, em que passei a maior parte do estágio desenvolvendo, tive o maior aprendizado, trabalhando no design e prototipagem de um equipamento partindo do zero. A aplicação de um ciclo de desenvolvimento em espiral, proposta pelos supervisores, foi também um grande aprendizado que se mostrou extremamente eficiente para descoberta e resolução de problemas. Ademais, o apoio dos supervisores no trabalho agregou fortemente com a experiência de trabalho e aprendizado assim como a disponibilidade de recursos para pesquisa e desenvolvimento e confiança no trabalho por parte deles. Juntos, esses fatores culminaram no sucesso do projeto e uma maravilhosa experiência profissional."
+}

@@ -1,0 +1,62 @@
+{
+  "estagiario": {
+    "nome_completo": "Heitor Gama Ribeiro",
+    "nusp": "14577494",
+    "curso": "Computer Engineering",
+    "telefone": "+55 (27) 997710927",
+    "email": "heitor_gama@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Jean-Philippe Diguet",
+    "telefone": "+61 455337277",
+    "email": "jean-philippe.diguet@cnrs.fr"
+  },
+  "estagio": {
+    "razao_social_empresa": "International Research Lab. CROSSING",
+    "cnpj": null,
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40h/week",
+    "carga_horaria_total": "16 weeks × 40 hours/week"
+  },
+  "sobre_empresa": "CROSSING is an International Research Laboratory (IRL) jointly operated by the French National Centre for Scientific Research (CNRS) and the University of Adelaide.\nThe lab focuses on cross-disciplinary AI, robotics and cyber-physical autonomous systems.\nMy internship took place within the AI & Multi-Agent Coordination group.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Investigated whether large language models (LLMs) can replace traditional planners in a cooperative bomb-defusal simulation on graph-based maps.",
+      "tarefas_realizadas": "Designed prompts and belief-state schemas, implemented zero-shot LLM controllers, bench-marked against standard baselines.",
+      "papel_exercido": "Research & development intern (solo owner under weekly supervision)",
+      "duracao": "Weeks 1-8",
+      "comentarios": "Achieved parity with MAPPO on small/medium maps.",
+      "aprendizados": "Prompt engineering, evaluation pipelines, MARL-LLM integration."
+    },
+    {
+      "numero": "2",
+      "descricao": "Studied effects of random communication dropouts and memory limits.",
+      "tarefas_realizadas": "Injected stochastic chat failures, compared explicit belief logs vs. raw event history, quantified action-level hallucinations.",
+      "papel_exercido": "Experiment designer & analyst",
+      "duracao": "Weeks 6-10",
+      "comentarios": "Found belief log ≅ full history",
+      "aprendizados": "Reliability testing, error taxonomy, data visualisation."
+    },
+    {
+      "numero": "3",
+      "descricao": "Reduced natural-language map descriptions via community detection to aid LLM spatial reasoning.",
+      "tarefas_realizadas": "Implemented graph-compression module (Python, NetworkX), ran ablation studies on map sizes, analysed impact on hallucination frequency.",
+      "papel_exercido": "Primary researcher",
+      "duracao": "Weeks 10-14",
+      "comentarios": "Compression cut context by >60% and recovered lost performance on large maps.",
+      "aprendizados": "Graph algorithms, experimental design, statistical analysis."
+    },
+    {
+      "numero": "4",
+      "descricao": "Produced slide decks, demos and oral reports periodically, prepared material for a conference paper publication. Final presentation in front of the Lab.",
+      "tarefas_realizadas": "Wrote intern reports, prepared plots/figures, coordinated feedback with supervisor",
+      "papel_exercido": "Technical writer & presenter",
+      "duracao": "Ongoing throughout internship",
+      "comentarios": null,
+      "aprendizados": "Scientific communication, slide design, concise technical writing."
+    }
+  ],
+  "conclusao": "This internship deepened my skills in multi-agent reinforcement learning, LLMs, graph algorithms, and rigorous experimentation. I gained hands-on experience integrating state-of-the-art language models into autonomous-system pipelines, designing compression techniques to fit strict context budgets, and evaluating robustness under partial observability and communication faults. The project strengthened my research methodology, statistical analysis, and technical presentation abilities, all directly relevant to my academic focus in AI and autonomous systems."
+}

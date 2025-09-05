@@ -1,0 +1,80 @@
+{
+  "estagiario": {
+    "nome_completo": "Henrique Brunoro Krohling",
+    "nusp": "14746867",
+    "curso": "Engenharia de Computação",
+    "telefone": "(27) 99982 3082",
+    "email": "henrique.krohling@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Helder Knidel",
+    "telefone": "(27) 99957 8798",
+    "email": "helkni@gmail.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "Kaffee Exportadora e Importadora Ldta",
+    "cnpj": "39.309.521/0001-60",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "600 horas"
+  },
+  "sobre_empresa": "A empresa Kaffee Importadora e Exportadora Ltda atua no comércio de café em grãos, realizando compra e venda do grão. O setor em que atuei é o de pesquisa, tecnologia e desenvolvimento, que desenvolve soluções para uso interno da empresa e que podem ser tornar soluções para o setor.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Classificação e segmentação de imagens de grãos de café para treino em modelo de Deep Learning",
+      "tarefas_realizadas": "Segmentar e classificar os grãos nas imagens que foram utilizadas para treino de modelo de Deep Learning",
+      "papel_exercido": "Segmentação e classificação dos grãos nas imagens",
+      "duracao": "40 horas",
+      "comentarios": null,
+      "aprendizados": "Como a segmentação e as anotações de uma imagem funcionam e são importantes no processo de treino de um modelo de Deep Learning para classificação de imagens."
+    },
+    {
+      "numero": "2",
+      "descricao": "Treino de modelo de Deep Learning para segmentação e classificação de imagens com grãos de café",
+      "tarefas_realizadas": "Configuração e operação de um modelo de segmentação de instâncias construído através do framework Detectron2",
+      "papel_exercido": "Configuração e operação do modelo",
+      "duracao": "80 horas",
+      "comentarios": null,
+      "aprendizados": "Aprendi como modelos de Deep Learning são utilizados para classificação e segmentação de imagens, assim como os diferentes parâmetros utilizados no processo de treino afetam a precisão e eficácia do modelo."
+    },
+    {
+      "numero": "3",
+      "descricao": "Validação do modelo de segmentação previamente treinado",
+      "tarefas_realizadas": "Análise da eficácia e da precisão do modelo de Deep Learning treinado para classificação e segmentação de grãos de café através de testes com amostras previamente classificadas",
+      "papel_exercido": "Análise dos resultados obtidos com o modelo de classificação e comparação com valores reais. Análise crítica dos resultados obtidos e estudo de métodos para aprimorar sua eficácia. Análise estatística dos resultados.",
+      "duracao": "80 horas",
+      "comentarios": null,
+      "aprendizados": "Aprendi a realizar análise crítica dos resultados obtidos na prática com a contrapartida teórica esperada, assim como realizar uma análise estatística dos mesmos."
+    },
+    {
+      "numero": "4",
+      "descricao": "Elaboração de modelo de Deep Learning para classificação e segmentação de imagens de grãos de café, substituindo o Framework previamente utilizado (Detectron2) por um mais atualizado (Pytorch)",
+      "tarefas_realizadas": "Entendimento do Framework Pytorch. Aprendizado do funcionamento de um modelo de classificação e segmentação de instâncias. Construção do modelo de classificação e segmentação de instâncias.",
+      "papel_exercido": "Compreensão do framework utilizado, da estrutura do modelo e a própria construção em si",
+      "duracao": "200 horas",
+      "comentarios": null,
+      "aprendizados": "Framework Pytorch, Redes Neurais, Redes Neurais Convoluídas, modelos de classificação e de segmentação de imagens, Redes Neurais Residuiais (ResNets), assim como todo background envolvendo modelos R-CNN."
+    },
+    {
+      "numero": "5",
+      "descricao": "Treino do modelo de classificação e de segmentação de imagens previamente desenvolvido utilizando o Framework Pytorch",
+      "tarefas_realizadas": "Treino do modelo com dataset de imagens previamente existente, assim como correção de erros do modelo",
+      "papel_exercido": "Manipulação do modelo, treino do modelo e monitoramento do processo de treino",
+      "duracao": "80 horas",
+      "comentarios": "Houveram problemas no processo de treino, relacionados a não otimização de memória durante o processo de treino do modelo, o que me obrigou a dedicar tempo para solucionar",
+      "aprendizados": "Treino de modelos R-CNN para classificação e segmentação de imagens de grãos de café utilizando modelo desenvolvido com Framework Pytorch. Manejo do uso de memória durante o processo de treinamento."
+    },
+    {
+      "numero": "6",
+      "descricao": "Validação do modelo de classificação e de segmentação de instâncias previamente desenvolvido",
+      "tarefas_realizadas": "Elaboração de métodos de verificação e validação dos resultados gerados pelo modelo previamente treinado",
+      "papel_exercido": "Elaboração dos códigos utilizados para gerar os resultados do modelo, assim como para validá-lo. Manejo do protótipo que é utilizado para rodar o modelo e gerar o resultado da classificação",
+      "duracao": "80 horas",
+      "comentarios": null,
+      "aprendizados": "Manejo do protótipo desenvolvido para rodar o modelo de classificação. Elaboração de métodos de validação e teste de modelos de classificação em Pytorch."
+    }
+  ],
+  "conclusao": "O estágio proporcionou um conhecimento sobre modelos de aprendizado profundo (Deep Learning) para detectar e classificar imagens. Aprendi com detalhes a arquitetura desses modelos, desde a estrutura das redes neurais convoluídas, a interação entre as diferentes camadas das redes, a extração das características presentes na imagem, além da parte teórica relacionada à aprendizagem do modelo, entendendo como o modelo consegue \"aprender\".\n\nAlém do entendimento do funcionamento do modelo, tive a oportunidade de aprender como construir modelos utilizando o framework Pytorch, observando na prática o comportamento relacionado com a fundamentação teórica. Ademais, ainda relacionado a esses modelos de Deep Learning utilizados para classificação e segmentação de imagens, pude aprender como ocorre o processo de treino e, por consequência, o aprendizado do modelo.\n\nDessa forma, o estágio foi fundamental para meu desenvolvimento e compreensão na área de inteligência artificial, mais especificamente na área de Deep Learning utilizando modelos de redes neurais convoluídas, permitindo aprendizado, tanto teórico do seu funcionamento, quanto prático, durante o processo de treino e validação do modelo."
+}

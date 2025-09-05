@@ -1,0 +1,44 @@
+{
+  "estagiario": {
+    "nome_completo": "Bernardo Asztalos Teixeira",
+    "nusp": "14561274",
+    "curso": "Engenharia de Computação",
+    "telefone": "+55 85 98202 8315",
+    "email": "bernardoteixeira@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Renan de Luca Avila",
+    "telefone": "+55 11 91952 2080",
+    "email": "renan.avila@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "Banco BTG Pactual S.A.",
+    "cnpj": "30.306.294/0001-45",
+    "periodo_inicio": "Maio de 2025",
+    "periodo_fim": "Agosto de 2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "Aproximadamente 560 horas"
+  },
+  "sobre_empresa": "O BTG Pactual é um banco múltiplo que atua no Brasil e em diversos países, sendo reconhecido como o maior banco de investimentos da América Latina. No Banco, atuei na área de Electronic Trading, que, embora não seja classificada internamente como uma área de tecnologia, integra a divisão macro da corretora.\n\nNo Electronic Trading, são desenvolvidas e operadas soluções de negociação eletrônica que incluem:\n• Desenvolvimento e manutenção de algoritmos de execução (como TWAP, VWAP e POV) para clientes institucionais;\n• Otimização de roteamento de ordens para diferentes bolsas e plataformas de negociação;\n• Monitoramento e análise de performance de estratégias automatizadas em tempo real;\n• Integração com sistemas de mercado e adaptação às regras de negociação e regulação vigentes;\n• Distribuição de dados financeiros para clientes externos e internos.\n\nO foco é maximizar eficiência, reduzir custos de transação e garantir execução de qualidade, combinando conhecimento de mercado, infraestrutura robusta e programação de baixa latência.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "OTC Analytics - Desenvolvimento de plataforma de análise de dados de crédito corporativo",
+      "tarefas_realizadas": "Desenvolvimento de páginas para análise de dados do BTG OTC Markets, incluindo gráficos interativos, tabelas exportáveis e filtros de análise",
+      "papel_exercido": "Desenvolvedor de Software / Engenheiro de Dados",
+      "duracao": "Primeiro a segundo mês de estágio",
+      "comentarios": "Projeto desenvolvido para facilitar análise de preços e taxas de ativos de crédito corporativo",
+      "aprendizados": "Desenvolvimento de pipeline de dados, uso de Airflow, AWS S3, QuestDB, FastAPI e React"
+    },
+    {
+      "numero": "2",
+      "descricao": "AlgoHunter - Ferramenta de identificação de algoritmos de negociação",
+      "tarefas_realizadas": "Desenvolvimento da Fourier Tool para identificação de padrões de negociação algorítmica, criação de dashboard em Streamlit",
+      "papel_exercido": "Desenvolvedor de Software / Pesquisador",
+      "duracao": "Terceiro a quarto mês de estágio",
+      "comentarios": "Projeto inovador para decomposição de sinais de negociação algorítmica",
+      "aprendizados": "Técnicas de processamento de sinais, transformada de Fourier, análise de dados financeiros"
+    }
+  ],
+  "conclusao": "O estágio quadrimestral no BTG Pactual representou uma experiência enriquecedora e transformadora, tanto no aspecto técnico quanto no pessoal. Ter contato tão cedo com a indústria financeira e tecnológica permitiu compreender, de forma prática, a aplicação dos conceitos aprendidos na graduação, além de expor desafios reais que exigem pensamento crítico, proatividade e adaptação constante.\n\nAo longo do período, pude vivenciar todo o ciclo de desenvolvimento de projetos, desde a concepção da arquitetura de dados até a entrega de soluções prontas para uso por clientes e áreas internas do banco. Essa vivência ampliou meu repertório técnico, envolvendo tecnologias amplamente utilizadas no mercado, como Airflow, AWS, QuestDB, FastAPI e frameworks de front-end, além de metodologias de análise de dados aplicadas a problemas concretos do setor financeiro.\n\nO contato direto com diferentes equipes — desenvolvimento, dados, áreas de negócio e gestores — proporcionou um aprendizado valioso sobre comunicação, priorização e alinhamento de expectativas, habilidades que considero fundamentais para a carreira. Ter a oportunidade de receber feedback de usuários finais e perceber o impacto direto das soluções implementadas reforçou o senso de propósito e motivação ao longo do estágio.\n\nPor fim, o ingresso precoce em um ambiente corporativo de alta performance como o BTG Pactual não apenas acelerou meu desenvolvimento profissional, como também me deu clareza sobre a dinâmica e as demandas de um mercado altamente competitivo. Essa experiência fortaleceu minha confiança para enfrentar novos desafios, ampliou minha visão sobre a carreira em Engenharia de Computação e consolidou a importância da integração entre conhecimento acadêmico e prática profissional."
+}

@@ -1,0 +1,53 @@
+{
+  "estagiario": {
+    "nome_completo": "Stephanie Pedrazza Grunwald",
+    "nusp": "11233522",
+    "curso": "Engenharia de Computação",
+    "telefone": "(71) 99123-7121",
+    "email": "stepgrunw@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Nathan Alexander Martins",
+    "telefone": "(11) 96341-1602",
+    "email": "Nathan.Martins@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "Banco BTG Pactual S.A.",
+    "cnpj": "30.306.294/0001-45",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "600 horas"
+  },
+  "sobre_empresa": "O estágio foi realizado no Banco BTG Pactual, instituição financeira especializada em capital de investimento e capital de risco, reconhecida atualmente como o maior banco de investimentos da América Latina. A empresa se destaca pela inovação no desenvolvimento de produtos e soluções digitais que ampliam a qualidade e a eficiência de seus serviços financeiros, atendendo clientes nos setores de atacado e varejo em ao menos 9 países.\n\nO estágio ocorreu dentro do time de Análise de Dados, na área de Canais de Investimento, responsável por estruturar, tratar e analisar informações estratégicas que apoiam a tomada de decisão dos canais. As atividades incluem desenvolvimento e otimização de indicadores, construção de tabelas, estudos e dashboards no Power BI, automação de processos e integração de diferentes fontes de dados, garantindo maior assertividade e agilidade na gestão comercial e operacional.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Desenvolvimento e implementação de um dashboard no Power BI para acompanhamento do spread de produtos de Renda Fixa, segmentado por assessores, tipo de produto e canais de distribuição.",
+      "tarefas_realizadas": "• Levantamento e compreensão dos requisitos junto aos usuários.\n• Extração de dados e construção de tabelas a partir de bancos de dados internos utilizando SQL.\n• Estruturação e tratamento dos dados para garantir consistência e integridade.\n• Criação de visuais no Power BI para acompanhamento de produtos vendidos.\n• Testes e validações para assegurar que os resultados refletissem os dados corretos.",
+      "papel_exercido": "Responsável pela concepção, modelagem de dados e desenvolvimento da dashboard, desde a criação e exploração das tabelas em SQL até a construção e publicação no Power BI.",
+      "duracao": "6 semanas",
+      "comentarios": "O painel trouxe maior agilidade e precisão na análise dos spreads, permitindo uma visão consolidada e de fácil interpretação do usuário. A criação facilitou a atualização e a análise para o problema sugerido de menor spread.",
+      "aprendizados": "• Criação de dashboards no Power BI,\n• Construção e manipulação de tabelas em SQL."
+    },
+    {
+      "numero": "2",
+      "descricao": "Reescrita, otimização e migração de cubos de dados para acompanhamento de transferência de contas, KPIs e novos clientes no canal de Advisors.",
+      "tarefas_realizadas": "• Conversão e otimização de código SQL para PySpark, visando maior eficiência e menor custo de processamento,\n• Reestruturação da lógica dos cubos para eliminar redundâncias e aprimorar a clareza das regras de negócio.\n• Desenvolvimento e ajuste de joins para integrar informações históricas e atuais no fechamento de métricas.\n• Orquestração de DAGs no Airflow.",
+      "papel_exercido": "Responsável pela reestruturação e otimização dos cubos, migrando seu processamento para PySpark e integrando-o a pipelines automatizados no Airflow.",
+      "duracao": "3 semanas",
+      "comentarios": "As melhorias implementadas e atualizadas estão reduzindo os custos de processamento e eliminando trabalho manual de atualização de planilha pelo Business",
+      "aprendizados": "• Desenvolvimento de código em Python,\n• Utilização de ferramentas da AWS, como Athena e EMR,\n• Escrita e otimização de código em PySpark buscando performance,\n• Orquestração e acompanhamento de pipelines por meio de DAGs no Airflow"
+    },
+    {
+      "numero": "3",
+      "descricao": "Refatoração do Power BI de Implantação a partir do aperfeiçoamento de códigos, consultas SQL, criação de novas tabelas e remodelação dos visuais das dashboards.",
+      "tarefas_realizadas": "• Desenvolvimento de novo script em PySpark corrigindo e otimizando lógicas existentes,\n• Criação e ajustes de tabelas de apoio,\n• Refatoramento e otimização de código SQL,\n• Atualização o visual do BI, aplicando melhorias de layout e organização de métricas,",
+      "papel_exercido": "Responsável pela criação e otimização de tabelas e scripts, atualização do visual e lógica do BI, e preparação do ambiente para centralização das informações, garantindo consistência, confiabilidade e melhor experiência de uso para consultas e análises.",
+      "duracao": "8 semanas",
+      "comentarios": "O trabalho permitiu aumentar a confiabilidade e usabilidade do BI, preparar o ambiente para novas funcionalidades e reduzir retrabalhos manuais. As melhorias realizadas servirão de base para acompanhamento contínuo e expansões futuras.",
+      "aprendizados": "• Construção de Power BI desde a modelagem dos dados até a entrega final,\n• Melhoria e otimização de métricas e scripts desenvolvidos em PySpark,\n• Aperfeiçoamento na consulta, validação e análise de dados utilizando SQL."
+    }
+  ],
+  "conclusao": "O estágio realizado no Banco BTG Pactual representou uma oportunidade valiosa para ampliar meus conhecimentos técnicos e aprimorar competências interpessoais, contribuindo de forma significativa para minha formação como engenheira. A atuação dentro do time de Análise de Dados, proporcionou contato direto com projetos de grande relevância e impacto, mas que tinham a possibilidade de serem desenvolvidos no meu tempo conforme o meu crescimento e aprendizado, envolvendo desde a concepção de dashboards estratégicos no Power BI até a otimização de cubos de dados e a implantação de soluções de analytics.\n\nAo longo do período, pude desenvolver habilidades práticas em SQL, PySpark, Python e ferramentas da AWS, bem como aprimorar a capacidade de modelagem, tratamento e análise de dados em larga escala. Além disso, a experiência com orquestração de pipelines no Airflow e com a construção de soluções de BI desde a base reforçou minha visão de ponta a ponta sobre processos analíticos.\n\nO contato frequente com diferentes stakeholders também contribuíram para o desenvolvimento de soft skills essenciais, como comunicação assertiva, gestão de prioridades e adaptação a mudanças. Em suma, este estágio foi fundamental para consolidar meu conhecimento técnico, fortalecer minha capacidade de entrega e ampliar minha visão sobre o papel estratégico da análise de dados no suporte à tomada de decisão no mercado financeiro."
+}

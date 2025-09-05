@@ -1,0 +1,53 @@
+{
+  "estagiario": {
+    "nome_completo": "Douglas Monteiro Almeida Souza",
+    "nusp": "10748048",
+    "curso": "Engenharia de computação",
+    "telefone": "(11) 97262-9937",
+    "email": "Dougla.s.ouza@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Vagner Guilherme Figueira Neto",
+    "telefone": "(16) 98837-1165",
+    "email": "neto.gffn@gmail.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "CMS Assessoria de Investimento LTDA",
+    "cnpj": "10.340.235/0001-86",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "600 horas"
+  },
+  "sobre_empresa": "A CMS Invest é uma empresa do setor financeiro voltada ao atendimento de clientes Private, oferecendo assessoria personalizada para investimentos. Sua estrutura está direcionada ao suporte de decisões financeiras complexas, sempre com foco em inteligência estratégica e alocação eficiente de recursos. Participei do setor de tecnologia e inteligência estratégica: Onde fica concentrado o controle do BI e do banco de dados e tomada de decisões de investimento",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Desenvolvimento de uma rotina automatizada para extração de informações de clientes e dados de mercado",
+      "tarefas_realizadas": "Implementação de scripts em Python utilizando Selenium para acessar plataformas financeiras e coletar dados; tratamento e organização das informações; integração dos dados coletados em um banco de dados corporativo",
+      "papel_exercido": "Responsável pelo desenvolvimento e manutenção da rotina de scraping e integração com a base de dados",
+      "duracao": "Maio a agosto de 2025 (atividade contínua)",
+      "comentarios": "Essa atividade exigiu atenção a detalhes técnicos, como lidar com autenticação, delays e mudanças de layout nos sites",
+      "aprendizados": "Aperfeiçoamento em automação de processos com Selenium, manipulação de banco de dados e boas práticas em coleta de dados financeiros"
+    },
+    {
+      "numero": "2",
+      "descricao": "Criação de um algoritmo para comparação de ativos de renda fixa, com base em fundamentos teóricos e práticos do mercado financeiro",
+      "tarefas_realizadas": "Estudo dos conceitos de renda fixa através do livro \"O Mercado de Renda Fixa no Brasil – Conceitos, Precificação e Risco\"; implementação em Python de cálculos de preço, taxa interna de retorno e equivalência de investimentos; desenvolvimento de critérios para propor trocas vantajosas entre ativos",
+      "papel_exercido": "Responsável por unir o conhecimento teórico e a implementação prática em um algoritmo funcional",
+      "duracao": "3 semanas",
+      "comentarios": "Foi necessário compreender conceitos financeiros avançados e traduzi-los em lógica de programação",
+      "aprendizados": "Consolidação do conhecimento em finanças quantitativas, aplicação prática de algoritmos de precificação e experiência em transformar teoria em ferramenta aplicada"
+    },
+    {
+      "numero": "3",
+      "descricao": "Implantação de rotinas automáticas em ambiente de nuvem, com execução agendada via cron",
+      "tarefas_realizadas": "Configuração de instância EC2 na AWS; preparação do ambiente de execução em Linux; deploy de scripts de APIs desenvolvidas previamente; configuração de rotinas automáticas com cron para execução periódica",
+      "papel_exercido": "Responsável pelo deploy, testes e garantia de funcionamento das rotinas em produção",
+      "duracao": "1 semana",
+      "comentarios": "A atividade trouxe contato prático com infraestrutura em nuvem e boas práticas de deploy",
+      "aprendizados": "Experiência prática com AWS EC2, automação com cron jobs e gestão de rotinas em produção"
+    }
+  ],
+  "conclusao": "O estágio na CMS Assessoria de Investimento representou uma oportunidade de desenvolvimento multidisciplinar, unindo competências tecnológicas com conhecimentos do mercado financeiro. Ao longo do período, foi possível aprimorar habilidades em programação, automação de processos e deploy em nuvem, consolidando a prática em ferramentas como Python, Selenium e AWS EC2. Essas atividades fortaleceram minha capacidade técnica de estruturar soluções escaláveis e seguras.\n\nParalelamente, o contato com o mercado de renda fixa e a área de inteligência estratégica ampliou minha compreensão sobre precificação, risco e tomada de decisão em investimentos. O estudo teórico aliado à implementação prática no comparador de renda fixa permitiu transformar conceitos financeiros em algoritmos aplicáveis, aproximando a visão acadêmica da realidade de mercado.\n\nAssim, o estágio possibilitou desenvolver tanto habilidades voltadas para tecnologia — programação, análise de dados e infraestrutura em nuvem — quanto competências relacionadas ao mercado financeiro, como interpretação de ativos, análise estratégica e suporte à decisão de investimentos. Esse aprendizado integrado contribuiu de forma significativa para minha formação em Engenharia de Computação e para minha preparação para atuar em ambientes que exigem simultaneamente rigor técnico e visão de negócios."
+}

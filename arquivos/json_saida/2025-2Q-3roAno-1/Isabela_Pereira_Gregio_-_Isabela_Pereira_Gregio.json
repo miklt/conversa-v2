@@ -1,0 +1,107 @@
+{
+  "estagiario": {
+    "nome_completo": "Isabela Pereira Gregio",
+    "nusp": "14579753",
+    "curso": "Engenharia de Computação",
+    "telefone": "67999825259",
+    "email": "isabela.gregio@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Daniel A. Aguiar",
+    "telefone": "55 11 95437-2685",
+    "email": "Daniel-A.Aguiar@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A.",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "5 de Maio de 2025",
+    "periodo_fim": "29 de Agosto de 2025",
+    "carga_horaria_semanal": "8 horas",
+    "carga_horaria_total": "510 horas"
+  },
+  "sobre_empresa": "Realizei o estágio quadrimestral na empresa BTG PACTUAL, banco de investimentos com diversos segmentos, desde gestão de fundos, investimentos em ativos e demais atividades financeiras. Trabalhei no setor de Contas a Receber da plataforma BTG Empresas, ferramenta que oferece soluções financeiras para diversas empresas. Mais especificamente neste setor, os produtos ofertados estão entre gerenciamento de boletos e pix para os respectivos clientes. Assim, atuei em demandas envolvidas na elaboração, manutenção e aperfeiçoamento dessas soluções.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Desenvolvimento back-end com TypeScript",
+      "tarefas_realizadas": "Programação, manutenção e refatoração do código referente ao back-end. Atuando no setor de \"Contas a Receber\" da plataforma BTG Empresas, foram desenvolvidos serviços nas áreas de emissão, comunicação e expiração de cobranças, criação e cancelamento de autorizações e agendamentos de Pix Automático e criação de links de pagamento.",
+      "papel_exercido": "Desenvolvimento back-end de serviços e APIs",
+      "duracao": "4 meses",
+      "comentarios": "As tarefas a serem realizadas envolvendo os produtos da plataforma eram definidas quinzenalmente em reuniões denominadas \"planning\", e dessa forma, contribui com a produtividade e metas da equipe executando as atividades planejadas.",
+      "aprendizados": "Prática em TypeScript, lógica de programação e desenvolvimento de algoritmos"
+    },
+    {
+      "numero": "2",
+      "descricao": "Aplicação do padrão Clean Architecture",
+      "tarefas_realizadas": "Estudo do padrão e aplicação da Clean Architecture durante o desenvolvimento dos serviços. Para cada nova demanda serviço de back-end, era necessário seguir as regras estabelecidas pela Clean Architecture. Além disso, foram realizadas tarefas de migração de serviços entre repositórios, adaptando serviços já existentes para o referido padrão de código.",
+      "papel_exercido": "Desenvolvimento e colaboração na melhoria da estrutura do software",
+      "duracao": "4 meses",
+      "comentarios": "Atividade essencial para melhoria e adaptação ao padrão adotado do código",
+      "aprendizados": "Compreensão de princípios de Clean Architecture e organização de camadas em software"
+    },
+    {
+      "numero": "3",
+      "descricao": "Desenvolvimento e otimização de queries SQL",
+      "tarefas_realizadas": "Escrita, análise e otimização de queries a partir das demandas dos serviços desenvolvidos para o back-end. Além do processo de realizar buscas, inserções, deleções e atualizações no banco de dados para cumprir com as necessidades das APIs desenvolvidas, também foram realizadas atividades de correção e melhorias de queries já existentes.",
+      "papel_exercido": "Análise e desenvolvimento de requisições a banco de dados",
+      "duracao": "4 meses",
+      "comentarios": "As atividades foram de fundamental importância para garantia da funcionalidade e otimização do código",
+      "aprendizados": "Conhecimento aprofundado em PostgreSQL, SQL, e fundamentos de banco de dados"
+    },
+    {
+      "numero": "4",
+      "descricao": "Gerenciamento de pipelines no Azure e deploy",
+      "tarefas_realizadas": "Configuração e execução de pipelines na plataforma Azure e tarefas de deploy em ambiente de teste e produção.",
+      "papel_exercido": "Suporte, correção de erros, automação e monitoramento das atividades de deploy",
+      "duracao": "4 meses",
+      "comentarios": "Atividade que exigiu atenção a detalhes e controle de versões",
+      "aprendizados": "Prática com Azure DevOps e processos de integração entre diferentes ambientes"
+    },
+    {
+      "numero": "5",
+      "descricao": "Desenvolvimento de testes unitários com Jest",
+      "tarefas_realizadas": "Escrita e manutenção de testes unitários usando Jest para todos os serviços de back-end desenvolvidos, garantindo a manutenção do padrão exigido de 100% de cobertura nos repositórios.",
+      "papel_exercido": "Desenvolvimento back-end focado em qualidade de código",
+      "duracao": "4 meses",
+      "comentarios": "Contribuiu para redução de bugs e erros em entregas",
+      "aprendizados": "Fundamentos de testes automatizados em JavaScript/TypeScript"
+    },
+    {
+      "numero": "6",
+      "descricao": "Desenvolvimento de infraestrutura com Terraform",
+      "tarefas_realizadas": "Definição de códigos Terraform para provisionar recursos aos serviços de back-end poderem serem executados nos ambientes de uso. Também foram realizadas atividades de migração de serviços já existentes para esse padrão de infrestrutua como código.",
+      "papel_exercido": "Auxiliar em infraestrutura responsável por suportar o back-end",
+      "duracao": "4 meses",
+      "comentarios": "Contribuiu para a qualidade da infraestrutura e melhoria da execução dos serviços",
+      "aprendizados": "Conceitos de IaC (Infrastructure as Code) e Terraform"
+    },
+    {
+      "numero": "7",
+      "descricao": "Uso de AWS S3, SNS e funções Lambda",
+      "tarefas_realizadas": "Configuração de buckets S3, tópicos SNS para troca de mensagens e execução de funções na plataforma AWS.",
+      "papel_exercido": "Suporte em arquitetura cloud, integração e escalabilidade",
+      "duracao": "4 meses",
+      "comentarios": "Atividades que contribuíram para a manutenção em nuvem dos serviços",
+      "aprendizados": "Conhecimento prático dos serviços AWS"
+    },
+    {
+      "numero": "8",
+      "descricao": "Implementação de arquitetura serverless",
+      "tarefas_realizadas": "Configuração de funções serverless para execução em ambiente local dos serviços.",
+      "papel_exercido": "Desenvolvimento de funções e arquitetura seguindo o padrão serverless",
+      "duracao": "4 meses",
+      "comentarios": "Embora a arquitetura predominante utilizada nos códigos era a de Terraform, foi necessário conhecimento e aplicação também do modelo serverless",
+      "aprendizados": "Conceitos da computação serverless"
+    },
+    {
+      "numero": "9",
+      "descricao": "Exposição de APIs em C#",
+      "tarefas_realizadas": "Criação e testes das APIs",
+      "papel_exercido": "Desenvolvimento de APIs para back-end",
+      "duracao": "4 meses",
+      "comentarios": "Tarefas fundamentais para conexão dos serviços desenvolvidos no back-end com o front-end",
+      "aprendizados": "Frameworks .NET e desenvolvimento de APIs e linguagem C#"
+    }
+  ],
+  "conclusao": "Em suma, conclui-se que o período de estágio realizado no setor de Contas a Receber do BTG Empresas do Banco BTG Pactual foi de extrema importância para o aprendizado de novas ferramentas para desenvolvimento, consolidação e aplicação de conhecimentos, contato com ambiente corporativo e resolução de problemas do mundo real. Foi uma experiência de aprendizado integral, tanto de Hard Skills como linguagens de programação (TypeScript, C#, SQL), ferramentas de teste, versionamento e deploy e manutenção de serviços em nuvem; como de Soft Skills como comunicação, planejamento em equipe e gerenciamento de tarefas."
+}

@@ -1,0 +1,44 @@
+{
+  "estagiario": {
+    "nome_completo": "Paulo Emanuel Castagnaro",
+    "nusp": "11261934",
+    "curso": "Bacharelado em Engenharia de Computação",
+    "telefone": "14 998102949",
+    "email": "paulocastagnaro@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Roberto Seraphim Dumke",
+    "telefone": "11 999671486",
+    "email": "roberto.dumke@abcbrasil.com.br"
+  },
+  "estagio": {
+    "razao_social_empresa": "ABC BRASIL DISTRIBUIDORA DE TÍTULOS E VALORES MOBILIARIOS S.A",
+    "cnpj": "33.817.677/0002-57",
+    "periodo_inicio": "01/05/2025",
+    "periodo_fim": "31/08/2025",
+    "carga_horaria_semanal": "40h",
+    "carga_horaria_total": "624h"
+  },
+  "sobre_empresa": "O Banco ABC Brasil é uma instituição financeira que atua há 35 anos no Brasil e tem presença em 53 cidades. O banco tem foco em serviços financeiros para médias e grandes empresas. O ABC Brasil fornece diversas soluções de crédito no segmento corporativo e possui forte atuação no mercado de capitais, principalmente auxiliando empresas na emissão de dívidas.\n\nO estágio foi realizado em São Paulo, na área de Research, que fica dentro do Banco de Investimentos do ABC Brasil. É a área responsável pelo estudo de títulos de dívida, análise de crédito de empresas, análise macroeconômica e setorial. Utiliza de ferramentas para elaboração de relatórios de análise detalhados sobre empresas, setores e mercados.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Web Scraping para Negociações no Mercado Secundário",
+      "tarefas_realizadas": "• Identificação de fontes de dados e estruturas de páginas web relevantes.\n• Desenvolvimento de códigos em Python utilizando bibliotecas como BeautifulSoup e Scrapy para extrair informações como nome do título, volume negociado, data, hora e preço.\n• Implementação de mecanismos para contornar bloqueios de IP e otimizar a velocidade de coleta.\n• Limpeza e organização dos dados extraídos para garantir sua usabilidade.",
+      "papel_exercido": null,
+      "duracao": "50h",
+      "comentarios": "Esta atividade foi essencial para a construção de uma base de dados proprietária, permitindo a análise mais granular e em tempo real das negociações, algo que muitas vezes não está prontamente disponível em fontes públicas de forma estruturada.",
+      "aprendizados": "Aprofundamento em técnicas de web scraping, manipulação de dados não estruturados, compreensão da dinâmica do mercado secundário e a importância da automação para a eficiência na coleta de informações."
+    },
+    {
+      "numero": "2",
+      "descricao": "Cálculos de Precificação Utilizando API da B3",
+      "tarefas_realizadas": "• Estudo da documentação da API da B3 para entender os endpoints disponíveis e o formato dos dados.\n• Desenvolvimento de códigos em Python para consumir dados específicos de negociações (taxa de juros, quantidade, preço, vencimento) e chamar os endpoints da API para realizar os cálculos.\n• Validação dos cálculos com dados históricos e referências de mercado (Anbima).",
+      "papel_exercido": null,
+      "duracao": "50h",
+      "comentarios": "Esta atividade agregou um valor analítico significativo, permitindo ir além da simples coleta de dados e gerar informações mais sofisticadas sobre o risco e o comportamento dos preços dos títulos.",
+      "aprendizados": "Conhecimento prático sobre APIs financeiras, aprofundamento em métricas de precificação de títulos de renda fixa, desenvolvimento de lógica financeira em Python e a importância da precisão nos cálculos."
+    }
+  ],
+  "conclusao": "Durante meu estágio em Research, desenvolvi um conjunto abrangente de habilidades técnicas e analíticas essenciais para o mercado financeiro. Fui responsável por:\n• Automação e Análise de Dados: Criei scripts em Python para web scraping (mercado secundário e primário), otimizando a coleta de dados de negociações e novas emissões.\n• Precificação e Métricas Financeiras: Integrei APIs da B3 para calcular métricas de precificação (duration, taxa) e aprimorei dashboards no Google Cloud para visualização intuitiva desses dados.\n• Gestão de Dados e Relatórios: Implementei um banco de dados para armazenar informações e automatizei a geração de relatórios mensais com análise de tendências.\n• Inteligência Artificial e Comunicação: Utilizei IA para interpretar documentos de emissão e automatizei o envio de e-mails com resumos de novas ofertas para as áreas internas.\n• Análise Fundamentalista: Realizei análise de demonstrações financeiras e modelagem econômico-financeira em Excel, avaliando empresas e seu potencial de investimento.\n\nEsta experiência proporcionou um profundo aprendizado em automação de processos, análise de dados financeiros, uso de APIs e IA, gestão de bancos de dados e modelagem econômica. Além disso, desenvolvi uma forte capacidade de traduzir dados complexos em insights acionáveis e comunicar resultados de forma eficaz, solidificando minha base para atuar no dinâmico mercado financeiro."
+}

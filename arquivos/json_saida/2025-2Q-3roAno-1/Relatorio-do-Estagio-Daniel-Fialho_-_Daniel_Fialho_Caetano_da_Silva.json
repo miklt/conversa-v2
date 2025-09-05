@@ -1,0 +1,80 @@
+{
+  "estagiario": {
+    "nome_completo": "Daniel Fialho Caetano da Silva",
+    "nusp": "14565386",
+    "curso": "Engenharia de Computação",
+    "telefone": "(31) 98238-5388",
+    "email": "daniel_04@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Marcelo Ortiz de Santana",
+    "telefone": "(11) 97573-3692",
+    "email": "marcelo.santana@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A.",
+    "cnpj": "30.306.294/0025-12",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "600 horas"
+  },
+  "sobre_empresa": "O Banco BTG Pactual S.A. foi fundado no Brasil, atua em diversos países e é voltado para investimentos, gestão de recursos e serviços bancários. Ele oferece soluções tanto para pessoas físicas quanto jurídicas e é dito como o maior banco de investimento da América Latina. Eu atuei como desenvolvedor de software na área do BTG Empresas, que é voltada para atender pequenas e médias empresas oferecendo conta PJ, crédito e outros serviços. Mais especificamente, na área de Contas a Pagar, responsável por todo fluxo de pagamento, processamento de faturas e controle de caixa, atuando tanto no backend, desenvolvendo a lógica e integração de sistemas, quanto no frontend, criando as interfaces para uso do cliente.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Melhoria no sistema \"Payable Reader\", no qual o cliente pode enviar uma foto ou arquivo de pagamento com um código de barras ou um tributo DARF e as informações necessárias são extraídas automaticamente.",
+      "tarefas_realizadas": "A primeira tarefa foi definir a causa do erro. Rodando o sistema localmente descobriu-se que as regras de análise de padrão do texto extraído do tributo DARF não estavam robustas o suficiente e havia formatos não mapeados que impossibilitavam localizar as informações. A solução foi melhorar as regras de expressões regulares (Regex) para aumentar a capacidade de extrair os dados dos diferentes formatos de textos que chegavam para o leitor.",
+      "papel_exercido": "Desenvolvedor",
+      "duracao": "140 horas",
+      "comentarios": "Esse foi meu primeiro projeto, inicialmente algo simples, apenas modificar regras de expressões regulares. Mas ele me permitiu discutir ideias com meu gestor e criar minha própria solução para o problema por meio de um novo algoritmo para a leitura dos arquivos.",
+      "aprendizados": "Aprofundar o uso da linguagem Python. Conhecer novas ferramentas, Regex para identificar expressões regulares, OCR para extrair textos de imagens e OpenCv para tratamento das imagens. Aprender o processo para disponibilizar um novo programa para os clientes, incluindo testes manuais, testes unitários, até o deploy para produção."
+    },
+    {
+      "numero": "2",
+      "descricao": "Incluir o fluxo de limites transacionais para a nova forma de pagamento, Pix Automático, e correção de bugs nos limites das demais formas de pagamento.",
+      "tarefas_realizadas": "A primeira tarefa foi alterar o backend para permitir a conexão entre as requisições que seriam feitas pelos clientes e o serviço de fraudes do banco, responsável pelas informações e pedidos relacionados aos limites transacionais. Para isso, foi necessário aprender o funcionamento do Node.js e da linguagem Typescript, utilizados para a maioria dos projetos na área.",
+      "papel_exercido": "Backend: Desenvolvedor, Frontend WEB: desenvolvedor, Frontend APP: Suporte de teste e integração",
+      "duracao": "136 horas",
+      "comentarios": "Essa atividade foi mais integrada com os projetos do time, pois os limites transacionais são uma parte central dos pagamentos do banco e isso me permitiu conhecer melhor principais ferramentas usadas nas atividades do time de Contas a pagar.",
+      "aprendizados": "Aprender uma nova linguagem, Typescript e uma nova ferramenta, Postman, para requisições HTTP. Desenvolvimento no backend e principalmente no frontend do site da empresa. Uso e desenvolvimento de social skills para conseguir obter as informações necessárias de outros times para concluir a atividade."
+    },
+    {
+      "numero": "3",
+      "descricao": "Atualizar uma mensagem de erro no pagamento por suspeita de fraude que gerava problemas de entendimento dos clientes.",
+      "tarefas_realizadas": "Essa atividade consistiu em estudar a estrutura do repositório do time, identificar onde essa mensagem de erro era utilizada, e alterá-la, tanto em português, quanto em inglês de forma a torná-la mais clara para o cliente.",
+      "papel_exercido": "Desenvolvedor",
+      "duracao": "8 horas",
+      "comentarios": "Essa foi uma tarefa simples, mas que me permitiu entender mais sobre a estrutura dos códigos da equipe e exemplificou com o desenvolvimento de produtos deve ser sempre voltada para os usuários.",
+      "aprendizados": "Estudo da arquitetura dos projetos do time."
+    },
+    {
+      "numero": "4",
+      "descricao": "Correção de uma mensagem de erro exibida durante o pagamento que, incorretamente, indicava falta de saldo.",
+      "tarefas_realizadas": "Nessa atividade identificou-se o código que era associado a esse erro e confirmou-se que ele estava disparando a mensagem relacionada à falta de saldo. Em seguida, criou-se um novo tipo de erro que indicava corretamente o erro por parte do recebedor.",
+      "papel_exercido": "Desenvolvedor",
+      "duracao": "16 horas",
+      "comentarios": "Essa atividade foi similar à anterior, atualização da mensagem de fraude, porém demandou o estudo dos códigos de erros, responsáveis por disparar as mensagens de erros.",
+      "aprendizados": "Estudo do sistema de códigos de erro e disparo de mensagens."
+    },
+    {
+      "numero": "5",
+      "descricao": "Criar a validação do valor de pagamento para Pix por QR Code. Garantir que o valor colocado pelo cliente seja de fato o valor esperado pelo pagamento para evitar futuros erro na conclusão dessa fatura.",
+      "tarefas_realizadas": "A primeira atividade foi o estudo do manual de iniciação do pix emitido pelo governo para entender os campos presentes e o funcionamento geral dos pagamentos de Pix por QR Code. A segunda atividade foi identificar os campos necessários para a validação.",
+      "papel_exercido": "Desenvolvedor",
+      "duracao": "104 horas",
+      "comentarios": "Essa atividade foi extremamente importante, pois envolvia uma funcionalidade muito crítica, já que poderia impactar o funcionamento de todos os pagamentos envolvendo Pix por QR Code.",
+      "aprendizados": "Aprendizado sobre o fluxo completo de pagamentos. Compreensão do sistema de pagamentos por Pix. Aprofundamento das técnicas de testes e sua importância para garantir o funcionamento de uma nova funcionalidade."
+    },
+    {
+      "numero": "6",
+      "descricao": "Criação de um sistema de envios de notificações por e-mail e push no aplicativo para clientes nos casos de erros no pagamento.",
+      "tarefas_realizadas": "A primeira tarefa foi criar os mecanismos de disparo da função de notificação, por meio da ferramenta Terraform da AWS. A segunda tarefa consistiu em estudar e compreender o funcionamento da API de envio de notificações, chamada Raven.",
+      "papel_exercido": "Desenvolvedor",
+      "duracao": "140 horas",
+      "comentarios": "Essa foi a atividade mais completa e que me permitiu aprender o maior número de habilidades, já que foi um projeto desenvolvido do zero.",
+      "aprendizados": "Aprender sobre o Terraform, ferramenta da AWS. Aplicar técnicas como a busca de eventos no banco de dados e armazenamento de dados na memória cache. Aprofundar na arquitetura utilizada pelo time. Conhecer mais sobre as regras de business da empresa."
+    }
+  ],
+  "conclusao": "O estágio no Banco BTG Pactual proporcionou um aprendizado abrangente e significativo, tanto no desenvolvimento técnico quanto na integração com diferentes áreas da empresa. A experiência permitiu aprofundar conhecimentos em linguagens de programação como Python e TypeScript, além de ferramentas essenciais como OpenCv, Regex, Terraform e técnicas como integração com APIs e armazenamento em memória cache. O contato direto com projetos reais, desde a identificação e solução de problemas até a implementação de funcionalidades críticas, contribuiu para o desenvolvimento de habilidades técnicas e sociais, como comunicação e trabalho em equipe. O estágio também possibilitou compreender melhor os processos internos do banco, especialmente na área de Contas a Pagar, e a importância de um desenvolvimento orientado ao usuário final, garantindo a qualidade e confiabilidade dos serviços oferecidos."
+}

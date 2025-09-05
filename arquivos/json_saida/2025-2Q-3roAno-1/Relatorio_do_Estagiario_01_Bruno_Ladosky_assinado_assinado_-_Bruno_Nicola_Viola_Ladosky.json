@@ -1,0 +1,71 @@
+{
+  "estagiario": {
+    "nome_completo": "Bruno Nicola Viola Ladosky",
+    "nusp": "14562532",
+    "curso": "Engenharia da Computação",
+    "telefone": "(11) 940535764",
+    "email": "brunonicladosky@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Jocilene Rodrigues Da Silva",
+    "telefone": "(11) 95418-2681",
+    "email": "Jocilene.silva@nuclea.com.br"
+  },
+  "estagio": {
+    "razao_social_empresa": "CIP S.A.",
+    "cnpj": "44.393.564/0001-07",
+    "periodo_inicio": "02/06/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40h",
+    "carga_horaria_total": "432h"
+  },
+  "sobre_empresa": "Fui contratado por 3 meses como estagiário na Núclea (CIP S.A.), responsável pelo desenvolvimento e oferecimento de soluções tecnológicas diversas para o mercado financeiro. Nela, fui alocado para acompanhar os desenvolvedores da equipe CRT4, equipe interna que gerencia o registro e depósito de ativos de renda fixa e derivativos, estando eu alocado para trabalhar com as APIs de renda fixa.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Curso de C#",
+      "tarefas_realizadas": "Acompanhamento de diversas partes do curso da Udemy e incorporação do meu conhecimento teórico pré-existente sobre Programação Orientada a Objetos em uma linguagem de programação com a qual eu não tinha prática",
+      "papel_exercido": "Aluno",
+      "duracao": "1 semana",
+      "comentarios": "Serviu também como oportunidade de recuperar alguns conhecimentos mais específicos sobre os princípios OOP e a sintaxe de classes e interfaces",
+      "aprendizados": "Desenvolvimento técnico da linguagem C#, incluindo a aplicação de princípios OOP nesta língua."
+    },
+    {
+      "numero": "2",
+      "descricao": "Curso de Construção de API Restful",
+      "tarefas_realizadas": "Acompanhamento de diversas partes do curso do Jose Carlos Macoratti e construção da minha própria API; realização de entregas de tarefas para averiguação dos aprendizados e alinhamento com meu mentor sobre práticas mais comuns, eficientes e seguras",
+      "papel_exercido": "Aluno",
+      "duracao": "1 mês e meio",
+      "comentarios": "Sou muito agradecido pela oportunidade de terem tido toda essa preocupação com o meu desenvolvimento técnico para a eventual participação no desenvolvimento",
+      "aprendizados": "Desenvolvimento técnico aprofundado da linguagem C# e diferentes pacotes no Visual Studio; desenvolvimento teórico da estrutura de APIs e princípios para seu funcionamento seguro e organizado; uso do Dapper para integração do projeto de API com uma base de dados em SQL."
+    },
+    {
+      "numero": "3",
+      "descricao": "Aprendizado de Docker",
+      "tarefas_realizadas": "Criação de containers próprios com formatação",
+      "papel_exercido": "Aluno",
+      "duracao": "1 semana",
+      "comentarios": "Foi uma atividade que desenvolvi com encorajamento da equipe paralelamente à minha integração nos ambientes de desenvolvimento, e gostaria de seguir estudando-a",
+      "aprendizados": "Desenvolvimento inicial do uso do Docker e entendimento de sua utilidade no desenvolvimento e compartilhamento de aplicações."
+    },
+    {
+      "numero": "4",
+      "descricao": "Reuniões de Overview do Sistema",
+      "tarefas_realizadas": "Acompanhamento de reuniões remotas de overview dos sistemas da CRT4",
+      "papel_exercido": "Participante de discussões, anotando informações importantes e tirando dúvidas",
+      "duracao": "1 semana",
+      "comentarios": "Extremamente importante para a minha entrada como desenvolvedor na CRT4",
+      "aprendizados": "Observação dos sistemas pela perspectiva da interação do cliente, com consideração de seus interesses no momento de utilização das plataformas disponibilizadas; organização da equipe e da condução de suas atividades, incluindo algumas práticas de etiqueta na realização de alterações no sistema."
+    },
+    {
+      "numero": "5",
+      "descricao": "Implementação de CNPJ Alfanumérico",
+      "tarefas_realizadas": "Aplicação de máscaras e remodelamento da lógica de levantamento de exceções, enviando essas mudanças para merge ao repositório remoto no Github",
+      "papel_exercido": "Desenvolvedor júnior",
+      "duracao": "2 semanas (ainda continuando)",
+      "comentarios": "Minhas primeiras contribuições significativas para as operações da CRT4",
+      "aprendizados": "Desenvolvimento conjunto por meio do Git; construção do front end por HTML e TypeScript; comunicação acerca do funcionamento de um sistema e suas mudanças planejadas."
+    }
+  ],
+  "conclusao": "Minha experiência de estágio me proporcionou a oportunidade de aprender em várias áreas — senti-me desenvolver minhas habilidades técnicas como programador / dev, aprendendo não somente a utilizar diversas ferramentas como C#, Git, Visual Studio, além de praticar outras que eu já tinha conhecimento, como SQL, e ainda por cima a aprendizagem teórica de práticas de desenvolvimento, principalmente na estrutura de projetos de API e seu funcionamento com segurança e organização; senti, também, a sensação de estar me desenvolvendo como participante da equipe, terminando com a sensação de poder assumir maiores compromissos com mais confiança, além de me acostumar a estar mais acolhido e integrado em uma equipe aberta a dúvidas e discussões. Por fim, acredito ter desenvolvido um entendimento maior da persistência da curiosidade e constante evolução no trabalho de um desenvolvedor, os dois sendo auxiliados pelo trabalho em equipe."
+}

@@ -1,0 +1,35 @@
+{
+  "estagiario": {
+    "nome_completo": "João Pedro Londe Franco Belga",
+    "nusp": "14747260",
+    "curso": "Engenharia de Computação (Quadrimestral)",
+    "telefone": "(63) 99961-4105",
+    "email": "jpedrobelga@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "André Mezzavilla",
+    "telefone": "(11) 95284-4762",
+    "email": "andre@justixcapital.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "JUSTIX TECH S/A",
+    "cnpj": "54.667.857/0001-99",
+    "periodo_inicio": "05/2025",
+    "periodo_fim": "08/2025",
+    "carga_horaria_semanal": "44 horas",
+    "carga_horaria_total": "750 horas"
+  },
+  "sobre_empresa": "Este relatório detalha as atividades desenvolvidas durante o período de estágio na JUSTIX Tech, uma legaltech especializada na aquisição de créditos jurídicos de natureza trabalhista. Fundada em 28 de agosto de 2024, a empresa opera adquirindo os recebíveis de processos judiciais, antecipando os valores para os titulares das ações. O capital para estas operações é provido por um Fundo de Investimento em Direitos Creditórios (FIDC), gerido pela Altinvest.\n\nEm seu primeiro ano, a JUSTIX Tech demonstrou um crescimento acelerado, com a aquisição de mais de 150 processos e um desembolso total de R$ 20 milhões. O objetivo central do estágio foi liderar o desenvolvimento de uma solução de Inteligência Artificial, denominada \"Justino\", para automatizar e otimizar o processo de análise de créditos jurídicos, aumentando a eficiência operacional e o valor estratégico da empresa.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Desenvolvimento de solução de IA 'Justino' para análise de créditos jurídicos",
+      "tarefas_realizadas": "Projetou e construiu protótipo na plataforma N8N, implementou arquitetura com RabbitMQ, desenvolveu versão em Python com FastAPI e Celery, criou arquitetura multiagente com LLMs",
+      "papel_exercido": "Líder técnico do projeto, gestor de produto, responsável por arquitetura de software e integração",
+      "duracao": "5 meses (período total do estágio)",
+      "comentarios": "Projeto evoluiu de MVP a uma solução de produção sofisticada, com capacidade de processamento aumentada de 500 para 15.000 análises diárias",
+      "aprendizados": "Desenvolvimento de IA, arquitetura de sistemas distribuídos, gestão de equipes, comunicação com stakeholders"
+    }
+  ],
+  "conclusao": "O período de trabalho na JUSTIX Tech foi uma experiência de imersão completa, na qual pude não apenas aplicar meus conhecimentos técnicos, mas também desenvolvê-los em um ambiente de alto crescimento. Liderei a criação de um produto de IA do zero, que se tornou o principal ativo estratégico da empresa. A jornada do \"Justino\" reflete meu próprio desenvolvimento: de uma prova de conceito a uma plataforma sofisticada que atraiu o interesse de investidores e de gigantes da tecnologia como o Google.\n\nA experiência estendeu-se para além do código, abrangendo a gestão de equipes, a comunicação com stakeholders de alto nível e a participação direta em negociações estratégicas. O período consolidou uma formação que une profundidade técnica em IA e sistemas distribuídos com uma visão aplicada de gestão de produto e estratégia de negócios."
+}

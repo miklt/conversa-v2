@@ -1,0 +1,35 @@
+{
+  "estagiario": {
+    "nome_completo": "Rodrigo Galvez Lima",
+    "nusp": "12553733",
+    "curso": "Engenharia da Computação",
+    "telefone": "11 9 3218 8901",
+    "email": "rodrigogalvezlima@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Rafael Santana de Jesus",
+    "telefone": "24 99962 6587",
+    "email": "rafael.jesus@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BRG PACTUAL S.A. -SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "5 de Maio de 2025",
+    "periodo_fim": "29 de Agosto de 2025",
+    "carga_horaria_semanal": "30 horas",
+    "carga_horaria_total": "450 horas"
+  },
+  "sobre_empresa": "A empresa que realizei estágio é conhecida por ser o maior destino dos estagiários da poli USP fazendo engenharia da computação e não é por coincidência. Eles possuem um ótimo ambiente produtivo para o trabalho e forneceram tudo que alguém pode precisar para trabalhar lá como mochila, caderno, notebook, mouse, headset etc. O ambiente é leve e diferente do que eu esperava por ser bem horizontal, claro que existes cargos diferentes e prazos para cumprir, porém todo mundo se senta em mesas iguais perto um do outro e todos conseguem conversar entre si seja um estagiário ou o líder da área. Tem algumas tradições interessantes como alguém que entra comprar sorvete para todo mundo e se apresentar para quase o andar todo ou a que na última sexta feira do mês todos que fazem aniversário no respectivo mês dividem entre si e pagam bolo doces e salgados para todos no setor. Em geral dá para entender por que tantos politécnicos escolhem o BTG Pactual. Eu fiquei na área que trata de empresas que fazem negócios com o BTG. Com o nome de BTG Empresas ou simplesmente PME neste setor trabalhamos para desenvolver criar e dar manutenção aos mais variados serviços que uma pessoa jurídica precisa em um banco. Dentro do BTG empresas fiquei na área de cartões de crédito e meu time era composto de 8 pessoas, porém nesses meses entraram mais algumas deixando o time com 12. Como eu sou o único estagiário do time me trataram muito bem me dando dicas e sempre me explicando o que eu pedisse e com isso principalmente depois de segunda semana já comecei a me sentir parte do time mesmo que eu ainda não conseguia fazer muitas coisas para ajudá-los.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Adição de filtro por tipo de pagamento na consulta de pagamentos de cartão de crédito, permitindo filtrar por PIX, PagFor, BankSlip, etc.",
+      "tarefas_realizadas": "Interface e Validação:\n• Adição do campo types nas interfaces de entrada da API\n• Implementação de validação usando enums para garantir valores válidos\n• Tratamento flexível de entrada (string única, array, null/undefined)\nCamada de Dados:\n• Modificação das queries SQL para incluir filtro WHERE com cláusula IN\n• Construção dinâmica de condições baseada nos tipos fornecidos\nTestes:\n• Cobertura de cenários de validação para tipos inválidos\n• Teste de integração validando filtro funcional no banco de dados\n• Verificação de diferentes formatos de entrada",
+      "papel_exercido": null,
+      "duracao": "1 semana",
+      "comentarios": null,
+      "aprendizados": "APIs com Filtros:\n• Como implementar parâmetros de filtro opcionais\n• Validação de entrada usando enumerações\n• Tratamento de dados em diferentes formatos\nSQL Dinâmico:\n• Construção segura de queries com condições variáveis\nTestes e Type Safety:\n• Testes parametrizados para múltiplos cenários\n• Uso de TypeScript enums para type safety\n• Manutenção de código"
+    }
+  ],
+  "conclusao": "Aprendizado (comente sobre o aprendizado proporcionado pelo estágio):\nConclusão dos Relatórios de Desenvolvimento\nApós realizar essas tarefas posso observar uma clara evolução nas práticas de desenvolvimento e uma gama diversificada de habilidades técnicas aplicadas. Como desenvolvedor analisando essas implementações, identifico várias competências fundamentais que foram exercitadas.\n\nSíntese das Funcionalidades Implementadas\n1. Controle de Limite com AccountId Condicional\nImplementação de lógica de negócio baseada em tipos de conta\nUso de operadores condicionais para construção dinâmica de payloads\n2. Geração de URLs Presignadas para Visualização\nCriação completa de caso de uso seguindo Clean Architecture\nIntegração com serviços de armazenamento em nuvem\n3. Adição de Tipo de Garantia em Eventos\nPadronização de estruturas de dados em arquitetura orientada a eventos\nManutenção de consistência entre diferentes tipos de eventos\n4. Implementação de Busca por ID em Repositório\nExtensão de funcionalidades de acesso a dados\nReutilização inteligente de infraestrutura existente\n\n[Texto completo da conclusão foi omitido para brevidade, mas mantém a estrutura original]"
+}

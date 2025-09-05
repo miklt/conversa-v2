@@ -1,0 +1,53 @@
+{
+  "estagiario": {
+    "nome_completo": "Andrey Rocha Reboredo",
+    "nusp": "14558565",
+    "curso": "Engenharia de Computação",
+    "telefone": "61 99852-9047",
+    "email": "andreyreboredo@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Pedro Natali",
+    "telefone": "(18) 99714-1110",
+    "email": "pedro.natali@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A.",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "560 horas"
+  },
+  "sobre_empresa": "O Banco BTG Pactual é, atualmente, o maior banco de investimentos da América Latina, possuindo sedes em pelo menos 12 países, caracterizado pela sua cultura de partnership meritocrático em que funcionários podem se tornar sócios, sendo estes os responsáveis pelo gerenciamento do banco. Vale destacar as áreas de atuação do BTG hoje, sendo estas: Investment Banking, Corporate Lending, Sales & Trading, Wealth Management e Asset Management, dentre outras. Além disso, o banco se inseriu no mercado de varejo por meio da aquisição do Banco Pan, aumentando sua presença no mercado em setores antes não explorados, consolidando a postura de crescimento que o BTG adquiriu ao longo dos anos.\n\nA área a qual eu estou alocado encontra-se na estrutura de Portfolio Management Offshore, sendo a equipe a qual faço parte uma das responsáveis por uma plataforma cujo foco é o auxílio de banqueiros na gestão de carteiras e criação de propostas para seus clientes.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Na plataforma mencionada acima, havia a necessidade de informar o usuário caso um de seus \"ativos\" em uma de suas carteiras apresentasse fundos indisponíveis, contudo este aviso não era para estar presente caso o usuário gerasse um relatório de performance de sua carteira, no formato de PDF.",
+      "tarefas_realizadas": "Alteração na página do frontend relativa ao relatório de performance, adicionando a condição para o aviso de fundos indisponíveis e o ícone relacionado a tal, além de adicionar uma condição para retirar o aviso do relatório gerado.",
+      "papel_exercido": "o estagiário finalizou a implementação de uma pequena funcionalidade dentro do escopo de um projeto maior previamente concluído.",
+      "duracao": "duas semanas (aproximadamente 80 horas)",
+      "comentarios": "esta tarefa é considerada uma tarefa introdutória e de menor escopo com o objetivo de introduzir o estagiário ao ambiente de trabalho e a plataforma a ser trabalhada.",
+      "aprendizados": "desenvolvimento de ambiente de frontend utilizando typescript e a biblioteca React; utilização da plataforma Azure DevOps para utilização de serviços Git."
+    },
+    {
+      "numero": "2",
+      "descricao": "Uma das funcionalidades da plataforma é a capacidade de gerar alocações (conjuntos modificáveis de ativos ou carteiras que um banqueiro utiliza para gerar propostas à clientes), visto que uma alocação pode vir a ser útil para mais de um usuário, foi-se previamente implementado uma funcionalidade de compartilhamento de alocações entre usuários. Contudo, devido a demanda de certas carteiras, o compartilhamento somente por usuários não era suficiente, assim, foi proposta a solução de um usuário ser capaz de compartilhar com uma área de negócios do banco, permitindo que todos os usuários relacionados àquela área possam acessar à alocação compartilhada. Para isso, era necessário criar um novo tipo de associação entre áreas de negócio e alocações no banco de dados, representando esse compartilhamento múltiplo.",
+      "tarefas_realizadas": "O estagiário foi responsável pela criação do fluxo da nova associação no banco de dados, sendo este composto pela tabela de associação que conecta duas entidades uma representando as áreas de negócios e outra as alocações, procedures (conjuntos de instruções armazenadas no banco de dados) responsáveis pela manipulação de tal tabela e um script encarregado de criar todos os componentes citados no banco de dados. A tabela dita quais áreas possuem acesso a quais alocações e dita qual o tipo de acesso (editor, administrador ou visualizador) que cada área possui para cada alocação compartilhada.",
+      "papel_exercido": "O estagiário foi responsável pelo completo desenvolvimento da nova funcionalidade da plataforma, desde a criação da nova estrutura no banco de dados, sua implementação, o desenvolvimento dos serviços da API até a implementação desses serviços no frontend, podendo, assim, desfrutar da construção completa de uma nova funcionalidade de uma aplicação web.",
+      "duracao": "2 meses e duas semanas (aproximadamente 240 horas)",
+      "comentarios": "o projeto dependia, do ponto de vista de implementação, somente do estagiário, fator que permitiu uma melhor compreensão do fluxo de construção de uma funcionalidade do zero.",
+      "aprendizados": "desenvolvimento de ambiente de backend utilizando C#, com o framework .NET; Elaboração de queries e scripts de SQL para implementação em banco de dados MySql; Integração do ambiente de frontend e backend por meio do uso de APIs;"
+    },
+    {
+      "numero": "3",
+      "descricao": "Devido a implementação da funcionalidade descrita na atividade 2, observou-se a necessidade de uma estrutura de associação à áreas de negócio mais padronizada, a fim de acelerar a implementação de possíveis novas funcionalidades na plataforma que seguem a mesma vertente de associação com áreas do banco.",
+      "tarefas_realizadas": "Desenvolvimento de classes e interfaces direcionadas a associação de um objeto genérico com uma área de negócios, permitindo a integração de uma funcionalidade de compartilhamento mais sucinta quando esta for necessária.",
+      "papel_exercido": "Prototipação de uma nova estrutura de associação genérica.",
+      "duracao": "duas semanas / em progresso",
+      "comentarios": "atividade não finalizada visto que o período do estágio não foi encerrado",
+      "aprendizados": "planejamento e desenvolvimento de estruturas de softwares voltados para escalabilidade e manutenção de um sistema."
+    }
+  ],
+  "conclusao": "O estágio possibilitou o entendimento do fluxo do dia a dia do desenvolvimento de software, desde reuniões diárias a documentar seu progresso usando Git, foi uma experiência enriquecedora do ponto de vista profissional e mais ainda do ponto técnico, considerando a oportunidade de trabalhar em um projeto do início ao fim de forma autônoma, aprendendo a solucionar problemas e passando por diferentes etapas no desenvolvimento, do planejamento à implementação, para chegar em um produto final."
+}

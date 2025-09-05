@@ -1,0 +1,80 @@
+{
+  "estagiario": {
+    "nome_completo": "Pedro Henrique Zanato da Costa",
+    "nusp": "13874761",
+    "curso": "Engenharia de Computação",
+    "telefone": "(48) 99674-0325",
+    "email": "pedrohenrique2001@gmail.com"
+  },
+  "supervisor": {
+    "nome_completo": "Rodrigo Vaz Pina Cabral Silva",
+    "telefone": "(48) 99983-3219",
+    "email": "Rodrigo.Pina@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A.",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "30 horas",
+    "carga_horaria_total": "480 horas"
+  },
+  "sobre_empresa": "O BTG Pactual é o maior banco de investimentos da América Latina. Sua estrutura de partnership meritocrática o diferencia em um setor tradicionalmente dominado por grandes corporações. Presente em mais de 10 países, o banco é referência em inovação e tecnologia. Em 2025, o BTG registrou resultados históricos, batendo recordes de lucro trimestral e reforçando sua posição de liderança no mercado global.\n\nDurante meu estágio, fui alocado ao time de Performance dentro do MARS, uma grande área do BTG, com responsabilidades diversas. Entre elas, está a gestão do Marsweb, sistema que permite acesso e visualização de relatórios das posições do banco. O objetivo central é garantir consistência no cálculo do portfólio do banco, assegurando que o banco cumpra de forma rigorosa as exigências regulatórias.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Desenvolvimento de uma regra de padronização em C# para o BackEnd corrigir automaticamente valores inseridos de forma incorreta, mas semelhantes ao padrão, desconsiderando espaços e diferenças entre maiúsculas e minúsculas.",
+      "tarefas_realizadas": "Criei um hashset com as formas de escrever a palavra com e sem espaço. Adicionei uma regra de validação.",
+      "papel_exercido": "Desenvolvedor C#",
+      "duracao": "1 dia",
+      "comentarios": "Realizada no meu segundo dia de banco",
+      "aprendizados": "Primeiro contato prático com a linguagem C# e aplicação em contexto corporativo"
+    },
+    {
+      "numero": "2",
+      "descricao": "Implementação de regras de validação no Front-End, permitindo destacar células incorretas, impedir o envio da tabela com erros e garantir maior consistência dos dados.",
+      "tarefas_realizadas": "Adaptação da classe do componente Angular para incluir as regras de validação; estudo da documentação do DevExtreme para customização da tabela; e realização de testes exaustivos para assegurar a correta aplicação das regras.",
+      "papel_exercido": "Desenvolvedor Front-End",
+      "duracao": "3 semanas",
+      "comentarios": "Essa atividade foi evoluindo ao longo do tempo, o que a primeiro momento pareceu que seria apenas criar uma regra de validação acabou virando uma reformulação em toda a validação da tabela",
+      "aprendizados": "Primeiro contato com Typescript e Angular. Me familiarizei com a biblioteca de componentes do DevExtreme"
+    },
+    {
+      "numero": "3",
+      "descricao": "Participei da migração de elementos do dashboard antigo para sua versão mais recente, criando um widget interativo que, ao ser clicado, exibe uma tabela expansível. Essa tabela permite abrir novas tabelas vinculadas à linha original, com colunas diferentes da tabela mãe, oferecendo maior flexibilidade de análise ao usuário.",
+      "tarefas_realizadas": "Recriação do componente no novo framework do dashboard; adaptação da lógica para a arquitetura de signals do Angular (recurso de última geração do framework); ajustes na comunicação entre Back-End e Front-End; e execução de testes para validação.",
+      "papel_exercido": "Desenvolvedor FullStack",
+      "duracao": "1 semana",
+      "comentarios": "Foi o widget mais fácil de fazer",
+      "aprendizados": "Aprimoramento no uso de signals no Angular, experiência prática em integração FullStack e maior compreensão da comunicação entre Front-End e Back-End"
+    },
+    {
+      "numero": "4",
+      "descricao": "Desenvolvimento de um widget capaz de exibir múltiplas tabelas lado a lado dentro do dashboard, permitindo melhor organização e comparação de dados.",
+      "tarefas_realizadas": "Modelei o componente Angular do widget para que a lógica estivesse no html. passei as entradas pra signals do angular, mudei a lógica de como os popups dos widgets abriam dentro do dashboard. Testei muito o código.",
+      "papel_exercido": "Desenvolvedor FullStack",
+      "duracao": "2 semanas",
+      "comentarios": "Passei grande parte do tempo corrigindo bugs e mexendo nas classes do Tailwind",
+      "aprendizados": "Aprimoramento no uso avançado do Angular com signals, experiência em depuração de código e maior domínio de estilização com Tailwind CSS"
+    },
+    {
+      "numero": "5",
+      "descricao": "Um Widget composto por uma tabela de posições. Você pode clicar no botão de opções para ver mais sobre as posições.",
+      "tarefas_realizadas": "Recriei o componente que já existia no dashboard. O código no front ficou bem parecido. Porém estava tendo dificuldades em fazer os dados chegarem no Front-End. Adicionei elementos gráficos enquanto os objetos do BackEnd não carregam.",
+      "papel_exercido": "Desenvolvedor FullStack",
+      "duracao": "2 semanas",
+      "comentarios": "Foi o mais difícil de fazer pela quantidade de sistemas com que estava conectado. Foi o que mais exigiu testes e debugging",
+      "aprendizados": "Fortalecimento de habilidades de debugging e experiência prática em lidar com cenários de múltiplas dependências de sistemas"
+    },
+    {
+      "numero": "6",
+      "descricao": "Solicitação para migrar três tabelas do Microsoft SQL Server para o PostgreSQL.",
+      "tarefas_realizadas": "Criação das novas bases; redirecionamento dos apontamentos das bases antigas para as novas; redesenho de queries para compatibilidade; preparação de uma das filas para processamento em batch.",
+      "papel_exercido": "Desenvolvedor Back-End com foco em Banco de Dados",
+      "duracao": "4 semanas",
+      "comentarios": "Pela primeira vez tive contato com grandes volumes de dados, trabalhando em tabelas com mais de 5 milhões de linhas. Essa experiência me mostrou a importância de adotar boas práticas de eficiência e cautela, já que qualquer erro ou consulta mal estruturada pode gerar alto custo de processamento e perda significativa de tempo.",
+      "aprendizados": "Consolidei meu conhecimento de SQL, aprendi sobre RabbitMQ"
+    }
+  ],
+  "conclusao": "O BTG Pactual me ensinou muito nesses 4 meses em que fui estagiário. Aprendi sobre como funciona um banco e tive a oportunidade de participar de mentorias, onde entendi melhor o funcionamento do mercado financeiro. Nesse período, tive contato com linguagens e frameworks como C#, TypeScript e Angular, aprendi a usar as classes do Tailwind e consolidei meu conhecimento em SQL e bancos de dados relacionais, como Postgres e Microsoft SQL Server. Tive a experiência de trabalhar tanto com o FrontEnd quanto com o BackEnd, o que ampliou minha visão sobre desenvolvimento de sistemas e marcou um passo importante no meu crescimento profissional."
+}

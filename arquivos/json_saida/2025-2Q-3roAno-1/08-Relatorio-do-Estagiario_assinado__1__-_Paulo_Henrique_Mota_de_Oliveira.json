@@ -1,0 +1,80 @@
+{
+  "estagiario": {
+    "nome_completo": "Paulo Henrique Mota de Oliveira",
+    "nusp": "14601816",
+    "curso": "Engenharia da computação",
+    "telefone": "(11) 95317-0504",
+    "email": "paulo.mota028@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Victor Dourigam Elias Dantas",
+    "telefone": "(11) 98341-2808",
+    "email": "victor.dourigam@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "Banco BTG PACTUAL S.A. - SP",
+    "cnpj": "30306294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "30h semanais",
+    "carga_horaria_total": "480h"
+  },
+  "sobre_empresa": "O estágio foi realizado no BTG Pactual, um dos maiores bancos de investimento da América Latina, com atuação global e presença em diversos segmentos do mercado financeiro, incluindo asset management, investment banking, corporate lending e sales & trading. Reconhecido pela solidez, inovação e excelência, o BTG Pactual combina expertise em serviços financeiros com uma cultura de alto desempenho e foco no cliente.\n\nA unidade em que o estágio foi desenvolvido foi o escritório de São Paulo, localizado na Avenida Faria Lima e posteriormente na Avenida Paulista, centros estratégicos das operações do banco no Brasil. O setor de atuação foi o IT Banking, responsável pelo desenvolvimento, manutenção e integração de sistemas internos utilizados para gestão, atendimento e autorização de operações e auditorias bancárias. Essa área é fundamental para garantir a eficiência, segurança e escalabilidade dos serviços prestados pelo banco, trabalhando de forma próxima às áreas de negócio e de tecnologia.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Onboarding, configuração do ambiente e estudo do sistema existente",
+      "tarefas_realizadas": "Solicitação de acessos internos, configuração da máquina de desenvolvimento, instalação e configuração de ferramentas como IntelliJ, Postman e DBeaver, além do estudo da arquitetura do Banking Admin Portal e compreensão dos fluxos de autorização e atendimento",
+      "papel_exercido": "Desenvolvedor back-end em treinamento, focado na compreensão do ecossistema e fluxos do portal",
+      "duracao": "1 semana",
+      "comentarios": "Fase inicial importante para a ambientação com os sistemas e ferramentas utilizadas pelo time",
+      "aprendizados": "Conhecimento sobre a arquitetura geral do portal, uso das ferramentas de desenvolvimento e compreensão dos processos internos de autorização e atendimento"
+    },
+    {
+      "numero": "2",
+      "descricao": "Implementação e ajustes em Feign Clients para integração com microsserviços internos",
+      "tarefas_realizadas": "Correção de chamadas com erro 404 no ambiente UAT, ajustes em URLs, parâmetros e headers, utilização de anotações como @RequestParam, @RequestHeader e @DateTimeFormat",
+      "papel_exercido": "Desenvolvedor back-end responsável por integrações com outros sistemas",
+      "duracao": "2 semanas",
+      "comentarios": "Melhorou a confiabilidade das integrações com microsserviços",
+      "aprendizados": "Configuração e ajuste de Feign Clients, boas práticas para chamadas de serviços e tratamento de parâmetros e datas"
+    },
+    {
+      "numero": "3",
+      "descricao": "Desenvolvimento e refatoração de DTOs paginados para tratamento de dados genéricos",
+      "tarefas_realizadas": "Criação de métodos utilitários para merge entre dois PaginateDTOs distintos, mapeamento de dados em estruturas genéricas, conversão e tratamento de objetos nulos ou com estrutura inesperada",
+      "papel_exercido": "Desenvolvedor back-end com foco em manipulação e padronização de dados",
+      "duracao": "3 semanas",
+      "comentarios": "Contribuiu para padronizar e simplificar o tratamento de dados no back-end",
+      "aprendizados": "Uso avançado de Kotlin para trabalhar com objetos genéricos, manipulação de paginação e tratamento de inconsistências de dados"
+    },
+    {
+      "numero": "4",
+      "descricao": "Implementação de filtros por data nas funcionalidades do portal",
+      "tarefas_realizadas": "Definição de parâmetros default para startDate e endDate, conversão de datas para o formato yyyy-MM-dd'T'HH:mm:ss, controle de horários com LocalDateTime e validação de intervalos de datas",
+      "papel_exercido": "Desenvolvedor back-end responsável por filtros e parametrização de consultas",
+      "duracao": "2 semanas",
+      "comentarios": "Aumentou a flexibilidade e a precisão na filtragem de dados",
+      "aprendizados": "Manipulação de datas e horários no Kotlin, boas práticas de validação no back-end"
+    },
+    {
+      "numero": "5",
+      "descricao": "Suporte à equipe de QA e desenvolvimento de testes automatizados",
+      "tarefas_realizadas": "Execução de testes de regressão, criação de testes unitários para novos métodos de manipulação de DTOs",
+      "papel_exercido": "Desenvolvedor back-end dando suporte à qualidade do código",
+      "duracao": "1 semana",
+      "comentarios": "Garantiu a estabilidade das novas funcionalidades implementadas",
+      "aprendizados": "Boas práticas de testes unitários, identificação de regressões e integração com QA"
+    },
+    {
+      "numero": "6",
+      "descricao": "Discussões técnicas e melhorias na arquitetura do sistema",
+      "tarefas_realizadas": "Participação ativa em debates sobre separação entre serviços, proposição de melhorias para desacoplamento e reaproveitamento de código",
+      "papel_exercido": "Colaborador nas decisões arquiteturais e no desenho de soluções",
+      "duracao": "2 semanas",
+      "comentarios": "Reforçou a colaboração e o alinhamento técnico dentro do time",
+      "aprendizados": "Conceitos de arquitetura de microsserviços, desacoplamento de módulos e práticas de reaproveitamento de código"
+    }
+  ],
+  "conclusao": "O estágio no BTG Pactual proporcionou um aprendizado técnico e profissional significativo. Do ponto de vista técnico, houve grande evolução no domínio de Kotlin e Spring Boot, no uso de padrões de integração via Feign Client, na manipulação avançada de DTOs e na implementação de funcionalidades de filtragem e paginação de dados. A prática diária com consultas SQL, testes automatizados e otimização de performance consolidou habilidades essenciais para o desenvolvimento back-end em ambientes corporativos de alta exigência.\n\nNo aspecto profissional, a experiência favoreceu o desenvolvimento de competências como resolução de problemas, colaboração em equipe multidisciplinar, comunicação técnica clara e participação em decisões arquiteturais. O contato direto com um ecossistema complexo de microsserviços e sistemas críticos reforçou a importância de qualidade, segurança e escalabilidade no desenvolvimento de software.\n\nDe forma geral, o estágio contribuiu para ampliar a visão sobre o funcionamento de uma instituição financeira de grande porte, aproximando a prática de mercado da teoria acadêmica e preparando para desafios futuros na área de tecnologia e engenharia de software."
+}

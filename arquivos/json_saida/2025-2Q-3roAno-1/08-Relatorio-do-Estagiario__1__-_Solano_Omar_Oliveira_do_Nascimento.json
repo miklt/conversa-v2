@@ -1,0 +1,53 @@
+{
+  "estagiario": {
+    "nome_completo": "Solano Omar Oliveira do Nascimento",
+    "nusp": "14608017",
+    "curso": "Engenharia da Computação",
+    "telefone": "+55 (31) 995887087",
+    "email": "solanoomar@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Tomás Ramos",
+    "telefone": "+55 (11) 99125-7474",
+    "email": "tomas.ramos@virtualisurg.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "Virtual Cirurgia Ltda",
+    "cnpj": "43.696.907/0001-40",
+    "periodo_inicio": "05 de maio",
+    "periodo_fim": "05 de setembro",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "584 horas"
+  },
+  "sobre_empresa": "A VirtualiSurg é uma empresa fundada em 2017 em Paris, com presença internacional em países como Brasil, Canadá, Singapura e Japão, especializada no desenvolvimento de simulações XR para treinamento técnico e educação médica. Sua missão é melhorar os resultados para pacientes, oferecendo soluções personalizadas que aceleram o aprendizado e aperfeiçoam habilidades, aliando inovação tecnológica, agilidade e compromisso ético. A empresa atua para tornar tecnologias médicas acessíveis globalmente, reduzir testes em animais e promover práticas sustentáveis, sempre com foco na qualidade do cuidado e no avanço da medicina.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Onboarding",
+      "tarefas_realizadas": "A. Realização de um curso disponibilizado pela empresa:\na. Visualização das aulas\nb. Criação de projetos para melhor entendimento\nB. Leitura de um livro fornecido pela empresa\nC. Estudo dos sistemas da empresa",
+      "papel_exercido": "Desenvolvedor XR",
+      "duracao": "4 semanas",
+      "comentarios": "O processo de onboarding foi bem interessante e esclarecedor, garantindo um bom entendimento dos programas utilizados durante o estágio.",
+      "aprendizados": null
+    },
+    {
+      "numero": "2",
+      "descricao": "Pesquisa Inicial para o PoC de rastreamento de objetos",
+      "tarefas_realizadas": "A. Pesquisa de métodos de análise de imagem do passthrough (preferencialmente repositórios):\na. Compreensão dos métodos pesquisados.\nB. Teste de códigos de implementações para ganharmos tempo:\na. Foi necessário que eu pelo menos fizesse um teste/verificação inicial da performance do método de detecção/rastreamento para escolher o melhor dos métodos.",
+      "papel_exercido": "Desenvolvedor XR",
+      "duracao": "3 semanas",
+      "comentarios": "Devido a limitações do Passthrough Camera API (PCA) que a Meta liberou só temos acesso a uma das câmeras, build de aplicativos apenas no modo \"standalone\" (hardware apenas do Quest 3/3S) e um delay mínimo de aproximadamente 40ms entre a coleta do vídeo e o dado pronto para ser processado.",
+      "aprendizados": null
+    },
+    {
+      "numero": "3",
+      "descricao": "Implementação do método de Rastreamento de objetos móveis",
+      "tarefas_realizadas": "A. Implementação do método de rastreamento individual para um cubo\nB. Implementação da fusão de faces nas situações em que há detecção de múltiplas faces\nC. Implementação do filtro de suavização, predição e trava\nD. Criação dos objetos de teste",
+      "papel_exercido": "Desenvolvedor XR",
+      "duracao": "9 semanas",
+      "comentarios": "Essa foi a etapa mais longa e mais complexa, surgiram alguns bugs e felizmente nós fizemos um versionamento do projeto o que ajudou bastante.",
+      "aprendizados": null
+    }
+  ],
+  "conclusao": "Nesse período de estágio, atuei como XR Intern, com foco principal no desenvolvimento em C# na Unity. No entanto, também precisei aprender e me aprofundar nos métodos e cálculos empregados no OpenCV e utilizei conhecimentos de cálculo (interpolação linear) e álgebra linear (transformadas de rotação e translação) para entender e aplicar nos métodos que desenvolvi.\n\nO acompanhamento do meu gestor foi ótimo e ele me ajudou tanto com conhecimentos técnicos na Unity como em orientações para que direção seguir em momentos chaves de decisão. No fim, acredito que esse estágio foi de grande proveito para minha formação profissional, tanto no desenvolvimento de habilidades de trabalho em equipe, quanto evolução de habilidades técnicas (programação, formulação de projeto, versionamento com git e documentação de todo o PoC) e também na experiência de trabalho real convivendo o dia-a-dia junto com profissionais efetivados do meio."
+}

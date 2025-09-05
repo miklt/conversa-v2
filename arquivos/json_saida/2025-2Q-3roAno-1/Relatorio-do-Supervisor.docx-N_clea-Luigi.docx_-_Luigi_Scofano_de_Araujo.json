@@ -1,0 +1,44 @@
+{
+  "estagiario": {
+    "nome_completo": "Luigi Scofano de Araujo",
+    "nusp": "13680334",
+    "curso": "Engenharia de Computação",
+    "telefone": "(21) 99737-1055",
+    "email": "luigiaraujo23@gmail.com"
+  },
+  "supervisor": {
+    "nome_completo": "Mariana Marques Ciari",
+    "telefone": "(11) 98649-0458",
+    "email": "mariana.ciari@nuclea.com.br"
+  },
+  "estagio": {
+    "razao_social_empresa": "CIP S.A",
+    "cnpj": "44.393.564/0001-07",
+    "periodo_inicio": "04/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "30 horas",
+    "carga_horaria_total": "480 horas"
+  },
+  "sobre_empresa": null,
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Construção de dashboards estratégicos em Power BI, análise de indicadores de pessoas, integração de bases de dados",
+      "tarefas_realizadas": "Construção de dashboards, integração de bases de dados em Excel e MySQL, padronização de dados históricos, criação de cronologias",
+      "papel_exercido": "Estagiário na equipe de Remuneração e Benefícios",
+      "duracao": null,
+      "comentarios": "Demonstrou elevado nível técnico, organização e comprometimento",
+      "aprendizados": null
+    },
+    {
+      "numero": "2",
+      "descricao": "Estudo correlacional entre deslocamento de colaboradores e pedidos de desligamento",
+      "tarefas_realizadas": "Idealização e execução de estudo sobre relação entre distância casa-trabalho e pedidos de desligamento",
+      "papel_exercido": null,
+      "duracao": null,
+      "comentarios": "Atividade surgida da observação de dados e escuta ativa em reuniões",
+      "aprendizados": "Desenvolvimento de autonomia analítica e capacidade crítica"
+    }
+  ],
+  "conclusao": "O desempenho de Luigi foi ótimo ao longo de todo o estágio. Mostrou-se proativo, curioso e comprometido, com domínio crescente das ferramentas técnicas e bom relacionamento com a equipe. Como ponto forte, destaca-se sua capacidade de construir análises consistentes e propor melhorias com base em dados. Como ponto a desenvolver, recomenda-se maior confiança ao apresentar propostas em ambientes mais amplos. A evolução ao longo do estágio foi notável, especialmente na comunicação de resultados e visão estratégica."
+}

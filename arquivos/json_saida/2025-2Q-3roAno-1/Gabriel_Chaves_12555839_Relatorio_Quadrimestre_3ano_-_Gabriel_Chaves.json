@@ -1,0 +1,71 @@
+{
+  "estagiario": {
+    "nome_completo": "Gabriel Chaves Lopes Silva",
+    "nusp": "12555839",
+    "curso": "Engenharia de Computação",
+    "telefone": "+353 083 73 2551",
+    "email": "gabriel.clsilva@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Lucas Araujo Picazio",
+    "telefone": "+55 11 33833993",
+    "email": "lucas.picazio@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A. - SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "5 de Maio",
+    "periodo_fim": "29 de Agosto",
+    "carga_horaria_semanal": "30 horas",
+    "carga_horaria_total": "390 Horas (13 semanas)"
+  },
+  "sobre_empresa": "Durante esse último quadro, atuei no BTG Pactual, um dos maiores bancos de investimento da América Latina, banco este que tem atuação nas áreas de investment banking, asset management, wealth management e sales & trading.\n\nA unidade onde realizei o estágio foi o FTS (FrontTrade System), responsável pelo desenvolvimento e manutenção de sistemas utilizados diretamente pelas mesas de operação (traders) do banco. Dentro dessa unidade, atuei especificamente no núcleo de desenvolvimento core, com foco em criar e otimizar soluções para os Traders, profissionais responsáveis pela negociação de ativos no mercado financeiro.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Criação de um endpoint no backend da api Desk, responsável por consolidar informações de diversos produtos financeiros",
+      "tarefas_realizadas": "● Configuração e execução de pipelines e deploy utilizando CloudFormation.\n● Correção de problemas de dependências e compatibilidade com o AWS Lambda.\n● Implementação do endpoint de consolidação geral.\n● Integração de produtos no consolidado, com alguns testes parciais.",
+      "papel_exercido": "Implementação e resolução de problemas de integração",
+      "duracao": "Semanas 2 e 5",
+      "comentarios": "Exigiu detecções e correções frequentes devido a falhas de ambiente, dependências e dados. Parte do desenvolvimento foi interrompida por mudança de foco.",
+      "aprendizados": "● Boas práticas em pipelines e uso de novas tecnologias como CloudFormation.\n● Resolução de incompatibilidade de dependências no AWS Lambda.\n● Integração de múltiplas fontes de dados.\n● Diagnóstico e solução de problemas de deploy."
+    },
+    {
+      "numero": "2",
+      "descricao": "Desenvolvimento e integração de uma API de autenticação utilizando .NET/C#, integrada com banco de dados AWS e autenticação via Azure AD, incluindo emissão e validação de tokens JWT",
+      "tarefas_realizadas": "● Configuração do ambiente de desenvolvimento no Visual Studio.\n● Criação e modelagem do banco de dados para os usuários.\n● Implementação e testes de CRUD para gerenciar os usuários.\n● Tentativa de integração da API com Azure AD para autenticação corporativa.\n● Decodificação e tratamento de tokens JWT.",
+      "papel_exercido": "Implementação para o ambiente FTS e testes unitários e de integração",
+      "duracao": "Semanas 3 a 5, com complementos técnicos nas semanas 11 e 12",
+      "comentarios": "Atividade com alta exigência devido ao uso de tecnologias novas (.NET, Azure AD), com necessidade de migração temporária de foco e ajustes após mudanças de escopo.",
+      "aprendizados": "● Uso de .NET e C# para desenvolvimento de APIs.\n● Integração com Azure AD e tokens OAuth/JWT.\n● Modelagem de banco de dados para autenticação.\n● Depuração e ajuste de problemas de autenticação.\n● Importância de versionamento frequente para evitar perda de código."
+    },
+    {
+      "numero": "3",
+      "descricao": "Desenvolvimento da interface web do módulo Consolidado, responsável por apresentar dados consolidados dos produtos, consumidos através da api Desk, evoluindo de um MVP inicial até a publicação em produção",
+      "tarefas_realizadas": "● Estudo e compreensão da base de código existente.\n● Desenvolvimento de MVP funcional.\n● Refatoração e adaptação da interface ao contexto real do projeto.\n● Integração com diversas APIs, desde a de consolidados, usuários e muitas outras.\n● Ajustes visuais e melhorias de UX.\n● Deploy da interface para produção.",
+      "papel_exercido": "Construção, melhoria e entrega final da interface",
+      "duracao": "Semanas 6 a 13",
+      "comentarios": "Projeto de evolução gradual, com desafios na integração com API externa e ajustes de UX, mas com boa autonomia no desenvolvimento. Tem sido o maior foco até o presente momento, pois conforme novos feedbacks, novas features são adicionadas e correções são lançadas.",
+      "aprendizados": "● Implementação de novas funções em códigos já existentes e utilizando princípios prévios do time.\n● Integração de APIs externas em aplicações web.\n● Criação de validações e controles de entrada.\n● Processo de deploy em produção.\n● Adaptação de layout e usabilidade conforme feedback."
+    },
+    {
+      "numero": "4",
+      "descricao": "Criação de um Add-in para Excel que permitisse autenticação via Azure AD, além de enviar o token de autenticação na Power Query",
+      "tarefas_realizadas": "● Desenvolvimento inicial do ADD-IN no Visual Studio.\n● Integração com Azure AD para obtenção de token OAuth.\n● Implementação de envio do token para API.",
+      "papel_exercido": "Responsável pela prova de conceito, testes e entrega final do mesmo",
+      "duracao": "Semanas 11 a 13",
+      "comentarios": "Atividade que necessitou se pausada algumas vezes devido à necessidade de maior clareza nos requisitos e priorização de outras demandas, mas que no final depois de um alinhamento com o time teve sua finalização.",
+      "aprendizados": "● Desenvolvimento de Add-ins para Excel no Visual Studio.\n● Integração de aplicações Office com autenticação corporativa.\n● Impacto de mudanças de escopo no planejamento técnico."
+    },
+    {
+      "numero": "5",
+      "descricao": "Início do desenvolvimento de uma nova tela de monitoramento para acompanhamento dos produtos financeiros advindos do consolidado geral, com requisitos mais complexos que o previsto inicialmente",
+      "tarefas_realizadas": "● Levantamento inicial de requisitos.\n● Criação dos primeiros componentes da interface.\n● Adaptação do layout com base no escopo preliminar.",
+      "papel_exercido": "O mesmo que da atividade 3, Criação, testes e deploy em ambiente de PROD",
+      "duracao": "Semana 12 e 13",
+      "comentarios": "Atividade que necessitou passar por reavaliação devido ao nível inesperado de dificuldade uma vez que foi necessário entender sobre reflexão e eventos em runtime.",
+      "aprendizados": "● Importância de alinhamento de requisitos antes do desenvolvimento.\n● Análise de complexidade de interface e lógica de negócios."
+    }
+  ],
+  "conclusao": "Foi uma experiência muito enriquecedora. No começo, enfrentei várias dificuldades, desde questões simples, como a comunicação e a adaptação a um ambiente totalmente novo, até o entendimento de métodos de trabalho e expectativas diferentes do que eu estava acostumado. Além disso, precisei lidar com tecnologias e processos que nunca tinha utilizado antes, o que exigiu bastante aprendizado e paciência.\n\nCom o tempo, fui ganhando mais confiança e clareza no que estava fazendo. Pude ver na prática como o que aprendemos na faculdade tem relação com o mundo real, entendendo melhor o que esperar de um futuro profissional não tão distante. O estágio me mostrou que o aprendizado envolve entender prioridades, lidar com mudanças de escopo, manter disciplina, saber pedir ajuda e trabalhar em equipe.\n\nMesmo com apenas quatro meses de duração, foi um período intenso e de muita evolução, tanto pessoal quanto profissional. Saio dessa experiência com uma bagagem enorme, preparado para enfrentar o que vier no futuro."
+}

@@ -1,0 +1,53 @@
+{
+  "estagiario": {
+    "nome_completo": "João Ricardo Rodrigues Ribeiro",
+    "nusp": "14582802",
+    "curso": "POLI USP Engenharia de Computação",
+    "telefone": "+55 (11) 949941484",
+    "email": "joaoricardorodriguesribeiro@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Diego Meirelles",
+    "telefone": null,
+    "email": "DIEGO.MEIRELLES@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A. - SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "5 de maio",
+    "periodo_fim": "31 de agosto",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "600 horas"
+  },
+  "sobre_empresa": "O BTG PACTUAL é o maior banco de investimentos na América latina. O banco possui presença tanto no mercado brasileiro quanto internacional, atendendo pessoas físicas e jurídicas. Ele conta com mais de oito mil funcionários e, no Brasil, possui escritórios em São Paulo e no Rio de Janeiro. A cultura organizacional do BTG procura ser meritocrática, baseando-se no modelo de \"partnership\" onde o funcionário que se destaca pode ser convidado a se tornar sócio.\n\nDurante meu estágio, atuei na área de IT Wealth Management, que é responsável pelo desenvolvimento e manutenção de soluções tecnológicas para clientes de alta renda. Dentro dessa área, participei do setor de desenvolvimento backend, que fornecia suporte às plataformas digitais de Wealth Management. As tecnologias principais utilizadas foram java, node.js, SQL e filas.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Inclusão de Daily Bankers nos e-mails de boletagem a termo D+2",
+      "tarefas_realizadas": "Alteração de um programa em Java, correção de erros e comunicação com outra equipe",
+      "papel_exercido": "Desenvolvedor backend",
+      "duracao": "07/05 até o presente (a tarefa está impactada)",
+      "comentarios": "Tarefa introdutória onde fui apresentado às tecnologias da equipe",
+      "aprendizados": "Hardskills - Framework java utilizado pelo banco (spring), utilização de plataforma para integração e entrega contínua (jenkins), plataforma para verificação de logs (kibana e rancher) e software para testar APIs (postman). Softskills – Desenvolvimento de comunicação objetiva e pragmática, adaptação ao trabalho em equipe, capacidade de seguir orientações e de formular dúvidas de forma clara."
+    },
+    {
+      "numero": "2",
+      "descricao": "Correção no serviço de resgate antecipado + TED",
+      "tarefas_realizadas": "Análise de código em Java para identificação do erro, mapeamento do fluxo do serviço e realização de testes",
+      "papel_exercido": "Desenvolvedor backend",
+      "duracao": "28/05 até o presente (está em fase de QA)",
+      "comentarios": "Atividade onde compreendi melhor a lógica de funcionamento e o fluxo de serviços",
+      "aprendizados": "Hardskills – Desenvolvi minha habilidade de leitura e interpretação de um código, representação de um fluxo e identificação de problemas em um código e aprendi a utilizar o JMSToolBox para envio de mensagens no formato JSON para filas. Softskills – Desenvolvimento da capacidade de reconhecer minhas dúvidas durante uma explicação e de transmitir de forma clara meus conhecimentos sobre um código para colegas que não conhecem o serviço."
+    },
+    {
+      "numero": "3",
+      "descricao": "Criação de segundo CGE e automatização da criação de uma segunda carteira administrada",
+      "tarefas_realizadas": "Criação de código em Java, incluindo endpoints, DTOs e funções. Alteração de código Node.js para comunicação com serviço java",
+      "papel_exercido": "Desenvolvedor backend",
+      "duracao": "17/07 até o presente",
+      "comentarios": "Fui capaz de aplicar meu conhecimento adquirido a partir das tarefas anteriores",
+      "aprendizados": "Hardskills – Manipulação de arquivos json com DTOs, desenvolvimento e consumo de endpoint, encapsulamento e organização dos códigos e uso de chamadas HTTP. Softskills – Desenvolvimento da capacidade de organizar tarefas de forma eficiente, reconhecimento da própria ignorância durante a criação de um código e desenvolvimento na minha habilidade de aprender e usar novas tecnologias."
+    }
+  ],
+  "conclusao": "O estágio no BTG, na área de IT WM, proporcionou o aprimoramento de habilidades técnicas em Java, Node.js e ferramentas de integração e monitoramento. Também possibilitou o desenvolvimento de soft skills como comunicação, organização, ser liderado e aprendizado. Essa experiência foi excepcional para o meu crescimento profissional e pessoal, preparando-me melhor para os desafios do mercado de trabalho."
+}

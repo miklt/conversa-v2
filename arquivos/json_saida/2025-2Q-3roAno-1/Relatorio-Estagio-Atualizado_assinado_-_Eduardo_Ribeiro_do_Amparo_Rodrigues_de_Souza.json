@@ -1,0 +1,107 @@
+{
+  "estagiario": {
+    "nome_completo": "Eduardo Ribeiro do Amparo Rodrigues de Souza",
+    "nusp": "14567346",
+    "curso": "Engenharia da Computação",
+    "telefone": "(12) 99652-2227",
+    "email": "eduardoamparo@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Italo Morales",
+    "telefone": "(11) 97158-7976",
+    "email": "Ítalo.morales@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A. - SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40h",
+    "carga_horaria_total": "600h"
+  },
+  "sobre_empresa": "O BTG Pactual é o maior banco de investimentos da América Latina, com atuação global em diferentes segmentos do mercado financeiro. A instituição é reconhecida pela sua solidez, inovação e pela oferta de produtos e serviços que abrangem investimentos, asset management, wealth management, corporate lending, entre outros. No Brasil, o BTG se destaca como uma referência no setor financeiro, oferecendo soluções completas e inovadoras para clientes institucionais e individuais.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Correção de bug relacionado ao expurgo de posições e cauções (lambda timeout)",
+      "tarefas_realizadas": "Análise do processo de expurgo, otimização de código da lambda, implementação de batch e revisão em PR",
+      "papel_exercido": "Apoio ao desenvolvimento e correção de falhas em sistemas distribuídos",
+      "duracao": "3 semanas",
+      "comentarios": "Aprendi sobre processos em lote (batch), otimização de desempenho e escalabilidade de sistemas em nuvem",
+      "aprendizados": "Aprendi sobre processos em lote (batch), otimização de desempenho e escalabilidade de sistemas em nuvem"
+    },
+    {
+      "numero": "2",
+      "descricao": "Criação de microserviço EnrichPnL para enriquecimento de dados de Cotas de Fundos",
+      "tarefas_realizadas": "Configuração inicial do microserviço, implementação das lógicas de enriquecimento, integração com outros sistemas e atualização de documentação",
+      "papel_exercido": "Suporte no desenvolvimento backend de microserviços com foco em integração",
+      "duracao": "4 semanas",
+      "comentarios": "Aprofundei conhecimentos em microserviços, arquitetura distribuída e boas práticas de documentação",
+      "aprendizados": "Aprofundei conhecimentos em microserviços, arquitetura distribuída e boas práticas de documentação"
+    },
+    {
+      "numero": "3",
+      "descricao": "Acompanhamento de tombamento de esteira",
+      "tarefas_realizadas": "Monitoramento do processo de tombamento, análise de logs e suporte às equipes responsáveis",
+      "papel_exercido": "Apoio técnico na manutenção de processos internos",
+      "duracao": "2 semanas",
+      "comentarios": "Aprendi sobre monitoramento de processos e análise de logs em ambientes produtivos",
+      "aprendizados": "Aprendi sobre monitoramento de processos e análise de logs em ambientes produtivos"
+    },
+    {
+      "numero": "4",
+      "descricao": "Correção de bug em Trades x LTRs com status descasados (SPR Cross)",
+      "tarefas_realizadas": "Implementação de novas validações, criação de endpoints, cobertura de testes unitários e revisão de código",
+      "papel_exercido": "Desenvolvimento backend focado em consistência de dados",
+      "duracao": "3 semanas",
+      "comentarios": "Desenvolvi habilidades em testes unitários, qualidade de código e correção de inconsistências em sistemas financeiros",
+      "aprendizados": "Desenvolvi habilidades em testes unitários, qualidade de código e correção de inconsistências em sistemas financeiros"
+    },
+    {
+      "numero": "5",
+      "descricao": "Refatoração do serviço ai-k8s-pb-position-report-pre",
+      "tarefas_realizadas": "Refatoração do código do microserviço, ajustes em performance e adequações para boas práticas",
+      "papel_exercido": "Desenvolvimento backend",
+      "duracao": "2 semanas",
+      "comentarios": "Aprendi sobre refatoração de código, melhoria contínua e importância de manter a escalabilidade e legibilidade do sistema",
+      "aprendizados": "Aprendi sobre refatoração de código, melhoria contínua e importância de manter a escalabilidade e legibilidade do sistema"
+    },
+    {
+      "numero": "6",
+      "descricao": "Refatoração do serviço ai-k8s-ti-panorama",
+      "tarefas_realizadas": "Refatoração do microserviço Panorama, reorganização de componentes e ajustes de integração",
+      "papel_exercido": "Desenvolvimento backend",
+      "duracao": "2 semanas",
+      "comentarios": "Reforcei conceitos de boas práticas de design de software e integração entre serviços",
+      "aprendizados": "Reforcei conceitos de boas práticas de design de software e integração entre serviços"
+    },
+    {
+      "numero": "7",
+      "descricao": "Refatoração do serviço ai-k8s-ti-cash-provisioning",
+      "tarefas_realizadas": "Ajustes de código e otimização do microserviço de provisionamento de caixa",
+      "papel_exercido": "Desenvolvimento backend",
+      "duracao": "2 semanas",
+      "comentarios": "Aprendi a lidar com regras de negócio críticas relacionadas a fluxos financeiros",
+      "aprendizados": "Aprendi a lidar com regras de negócio críticas relacionadas a fluxos financeiros"
+    },
+    {
+      "numero": "8",
+      "descricao": "Refatoração do serviço ai-k8s-ti-tax",
+      "tarefas_realizadas": "Refatoração de código, ajustes em regras fiscais e melhoria na integração",
+      "papel_exercido": "Desenvolvimento backend",
+      "duracao": "2 semanas",
+      "comentarios": "Ampliei conhecimentos em regras fiscais e em como sistemas lidam com tributação de forma eficiente",
+      "aprendizados": "Ampliei conhecimentos em regras fiscais e em como sistemas lidam com tributação de forma eficiente"
+    },
+    {
+      "numero": "9",
+      "descricao": "Refatoração do serviço ai-k8s-pb-position-precatorio",
+      "tarefas_realizadas": "Refatoração e finalização do microserviço de posições precatórias",
+      "papel_exercido": "Desenvolvimento backend",
+      "duracao": "2 semanas",
+      "comentarios": "Consolidei experiência em refatoração de microserviços e entrega de sistemas em produção",
+      "aprendizados": "Consolidei experiência em refatoração de microserviços e entrega de sistemas em produção"
+    }
+  ],
+  "conclusao": "O estágio proporcionou uma visão prática sobre desenvolvimento de sistemas em ambientes corporativos de grande porte, com foco em microserviços, otimização de processos e manutenção de sistemas críticos. Além de aprimorar habilidades técnicas em programação backend e arquitetura distribuída, também fortaleceu competências interpessoais como trabalho em equipe, comunicação e gestão de prazos."
+}

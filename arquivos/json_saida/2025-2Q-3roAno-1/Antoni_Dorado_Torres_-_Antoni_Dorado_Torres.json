@@ -1,0 +1,80 @@
+{
+  "estagiario": {
+    "nome_completo": "Antoni Dorado Torres",
+    "nusp": "14558972",
+    "curso": "Engenharia de Computação",
+    "telefone": "+55 (11) 99431-3452",
+    "email": "antoni.torres@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Michelle Pinheiro Dos Santos",
+    "telefone": "+55 (11) 98238-8927",
+    "email": "michelle.pinheiro@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A. - SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "30 a 40 horas semanais",
+    "carga_horaria_total": "510 horas"
+  },
+  "sobre_empresa": "O BTG Pactual é um banco de investimento focado em serviços financeiros. Possui atuação em diversas áreas como Investment Banking, Corporate Lending, Sales & Trading, Wealth Management e Asset Management.\n\nO setor em que realizei o estágio foi o IT Legal, especificamente a equipe de BDTO (Bloqueio, desbloqueio e transferência judicial). Dentro da equipe fiquei encarregado de melhorias no sistema responsável por lidar com pedidos de quebra de sigilo.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Otimização inicial de consultas realizadas no processo de quebra de sigilo",
+      "tarefas_realizadas": "Análise das tabelas usadas, análise do sistema usado para realizar as consultas (AWS Athena), alteração das consultas SQL realizadas",
+      "papel_exercido": "Analisei o melhor método de otimizar as consultas; Planejei e implementei a otimização nas diversas consultas que realizamos; Realizei testes dessa alteração antes e após a subida; Monitorei o custo nas semanas seguintes para garantir a redução de custos",
+      "duracao": "1 mês",
+      "comentarios": "Foi a tarefa com maior impacto que realizei e serviu como base para quase todas as outras tarefas realizadas",
+      "aprendizados": "Uso básico do C#/.NET; Técnicas de otimização de consultas (em especial o uso de particionamento); Familiaridade com sistemas do AWS (especialmente o Athena)"
+    },
+    {
+      "numero": "2",
+      "descricao": "Melhora da otimização anterior",
+      "tarefas_realizadas": "Alteração no código C# responsável por criar as consultas",
+      "papel_exercido": "Implementei uma melhoria sugerida pela minha gestora; Fiz uma alteração relativamente simples no código responsável por criar as consultas",
+      "duracao": "2 semanas",
+      "comentarios": "Foi uma tarefa mais simples, mas que apresentou um bom efeito no custo das consultas executadas",
+      "aprendizados": "Uso um pouco mais avançado do C#/.NET; Interação com sistemas externos ao meu time; Criação de campos em uma tabela de SQL já existente"
+    },
+    {
+      "numero": "3",
+      "descricao": "Correção de um problema na determinação de contas inclusas na quebra de sigilo",
+      "tarefas_realizadas": "Alteração da consulta utilizada para determinar contas reportáveis",
+      "papel_exercido": "Implementei uma alteração que foi demandada pela equipe de negócio, testei a alteração antes e após a subida",
+      "duracao": "2 semanas",
+      "comentarios": "Não teve relação com o que foi meu foco no estágio (otimização de consultas do AWS Athena), mas foi uma oportunidade de aprendizado",
+      "aprendizados": "Interação com sistemas externos ao meu time"
+    },
+    {
+      "numero": "4",
+      "descricao": "Remoção de código tornado desnecessário pela última atividade",
+      "tarefas_realizadas": "Remoção de código desnecessário para resolver um problema de timeout",
+      "papel_exercido": "Implementei uma melhora que foi notada por mim, resolvendo assim um problema em ambiente de produção",
+      "duracao": "1 semana",
+      "comentarios": "Por ter sido uma melhoria encontrada por mim consegui me sentir mais confiante sobre meu entendimento do fluxo desse sistema",
+      "aprendizados": "Habilidades de depuração e investigação de problemas"
+    },
+    {
+      "numero": "5",
+      "descricao": "Melhora da otimização das consultas do AWS Athena através da técnica de materialização",
+      "tarefas_realizadas": "Análise de diversas possíveis técnicas de otimização; Implementação da técnica de otimização encontrada",
+      "papel_exercido": "Implementei uma otimização que encontrei através de um longo processo de testes; Fiquei responsável por implementar e validar a otimização encontrada",
+      "duracao": "1 mês",
+      "comentarios": "Foi uma subida responsável por reduzir os custos do Athena massivamente",
+      "aprendizados": "Técnicas de otimização mais avançadas; Conceitos de paralelização no C#/.NET"
+    },
+    {
+      "numero": "6",
+      "descricao": "Otimização de uma consulta nova do AWS Athena",
+      "tarefas_realizadas": "Análise de uma nova consulta que adicionamos no fluxo",
+      "papel_exercido": "Implementei uma otimização que encontrei; Fiquei responsável por implementar e validar a otimização encontrada",
+      "duracao": "3 semanas",
+      "comentarios": "A otimização consistiu em usar a mesma técnica da atividade anterior em uma consulta nova, o que acabou demandando certas adaptações. Foi a última atividade realizada antes da escrita deste relatório e está com o desenvolvimento finalizado e data de subida a ser definida",
+      "aprendizados": "Técnicas de otimização mais avançadas; Conceitos de paralelização no C#/.NET"
+    }
+  ],
+  "conclusao": "Nesse estágio consegui interagir com diversos aspectos de um mesmo sistema, e tive contato com diversas tecnologias que nunca havia conhecido antes. Consegui uma grande familiaridade e domínio com os fluxos do sistema de quebra de sigilo.\n\nEm especial acabei ganhando uma profunda familiaridade com o AWS Athena, sendo responsável por diversas otimizações importantes na utilização desse sistema. Outras tecnologias que consegui ganhar experiência foram: C#/.NET, AWS, Redis, SQL, Git.\n\nAlém disso, me familiarizei com o processo de desenvolvimento ágil, através das sprints e dailys do time. Outro aspecto importante foi a experiência profissional que adquiri, desenvolvendo habilidades de trabalho em equipe, ética e disciplina profissional."
+}

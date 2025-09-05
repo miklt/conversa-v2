@@ -1,0 +1,71 @@
+{
+  "estagiario": {
+    "nome_completo": "Lays Vieira Zandomingos",
+    "nusp": "14587999",
+    "curso": "Engenharia da Computação",
+    "telefone": "(21)972577820",
+    "email": "Lays.zandomingos@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Vinícius Balbino de Souza",
+    "telefone": "19 992062757",
+    "email": "Vinicius-B.Souza@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BTG Pactual",
+    "cnpj": "30.306.294/0001-45",
+    "periodo_inicio": "05 de maio",
+    "periodo_fim": "29 de agosto",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "560 horas"
+  },
+  "sobre_empresa": "O Banco BTG Pactual é um banco de investimentos brasileiro fundado em 1983, com atuação nacional e internacional. Nessa perspectiva, a empresa é reconhecida por oferecer serviços como gestão de investimentos, asset management, wealth management, tesouraria, crédito corporativo, fusões e aquisições e research.\n\nNesse contexto, atuei como estagiária na área de Data Analytics (DA), com foco em Digital Products – soluções desenvolvidas para não somente otimizar, como também apoiar os times internos do banco, fundamentadas na análise de dados para tomada de decisão e eficiência operacional.\n\nFui designada para o setor de Speech Analytics, área estratégica responsável por transformar interações com clientes em insights valiosos para o negócio. Por meio da análise automatizada de conversas, o setor contribui para medir a efetividade dos atendimentos, avaliar o nível de satisfação dos clientes, identificar se suas demandas foram resolvidas e detectar eventuais desvios de conduta no relacionamento.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Cobrança Ativa – Foco em melhorias contínuas",
+      "tarefas_realizadas": "• Analisar as regras existentes de avaliação no Speech Analytics para identificar lacunas e inconsistências.\n• Mapear e corrigir casos em que o sistema não reconhecia negociações legítimas ou produtos específicos do banco.\n• Reformular a lógica de avaliação, incluindo novas regras e expressões regulares para reconhecer valores, datas de pagamento, formas de parcelamento e modalidades de quitação.\n• Realizar testes unitários para validar a nova implementação antes de colocar em produção.\n• Documentar a nova regra e comunicar as mudanças ao time responsável.",
+      "papel_exercido": "Analisar dados com entendimento do entendimento do fluxo de cobrança para construir soluções não só assertivas, como também escaláveis no sistema de Speech Analytics.",
+      "duracao": "Aproximadamente 3 semanas",
+      "comentarios": "O trabalho trouxe impacto direto na qualidade das métricas utilizadas para avaliar os atendentes, reduzindo falsos negativos, além de aumentar a confiabilidade das análises.",
+      "aprendizados": "• Programação Orientada a Objetos (POO) aplicada em regras de negócio.\n• Desenvolvimento e aplicação de métodos para modularidade e reutilização de código.\n• Criação e otimização de expressões regulares (regex) para extração de informações textuais.\n• Uso de Git Hub para \"subir\" códigos e colocá-los em produção para toda a empresa.\n• Utilização da AWS para integrar tabelas com a automatização do código em larga escala com elevada volumetria de dados."
+    },
+    {
+      "numero": "2",
+      "descricao": "Cobrança Ativa – Tratamento de \"Shortcalls\" para evitar penalizações indevidas",
+      "tarefas_realizadas": "• Mapear casos reais de ligações curtas em que havia penalização indevida.\n• Definir critérios objetivos para caracterizar uma \"shortcall\" (ex.: cliente recusa prosseguir, engano no contato, ausência de resposta a dados solicitados).\n• Criar expressões regulares (regex) para identificar padrões de fala relacionados a recusa, engano ou falta de interação.\n• Integrar a nova detecção de shortcalls na função de não atendimento já existente no Speech Analytics.\n• Testar a nova lógica com dados reais para validar sua precisão antes da aplicação definitiva.",
+      "papel_exercido": "Analisar dados, atuando na modelagem de regras de negócio e na programação orientada a objetos, com aplicação de técnicas de processamento de linguagem natural (via regex) para aprimorar a justiça e a precisão nas métricas de desempenho.",
+      "duracao": "1 semana aproximada",
+      "comentarios": "Essa melhoria aumentou a equidade no processo de avaliação dos atendentes, garantindo que penalizações ocorressem apenas quando houvesse de fato falha operacional.",
+      "aprendizados": "• Aplicação prática de regex para classificação de ocorrências em interações reais.\n• Melhoria de funções existentes por meio da integração de novas regras de negócio.\n• Uso de programação orientada a objetos para manter a modularidade e a legibilidade do código."
+    },
+    {
+      "numero": "3",
+      "descricao": "Resolve Aí – Reestruturação completa de formulários de avaliação e criação de dashboard analítica",
+      "tarefas_realizadas": "• Reconstruir integralmente os formulários de avaliação, incorporando novas métricas alinhadas às necessidades da área.\n• Inserir cobertura para múltiplos canais de atendimento: e-mail, chat, telefone e 5min (primeiro contato com o cliente).\n• Criar a função filtrar_casos_validos para filtrar registros por atendente responsável, prevenindo atribuição de erros indevidos.\n• Configurar a integração com skills de atendimento especializados, garantindo rastreabilidade por segmento.\n• Consolidar os resultados de todos os canais e skills em várias dashboards em Power Bi segmentadas por canais de atendimento, promovendo uma visualização mais limpa, além de mais interativa para o time.\n• Manipular e tratar alta volumetria de dados, assegurando performance adequada nas consultas.\n• Subir e operar dados na AWS.",
+      "papel_exercido": "Analista de dados em treinamento, com atuação na interseção entre análise e visualização. Responsável por traduzir requisitos de negócio em soluções técnicas robustas, garantindo que as métricas refletissem com fidedignidade a qualidade do atendimento prestado.",
+      "duracao": "Aproximadamente 1 mês",
+      "comentarios": "Este projeto representou uma evolução pessoal, pois foi um dos meus maiores projetos. Ademais, esse marco consolidou a avaliação em todos os canais de atendimento sob um mesmo padrão, reduziu falhas na atribuição de responsabilidade e ampliou a transparência dos resultados.",
+      "aprendizados": "• Criação e manutenção de funções de filtragem e validação de dados em contextos reais de operação.\n• Estruturação de dashboards interativas no Power BI, com foco em clareza e tomada de decisão.\n• Integração de dados provenientes de múltiplas fontes, incluindo Salesforce e AWS.\n• Programação orientada a objetos envolvendo construção de classes, métodos e objetos.\n• Utilização de Git Hub para centralização das modificações ao longo do caminho do projeto."
+    },
+    {
+      "numero": "4",
+      "descricao": "Cadastro B2B – Desenvolvimento de corretor automático de ortografia para atendimento",
+      "tarefas_realizadas": "• Levantar requisitos junto ao time de Cadastro B2B para compreender o escopo da necessidade.\n• Pesquisar alternativas de bibliotecas Python para correção ortográfica, como LanguageTool e PySpellChecker, avaliando critérios de acurácia, velocidade e facilidade de integração.\n• Testar diferentes abordagens, mensurando impacto de performance e compatibilidade com o pipeline já existente.\n• Adaptar a implementação para operar em alto volume de dados sem comprometer a estabilidade do sistema.\n• Garantir que o corretor funcionasse de forma transparente, sugerindo ou aplicando correções automaticamente conforme as regras definidas pelo time.",
+      "papel_exercido": "Atuar na pesquisa, teste e integração de soluções de processamento de linguagem natural, conciliando eficiência computacional e qualidade de saída textual.",
+      "duracao": "3 semanas aproximadamente",
+      "comentarios": "O corretor ortográfico resultou em ganho significativo na qualidade final dos textos enviados ao cliente, além de contribuir para a padronização da linguagem utilizada.",
+      "aprendizados": "• Pesquisa e comparação de bibliotecas Python voltadas ao Processamento de Linguagem Natural (PLN).\n• Implementação de corretores ortográficos automáticos com foco em eficiência.\n• Balanceamento entre acurácia e desempenho em soluções de alto volume de dados."
+    },
+    {
+      "numero": "5",
+      "descricao": "Assessoria Digital – Implementação de novas flags de avaliação e dashboard analítica",
+      "tarefas_realizadas": "• Mapear necessidades de monitoramento da Assessoria Digital e traduzi-las em novas flags de avaliação.\n• Criar regras de detecção de insatisfação do cliente, especialmente em casos de agendamento, utilizando regex para reconhecimento de padrões linguísticos.\n• Implementar lógica para identificar se o atendente realizava o mapeamento de recursos (oferta ou sondagem de cartão, previdência, entre outros) de forma adequada.\n• Aplicar princípios de programação orientada a objetos para estruturar o código de forma modular e reutilizável.\n• Integrar as novas flags ao sistema de Speech Analytics, garantindo alinhamento com as métricas existentes.\n• Consolidar os resultados em uma dashboard interativa no Power BI, facilitando a interpretação e acompanhamento dos indicadores pelo time.\n• Validar a consistência e precisão das novas métricas por meio de testes com base histórica.",
+      "papel_exercido": "Analista de dados em treinamento, atuando no desenvolvimento de soluções que uniram lógica de programação, análise de dados e visualização para aprimorar a mensuração da qualidade do atendimento, além de apoiar decisões estratégicas.",
+      "duracao": "Aproximadamente 4 semanas",
+      "comentarios": "A inclusão dessas flags ampliou a visão sobre a performance da Assessoria Digital, permitindo detectar com maior precisão situações de insatisfação e lacunas na abordagem comercial.",
+      "aprendizados": "• Definição e implementação de novos indicadores de performance aplicados ao atendimento.\n• Uso avançado de regex para classificação de interações.\n• Aplicação prática de programação orientada a objetos para soluções escaláveis.\n• Desenvolvimento de dashboards interativas no Power BI voltadas para acompanhamento operacional.\n• Importância da validação com dados reais para garantir a confiabilidade das métricas.\n• Integração de análise qualitativa e quantitativa para geração de insights estratégicos"
+    }
+  ],
+  "conclusao": "O estágio na área de Data Analytics, com atuação direta em Speech Analytics e Digital Products no Banco BTG Pactual, proporcionou um aprendizado profundo e multidisciplinar, combinando competências técnicas, visão de negócio e habilidades analíticas. Ao longo do período, participei de projetos que impactaram de forma significativa a qualidade das métricas de atendimento, a justiça na avaliação das equipes, além de contribuir para a clareza na apresentação de resultados.\n\nDo ponto de vista técnico, a experiência possibilitou o aprimoramento de conhecimentos em programação orientada a objetos, expressões regulares (regex) e processamento de linguagem natural, aplicados a cenários reais de alto volume de dados. Não somente houve avanço no domínio de ferramentas e ambientes como Power BI, Salesforce e AWS, como também no tratamento de bases extensas, aliado ao desenvolvimento de práticas de integração, bem como otimização de sistemas.\n\nSob a ótica de negócio, compreendi de forma mais ampla como a análise de dados se conecta aos objetivos estratégicos do banco, apoiando áreas como Cobrança Ativa, Assessoria Digital, Resolve Aí e Cadastro B2B na melhoria contínua de processos. Ademais, forneci suporte para decisões fundamentadas em informações confiáveis. Nesse ambiente, alguns projetos como a reestruturação de formulários, a criação de novas métricas, o desenvolvimento de dashboards, além da implementação de validadores ou corretores automáticos, evidenciaram a relevância do Speech Analytics como ferramenta de aprimoramento da experiência do cliente.\n\nPortanto, a vivência diária com alta volumetria de dados, múltiplas integrações e demandas simultâneas contribuiu para o fortalecimento de habilidades voltadas à resolução de problemas, ao pensamento crítico e à colaboração em equipe. Não somente consolidei conhecimentos adquiridos anteriormente – em disciplinas da Escola Politécnica –, mas também expandi meu repertório técnico e estratégico. Além disso, cabe acrescentar que essa experiência reforçou minha capacidade de transformar dados em soluções práticas, com impacto real para o negócio."
+}

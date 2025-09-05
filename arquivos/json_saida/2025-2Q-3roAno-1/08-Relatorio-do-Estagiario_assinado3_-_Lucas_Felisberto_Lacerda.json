@@ -1,0 +1,80 @@
+{
+  "estagiario": {
+    "nome_completo": "Lucas Felisberto Lacerda",
+    "nusp": "14590923",
+    "curso": "Engenhiaria de Computação",
+    "telefone": "+55 (11) 97514-8604",
+    "email": "lucas.f.lacerda@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Bruno Kitaka",
+    "telefone": "+55 (11) 99733-9778",
+    "email": "bruno.kitaka@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A. - SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40h",
+    "carga_horaria_total": "560h"
+  },
+  "sobre_empresa": "BTG Pactual é um banco de investimentos brasileiro, que atua em diversas áreas financeiras, incluindo gestão de ativos, wealth management, investment banking e trading. É reconhecido como o maior banco de investimentos da América Latina, tendo presença não apenas no Brasil, mas também em outros países como Chile, México, Estados Unidos e outros. Possui foco em inovação e tecnologia para oferecer soluções financeiras integradas a todo tipo de clientes.\n\nDurante o período de estágio, trabalhei na área de Electronic Trading. A área é responsável por desenvolver e operar plataformas e sistemas automatizados para negociação eletrônica de ativos financeiros. Isso significa que todos na áream utilizam da tecnologia para desenvolver diversas ferramentas no campo de negociação com a bolsa, como a interface do corretor com a bolsa, algoritmos, e até mesmo dark pools desenvolvidas internamente.\n\nDentro da área, meu time trabalha com relações offshore. Isso é, embora não esteja limitado a isso, nosso foco é desenvolver essas ferramentas para outros países, em principal latino-americanos com os quais trabalhamos: Chile, Colômbia, Peru, Bolívia e México. Além disso, nosso time é responsável pelo desenvolvimento e manutenção do BLOX(BTG Large Order X), uma solução para clientes encontrarem liquidez quando lidando com grandes investimentos de forma segura para sua posição no mercado.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Implementar, ao banco de dados de contas de corretores chilenos, uma funcionalidade de limpar o banco das contas já não mais usadas pelo BTG",
+      "tarefas_realizadas": "Desenvolvimento do algoritmo que recebe os dados de uma API e verifica quais não precisam mais estar no banco de dados, então realiza a limpa dos dados",
+      "papel_exercido": "Desenvolvedor",
+      "duracao": "1 semana",
+      "comentarios": "Foi um projeto mais curto e de integração, mas que me permitiu entender como são organizados os projetos do time, o que tornou mais fácil a transição para projetos mais complexos",
+      "aprendizados": "Organização de projeto, interpretação de código de outras pessoas"
+    },
+    {
+      "numero": "2",
+      "descricao": "Implementação de um novo campo no banco de dados de usuários do chile",
+      "tarefas_realizadas": "Criação de um novo campo no banco de dados e implementação de código que comunicasse esse campo com o banco. Além disso, também foi planejado e implementado o formato como esse dado seria transmitido",
+      "papel_exercido": "Desenvolvedor",
+      "duracao": "1 semana",
+      "comentarios": "Um projeto também curto, mas que exigiu, não apenas conhecimento de programação, mas também um planejamento de projeto sobre o jeito mais eficaz de realizar a implementação",
+      "aprendizados": "Organização de projeto, planejamento de projeto"
+    },
+    {
+      "numero": "3",
+      "descricao": "Reunião de dados sobre o BLOX Brasil, primeira dark pool brasileira e mantida pelo meu time. A tarefa compunha de reunir as interações de clientes com a plataforma e organizá-las por tempo em uma tela",
+      "tarefas_realizadas": "Me familiar com o BLOX, implementar o monitoramento por tempo",
+      "papel_exercido": null,
+      "duracao": "2 semanas",
+      "comentarios": null,
+      "aprendizados": null
+    },
+    {
+      "numero": "4",
+      "descricao": "Desenvolvimento do BLOX para o México",
+      "tarefas_realizadas": "Compreender como é esperada a comunicação do BLOX com uma das bolsas mexicanas (BMV) e realizar as alterações necessárias no sistema para suportar essa integração. Implementar a comunicação da dark pool com o banco de dados do back office da sede mexicana do BTG, garantindo a consistência dos dados e conformidade com as regras locais",
+      "papel_exercido": "Desenvolvedor",
+      "duracao": "2 meses e meio",
+      "comentarios": "Projeto mais complexo e de longa duração, exigindo entendimento profundo do funcionamento interno do BLOX e das especificidades regulatórias e técnicas da BMV. Foi necessário trabalhar em estreita colaboração com o time do México para alinhar requisitos",
+      "aprendizados": "Projeto mais complexo e de longa duração, exigindo entendimento profundo do funcionamento interno do BLOX e das especificidades regulatórias e técnicas da BMV. Foi necessário trabalhar em estreita colaboração com o time do México para alinhar requisitos"
+    },
+    {
+      "numero": "5",
+      "descricao": "Manutenção do BLOX Brasil",
+      "tarefas_realizadas": "Realizar mudanças no sistema BLOX conforme a bolsa brasileira (B3) atualizou suas exigências para ordens de ações. Adaptar o código e os processos internos para atender às novas especificações, garantindo que o sistema continuasse operando sem interrupções",
+      "papel_exercido": "Desenvolvedor",
+      "duracao": "1 mês",
+      "comentarios": "Apesar de menor em escopo do que o projeto do México, exigiu agilidade para compreender e aplicar rapidamente as novas exigências da B3, evitando impactos nas operações diárias",
+      "aprendizados": "Agilidade na adaptação de sistemas a mudanças externas, leitura e interpretação de novas regras técnicas, aplicação de testes para evitar regressões em sistemas críticos"
+    },
+    {
+      "numero": "6",
+      "descricao": "Estudo de dados sobre execuções e utilizações do BLOX Brasil para avaliar a eficiência do serviço e o apelo aos clientes",
+      "tarefas_realizadas": "Planejamento dos relatórios e indicadores que seriam mais relevantes para análise, desenvolvimento em Python para extrair, processar e organizar os dados, e apresentação das informações de forma clara para apoiar a tomada de decisão",
+      "papel_exercido": "Desenvolvedor",
+      "duracao": "1 mês",
+      "comentarios": "Essa atividade foi essencial para aprofundar meus conhecimentos em análise de dados. Não se tratou apenas de extrair informações, mas de interpretar padrões, identificar oportunidades de melhoria no serviço e fornecer ao time insights concretos para decisões estratégicas. A etapa de planejamento dos relatórios foi tão importante quanto a execução técnica, pois exigiu compreender as necessidades do negócio e traduzi-las em métricas relevantes",
+      "aprendizados": "Manipulação e análise de dados em Python, definição de métricas e relatórios, pensamento analítico para transformar dados em insights úteis para o time"
+    }
+  ],
+  "conclusao": "Durante o estágio, pude atuar em diferentes frentes e desenvolver competências que vão muito além da codificação. Trabalhei com programação em C#, integração e manipulação de bancos de dados, e também com Python para análise e apresentação de dados, explorando desde tarefas mais diretas de implementação até projetos que exigiam planejamento e visão estratégica. Tive contato com arquiteturas complexas como a do BLOX, aprendi a interpretar códigos escritos por outras pessoas e a adaptar sistemas a novas exigências regulatórias e técnicas.\n\nParticiipei de projetos internacionais, o que me ensinou a lidar com diferentes padrões de integração e a alinhar requisitos com equipes de outros países. Também mergulhei em análise de dados, planejando e construindo relatórios que ajudaram a entender a eficiência do serviço e a percepção dos clientes, o que me deu uma visão mais clara de como tecnologia e estratégia caminham juntas.\n\nAlém do aprendizado técnico, desenvolvi habilidades interpessoais e organizacionais, como autonomia, proatividade, comunicação com diferentes times e capacidade de priorizar tarefas de acordo com impacto e urgência. Encerro o estágio não apenas mais preparado tecnicamente, mas também com uma visão mais madura sobre o papel da tecnologia na solução de problemas reais e na geração de valor para o negócio."
+}

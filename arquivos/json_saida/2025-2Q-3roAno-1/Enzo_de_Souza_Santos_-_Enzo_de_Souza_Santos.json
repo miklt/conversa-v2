@@ -1,0 +1,98 @@
+{
+  "estagiario": {
+    "nome_completo": "Enzo de Souza Santos",
+    "nusp": "13689517",
+    "curso": "Engenharia de Computação",
+    "telefone": "11 9 4141 0540",
+    "email": "enzos@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Giovane Andrade",
+    "telefone": "11 9 6274 2249",
+    "email": "giovane.andrade@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A. - SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "600 horas"
+  },
+  "sobre_empresa": "O BTG Pactual é uma instituição financeira brasileira com atuação global, sendo considerado atualmente o maior banco de investimentos da América Latina. Atua nas áreas de Investment Banking, Corporate Lending, Asset Management, Wealth Management e Banking. Recentemente também contou com a incorporação do Banco Pan, trazendo uma frente de varejo para o banco. O banco tem como pilares a cultura empreendedora, foco em inovação e a meritocracia.\n\nIntegrei a equipe de Database Reliability Engineering, na sede do Pátio Malzoni em São Paulo. A equipe é responsável tanto por dar apoio 24/7 para toda equipe de desenvolvedores do banco e para as equipes de banco de dados internacionais, garantindo o bom funcionamento de todas as estruturas de Database do banco, como também pelos projetos desenvolvidos dentro da área de Banco de Dados, como automações, otimizações de recursos e refinamento de processos.\n\nDentro desta equipe, integrei a squad de automações, atuando principalmente no desenvolvimento de novas automações ou refatoração e ajustes nas existentes, mas também com eventuais chamados relativos à essas automações.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "mapeamento de todas as DAGs (Directed Acyclic Graph ou Grafo Acíclico Dirigido) que utilizavam usuários de administrador para conexão com bancos de dados, buscando sua substituição por usuários com permissões estritamente necessárias para realização das operações",
+      "tarefas_realizadas": "levantamento e análise das DAGs existentes no Apache Airflow que utilizavam credenciais privilegiadas; Identificação dos pontos de conexão com bancos de dados e serviços na nuvem (AWS); Documentação do processo e das permissões necessárias para cada execução",
+      "papel_exercido": "papel de Database Administrator, prezando pela segurança e confiabilidade de dados, contribuindo para a melhoria do controle de acesso e redução de riscos operacionais",
+      "duracao": "1 semana",
+      "comentarios": "primeira tarefa realizada, contribuiu para entender melhor como funcionava o acesso à cada ferramenta e suas respectivas funções",
+      "aprendizados": "permissionamento e conexões em bancos de dados, ferramentas como AWS, Apache Airflow, Python, Boto3, DBeaver"
+    },
+    {
+      "numero": "2",
+      "descricao": "mudança do layout do menu e da página inicial do portal interno (Portal Database) que concentra as automações referentes à equipe de banco de dados (criação de banco de dados, criação de usuário e mudança de classe), os logs das execuções realizadas e ferramentas para suporte ao atendimento de chamados relativos à banco de dados",
+      "tarefas_realizadas": "refatoração e desenvolvimento de novos códigos para atualizar o portal, seguindo a identidade visual do banco e aprimorando a estética e usabilidade da aplicação",
+      "papel_exercido": "essencialmente papel de desenvolvedor frontend",
+      "duracao": "1 semana",
+      "comentarios": "primeiro contato com desenvolvimento frontend em maior escala, trazendo a necessidade de pensar em otimização e performance da solução",
+      "aprendizados": "padrões de desenvolvimento de frontend, versionamento de código (Git, Azure DevOps), disponibilização de códigos em ambientes de desenvolvimento e produção, Amazon S3, Vue.js, JavaScript"
+    },
+    {
+      "numero": "3",
+      "descricao": "criação de processo para alteração da janela de manutenção de uma instância do serviço AWS RDS e integração ao Portal Database",
+      "tarefas_realizadas": "desenvolvimento de toda a interface para alteração de janela de manutenção de uma instância RDS de forma automática, criação do motor da aplicação (backend) que, de forma integrada com a ferramenta de fluxos de trabalho (Jira), gera um chamado, e o desenvolvimento da DAG que se conecta ao Jira, obtém os dados necessários, se conecta à instância RDS e realiza as mudanças solicitadas pelos desenvolvedores de forma autônoma",
+      "papel_exercido": "papel de desenvolvedor fullstack, administrador de banco de dados e engenheiro de dados",
+      "duracao": "3 semanas",
+      "comentarios": "primeira atividade que envolveu a construção de uma nova solução, o que permitiu o contato com diferentes ferramentas e contribuiu ativamente para as necessidades sentidas pelo time",
+      "aprendizados": "práticas de desenvolvimento em frontend e backend, práticas de execuções em bancos de dados, Vue.js, Python, Jira, Apache Airflow, Python, AWS, Boto3"
+    },
+    {
+      "numero": "4",
+      "descricao": "criação de processo para alteração de classe (tamanho da máquina) de uma instância RDS e integração ao Portal Database",
+      "tarefas_realizadas": "desenvolvimento de toda a interface para mudança de classe de uma instância RDS de forma automática, criação do motor da aplicação (backend) que, de forma integrada com a ferramenta de fluxos de trabalho (Jira), gera um chamado, e o desenvolvimento da DAG que se conecta ao Jira, obtém os dados necessários, se conecta ao banco de dados e realiza as mudanças solicitadas pelos desenvolvedores de forma autônoma",
+      "papel_exercido": "papel de desenvolvedor fullstack, administrador de banco de dados e engenheiro de dados",
+      "duracao": "3 semanas",
+      "comentarios": "atividade semelhante com a anterior, e permitiu uma familiaridade ainda maior com as ferramentas e processos do setor de tecnologia da empresa",
+      "aprendizados": "práticas de desenvolvimento em frontend e backend, práticas de execuções em bancos de dados, Vue.js, Python, Jira, Apache Airflow, Python, AWS, Boto3"
+    },
+    {
+      "numero": "5",
+      "descricao": "criação de processo para deleção de uma instância RDS e integração ao Portal Database",
+      "tarefas_realizadas": "desenvolvimento de toda a interface para deleção de uma instância RDS de forma automática, criação do motor da aplicação (backend) que, de forma integrada com a ferramenta de fluxos de trabalho (Jira), gera um chamado, e o desenvolvimento da DAG que se conecta ao Jira, obtém os dados necessários, se conecta ao banco de dados e realiza as mudanças solicitadas pelos desenvolvedores de forma autônoma",
+      "papel_exercido": "papel de desenvolvedor fullstack, administrador de banco de dados e engenheiro de dados",
+      "duracao": "1 semana",
+      "comentarios": "com a familiaridade com as ferramentas e processos obtida nas tarefas anteriores foi possível observar uma maior eficiência na realização desta atividade, que pode ser realizada em um período bem menor, de apenas 1 semana, contra 3 semanas das tarefas anteriores",
+      "aprendizados": "práticas de desenvolvimento em frontend e backend, práticas de execuções em bancos de dados, Vue.js, Python, Jira, Apache Airflow, Python, AWS, Boto3"
+    },
+    {
+      "numero": "6",
+      "descricao": "criação de processo para criação de um banco de dados DocumentDB na AWS e integração ao Portal Database",
+      "tarefas_realizadas": "desenvolvimento de toda a inteface para criação de uma instância DocumentDB na AWS de forma automática, criação do motor da aplicação (backend) que, de forma integrada com a ferramenta de fluxos de trabalho (Jira), gera um chamado, e o desenvolvimento da DAG que se conecta ao Jira, obtém os dados necessários, se conecta ao banco de dados e realiza as mudanças solicitadas pelos desenvolvedores de forma autônoma. Também foi necessário incluir no código de criação todas as configurações padrões de acordo com os processos do banco, como usuários de monitoramento, rotas e grupos de segurança",
+      "papel_exercido": "papel de desenvolvedor fullstack, administrador de banco de dados e engenheiro de dados",
+      "duracao": "2 semanas",
+      "comentarios": "tarefa foi desenvolvida com base em um código legado do time, que rodava em um servidor \"on premise\" (servidor mantido fisicamente dentro da empresa) que já não atendia adequadamente as demandas atuais da equipe",
+      "aprendizados": "práticas de desenvolvimento em frontend e backend, práticas de execuções em bancos de dados, Vue.js, Python, Jira, Apache Airflow, Python, AWS, Boto3"
+    },
+    {
+      "numero": "7",
+      "descricao": "criação de processo para pausa e inicialização de uma instância RDS e integração ao Portal Database",
+      "tarefas_realizadas": "desenvolvimento de toda a interface para pausa e inicialização de uma instância RDS de forma automática, criação do motor da aplicação (backend) que, de forma integrada com a ferramenta de fluxos de trabalho (Jira), gera um chamado, e o desenvolvimento da DAG que se conecta ao Jira, obtém os dados necessários, se conecta ao banco de dados e realiza as mudanças solicitadas pelos desenvolvedores de forma autônoma",
+      "papel_exercido": "papel de desenvolvedor fullstack, administrador de banco de dados e engenheiro de dados",
+      "duracao": "2 semanas",
+      "comentarios": null,
+      "aprendizados": "práticas de desenvolvimento em frontend e backend, práticas de execuções em bancos de dados, Vue.js, Python, Jira, Apache Airflow, Python, AWS, Boto3"
+    },
+    {
+      "numero": "8",
+      "descricao": "mapeamento acerca de menus antigos presentes no Portal Database",
+      "tarefas_realizadas": "análise das funcionalidades presentes em menus herdados do portal, buscando entender se ainda tem uso e avaliando se há a necessidade de removê-las ou reestruturá-las",
+      "papel_exercido": "papel de desenvolvedor fullstack, administrador de banco de dados e engenheiro de dados",
+      "duracao": "2 semanas",
+      "comentarios": null,
+      "aprendizados": "práticas de desenvolvimento em frontend e backend, práticas de execuções em bancos de dados, Vue.js, Python, Jira, Apache Airflow, Python, AWS, Boto3"
+    }
+  ],
+  "conclusao": "Dentro do time de Database Reliability Engineering tive muitas oportunidades de aprendizado. Tive contato tanto com frentes de desenvolvimento, que me permitiu aprender sobre práticas de desenvolvimento de backend e frontend, processos de hospedagem de plataformas, automações, integrações com outras plataformas, conexões, bibliotecas, como com a frente de chamados, que me permitiu entender o funcionamento e configuração de um banco de dados, eventuais problemas e suas soluções, tecnologias de bancos de dados, suas diferenças e seus usos. Além de tudo isso, tive uma intensa vivência empresarial, que me ajudou a entender melhor as perspectivas de carreira que posso seguir e me capacitou como profissional."
+}

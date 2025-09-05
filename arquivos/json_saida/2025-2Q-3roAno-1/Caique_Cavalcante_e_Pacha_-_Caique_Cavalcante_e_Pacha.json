@@ -1,0 +1,62 @@
+{
+  "estagiario": {
+    "nome_completo": "Caíque Cavalcante e Pachá",
+    "nusp": "13682934",
+    "curso": "Engenharia da computação",
+    "telefone": "(11) 99657-9745",
+    "email": "pacha.c@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Oscar Antonio Telles de Azevedo",
+    "telefone": "(11) 98181-6678",
+    "email": "oscar.azevedo@nuclea.com.br"
+  },
+  "estagio": {
+    "razao_social_empresa": "CIP S.A",
+    "cnpj": "44.393.564/0001-07",
+    "periodo_inicio": "02/06/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40 h",
+    "carga_horaria_total": "440 h"
+  },
+  "sobre_empresa": "CIP S.A., nome fantasia \"Núclea\", é uma empresa que se originou como uma fornecedora sem fins lucrativos de infraestrutura tecnológica para os bancos no Brasil como a então Câmara Interbancária de Pagamentos. Hoje, como S/A, ela fornece uma variedade produtos tecnológicos para empresas de diversas áreas.\n\nAtuei em sua cede na região da Faria Lima em São Paulo, CEP 5426-100, no Centro de Excelência (CdE) de automação e inteligência artificial. Os CdEs são grupos especializados que atuam criando e mantendo produtos de uma certa natureza, para uso interno ou venda. No caso, nosso grupo recebia demandas principalmente relacionadas com o uso e implantação de IA em produtos ou sistemas e era responsável por avaliar e muitas vezes implementar essa tecnologia.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Automação do processo de FTL de uma base de dados de chamados internos para formato CSV",
+      "tarefas_realizadas": "Melhoramento de um programa que automatiza o processo, retirando, transformando e enviando os dados de uma base para um bucket S3",
+      "papel_exercido": "Auxiliado por outros colegas, procurou entender o problema e criou um programa de fácil manutenção que faz automaticamente um processo anteriormente manual",
+      "duracao": "3 semanas",
+      "comentarios": null,
+      "aprendizados": "Aprofundamento de conhecimentos em Java ao trabalhar com novas bibliotecas e introdução ao uso do AWS lambda e S3"
+    },
+    {
+      "numero": "2",
+      "descricao": "Automação do processo de FTL de uma base de dados financeiros para formato CSV",
+      "tarefas_realizadas": "Criou um programa capaz de retirar, transformar e guardar dados de uma base em um bucket S3",
+      "papel_exercido": "Além de criar o programa primeiramente em Java e depois em Python para fácil manutenção do time requisitante, manteve contato direto com este para adaptar o produto às suas necessidades em cada etapa",
+      "duracao": "4 semanas",
+      "comentarios": null,
+      "aprendizados": "Aprofundamento de conhecimentos em Java e Python ao trabalhar com novas bibliotecas e prática do uso de AWS lambda e S3"
+    },
+    {
+      "numero": "3",
+      "descricao": "Estudo de melhora da resposta de um agente de IA para o resumo de documentos",
+      "tarefas_realizadas": "Estudou e testou diversas técnicas de engenharia de prompt para aumentar a precisão do agente utilizado em um produto de análise automática de documentos",
+      "papel_exercido": "Contribuiu para o conhecimento de técnicas do time e para a melhora do produto a partir dos estudos e testes realizados",
+      "duracao": "3 semanas",
+      "comentarios": null,
+      "aprendizados": "Introdução a engenharia de prompt e suas técnicas básicas, como prompt chaining, iteração agent X e Tree of thought"
+    },
+    {
+      "numero": "4",
+      "descricao": "Criação do front end para uma plataforma de ajuste de ponto",
+      "tarefas_realizadas": "Estudou e iniciou a codificação do micro front end em Angular",
+      "papel_exercido": "Ficou responsável por implantar a parte visual da plataforma desenhada pelo time de design",
+      "duracao": "3 semanas",
+      "comentarios": "Esta atividade continua sendo desenvolvida após a entrega deste relatório",
+      "aprendizados": "Introdução ao desenvolvimento de front end, conhecendo e se aprofundando em Type Script, Java Scritp, Angular e Html"
+    }
+  ],
+  "conclusao": "Ao atuar em múltiplos projetos, a maioria de naturezas bem diferentes entre si, tive a oportunidade de conhecer múltiplas tecnologias e até me aprofundar em algumas, sem mencionar o conhecimento pratico de adquirido ao conviver com profissionais com alto conhecimento em muitas áreas. Saio da Núclea com novos conhecimentos e perspectivas do que fazer e esperar no contexto do mercado tecnológico."
+}

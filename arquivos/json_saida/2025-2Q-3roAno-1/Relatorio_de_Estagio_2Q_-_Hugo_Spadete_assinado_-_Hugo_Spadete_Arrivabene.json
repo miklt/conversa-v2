@@ -1,0 +1,62 @@
+{
+  "estagiario": {
+    "nome_completo": "Hugo Spadete Arrivabene",
+    "nusp": "14578727",
+    "curso": "Engenharia de Computação",
+    "telefone": "(27) 998466803",
+    "email": "hugo.arrivabene@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Priscila Schumacker",
+    "telefone": "(21) 99139-2110",
+    "email": "Priscila.Schumacker@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "Banco BTG Pactual S.A.",
+    "cnpj": "30.306.294/0001-91",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "584 horas"
+  },
+  "sobre_empresa": "Realizei meu período de estágio no banco BTG Pactual, na área de tecnologia. Minha área, especificamente, chama-se \"DataHub\", e é o serviço interno do banco responsável pelo envio dos dados da custódia aos consumidores. Sendo assim, atuamos como uma \"ponte\" entre a área de custódia dos produtos financeiros e outras áreas internas do banco que julgam importante o consumo desses dados.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Revisão da documentação no Confluence",
+      "tarefas_realizadas": "Revisão de filas em RabbitMQ; ajuste de diagramas no Draw.io",
+      "papel_exercido": null,
+      "duracao": "1 mês",
+      "comentarios": "Foi uma ótima atividade para iniciar no time, pois consegui adquirir uma visão macro de como o fluxo de todos nossos produtos funcionavam.",
+      "aprendizados": "RabbitMQ; Draw.io"
+    },
+    {
+      "numero": "2",
+      "descricao": "Criação de shovels em RabbitMQ",
+      "tarefas_realizadas": "Criação do shovel em UAT nos moldes da documentação; validação do shovel em UAT por meio de teste de massas; deploy do shovel em ambiente de produção.",
+      "papel_exercido": null,
+      "duracao": "3 meses",
+      "comentarios": "Pude entender na prática o funcionamento do RabbitMQ",
+      "aprendizados": "RabbitMQ"
+    },
+    {
+      "numero": "3",
+      "descricao": "Revisão de métricas do serviços de confirmação",
+      "tarefas_realizadas": "Analisar os gráficos de consumo; fazer as modificações no yaml do serviço; testar a resposta do serviço com as novas configurações por meio de estresse de massa.",
+      "papel_exercido": null,
+      "duracao": "1 mês",
+      "comentarios": null,
+      "aprendizados": "Git; análise de gráficos"
+    },
+    {
+      "numero": "4",
+      "descricao": "Validação do fluxo das esteiras após atualização do RabbitMQ 4.0",
+      "tarefas_realizadas": "Análise de gráficos de filas Rabbit e SQS; análise de Kubernetes; buscas no banco de dados para batimento da massa de mensagens",
+      "papel_exercido": null,
+      "duracao": "1 mês",
+      "comentarios": "Primeiro contato prático que tive com banco de dados e SQL",
+      "aprendizados": "RabbitMQ; AWS SQS; SQL; Rancher"
+    }
+  ],
+  "conclusao": "O período de estágio foi bastante interessante. Consegui aperfeiçoar conhecimentos técnicos que aprendi na faculdade, como por exemplo SQL; e também pude aprender sobre temas que eu nunca tinha visto antes, a exemplo dos serviços de mensageria (RabbitMQ e AWS SQS). As aulas sobre mercado financeiro que tivemos nos chamados \"QuadriLabs\" também foram bastante úteis para aprender mais sobre os produtos do banco e ter mais contato com finanças.\n\nAdemais, creio que o mais valioso dessa experiência foi entender na prática como funciona o dia a dia no mercado de trabalho, principalmente num contexto corporativo de um banco. Creio que consegui me adaptar bem ao ambiente e pude aprimorar minhas softskills de maneira valiosa. Melhorei, principalmente, minha comunicação, trabalho em equipe e planejamento de tarefas."
+}

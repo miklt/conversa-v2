@@ -1,0 +1,71 @@
+{
+  "estagiario": {
+    "nome_completo": "Luca Bompiani",
+    "nusp": "12552760",
+    "curso": "Engenharia da Computação",
+    "telefone": "(11) 99124-6546",
+    "email": "luca.bompiani@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Mateus Patriani Cardoso",
+    "telefone": "11 94152-3556",
+    "email": "mateus@visualiza.ai"
+  },
+  "estagio": {
+    "razao_social_empresa": "Visualiza LTDA",
+    "cnpj": "54.904.478/0001-75",
+    "periodo_inicio": "02/01/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "30 horas",
+    "carga_horaria_total": "720 horas"
+  },
+  "sobre_empresa": "A Visualiza LTDA é uma startup de base tecnológica em rápido crescimento, especializada no desenvolvimento de soluções de Visão Computacional para o mercado de mídia Out-of-Home (OOH). O core business da empresa é aplicar inteligência artificial para analisar imagens e vídeos de espaços publicitários físicos (como outdoors, painéis digitais e anúncios em pontos de ônibus), transformando dados visuais brutos em métricas de audiência precisas. Caracteriza-se por um ambiente inovador e uma cultura ágil, com uma equipe enxuta e jovem, focada no desenvolvimento rápido de produtos e na adaptação constante às novas tecnologias do setor.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Atuei na manutenção e aprimoramento de uma grande estrutura de dados, com o objetivo de garantir a correta organização, armazenamento e integridade das informações da empresa.",
+      "tarefas_realizadas": "• Monitorei continuamente a consistência e integridade dos dados para identificar possíveis falhas.\n• Apliquei rotinas de limpeza e padronização para melhorar a qualidade geral das informações.\n• Auxiliei a equipe na implementação de novas tabelas e campos na estrutura de dados existente.\n• Verifiquei e validei processos de backup para garantir a segurança e a recuperabilidade das informações.",
+      "papel_exercido": "Meu papel foi o de guardar e garantir a qualidade dos dados. Tive a responsabilidade de ajudar a manter a base de dados organizada e confiável, garantindo que as informações estivessem sempre corretas e acessíveis para as áreas que delas dependem.",
+      "duracao": "Foi uma atividade contínua, realizada ao longo de todo o período do estágio",
+      "comentarios": "Nesta função, busquei ser muito atento aos detalhes e proativo na identificação de inconsistências. Acredito que meu comprometimento com a qualidade contribuiu de forma significativa para a confiabilidade da estrutura de dados da empresa.",
+      "aprendizados": "• Adquiri conhecimento prático em gerenciamento de bancos de dados.\n• Compreendi na prática a importância da governança e da integridade de dados para uma organização.\n• Desenvolvi minhas habilidades analíticas para identificar e solucionar anomalias em grandes volumes de informação.\n• Aprendi técnicas de organização e documentação de estruturas de dados."
+    },
+    {
+      "numero": "2",
+      "descricao": "Participei ativamente de projetos de automação de processos, com o foco em reduzir tarefas manuais e repetitivas, buscando aumentar a eficiência operacional da equipe.",
+      "tarefas_realizadas": "• Mapeei processos manuais que apresentavam potencial para serem automatizados.\n• Desenvolvi e implementei scripts para automatizar a coleta e o processamento de dados.\n• Implementei diversos testes para assegurar que as automações funcionavam conforme o esperado.",
+      "papel_exercido": "Atuei identificando gargalos operacionais, o que me permitiu aplicar meu conhecimento técnico para construir soluções. Meu objetivo era modernizar fluxos de trabalho e permitir que a equipe pudesse focar em atividades mais estratégicas.",
+      "duracao": "3 primeiras semanas do estágio",
+      "comentarios": "Sinto que minha atuação nestes projetos trouxe ganhos de eficiência reais para a equipe. Fiquei muito satisfeito com meu rápido aprendizado e com a capacidade de aplicar novas tecnologias para resolver problemas práticos do dia a dia.",
+      "aprendizados": "• Desenvolvi minhas habilidades de programação e criação de scripts (Python, Shell Script).\n• Aprimorei minha lógica de programação ao aplicá-la para solucionar problemas de negócio.\n• Ganhei uma compreensão clara sobre arquiteturas de automação e teste dos códigos."
+    },
+    {
+      "numero": "3",
+      "descricao": "Colaborei com a equipe na otimização do desempenho de sistemas e fluxos de dados, identificando e aplicando melhorias técnicas para tornar os processos mais rápidos e estáveis.",
+      "tarefas_realizadas": "• Analisei consultas e rotinas de processamento para encontrar gargalos de performance.\n• Ajudei na refatoração de códigos, aplicando melhores práticas de desenvolvimento para torná-los mais eficientes.\n• Monitorei indicadores de desempenho dos sistemas para avaliar o impacto das otimizações.\n• Participei de testes de carga para validar a estabilidade e a escalabilidade das melhorias.",
+      "papel_exercido": "Trabalhei junto à equipe técnica para diagnosticar pontos de lentidão e implementar soluções que garantissem a rapidez e a confiabilidade dos nossos sistemas.",
+      "duracao": "4 semanas",
+      "comentarios": "Dediquei-me a entender profundamente os fluxos de dados para poder contribuir com melhorias relevantes. Acredito que minha capacidade de análise ajudou a implementar otimizações técnicas que melhoraram a performance geral dos sistemas.",
+      "aprendizados": "• Aprendi a monitorar e analisar a performance de sistemas complexos.\n• Adquiri conhecimento em técnicas de otimização de consultas em bancos de dados.\n• Tive contato com boas práticas de desenvolvimento de software focado em alto desempenho e big data.\n• Desenvolvi minha capacidade de diagnosticar problemas e propor soluções técnicas eficazes."
+    },
+    {
+      "numero": "4",
+      "descricao": "Apoiei a implementação de práticas de segurança da informação, contribuindo ativamente para a proteção de dados sensíveis e para a conformidade com as políticas da empresa.",
+      "tarefas_realizadas": "• Auxiliei na gestão de perfis e no controle de acesso a sistemas e bancos de dados.\n• Participei da aplicação de políticas de mascaramento e anonimização de dados em ambientes não produtivos.\n• Colaborei na elaboração de documentação de processos e procedimentos de segurança.",
+      "papel_exercido": "Exerci um papel de suporte na proteção dos ativos de informação da empresa. Minha responsabilidade era ajudar a garantir que as políticas de segurança fossem seguidas, mitigando riscos e protegendo a privacidade dos dados.",
+      "duracao": "Foi uma responsabilidade contínua, presente nas minhas tarefas diárias",
+      "comentarios": "Minha atenção aos procedimentos e o cuidado no manuseio das informações foram, a meu ver, essenciais para ajudar a manter o ambiente de dados seguro e protegido.",
+      "aprendizados": "• Aprendi os fundamentos da segurança da informação: confidencialidade, integridade e disponibilidade.\n• Ganhei experiência prática em gestão de identidade e controle de acesso (IAM), especialmente na AWS.\n• Apliquei conceitos importantes sobre leis de proteção de dados, como a LGPD."
+    },
+    {
+      "numero": "5",
+      "descricao": "Fui responsável pela elaboração e atualização de relatórios gerenciais, consolidando informações de forma clara e objetiva para dar suporte ao processo de tomada de decisão da gestão.",
+      "tarefas_realizadas": "• Desenvolvi e mantive pipelines de dados utilizando AWS Glue para realizar a extração, transformação e carga (ETL) de informações de diversas fontes para nosso Data Lake no Amazon S3.\n• Utilizei Amazon Athena para executar consultas ad-hoc nos dados armazenados no S3, preparando e consolidando os datasets que serviriam de base para os relatórios.\n• Implementei rotinas de validação e data quality checks dentro dos jobs de ETL para garantir a precisão e a consistência das informações processadas.\n• Orquestrei a execução automática desses pipelines com o AWS Step Functions, garantindo que os dados para os relatórios fossem atualizados de forma pontual e confiável.",
+      "papel_exercido": "Ajudei a acompanhar a infraestrutura na nuvem AWS que viabilizava a geração dos relatórios. Meu foco era garantir que os dados estivessem processados, consolidados, otimizados e disponíveis para consulta pela equipe de negócios.",
+      "duracao": "7 semanas",
+      "comentarios": "Busquei sempre trabalhar de forma organizada para apresentar as informações da maneira mais clara e objetiva possível. Sinto que minha dedicação na geração dos relatórios evidenciou minha capacidade de transformar dados em conhecimento útil para a tomada de decisão.",
+      "aprendizados": "• Ganhei experiência prática na construção de pipelines de ETL serverless com AWS Glue.\n• Aprendi a modelar, gerenciar e otimizar um Data Lake no Amazon S3.\n• Desenvolvi habilidades avançadas em SQL para consulta de grandes volumes de dados com Amazon Athena.\n• Adquiri conhecimento em orquestração de fluxos de trabalho na nuvem com AWS Step Functions e na automação de processos de dados."
+    }
+  ],
+  "conclusao": "O estágio foi uma excelente oportunidade para aplicar meus conhecimentos teóricos em desafios práticos de programação e engenharia de dados. Desenvolvi habilidades técnicas essenciais na construção e automação de pipelines de dados, utilizando ferramentas do ecossistema AWS como Glue para ETL, S3 como Data Lake e Athena para consultas. Além da parte técnica, a experiência me permitiu entender na prática a importância da qualidade, segurança e otimização dos dados para o negócio. Sinto que o estágio me proporcionou uma base sólida e confirmou meu interesse em seguir carreira na área de engenharia de dados."
+}

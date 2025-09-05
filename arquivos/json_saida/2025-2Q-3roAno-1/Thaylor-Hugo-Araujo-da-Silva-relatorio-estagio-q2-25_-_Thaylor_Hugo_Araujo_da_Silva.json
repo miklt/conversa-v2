@@ -1,0 +1,80 @@
+{
+  "estagiario": {
+    "nome_completo": "Thaylor Hugo Araujo da Silva",
+    "nusp": "13684425",
+    "curso": "Engenharia de Computação",
+    "telefone": "11 99519-4405",
+    "email": "thaylorhugo@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Felipe Prado Bernardes",
+    "telefone": "11 98421-3667",
+    "email": "felipe.bernardes@grupopan.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A. - SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "30",
+    "carga_horaria_total": "450"
+  },
+  "sobre_empresa": "Estágio realizado no Banco BTG Pactual, o maior banco de investimentos da América Latina. O banco possui uma forte cultura de empreendedorismo, trabalho em equipe e desempenho.\n\nO estágio foi realizado no setor de infraestrutura o qual hoje é responsável pelo ambiente de tecnologia do BTG e Banco PAN. Durante esse período fiquei alocado no time de Observabilidade. Essa área é responsável por gerenciar plataformas de monitoramento de infraestrutura, como o Zabbix e Dynatrace. As funções dessa área incluem, por exemplo, a instalação de agentes de monitoramento, criação e manutenção de alertas, e demais atividades relacionadas a observabilidade da infraestrutura do banco.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Criação de Query SQL para Coleta de Eventos do Zabbix",
+      "tarefas_realizadas": "• Leitura da Documentação do Zabbix\n• Estudo das tabelas do banco de dados do zabbix\n• Criação e aprimoramento de Query SQL",
+      "papel_exercido": "Coleta de dados para análise futura",
+      "duracao": "1 semana",
+      "comentarios": "Foi realizado um estudo inicial de funcionamento da plataforma de monitoramento Zabbix e relação das tabelas do banco de dados a partir da documentação. Com isso, foi desenvolvido uma query responsável por coletar os alertas gerados com dados complementares para análise, como host e criticidade. Está query foi sendo aprimorada durante as demais atividades",
+      "aprendizados": "• Funcionamento do Zabbix\n• Utilização do DBeaver\n• Criação de querys sql com múltiplos joins, condições e agrupamentos"
+    },
+    {
+      "numero": "2",
+      "descricao": "Extração e Validação de contatos de Triggers",
+      "tarefas_realizadas": "• Criação de script python",
+      "papel_exercido": "Coleta de contatos para validação e descoberta de contatos inválidos, como macros não traduzidas",
+      "duracao": "1 dia",
+      "comentarios": "Atividade consistiu em criar um script responsável por iterar sobre os alertas coletados, realizando uma nova coleta dos contatos de acionamento de cada uma das triggers dos eventos analisados, encontrando alguns contatos inválidos.",
+      "aprendizados": "• Criação de scripts simples\n• Manipulação de arquivos csv via Python"
+    },
+    {
+      "numero": "3",
+      "descricao": "Validação dos Contatos",
+      "tarefas_realizadas": "• Validação dos contatos com existência de grupos no sistema interno via api\no Estudo de funcionamento da API\no Requisições de consulta de contatos\n• Criação de script para automação da validação",
+      "papel_exercido": "Validação dos contatos coletados e descoberta de contatos inexistentes",
+      "duracao": "2 dias",
+      "comentarios": "Foi utilizado a ferramenta Insomnia para realizar os testes das requisições na api de um sistema interno do banco para validação se os contatos cadastrados nos alertas existiam. Foi criado um script responsável por validar todos os contatos coletados na atividade anterior, sendo encontrados contatos sem grupos internos correspondentes.",
+      "aprendizados": "• Utilização do software Insomnia\n• Realização de requisição de api\n• Utilização da biblioteca requests do python"
+    },
+    {
+      "numero": "4",
+      "descricao": "Coleta de Triggers e Items de Hosts Ativos",
+      "tarefas_realizadas": "• Criação de script para coleta via API e Banco de dados",
+      "papel_exercido": "Re-coleta de dados para análise",
+      "duracao": "1 semana",
+      "comentarios": "Uma certa mudança da coleta de dados ocorreu, sendo então as triggers coletadas via API para cada host ativo e os items coletados através do banco de dados do Zabbix. O script de coleta foi alterado de acordo com as novas estruturas da coleta via API e novas querys SQL para coleta do banco de dados.",
+      "aprendizados": "• Utilização da biblioteca python mysql.connector"
+    },
+    {
+      "numero": "5",
+      "descricao": "Consolidação no Power BI",
+      "tarefas_realizadas": "• Criação de Power BI para apresentação",
+      "papel_exercido": "Organização e análise dos dados coletados",
+      "duracao": "1 semana",
+      "comentarios": "De modo a finalizar a atividade, fui responsável por criar um Power BI com os dados coletados, dando visibilidade as triggers com contatos inválidos e itens não suportados. Desse modo, sendo permitido ao time ter uma visão de pontos que precisam de atuação",
+      "aprendizados": "• DAX language para criação de colunas personalizadas\n• Estruturação de gráficos para análise"
+    },
+    {
+      "numero": "6",
+      "descricao": "Automação e recorrência das coletas",
+      "tarefas_realizadas": "• Criação de tarefa no Rundeck",
+      "papel_exercido": "Possibilitação de recorrência automática da coleta de dados para análise",
+      "duracao": "1 semana",
+      "comentarios": "Nessa tarefa, foi automatizado a coleta dos dados no Rundeck (software utilizado para automações), de modo que a apresentação continuasse atualizada e fosse possível analisar uma evolução dos dados sem interferência do usuário.",
+      "aprendizados": "• Uso do Rundeck para automações"
+    }
+  ],
+  "conclusao": "Como primeira experiencia de estágio no mercado de trabalho em tecnologia, essa experiencia foi muito enriquecedora, me possibilitando adquirir e aprimorar diversas novas habilidades e conhecimentos técnicos e interpessoais, me possibilitando um grande desenvolvimento pessoal e profissional.\n\nDurante esse período, tive a oportunidade de trabalhar não apenas com meu time, mas também outras áreas dentro do banco e consultores externos, me possibilitando desenvolver habilidades sociais relacionadas a comunicação e entendimento do funcionamento interno do banco e relações externas, me mostrando a estrutura de organização de uma grande empresa consolidada como o banco BTG.\n\nAlém disso, também pode descobrir diversas ferramentas técnicas novas, como o Zabbix, Dynatrace, Rundeck e Postman que me permitiram expandir meu conhecimento técnico. Utilizei principalmente a linguagem de programação Python alinhados com linguagens de query como SQL e DQL. Assim como a importância da apresentação da análise de dados, onde aprendi a utilizar e estruturar os dados no Power BI. Consegui também aprender a importância da observabilidade para a infraestrutura de uma empresa como a do banco e a forma de utilização de ferramentas para alcançar esse objetivo."
+}

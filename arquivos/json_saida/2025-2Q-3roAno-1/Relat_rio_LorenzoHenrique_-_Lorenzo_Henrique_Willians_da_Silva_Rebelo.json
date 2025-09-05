@@ -1,0 +1,62 @@
+{
+  "estagiario": {
+    "nome_completo": "Lorenzo Henrique Willians da Silva Rebelo",
+    "nusp": "14590120",
+    "curso": "Engenharia de Computação",
+    "telefone": "27997200419",
+    "email": "henriquewillians@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Tomás Ramos",
+    "telefone": "11991257474",
+    "email": "tomas.ramos@virtualisurg.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "Virtual Cirurgia Ltda",
+    "cnpj": "43.696.907/0001-40",
+    "periodo_inicio": "05 de maio",
+    "periodo_fim": "05 de setembro",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "584 horas"
+  },
+  "sobre_empresa": "A VirtualiSurg é uma empresa fundada em 2017 em Paris, com presença internacional em países como Brasil, Canadá, Singapura e Japão, especializada no desenvolvimento de simulações XR para treinamento técnico e educação médica. Sua missão é melhorar os resultados para pacientes, oferecendo soluções personalizadas que aceleram o aprendizado e aperfeiçoam habilidades, aliando inovação tecnológica, agilidade e compromisso ético. A empresa atua para tornar tecnologias médicas acessíveis globalmente, reduzir testes em animais e promover práticas sustentáveis, sempre com foco na qualidade do cuidado e no avanço da medicina.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Onboarding",
+      "tarefas_realizadas": "1. Realização de um curso disponibilizado pela empresa\n2. Leitura de um livro fornecido pela empresa\n3. Estudo dos sistemas da empresa",
+      "papel_exercido": "Desenvolvedor",
+      "duracao": "4 semanas",
+      "comentarios": "O processo de onboarding foi bem interessante e esclarecedor, garantindo um bom entendimento dos programas utilizados durante o estágio.",
+      "aprendizados": "Aprendizado em c# e unity, além de design patterns."
+    },
+    {
+      "numero": "2",
+      "descricao": "Configuração do Headset (Metaquest)",
+      "tarefas_realizadas": "1. Estudo sobre como funciona o Metaquest\n2. Teste de códigos por ADB\n3. Implementação",
+      "papel_exercido": "Desenvolvedor",
+      "duracao": "3 semanas",
+      "comentarios": "Essa atividade foi bastante desafiadora, pois não existe quase nada na internet explicando isso e muito menos os comandos, tive que fazer muitos testes e comandos para ver o que funcionava, e depois ainda tive que implementar DLLs em C para que funcionasse corretamente no Windows.",
+      "aprendizados": "ADB, metaquest, implementação de DLLs"
+    },
+    {
+      "numero": "3",
+      "descricao": "Configuração do Arduino",
+      "tarefas_realizadas": "1. Entender como funcionam essas 'bases' da empresa\n2. Estudar os códigos arduino para entender qual é o padrão de envio das informações\n3. Desenvolver o código de validação",
+      "papel_exercido": "Desenvolvedor",
+      "duracao": "3 semanas",
+      "comentarios": "Foi um bom projeto, apesar de ser meio complicado no início consegui fazer ele rapidamente, pois comunicação serial tem mais conteúdos na internet do que o tópico anterior.",
+      "aprendizados": "Comunicação serial entre o computador e arduino."
+    },
+    {
+      "numero": "4",
+      "descricao": "Configuração dos dispositivos hápticos",
+      "tarefas_realizadas": "1. Estudo sobre os dispositivos hápticos\n2. Comunicação\n3. Implementação",
+      "papel_exercido": "Desenvolvedor",
+      "duracao": "6 semanas",
+      "comentarios": "Essa foi, de longe, a tarefa mais difícil do estágio. Não havia uma documentação adequada sobre o funcionamento dos dispositivos hápticos e, as poucas disponíveis, eram mal elaboradas pelo fornecedor.",
+      "aprendizados": "Programação de dispositivos hápticos"
+    }
+  ],
+  "conclusao": "Nesse período de estágio, atuei como XR Intern, com foco principal no desenvolvimento em C# na Unity, área na qual já possuía algum conhecimento prévio. No entanto, também precisei trabalhar com ADB, comunicação serial e dispositivos hápticos, tecnologias com as quais nunca havia tido contato antes. Isso tornou a experiência ainda mais interessante, pois exigiu que eu aprendesse rapidamente sobre diversos tópicos novos, expandindo bastante minhas habilidades técnicas.\n\nO acompanhamento do meu gestor foi excelente e, em nenhum momento, me senti sozinho na execução das tarefas. Além disso, por ser uma empresa com uma equipe reduzida, pude me aproximar mais dos meus colegas e desfrutar de um ambiente de trabalho acolhedor e colaborativo. Essa proximidade e o apoio constante tornaram o estágio não apenas um grande aprendizado técnico, mas também uma vivência extremamente agradável e enriquecedora, consolidando meu interesse pela área de XR e me proporcionando uma base sólida para futuros desafios profissionais"
+}

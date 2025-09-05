@@ -1,0 +1,53 @@
+{
+  "estagiario": {
+    "nome_completo": "Carolina Tavares Duarte",
+    "nusp": "12690963",
+    "curso": "Engenharia de Computação",
+    "telefone": "(21)975895639",
+    "email": "carolinatavaresduarte@gmail.com"
+  },
+  "supervisor": {
+    "nome_completo": "Juan Santos",
+    "telefone": "(19)982633576",
+    "email": "Juan.Santos@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A. - SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40h",
+    "carga_horaria_total": "600h"
+  },
+  "sobre_empresa": "O Banco BTG Pactual é uma instituição financeira brasileira de investimento e gestão de recursos, com atuação em diversas áreas como banco de investimento, gestão de patrimônio, sales & trading, research, corporate actions, entre outros. O estágio foi realizado na unidade de São Paulo, dentro do setor de Equities e Derivativos, com foco em automação, inteligência artificial e processamento de dados para suporte às áreas de Corporate Actions (CA) e Research.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Desenvolvimento de uma solução automatizada para otimizar o processo de envio de emails com informações de tratamento fiscal para clientes não residentes, reduzindo etapas manuais e tempo de execução.",
+      "tarefas_realizadas": "- Integração com o backend do time responsável por buscar notícias no site da B3, adicionando palavras-chave relacionadas a tratamento fiscal.\n- Implementação de extração automática de informações de PDFs utilizando técnicas de IA.\n- Consulta ao banco de dados (SQL Server) para identificar clientes não residentes e exportar resultados para Excel.\n- Geração automática de email via template .cshtml com anexos (PDF e Excel).\n- Integração com RabbitMQ para mensageria.\n- Implantação e gerenciamento de containers via Rancher.\n- Criação e teste de endpoints de API usando Swagger.",
+      "papel_exercido": "Responsável por todo o desenvolvimento da automação, desde a leitura dos documentos até o envio final do email, garantindo integração com sistemas existentes.",
+      "duracao": "Aproximadamente 1 mês, sendo o primeiro projeto do estágio",
+      "comentarios": "A automação reduz um processo de 3 etapas manuais para um fluxo totalmente automatizado, otimizando significativamente o tempo do time de CA.",
+      "aprendizados": "Domínio de integração entre backends, uso de VisualStudio e C#, processamento de PDFs com IA, manipulação de dados no SQL Server, mensageria com RabbitMQ e orquestração de serviços com Rancher."
+    },
+    {
+      "numero": "2",
+      "descricao": "Desenvolvimento de um chatbot baseado em RAG (Retrieval-Augmented Generation) para atender perguntas internas do time, com alta precisão, modularidade e escalabilidade, capaz de buscar e resumir relatórios, listar documentos e responder a perguntas abertas.",
+      "tarefas_realizadas": "- Estruturação do workflow modular usando LangChain e LangGraph em Python.\n- Criação de banco de embeddings usando PostgreSQL com pgvector e FAISS.\n- Implementação de nós para reformulação de perguntas com base no histórico da conversa.\n- Extração de filtros (data, departamento, empresa, ticker, analistas, etc.).\n- Montagem de SQL dinâmico e execução no banco de dados.\n- Recuperação de contexto com embeddings e metadados.\n- Geração de respostas com prompts específicos para cada tipo de pergunta (listagem, resumo e pergunta aberta).\n- Verificação semântica e fallback para respostas padrão em caso de erro.\n- Tratamento de prompt injection e bloqueio de perguntas fora de contexto.\n- Integração de testes via Swagger para endpoints.",
+      "papel_exercido": "Desenvolvedora principal do fluxo RAG, responsável pela arquitetura do pipeline e implementação das funcionalidades avançadas de busca e interpretação.",
+      "duracao": "Aproximadamente 3 meses",
+      "comentarios": "O chatbot aumentou a autonomia do time na busca por informações, permitindo consultas complexas e reduzindo a necessidade de suporte manual.",
+      "aprendizados": "Uso avançado de LangChain e LangGraph, implementação de buscas vetoriais híbridas (pgvector + FAISS), design de prompts estruturados e validação semântica de respostas."
+    },
+    {
+      "numero": "3",
+      "descricao": "Implementação de um sistema para traduzir perguntas em linguagem natural para SQL, executar consultas no banco e apresentar resultados de forma clara, permitindo análises e estatísticas rápidas.",
+      "tarefas_realizadas": "- Estruturação do workflow em LangChain e LangGraph usando Python.\n- Integração com PostgreSQL usando pgvector e FAISS para consultas que combinam dados tabulares e contexto semântico.\n- Implementação de múltiplos nós especializados (interpretação da pergunta, geração de SQL, execução da consulta, formatação da resposta).\n- Criação de mecanismos para consultas comparativas, ordenações e filtros personalizados.\n- Testes e documentação via Swagger.",
+      "papel_exercido": "Desenvolvedora responsável pelo fluxo completo do Text2SQL, desde a decomposição da pergunta até a apresentação final da resposta.",
+      "duracao": "Aproximadamente 3 meses",
+      "comentarios": "A solução reduziu o tempo de elaboração de consultas complexas e ampliou a acessibilidade a dados para usuários não técnicos.",
+      "aprendizados": "Conversão de linguagem natural para SQL, integração de vetores em consultas relacionais, design modular de workflows e otimização de queries."
+    }
+  ],
+  "conclusao": "O estágio proporcionou aprendizado técnico avançado em desenvolvimento backend, inteligência artificial, busca vetorial e integração de sistemas corporativos, além de aprimorar habilidades de análise de requisitos, documentação técnica e trabalho em equipe. A experiência foi fundamental para consolidar conhecimentos em C#, Python, SQL, LangChain, LangGraph, PostgreSQL, pgvector, FAISS e no uso de ferramentas de mensageria e orquestração como RabbitMQ e Rancher."
+}

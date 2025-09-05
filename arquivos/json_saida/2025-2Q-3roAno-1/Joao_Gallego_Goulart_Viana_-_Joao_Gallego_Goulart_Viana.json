@@ -1,0 +1,44 @@
+{
+  "estagiario": {
+    "nome_completo": "João Gallego Goulart Viana",
+    "nusp": "14581606",
+    "curso": "Engenharia Da Computação - Bacharelado",
+    "telefone": "(27) 99204-4807",
+    "email": "jojo.g.viana@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Luana Sá Trovo",
+    "telefone": "(19) 99365-0905",
+    "email": "luana.trovo@visagio.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "VLABS SERVICOS E SOLUCOES EM DATA SCIENCE LTDA",
+    "cnpj": "57.823.326/0001-36",
+    "periodo_inicio": "26/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "480 horas"
+  },
+  "sobre_empresa": "Estagiei no VLabs, unidade de Data Analytics, Machine Learning e Inteligência Artificial do Grupo Visagio. O VLabs aplica IA e analytics em projetos de consultoria estratégica para setores como Banking, Varejo, Energia, Mineração, Logística e Agronegócio.",
+  "atividades_realizadas": [
+    {
+      "numero": "01",
+      "descricao": "Projeto de Eficiência no setor Jurídico de uma Companhia Aérea",
+      "tarefas_realizadas": "Realizei a coleta, consolidação e análise de dados operacionais por meio da extração de relatórios do sistema Elaw, utilizado pela empresa para guardar os dados dos processos jurídicos movidos contra ela.\n\nCom base nesses dados extraídos e analisados, desenvolvi um Dashboard com atualização diária de indicadores, utilizando Excel, Python e PowerBI. O Dashboard serve para o acompanhamento de KPIs do setor jurídico, como: quantidade de novos processos, processos que foram encerrados, ticket médio de condenação, quantidade de acordos realizados, etc.\n\nParalelamente, atuei no desenvolvimento de um processo automatizado para cadastro de ações cíveis usando GenAI, com a estruturação de um pipeline para extração e tabulação de informações, conduzindo também testes e avaliação de modelos por meio de metodologias distintas para campos tabulares e interpretativos e utilizando técnicas avançadas como embeddings e similaridade de cosseno.\n\nDesenvolvi também um assistente para descrição e detalhamento de imagens com Python, GenAI e Streamlit, hospedado numa plataforma interna da companhia (Snowflake), para enriquecer laudos e subsídios (evidências / provas) dos processos jurídicos.\n\nPor último, documentei todas essas entregas, realizando a transferência das responsabilidades de sustentação para a equipe de TI do cliente.",
+      "papel_exercido": null,
+      "duracao": "Mai/25 até Jun/25 (aproximadamente 6 semanas)",
+      "comentarios": "As ferramentas foram implementadas aproveitando a stack tecnológica nativa do cliente, o que facilitou a integração e a operação pelos atendentes. O dashboard passou a ser utilizado pelas áreas de planejamento financeiro (FP&A), jurídico e TI dessa Companhia Aérea, suportando a tomada de decisão.",
+      "aprendizados": "Desenvolvimento e implementação de dashboards para monitoramento frequente de KPIs e suporte à tomada de decisão; aplicação de GenAI para automação de tarefas operacionais e enriquecimento de informações, incluindo avaliação de modelos sem ground-truth por meio de embeddings e similaridade de cosseno; construção de aplicações práticas em Python/Streamlit e integração com arquitetura de dados corporativa (ex.: Snowflake); e compreensão da importância da qualidade dos dados, governança e da transferência efetiva de conhecimento para as equipes operacionais e de TI do cliente."
+    },
+    {
+      "numero": "02",
+      "descricao": "Projeto de Governança de Comunicações em um Banco de médio porte brasileiro",
+      "tarefas_realizadas": "Ajudei no mapeamento das comunicações do banco por meio de interlocução direta com fornecedores e com as áreas internas responsáveis pelos disparos do banco, como equipes de operação, atendimento e CRM.\n\nConsolidei todas essas comunicações mapeadas em um \"mapa de comunicações\" no Excel, utilizando Power Query para padronizar, transformar e integrar as bases de dados.\n\nCom base nesse mapa, desenvolvi um dashboard analítico em Power BI com indicadores de volumetria, custo unitário, custo mensal, canal, conteúdo do disparo e área demandante, incluindo filtros e visualizações para suporte à análise.\n\nAjudei também na estruturação da proposta de governança e da arquitetura de referência, definindo papéis, responsabilidades, processos de aprovação e fluxos operacionais, onde apoiei na preparação e na apresentação de material em PowerPoint destinado à alta gerência (gerentes executivos e diretores do banco).\n\nPor último, venho ajudando na elaboração de uma documentação de governança que documenta o novo processo de criação, aprovação e monitoramento dos disparos; onde estou conduzindo validações com diversas áreas do banco para garantir consistência e aderência dos dados e dos processos propostos.",
+      "papel_exercido": null,
+      "duracao": "Jul/25 até Ago/25 (aproximadamente 8 semanas)",
+      "comentarios": "As entregas foram desenvolvidas considerando a infraestrutura e os fornecedores já existentes, o que facilitou a coleta e validação das informações. O mapa de comunicações e seus dados analíticos ajudaram a subsidiar discussões estratégicas da alta gerência e das áreas demandantes, fornecendo visibilidade sobre volumetria, fornecedores, custos e canais e apoiando decisões relacionadas a centralização da governança.",
+      "aprendizados": "Condução de mapeamento de processos e relacionamento com fornecedores e stakeholders internos; experiência em consolidação e transformação de bases com Excel/Power Query; desenvolvimento de dashboards analíticos em Power BI com foco em volumetria e custos; elaboração de material executivo para apresentação à alta gestão; e vivência na definição de governança e papéis e responsabilidades."
+    }
+  ],
+  "conclusao": "O estágio foi de suma importância para meu aprendizado, pois pude desenvolver muito minhas Hard Skills nos campos de programação, GenAI e Data Science. Mas muito além disso, pude desenvolver minhas Soft Skills, aprendendo a importância do trabalho em equipe, tendo proatividade de conduzir entrevistas sozinho com o cliente, apresentar material e participar de discussões sobre estruturação da governança e do fluxo ideal para um banco de médio porte brasileiro."
+}

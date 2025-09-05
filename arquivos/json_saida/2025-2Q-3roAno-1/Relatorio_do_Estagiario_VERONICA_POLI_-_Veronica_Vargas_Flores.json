@@ -1,0 +1,89 @@
+{
+  "estagiario": {
+    "nome_completo": "Veronica Vargas Flores",
+    "nusp": "14610174",
+    "curso": "Engenharia da Computação",
+    "telefone": "11 978902869",
+    "email": "Veronicavargas@usp.com.br"
+  },
+  "supervisor": {
+    "nome_completo": "Daniel Golhiardi",
+    "telefone": "19 997439820",
+    "email": "daniel.golhiardi@nuclea.com.br"
+  },
+  "estagio": {
+    "razao_social_empresa": "CIP S.A",
+    "cnpj": "44393564000107",
+    "periodo_inicio": "02/06/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "400 horas"
+  },
+  "sobre_empresa": "A Núclea é uma empresa brasileira que oferece tecnologia para facilitar transações financeiras, ela é responsável por 100% dos registros de boleto e 90% da liquidação de cartões de débito e crédito do país, além de atuar com dados, blockchain e soluções para crédito e seguros. A empresa é constituída por várias áreas, dentre elas está aquela em que realizei meu estágio: a área de dados, denominada como Tribo de Dados. Dentro da tribo, há algumas squads; a squad da qual fiz parte foi a de Plataforma de Produtos, que entrega APIs para que os clientes consultem os produtos da Núclea. Entretanto, dentro da squad temos dois tipos de entrega dos produtos: via API e via arquivo.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Mapeamento das credenciais de cada cliente e os produtos contratados com o objetivo colocar em um só lugar para fácil acesso.",
+      "tarefas_realizadas": "• Navegação pelo serviço Cognito da AWS para obtenção das credenciais de acesso dos clientes e os produtos associados a cada cliente.\n• Utilização do API Gateway para descobrir qual produto o endpoint se refere.\n• Registro das informações coletadas em uma planilha para facilitar a análise.\n• Leitura de Contratos e coleta dos dados para fazer a validação com as credenciais já criadas.",
+      "papel_exercido": "Responsável pela coleta, organização, documentação das credenciais e produtos contratados pelos clientes e a verificação se eram condizentes com o que estava no contrato. A atividade foi registrada no confluence.",
+      "duracao": "2 semanas",
+      "comentarios": "Para realizar está atividade foi necessário aprender sobre alguns serviços da AWS, além de entender todo o fluxo das entregas, como por exemplo: o que é ambiente de homologação e de produção. Além de que tive mais contato com o pessoal do meu time pois esclarecia minhas dúvidas diretamente com eles e, também, tive contato com o comercial para a obtenção dos contratos.",
+      "aprendizados": "• Conceitos de computação em nuvem e serviços da AWS.\n• Fluxo das entregas de API\n• Desenvolvimento pessoal e técnico através das conversas com pessoas de dentro e fora da minha squad."
+    },
+    {
+      "numero": "2",
+      "descricao": "Validação das APIs utilizando Postman, com foco em garantir o funcionamento correto dos endpoints em diferentes ambientes.",
+      "tarefas_realizadas": "• Estudo sobre o que são APIs e como funciona o Postman.\n• Upload das APIs da squad na máquina local.\n• Configuração dos ambientes e parâmetros necessários para os testes.\n• Execução de testes em cada API, verificando o código de retorno e os campos de saída.",
+      "papel_exercido": "Responsável pela validação de todas as APIs para verificar o código de retorno e os campos de saída, testando tanto no ambiente interno como no de Homologação.",
+      "duracao": "1 semana",
+      "comentarios": "Recebi apoio do QA da squad para configurar o Postman e realizar o upload das APIs. Também tive uma breve explicação sobre os campos presentes nas APIs, o que facilitou a compreensão e execução dos testes.",
+      "aprendizados": "Aprofundei meus conhecimentos em API e pude entender na pratica o que era, além de ter um contato com o Postman."
+    },
+    {
+      "numero": "3",
+      "descricao": "Atuação na sustentação da squad, realizando triagem e encaminhamento de chamados para garantir agilidade no atendimento e cumprimento dos SLAs.",
+      "tarefas_realizadas": "• Triagem e filtragem dos chamados recebidos.\n• Verificação das informações obrigatórias em cada chamado.\n• Recusa de chamados incompletos ou fora do escopo da squad.\n• Criação de cards no Jira para os chamados válidos.\n• Designação dos chamados aos responsáveis (desenvolvedores ou engenheiros).",
+      "papel_exercido": "Responsável por garantir que os chamados fossem corretamente classificados e encaminhados, evitando atrasos e contribuindo para a organização do fluxo de trabalho da squad. Também atuei como ponto de contato entre a squad e outras áreas envolvidas.",
+      "duracao": "6 semanas",
+      "comentarios": "Durante essa atividade, tive a oportunidade de interagir com pessoas de fora da minha squad, o que ampliou minha visão sobre o funcionamento da empresa. A experiência também me ajudou a desenvolver habilidades de comunicação.",
+      "aprendizados": "Aprendi na prática sobre o que a minha squad é responsável, a como mexer no Jira e a me comunicar um pouco melhor nas reuniões, pois na Daily (cerimonia de alinhamento que ocorre todo dia e dura cerca de 20 min) tive que informar uma visão geral de como estava prosseguindo na sustentação e pude colocar em pratica o que eu tinha aprendido sobre o fluxo das entregas de API."
+    },
+    {
+      "numero": "4",
+      "descricao": "Workshop para outra área da empresa",
+      "tarefas_realizadas": "• Apoio na criação do documento de suporte utilizado durante o workshop.\n• Revisão e limpeza das páginas envolvidas, organizando o conteúdo para facilitar a visualização e compreensão por parte dos participantes.",
+      "papel_exercido": "Responsável por colaborar na preparação dos materiais do workshop, contribuindo para a estruturação e clareza das informações.",
+      "duracao": "2 semanas",
+      "comentarios": "A atividade proporcionou uma perspectiva sobre como outras áreas da empresa consomem as informações da squad. Também foi uma oportunidade de colaborar em um contexto mais estratégico e interdepartamental.",
+      "aprendizados": "• Noções de como adaptar conteúdo para públicos com diferentes níveis de conhecimento técnico.\n• Valorização do trabalho colaborativo entre áreas para promover alinhamento e entendimento comum."
+    },
+    {
+      "numero": "5",
+      "descricao": "Participação da primeira edição do DataTank",
+      "tarefas_realizadas": "• Preparação do material de apresentação da solução encontrada",
+      "papel_exercido": "Responsável por preparar o powerpoint para a apresentação",
+      "duracao": "2 dias",
+      "comentarios": "Participar desse evento interno da empresa foi uma experiencia incrível pois tive contato com pessoas de outras squads, além de poder ouvir as ideias dos demais e poder absorver um pouco de aprendizado de cada um.",
+      "aprendizados": "Um dos principais aprendizados foi melhoramento da habilidade de trabalhar em equipe."
+    },
+    {
+      "numero": "6",
+      "descricao": "Comparação dos Swaggers com a Planilha que contém todos os produtos da Tribo de Dados",
+      "tarefas_realizadas": "• Coletar os dados dos Swaggers do portal do desenvolvedor\n• Registrar em uma planilha todas as informações coletadas\n• Comparar os dados com a Hierarquia de produtos para poder se fazer uma análise.",
+      "papel_exercido": "Responsável por realizar uma comparação entre os dados coletados e a hierarquia de produtos pois a partir dessa análise verificar se os swaggers precisam ser atualizados, ou se a hierarquia precisa ser atualizada.",
+      "duracao": "1 semana",
+      "comentarios": "Realizar esta atividade me proporcionou um entendimento melhor sobre uma etapa que envolve a criação de API, o Swagger, além de ter o privilégio de entender o fluxo do portal do desenvolvedor.",
+      "aprendizados": "Com a realização dessa atividade obtive mais conhecimento técnico (compreensão do Swagger e sobre o portal do desenvolvedor) e também aprimorei meu conhecimento sobre o processo de desenvolvimento."
+    },
+    {
+      "numero": "7",
+      "descricao": "Introdução à engenharia de dados",
+      "tarefas_realizadas": "• Estudo sobre Pyspark, Databricks e Airflow\n• Reuniões realizadas com os engenheiros para entendimento do desenvolvimento dos códigos.",
+      "papel_exercido": "Aprimorar meus conhecimentos em SQL e Python e desenvolver o conhecimento em Pyspark, Databricks e Airflow. Além de acompanhar o fluxo da engenharia de dados",
+      "duracao": "3 semanas",
+      "comentarios": "Ao realizar esta atividade tive o apoio incondicional dos engenheiros de dados da minha squad que me mostraram o fluxo de engenharia, as tarefas e os códigos. Além de sempre compartilharem ensinamentos e boas práticas.",
+      "aprendizados": "Está atividade foi responsável por ampliar minha visão de ferramentas que antes eu não tinha conhecimento, além de poder ver de perto os códigos desenvolvidos pelo time de engenharia."
+    }
+  ],
+  "conclusao": "O estágio me proporcionou muitos aprendizados tanto na parte técnica quanto na área de negócios. Foi muito gratificante acompanhar de perto todo o processo de trabalho dentro de uma empresa, desde as cerimônias que seguem a metodologia Scrum até o ciclo completo de criação e entrega de uma API.\n\nPude entender melhor como funciona cada etapa, desde a solicitação da criação da API até sua disponibilização para o cliente, passando por processos burocráticos e técnicos. Um dos pontos mais marcantes foi aprender que, antes de uma API ser liberada para o cliente, ela passa por testes no ambiente interno (HINT), realizados pelos desenvolvedores. Após essa etapa, a API é validada pelo QA e, em seguida, aprovada pelo PM (Product Manager). Só então ela é liberada para o ambiente de homologação, onde o cliente realiza seus próprios testes. Quando aprovada, a API é finalmente disponibilizada no ambiente de produção, onde o cliente começa a consumir e pagar pelo serviço. E em cada etapa envolve outros processos internos, de modo geral, o estágio me proporcionou tanto em tão pouco tempo."
+}

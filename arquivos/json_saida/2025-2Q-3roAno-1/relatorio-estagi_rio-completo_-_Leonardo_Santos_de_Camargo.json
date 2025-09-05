@@ -1,0 +1,44 @@
+{
+  "estagiario": {
+    "nome_completo": "Leonardo Santos de Camargo",
+    "nusp": "14615266",
+    "curso": "Engenharia da Computação",
+    "telefone": "41992844477",
+    "email": "leonardosantosdecamargo@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Diego Pereira",
+    "telefone": "(71) 99165-9849",
+    "email": "diego-s.pereira@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "Banco Btg Pactual S.A",
+    "cnpj": "30.306.294/0001-45",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "608 horas"
+  },
+  "sobre_empresa": "O BTG Pactual é um banco de investimentos brasileiro, reconhecido por sua atuação em áreas como Asset Management, Wealth Management, Corporate Lending e Investment Banking. Líder em inovação e tecnologia, o BTG é reconhecido por sua cultura meritocrática e orientada a resultados. O banco valoriza a autonomia, o espírito empreendedor e a colaboração entre equipes, incentivando a inovação contínua e o desenvolvimento profissional. Sobre a unidade e o setor em que realizei o estágio: atuei na unidade de Tecnologia da Informação, especificamente no setor de IT SELIC, responsável pelo suporte e desenvolvimento de sistemas relacionados à negociação e liquidação de títulos públicos. Meu time tinha em torno de 12 membros, incluindo desenvolvedores, analistas de testes, product owner e outros.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Desenvolvimento Java",
+      "tarefas_realizadas": "adição/ remoção de campos específicos, tratamento de testes unitários",
+      "papel_exercido": "acompanhamento de desenvolvedor experiente, num primeiro momento observando e aprendendo, num segundo momento realizando as alterações com a supervisão do desenvolvedor",
+      "duracao": "1 semana",
+      "comentarios": null,
+      "aprendizados": "Conhecimentos de Java, boas práticas de projeto e estrutura de testes de projetos"
+    },
+    {
+      "numero": "2",
+      "descricao": "Projeto de Detector de Anomalias em Trades SELIC",
+      "tarefas_realizadas": "estudo estatístico prévio das trades SELIC; conexão com banco de dados para pegar as trades com data configurável; conexão com Microsoft Teams para enviar alertas automaticamente mediante encontro de anomalia; aperfeiçoamento de validador de esquema de trade; criação de validador de estado de erro de trade; estruturação e planejamento do projeto de inteligência artificial; aprendizado sobre as tecnologias e modelos de IA a serem utilizados; criação do scanner de trades utilizando Tabular Transformer; criação do agente DQN de aprendizado por reforço de detecção de anomalias; união do agente DQN com scanner Tabular Transformer para formar validador por IA de trades; uso das conexões com banco de dados e Microsfot Teams para criar o Detector de Anomalias SELIC",
+      "papel_exercido": "havia poucas ferramentas prontas antes de meu trabalho, sendo elas o validador de esquemas, a conexão com banco de dados e com Microsoft Teams. Fui o único desenvolvedor assinalado ao projeto, recebendo apenas orientações e feedbacks de desenvolvedores mais experientes. Todo o código do validador de estado de erro e do validador de IA é de minha autoria",
+      "duracao": "16 semanas",
+      "comentarios": "a grande maioria de meu estágio se concentrou no trabalho neste projeto. O Detector de Anomalias era uma ideia pré-existente do time, mas não tinham o tempo a disposição para o desenvolvimento do projeto. Assim, fui o principal desenvolvedor do projeto, recebendo sempre feedback e orientação de chefes e colegas de trabalho",
+      "aprendizados": "uso de tecnologias como DBeaver, Postman, api do Microsoft Teams, e pacotes python como pytorch, pandas, numpy, tensorflow. Aprendizado sobre estrutura de projeto, requisitos de projeto, transparência de desenvolvimento, técnicas de depuração de bugs"
+    }
+  ],
+  "conclusao": "além do aprofundamento técnico nas mais diversas ferramentas, e nos conhecimentos sobre estrutura profissional de projeto, valorizo muito as soft skills do mundo corporativo que o estágio me apresentou: como se portar numa reunião, quando pedir auxílio para contornar um problema de maneira efetiva, como prestar auxílio para colegas de trabalho que me requisitem, como apresentar resultados para figuras de gestão."
+}

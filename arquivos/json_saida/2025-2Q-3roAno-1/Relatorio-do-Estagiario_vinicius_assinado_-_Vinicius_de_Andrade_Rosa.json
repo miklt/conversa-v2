@@ -1,0 +1,80 @@
+{
+  "estagiario": {
+    "nome_completo": "Vinícius de Andrade Rosa",
+    "nusp": "14610991",
+    "curso": "Engenharia de Computação",
+    "telefone": "(14)996984657",
+    "email": "viniciusrosa@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Cristiano Rodrigues Lima",
+    "telefone": "+55 21 98090‑2016",
+    "email": "cristiano.lima@flashapp.com.br"
+  },
+  "estagio": {
+    "razao_social_empresa": "FLASH TECNOLOGIA E INSTITUIÇÃO DE PAGAMENTO LTDA",
+    "cnpj": "32.223.020/0001-18",
+    "periodo_inicio": "12/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "6 horas",
+    "carga_horaria_total": "420 horas"
+  },
+  "sobre_empresa": "A Flash Tecnologia e Instituição de Pagamento é uma empresa brasileira credenciada pelo Banco Central que atua no setor de meios de pagamento, com foco na oferta de soluções digitais para gestão de benefícios corporativos. Desenvolve e opera plataformas e cartões que permitem às empresas conceder benefícios de forma flexível e integrada, atendendo às exigências legais e às necessidades dos colaboradores.\n\nNesse contexto, a Plataforma Antifraude da Flash - a área em que atuei - se insere como uma área estratégica e essencial. Nosso objetivo é construir uma plataforma de riscos escalável e eficiente, protegendo o negócio sem criar atrito à experiência do usuário e atendendo a rigorosos requisitos regulatórios. Isso se concretiza através do desenvolvimento de modelos de scores de risco, da criação de uma arquitetura antifraude by design, da atuação proativa na identificação de transações suspeitas e da garantia da conformidade dos processos de KYC (Know your Customer). Integrada à Tribo de Plataforma, nossa visão é entregar um sistema antifraude robusto, assertivo e independente, beneficiando todos os times da Flash.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Sessões de pair programming com o Tech Lead e desenvolvedores da equipe",
+      "tarefas_realizadas": "Durante as sessões de pair programming, tive a oportunidade de aprofundar meu entendimento sobre as regras de negócio e participei ativamente do desenvolvimento de funcionalidades. Essa experiência me proporcionou uma visão prática e detalhada dos processos e da lógica adotada pela empresa. A arquitetura de software foi assimilada por meio da observação e das discussões durante a implementação de soluções, o que ampliou minha compreensão sobre a estrutura e os padrões arquitetônicos utilizados.\n\nAlém disso, desenvolvi minhas habilidades de comunicação e colaboração ao justificar decisões, expor ideias e oferecer feedback construtivo. O contato com desafios reais e a busca conjunta por soluções aceleraram minha capacidade de depuração e resolução de problemas, permitindo identificar e corrigir falhas de forma eficaz. Também adquiri conhecimento prático e contextualizado sobre as ferramentas e tecnologias aplicadas pela equipe.",
+      "papel_exercido": null,
+      "duracao": "aproximadamente 4 horas semanais",
+      "comentarios": null,
+      "aprendizados": "O envolvimento nessa atividade contribuiu para o aprimoramento de competências que permearam todas as demais tarefas. Em resumo:\nFrontend\n• React: Biblioteca principal para desenvolvimento de interfaces de usuário, com uso extensivo de componentes.\n• TypeScript: Linguagem utilizada para garantir maior segurança de tipos.\n• Hooks do React: Base da lógica do frontend (useState, useEffect, useRef, useCallback, forwardRef, useImperativeHandle).\n• Styled-Components: Biblioteca CSS-in-JS para estilização de componentes.\nBackend\n• Node.js: Ambiente de execução de aplicações no servidor.\n• Fastify: Framework web de alta performance para APIs.\n• MongoDB: Banco de dados NoSQL.\n• Papr: ORM para interação segura com MongoDB em TypeScript.\n• Kafka: Message broker para processamento assíncrono.\n• Resultar: Biblioteca para tratamento funcional de erros (Result Pattern).\n• Undici: Cliente HTTP de alta performance para comunicação entre serviços.\nFerramentas de Desenvolvimento e DevOps\n• Swagger: Documentação e teste de APIs.\n• ClickUp: Ferramenta de gerenciamento de projetos.\nMetodologias e Padrões de Arquitetura\n• Arquitetura de Microsserviços.\n• BFF (Backend-for-Frontend).\n• Repository Pattern.\n• Use Case Layer.\n• Componentização e criação de hooks customizados.\n• Programação funcional.\n• Depuração por isolamento (estratégia \"dividir e conquistar\")."
+    },
+    {
+      "numero": "2",
+      "descricao": "Desenvolvimento de Backend e Testes para Prova de Conceito (POC) de Biometria",
+      "tarefas_realizadas": "Analisei e interpretei a arquitetura de software existente (Clean Architecture/Arquitetura Hexagonal), compreendendo a separação de responsabilidades entre Domínio, Aplicação e Infraestrutura. Transformei um requisito de alto nível do documento da POC em um plano de ação técnico detalhado, com entregáveis claros. Desenvolvi o use case responsável pela lógica de negócio, criando um pipeline de agregação no MongoDB para calcular estatísticas de performance. Além disso, elaborei testes unitários utilizando o node:test e a biblioteca strong-mock, adotando programação funcional com a biblioteca resultar.",
+      "papel_exercido": "Atuei como desenvolvedor backend, assumindo responsabilidade pelo ciclo de vida completo de uma nova funcionalidade, desde a análise de requisitos até a implementação, testes e depuração de erros complexos.",
+      "duracao": "1 semana",
+      "comentarios": "A atividade foi desafiadora e imersiva, proporcionando contato direto com uma stack moderna e boas práticas de desenvolvimento, como arquitetura limpa e testes rigorosos. A depuração de erros foi especialmente enriquecedora, aprofundando meu conhecimento em TypeScript e programação funcional.",
+      "aprendizados": "• Compreensão prática dos princípios da Clean Architecture.\n• Escrita de testes unitários robustos com mocks.\n• Aplicação de conceitos de programação funcional em TypeScript."
+    },
+    {
+      "numero": "3",
+      "descricao": "Apoio à Product Manager na organização de cards e na definição e revisão de critérios de aceite",
+      "tarefas_realizadas": "Colaborei na gestão de cards em ferramentas de gerenciamento de projetos, garantindo atualização e clareza das informações. Contribuí no refinamento de critérios de aceite para tarefas e histórias de usuário, assegurando maior qualidade nas entregas. Facilitei a comunicação entre as equipes de desenvolvimento e produto, além de participar de reuniões de planejamento, oferecendo sugestões e insights.",
+      "papel_exercido": null,
+      "duracao": "aproximadamente 5 horas semanais",
+      "comentarios": null,
+      "aprendizados": "Aprofundei meu entendimento sobre metodologias ágeis, desenvolvi habilidades na definição de critérios de aceite claros e mensuráveis e melhorei minha comunicação em equipes multidisciplinares. Também ampliei meu domínio de ferramentas de gerenciamento de projetos e a capacidade de identificar melhorias em processos."
+    },
+    {
+      "numero": "4",
+      "descricao": "Desenvolvimento fullstack da funcionalidade para cadastro de Acionistas Pessoa Jurídica em formulário de compliance regulatória",
+      "tarefas_realizadas": "No frontend, refatorei a arquitetura do formulário para suportar dados polimórficos, criei hooks customizados para isolar a lógica e desenvolvi componentes reutilizáveis, além de implementar regras de negócio complexas e persistência de dados em sessionStorage. No backend, alterei o modelo de dados no MongoDB, ajustei a camada de lógica de negócio e adaptei schemas de validação para aceitar o novo payload.",
+      "papel_exercido": null,
+      "duracao": "2 semanas",
+      "comentarios": "Foi uma atividade completa, envolvendo modificações em toda a stack da aplicação.",
+      "aprendizados": "Aprofundei conhecimentos em React avançado, arquitetura de formulários complexos, componentização, hooks customizados e arquitetura backend com Use Cases e Repositories."
+    },
+    {
+      "numero": "5",
+      "descricao": "Implementação de funcionalidade de upload de múltiplos arquivos em sistema de micro-frontends",
+      "tarefas_realizadas": "Desenvolvi componentes em React com TypeScript para permitir upload múltiplo, refatorei a lógica assíncrona com Promise.all, depurei bugs complexos relacionados a gestão de estado, avaliei diferentes arquiteturas e investiguei erros em produção no Grafana. Também realizei comunicação técnica clara e utilizei boas práticas de versionamento e documentação.",
+      "papel_exercido": null,
+      "duracao": "8 dias",
+      "comentarios": null,
+      "aprendizados": "Dominei conceitos de programação assíncrona, depuração de bugs em React, análise de arquiteturas frontend/backend e investigação de erros em produção. Desenvolvi ainda habilidades de comunicação técnica e boas práticas de versionamento e documentação."
+    },
+    {
+      "numero": "6",
+      "descricao": "Desenvolvimento fullstack de solução para reprocessamento de CNPJs em lote, com o objetivo de reduzir trabalho manual da equipe de antifraude",
+      "tarefas_realizadas": "No backend, defini e implementei a mutation GraphQL, criei controllers, adaptei serviços de integração e desenvolvi testes automatizados. No frontend, criei um novo micro-frontend em React, implementei lógica de estado, integrei com a API GraphQL e desenvolvi a interface de apresentação dos resultados.",
+      "papel_exercido": "Atuei como desenvolvedor fullstack, responsável pelo ciclo de vida completo da solução.",
+      "duracao": "6 dias",
+      "comentarios": "A atividade resultou em uma solução end-to-end que atendeu diretamente a uma necessidade operacional, alinhada às arquiteturas e padrões da empresa.",
+      "aprendizados": "Consolidei experiência em desenvolvimento fullstack, arquitetura em camadas, APIs GraphQL, desenvolvimento de interfaces em React e testes automatizados."
+    }
+  ],
+  "conclusao": "O período de estágio na Flash foi uma experiência transformadora, marcada por aprendizados técnicos e interpessoais que certamente levarei para toda a minha trajetória profissional. Ao longo desses meses, pude aprofundar meus conhecimentos em desenvolvimento de software, compreender de forma prática metodologias ágeis e vivenciar de perto os desafios e responsabilidades de atuar em um time de tecnologia com alto nível de excelência. Mais do que isso, aprendi a importância da colaboração, da comunicação clara e do alinhamento constante entre as diferentes áreas da empresa, aspectos que considero fundamentais para qualquer projeto de impacto.\n\nO ambiente de trabalho foi acolhedor e estimulante, proporcionando não apenas espaço para aprendizado, mas também para contribuição ativa. Sinto que, na mesma medida em que pude apoiar e entregar valor, recebi de volta lições valiosas que fortaleceram minha formação profissional e pessoal.\n\nDeixo aqui um sincero agradecimento ao meu gestor, Cristiano Rodrigues Lima, pelo acompanhamento próximo e pelas oportunidades de crescimento, assim como aos colegas da área – Tom, Tiago, Ize e o recém-chegado Leandro – pelo período em que pude contribuir com eles, na mesma proporção em que todos contribuíram para minha jornada. Essa troca genuína e enriquecedora é, sem dúvida, um dos maiores legados que levo deste estágio."
+}

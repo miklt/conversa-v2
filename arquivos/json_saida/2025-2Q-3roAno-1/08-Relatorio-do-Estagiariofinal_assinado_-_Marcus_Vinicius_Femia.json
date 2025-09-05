@@ -1,0 +1,44 @@
+{
+  "estagiario": {
+    "nome_completo": "Marcus Vinícius Femia",
+    "nusp": "14594375",
+    "curso": "Engenharia de Computação",
+    "telefone": "(11) 99522-9330",
+    "email": "marcusfemia@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Ronaldo Vieira",
+    "telefone": "(11) 96856-7556",
+    "email": "ronaldo.vieira@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "Banco BTG Pactual S.A.",
+    "cnpj": "30.306.294/0001-45",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40h",
+    "carga_horaria_total": "600h"
+  },
+  "sobre_empresa": "Estagiei no Banco BTG Pactual, uma das principais instituições financeiras da América Latina, reconhecido por sua atuaçào em diversos segmentos, como investimentos, gestão de recursos e crédito. A empresa se destaca pela inovação e excelência no atendimento, oferecendo soluçoes personalizadas para clientes corporativos e individuais. Mais especificamente, o estagio foi realizado na corretora de seguros do banco, na area de sustentação de TI para seguros e resseguros. Este setor é responsavel por garantir o pleno funcionamento dos sistemas tecnologicos que suportam as operações de seguros e resseguros, promovendo a estabilidade, a segurança e a eficiência dos processos internos e atendendo às demandas dos clientes da corretora (Area de Operaçoes de Seguros e Resseguros do Banco).",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Criação de automação com IA para gerar chamados RTB na Azure DevOps pelo canal do time no Teams.",
+      "tarefas_realizadas": "Criação de Knowledge-Base dos chamados, Infraestrura em nuvem AWS para orquestrar fluxo, Configuração do Chat-bot no Teams, Fluxo de IA para Inferir classificação com RAG, Conexão com Azure DevOps, Tracking do Card gerado e CronJob de realimentação da KB",
+      "papel_exercido": "Único desenvolvedor do projeto",
+      "duracao": "aproximadamente 2 meses",
+      "comentarios": null,
+      "aprendizados": "Micro-serviços da AWS (API Gateway, Step Function, Cloud Formation), Automação em Python, RAG e SCRUM (Metodologia Ágil de Projeto)"
+    },
+    {
+      "numero": "2",
+      "descricao": "Chat-bot Agentico integrado ao hub de Seguros, com a funcionalidade de criação de chamados RTB da atividade anterior, mas com estrutura e modularização para o para futura adição da equipe de novas funcionalidades (Onboarding, Regras de negócio, Querys).",
+      "tarefas_realizadas": "Back-end e Front-end da aplicação, Novo fluxo de IA no Dify com leitura de arquivos para RAG e integração com componente de feed-back de qualidade da descrição do card a ser criado.",
+      "papel_exercido": "Único desenvolvedor do projeto",
+      "duracao": "aproximadamente 2 meses",
+      "comentarios": null,
+      "aprendizados": "Front-end (Type Script, CSS e HTML)"
+    }
+  ],
+  "conclusao": "Acredito que como tive autonomia para fazer projetos do início ao fim, experimentei por diversas áreas que envolvem um projeto de computação profissional, desde o desenho da melhor arquitetura que o fluxo deve seguir, back-end, front-ent, recursos de cloud e integração de modelos de IA agenticos para automação de processos. Acima de tudo, gostei de desenvolver a base de um projeto que seguirá sendo melhorada e cada vez mais útil ao time que compús nesses 4 meses."
+}

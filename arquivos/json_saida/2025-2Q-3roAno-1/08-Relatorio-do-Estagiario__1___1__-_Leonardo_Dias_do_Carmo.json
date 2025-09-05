@@ -1,0 +1,62 @@
+{
+  "estagiario": {
+    "nome_completo": "Leonardo Dias do Carmo",
+    "nusp": "14588256",
+    "curso": "Engenharia de Computação",
+    "telefone": "(19) 9 9250-7305",
+    "email": "leonardo_carmo@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Oscar Antonio Telles de Azevedo",
+    "telefone": "(11) 9 8181-6678",
+    "email": "oscar.azevedo@nuclea.com.br"
+  },
+  "estagio": {
+    "razao_social_empresa": "Cip S.A.",
+    "cnpj": "44.393.564/0001-07",
+    "periodo_inicio": "Início de Junho",
+    "periodo_fim": "Fim de Agosto",
+    "carga_horaria_semanal": "40h",
+    "carga_horaria_total": "440h"
+  },
+  "sobre_empresa": "A Núclea é uma empresa brasileira, focada em tecnologia e inteligência de dados, que surgiu a partir da transformação da Câmara Interbancária de Pagamentos (CIP). A empresa oferece soluções para simplificar transações, conectar negócios com eficiência e segurança, e otimizar decisões empresariais com base em dados. A Núclea atua no mercado financeiro, oferecendo serviços como a Central Depositária, que centraliza o registro e a guarda de ativos financeiros. Trabalhei no setor de arquitetura de software da Núclea, com ênfase em automação inteligência artificial, oferecendo suporte ao time na: criação de soluções para sistemas multi-agente de inteligência artificial generativa; automação de processos internos para o time de RH e financeiro; criação de aplicação interna para auxiliar o RH no gerenciamento dos pontos batidos pelos colaboradores.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Extração, manipulação e ingestão de dados financeiros",
+      "tarefas_realizadas": "Consumo de API de dados financeiros; Conversão de modelo Base64 importado para CSV; Ingestão dos dados manipulados para banco de dados na nuvem;",
+      "papel_exercido": "Implementação de uma função Lambda na AWS para extrair os dados; Criação de um conversor de Base64 para CSV; Ingestão dos dados no banco de dados S3 da AWS;",
+      "duracao": "01 mês",
+      "comentarios": "Foi uma boa atividade, pois permitiu desenvolver comunicação com outros times internos da empresa – principalmente o time financeiro – e auxiliá-los na automatização da tarefa que realizavam manualmente todo mẽs.",
+      "aprendizados": "Java, AWS S3, AWS Lambda, Python, comunicação e trabalho em equipe."
+    },
+    {
+      "numero": "2",
+      "descricao": "Extração, manipulação e ingestão de dados de chamado do RH",
+      "tarefas_realizadas": "Consumo de API de dados do RH; Ingestão dos dados manipulados para banco de dados na nuvem;",
+      "papel_exercido": "Implementação de uma função Lambda na AWS para extrair os dados; Manipulação dos dados para o formato CSV; Ingestão dos dados no banco de dados S3 da AWS;",
+      "duracao": "01 mês",
+      "comentarios": "Foi uma boa atividade, pois permitiu desenvolver comunicação com outros times internos da empresa – principalmente o time de RH – e auxiliá-los na automatização da tarefa que realizavam manualmente todo mẽs.",
+      "aprendizados": "Java, AWS S3, AWS Lambda, Python, comunicação e trabalho em equipe."
+    },
+    {
+      "numero": "3",
+      "descricao": "Otimização de uma aplicação de inteligência artificial generativa",
+      "tarefas_realizadas": "Tentar criar uma nova arquitetura de solução para um agente de inteligência artificial de direito jurídico",
+      "papel_exercido": "Implementação de buscas semânticas para auxílio no desenvolvimento do prompt executado para realização da atividade;",
+      "duracao": "01 mês",
+      "comentarios": "Foi uma boa atividade, pois permitiu expandir os meus conhecimentos em IA generativa, criação de agentes e integração com o banco de dados S3 da AWS.",
+      "aprendizados": "Python, AWS S3"
+    },
+    {
+      "numero": "4",
+      "descricao": "Criação de um aplicação web para auxilío dos gestores no acompanhamento das atividades de seus funcionários",
+      "tarefas_realizadas": "Desenho da arquitetura de software, modelagem do banco de dados, criação de APIs para interação com as outras partes do sistema, criação de integração com o banco de dados AWS S3 e PostgreSQL.",
+      "papel_exercido": "Implementação do Back-End da aplicação em Java e o serviço de integração com os dados provenientes do time de dados através do banco de dados da AWS S3.",
+      "duracao": "01 mês",
+      "comentarios": "Foi uma boa atividade, pois permitiu expandir os meus conhecimentos em criação de aplicações, desenvolvimento e arquitetura de software",
+      "aprendizados": "Java, AWS S3"
+    }
+  ],
+  "conclusao": "Durante o estágio, tive a oportunidade de atuar em projetos diversos, envolvendo extração, manipulação e ingestão de dados, além do desenvolvimento de aplicações web e soluções com inteligência artificial generativa. Aprimorei habilidades técnicas em linguagens como Java e Python, além de ferramentas e serviços da AWS, como Lambda e S3. Também desenvolvi competências em arquitetura de software, integração de sistemas e modelagem de dados. A interação com diferentes times, como RH e financeiro, contribuiu para meu crescimento em comunicação e trabalho em equipe. O estágio proporcionou uma visão prática e integrada do ciclo completo de desenvolvimento de soluções, consolidando minha base técnica e profissional."
+}

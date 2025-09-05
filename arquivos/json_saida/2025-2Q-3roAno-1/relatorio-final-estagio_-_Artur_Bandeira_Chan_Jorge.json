@@ -1,0 +1,53 @@
+{
+  "estagiario": {
+    "nome_completo": "Artur Bandeira Chan Jorge",
+    "nusp": "14559872",
+    "curso": "Engenharia de Computação",
+    "telefone": "61998169635",
+    "email": "arturbchanj@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Mariana Pereira",
+    "telefone": null,
+    "email": "mariana.pereira@inmetrics.com.br"
+  },
+  "estagio": {
+    "razao_social_empresa": "Inmetrics LTDA",
+    "cnpj": "04.959.158/0001-44",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "14/08/2025",
+    "carga_horaria_semanal": "30",
+    "carga_horaria_total": "450"
+  },
+  "sobre_empresa": "A Inmetrics é uma empresa especializada em qualidade de software, performance, engenharia de dados e soluções em nuvem. Atua prestando serviços de consultoria e outsourcing para grandes empresas do mercado financeiro, varejo, telecomunicações, entre outros.\n\nO estágio foi realizado na unidade de São Paulo, no setor de engenharia de software, voltado para formação e capacitação em tecnologias modernas de desenvolvimento, infraestrutura, DevOps e qualidade.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Desenvolvimento de APIs RESTful em Python com MySQL",
+      "tarefas_realizadas": "● Criação de APIs com Flask para CRUD de clientes, endereços e produtos.\n● Implementação de autenticação HTTP Basic Auth.\n● Elaboração de documento de arquitetura da solução.\n● Criação de APIs adicionais de catálogo e inventário de produtos.\n● Planejamento dos testes funcionais utilizando Gherkin.",
+      "papel_exercido": "Desenvolvedor backend e arquiteto de soluções iniciante",
+      "duracao": "pouco mais de um mês",
+      "comentarios": "A atividade envolveu tanto aspectos de backend quanto de modelagem de dados e boas práticas de segurança",
+      "aprendizados": "● Prática com Flask, MySQL, REST.\n● Documentação técnica.\n● Conceitos de microsserviços e 'Domain Driven Design'.\n● Planejamento de testes com visão mercadológica."
+    },
+    {
+      "numero": "2",
+      "descricao": "Deploy da aplicação em servidor HTTP e implementação de sistema de monitoramento sintético",
+      "tarefas_realizadas": "● Deploy de uma aplicação em um servidor NGINX.\n● Gerenciamento de uma máquina virtual Linux utilizando o Vagrant.\n● Configuração de um ambiente virtual Linux.\n● Instalação, configuração e uso do Zabbix para monitoramento do servidor HTTP.\n● Instalação, configuração e uso do Grafana para obter dashboards em tempo real com os dados provenientes do Zabbix.\n● Criação de testes utilizando o framework Robot.\n● Criação de massa de dados para preenchimento artificial do banco de dados.\n● Gerenciamento de logs.",
+      "papel_exercido": "Desenvolvedor de redes e arquiteto de soluções iniciante",
+      "duracao": "pouco mais de um mês",
+      "comentarios": "A atividade envolveu aspectos relacionados à arquitetura e gerenciamento de servidores e ambientes virtuais",
+      "aprendizados": "● Prática com Zabbix, Grafana, Vagrant, Linux e NGINX.\n● Documentação técnica.\n● Conceitos de engenharia de redes e monitoramento sintético.\n● Implementação e execução testes."
+    },
+    {
+      "numero": "3",
+      "descricao": "Provisionamento de infraestrutura em nuvem AWS utilizando Terraform e conteinerização com DevOps Azure",
+      "tarefas_realizadas": "● Criação de estruturas e entidades AWS utilizando o Terraform como provisionamento.\n● Provisionamento de banco de dados MySQL via RDS.\n● Deploy da aplicação.\n● Criação de imagens Docker e upload para o Docker Hub.\n● Configuração de cluster EKS (Amazon Kubernetes Service).\n● Criação de manifests Kubernetes (deployment, service, ingress).\n● Criação de pipeline no Azure DevOps para deploy automatizado.",
+      "papel_exercido": "Desenvolvedor DevOps",
+      "duracao": "pouco mais de um mês",
+      "comentarios": "A atividade envolveu aspectos relacionados à infraestrutura cloud, alta disponibilidade, conteinerização, automação e integração contínua",
+      "aprendizados": "● Uso de Terraform.\n● Conceitos de AWS: VPC, EC2, RDS, Auto Scaling.\n● Segurança e boas práticas em ambientes cloud.\n● Docker e Kubernetes na AWS.\n● Azure DevOps.\n● Integração entre ferramentas DevOps e infraestrutura cloud."
+    }
+  ],
+  "conclusao": "O estágio permitiu um aprendizado prático e abrangente sobre o ciclo completo de desenvolvimento e entrega de software, desde a modelagem de dados e desenvolvimento de APIs até o provisionamento de infraestrutura em nuvem, conteinerização e criação de pipelines DevOps. Consolidou conhecimentos de engenharia de software moderna e preparação para ambientes de produção reais. Além disso, também foram obtidos 'soft skills' relacionadas à prática de engenharia, por meio da elaboração de relatórios técnicos, preparação de apresentações expositivas em Power Point, e das apresentações mensais nas quais o estagiário apresentou a execução destas atividades para uma equipe da Inmetrics."
+}

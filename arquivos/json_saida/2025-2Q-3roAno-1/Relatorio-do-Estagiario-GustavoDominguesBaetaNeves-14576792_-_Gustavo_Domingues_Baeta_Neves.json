@@ -1,0 +1,53 @@
+{
+  "estagiario": {
+    "nome_completo": "Gustavo Domingues Baeta Neves",
+    "nusp": "14576792",
+    "curso": "Engenharia de Computação",
+    "telefone": "(11)94418-7593",
+    "email": "baetaneves2115@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "André Barcelos",
+    "telefone": "(11) 99648-5476",
+    "email": "andre.barcelos@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A - SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40h",
+    "carga_horaria_total": "600h"
+  },
+  "sobre_empresa": "Meu estágio foi realizado no banco BTG PACTUAL, localizado na Av. Brigadeiro Faria Lima 3477 (Pátio Victor Malzoni, no 10° andar). Atuei no time de IT FX (Câmbio), responsável pelo desenvolvimento e operação do Motor de Câmbio, sistema de backoffice responsável por realizar a liquidação das operações de câmbio onshore. Atuei sobretudo no time Regulatório e RTB (run the bank) da área, contribuindo para bom funcionamento e manutenção do sistema.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Adequação de mensagens SWIFT para formato XML",
+      "tarefas_realizadas": "Fui responsável por adequar três tipos principais de mensagens para o novo formato: Mensagens Livres, Amends e Recalls (tipos de mensagens SWIFT do fluxo de câmbio). Essas mensagens tiveram suas telas adaptadas para receber e tratar o formato XML; realizei ajustes internos na criação e edição dessas mensagens e atuei no recebimento, armazenamento e exibição das novas mensagens no histórico SWIFT.",
+      "papel_exercido": "Desenvolvedor de software",
+      "duracao": "Cerca de 2 meses",
+      "comentarios": null,
+      "aprendizados": "Desenvolvi habilidades em front-end (React.js) e back-end (.NET); usei controle de versão com Git; tive contato com práticas de DevOps (Azure) e com serviços em nuvem (AWS), incluindo S3 e DynamoDB para armazenamento e SQS e SNS para comunicação entre sistemas."
+    },
+    {
+      "numero": "2",
+      "descricao": "Ajustes e manutenção do sistema",
+      "tarefas_realizadas": "Identifiquei e corrigi defeitos em front-end e back-end; atualizei interfaces para tratar corretamente o novo formato SWIFT; implementei integrações e consultas com S3; participei de deploys assistidos, análise de logs e monitoramento para validar as correções em ambiente de produção.",
+      "papel_exercido": "Desenvolvedor de software",
+      "duracao": "Cerca de 1 mês",
+      "comentarios": null,
+      "aprendizados": "Aperfeiçoei habilidades de front-end (React.js) e de integração com serviços AWS, ganhei experiência prática em diagnóstico e correção de bugs, análise de logs e processos de deploy; desenvolvi soft skills importantes, como comunicação, priorização de tarefas e resolução de problemas."
+    },
+    {
+      "numero": "3",
+      "descricao": "Estruturação e implementação de um Data Lake para o setor",
+      "tarefas_realizadas": "Fui responsável por modelar e implementar o banco de dados relacional que receberia os dados a serem persistidos (criação de tabelas e diagramas entidade-relacionamento). Atualizei o sistema existente para processar, persistir e expor as novas informações para consumo por outros serviços.",
+      "papel_exercido": "Engenheiro de software e banco de dados",
+      "duracao": "Cerca de 1 mês",
+      "comentarios": null,
+      "aprendizados": "Aprofundei conhecimentos em bancos de dados relacionais (PostgreSQL e Amazon Aurora), em processamento/eventos com serviços AWS (SQS, SNS e Lambdas), em desenvolvimento de back-end em .NET; no desenvolvimento de APIs e apliquei conceitos de IaaS com apoio do time de SRE para implementação de cloud formation."
+    }
+  ],
+  "conclusao": "O estágio me proporcionou contato com diversas ferramentas e tecnologias que eu ainda não conhecia. Pude trabalhar em sistemas reais, com aplicações de impacto para o banco, e desenvolver um sentimento de responsabilidade pelas minhas entregas. Também vivi um ambiente novo — o setor financeiro na Faria Lima — e aprendi vários conceitos sobre o mercado financeiro. No geral, foi uma experiência desafiadora, muito gratificante e de grande aprendizado, que trouxe oportunidades de crescimento profissional e fortaleceu tanto minhas competências técnicas quanto minhas habilidades interpessoais."
+}

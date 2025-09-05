@@ -1,0 +1,116 @@
+{
+  "estagiario": {
+    "nome_completo": "Fernanda Emilio Ortiz",
+    "nusp": "14570225",
+    "curso": "Engenharia de Computação",
+    "telefone": "(11) 98600-1422",
+    "email": "feeortiz@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Douglas Barbosa de Lima",
+    "telefone": "(11) 95798-7827",
+    "email": "Douglas.Barbosa@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "Banco BTG Pactual S.A.",
+    "cnpj": "30.306.294/0001-45",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "8 horas",
+    "carga_horaria_total": "584 horas"
+  },
+  "sobre_empresa": "O Banco BTG Pactual é um banco de investimentos, fundado a partir da fusão do BTG e do UBS Pactual em 2009, que atua em diferentes frentes no mercado financeiro: Investment Banking (que presta assessoria para grandes movimentações financeiras de empresas), Corporate Lending e Business Banking (área que trabalha com empréstimos e crédito para empresas), Sales & Trading (o estereótipo do mercado financeiro, pessoas que trabalham com a compra e venda de ativos), Asset Management (fundos de investimento, gestoras, instituições financeiras responsáveis por investir e administrar dinheiro de outras pessoas), Wealth Management (parecido com Asset Management mas para pessoas com grandes riquezas) e Personal Banking (plataformas de Investimento e de Banking).\n\nO banco conta hoje com uma presença global e com um crescimento acelerado, estando no seu auge de lucros, funcionários, influência etc, o que foi perceptível durante o meu estágio. No segundo semestre de 2025 a empresa atingiu recorde de lucro, contém participação em mais de 11 países, alguns desses sendo os Estados Unidos e o Reino Unido. Além disso, o BTG Pactual fez diversas aquisições como o Banco Pan e o Too Seguros, expandindo sua área de atuação. Culturalmente, o DNA da empresa se pauta no Partnership Meritocrático, basicamente a ideia de que, com dedicação, trabalho duro e excelência dentro da empresa, você pode se tornar sócio.\n\nNo meu estágio eu trabalhei na área previdência privada da plataforma digital de investimentos do BTG Pactual, atuando como desenvolvedora backend e suporte para a mesa de operações e negócios de previdência, principalmente. Na minha área, cuidávamos de toda a interface referente aos serviços de previdência privada nas diferentes plataformas de investimentos do BTG - existia uma para assessores e outra para clientes - nos diferentes canais - site ou mobile/app - com outras estruturas internas e externas para viabilizar operações de previdência privada, como aporte, adesão de um plano, resgate de uma quantia, entre outras.\n\nEsse setor específico de previdência privada ficava dentro de uma unidade maior que era a de Digital Platform/IT Products, que abrange todos os times que desenvolvem para a plataforma de investimento, os times que fazem a governança e as cerimônias e diretores que conhecem os diferentes produtos e pensam estrategicamente na plataforma.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Atuação no backend da plataforma de investimentos, com foco no produto de previdência privada",
+      "tarefas_realizadas": "Desenvolvimento de novas funcionalidades, criação de testes unitários, refatoração de código, integração com bancos de dados e uso de ferramentas como Git, Node.js, Docker, Jest, Knex e SQL",
+      "papel_exercido": "Desenvolvedora backend, contribuindo para a evolução técnica do sistema",
+      "duracao": "Todo o período do estágio (05/05 - 29/08)",
+      "comentarios": "Trabalho altamente técnico, exigiu aprendizado contínuo de ferramentas, bibliotecas e boas práticas de programação. Foi essencial para consolidar conhecimentos em desenvolvimento de software",
+      "aprendizados": "domínio prático de ferramentas e bibliotecas do ecossistema Node.js, experiência com versionamento e trabalho colaborativo em times ágeis, desenvolvimento de raciocínio lógico para estruturação e manutenção de código, introdução ao uso de containers e orquestração em ambientes de produção e maior autonomia e segurança em resolver problemas técnicos complexos"
+    },
+    {
+      "numero": "2",
+      "descricao": "Gestão completa das próprias demandas e transformação delas em tasks técnicas, acompanhando o fluxo no board do time",
+      "tarefas_realizadas": "Entender as demandas e traduzi-las em tarefas técnicas claras, administrar estados e prioridades no board (Monday), fazer refinamentos, mapear times e desenvolvedores impactados, reunir documentação, abrir e acompanhar pull requests, estipular prazos e gerenciar o tempo",
+      "papel_exercido": "Gestora das próprias demandas técnicas, responsável por garantir clareza, organização e andamento das atividades",
+      "duracao": "Todo o período do estágio (05/05 - 29/08)",
+      "comentarios": "Foi uma atividade que exigiu disciplina, autonomia e visão organizacional, além de contato constante com diferentes áreas impactadas",
+      "aprendizados": "Planejamento, priorização e gestão de tempo, além do desenvolvimento da habilidade de transformar demandas de negócio em tarefas técnicas estruturadas"
+    },
+    {
+      "numero": "3",
+      "descricao": "Integração e cooperação contínua com diferentes equipes para alinhamento e execução das demandas do produto",
+      "tarefas_realizadas": "Interação com profissionais de diversos times por meio de calls, mensagens e e-mails, acompanhamento do trabalho de outras áreas, revisão e colaboração em tarefas conjuntas, auxílio em ambientes de desenvolvimento e refinamento de funcionalidades, facilitação do entendimento das demandas e suporte ao progresso de outros grupos",
+      "papel_exercido": "Colaboradora entre equipes, atuando como facilitador na comunicação e integração entre diferentes áreas do produto",
+      "duracao": "Todo o período do estágio (05/05 - 29/08)",
+      "comentarios": "Soft skills foram essenciais para se comunicar com outros times",
+      "aprendizados": "Habilidade de comunicação clara, postura proativa em interações e visão sistêmica sobre como diferentes times se conectam no desenvolvimento do produto"
+    },
+    {
+      "numero": "4",
+      "descricao": "Constante contato com a mesa de negócios para apresentação e atualização de demandas técnicas",
+      "tarefas_realizadas": "Explicar funcionalidades implementadas para pessoas não técnicas, mostrar fluxos de trabalho, apresentar prazos e atualizações e gerir expectativas",
+      "papel_exercido": "Desenvolvedora de software",
+      "duracao": "Todo o período do estágio (05/05 - 29/08)",
+      "comentarios": "Foi uma experiência importante para ganhar confiança em reuniões e aprender a lidar com diferentes públicos",
+      "aprendizados": "Melhorei minha comunicação, postura em reuniões e a capacidade de explicar temas técnicos de maneira acessível"
+    },
+    {
+      "numero": "5",
+      "descricao": "Execução de testes em funcionalidades desenvolvidas e repasse de conhecimento ao time de QA para validação adequada",
+      "tarefas_realizadas": "Realizar deploy em ambiente de UAT utilizando Jenkins e Rancher, testar funcionalidades com Kibana e Google Dev Tools, validar fluxos de uso, montar evidências de testes, detalhar demandas e funcionalidades para QA, acompanhar testes e solucionar dúvidas técnicas",
+      "papel_exercido": "Testadora e desenvolvedora",
+      "duracao": "Todo o período do estágio (05/05 - 29/08)",
+      "comentarios": "Essa atividade aproximou o estágio da realidade de entrega de produto e trouxe contato prático com a etapa de testes e homologação",
+      "aprendizados": "Conhecimento em ferramentas de deploy e monitoramento, maior atenção a detalhes de funcionalidade e fortalecimento da comunicação com QA e gestores para alinhamento de entregas"
+    },
+    {
+      "numero": "6",
+      "descricao": "Participação no processo de deploy das mudanças desenvolvidas para o ambiente de produção",
+      "tarefas_realizadas": "Participar das cerimônias de aprovação de deploy, defender a relevância da mudança proposta, alinhar com o time para obter apoio, solicitar aprovação de diretores, cadastrar a demanda entre as mudanças planejadas, realizar o merge na branch de produção e acompanhar o deploy, testando em seguida para garantir que ocorreu corretamente",
+      "papel_exercido": "Responsável por garantir a qualidade e segurança das alterações levadas ao ambiente de produção",
+      "duracao": "Todo o período do estágio (05/05 - 29/08)",
+      "comentarios": "Atividade crítica, que trouxe contato com processos formais de governança e responsabilidade sobre entregas que impactam usuários finais",
+      "aprendizados": "Visão do fluxo completo de entrega em produção, responsabilidade sobre mudanças críticas e prática de comunicação em momentos de tomada de decisão"
+    },
+    {
+      "numero": "7",
+      "descricao": "Vivência prática da metodologia ágil SCRUM para organização e execução das demandas do time",
+      "tarefas_realizadas": "Participação ativa em dailys, plannings, reviews e retrospectives, organizando atividades e acompanhando o progresso das entregas",
+      "papel_exercido": "Desenvolvedora de software",
+      "duracao": "Todo o período do estágio (05/05 - 29/08)",
+      "comentarios": "A vivência em SCRUM me ajudou a aprender a dinâmica de um time ágil e a importância de rituais de alinhamento e feedback",
+      "aprendizados": "Organização de demandas, colaboração contínua com o time e maior clareza sobre fluxos ágeis de trabalho"
+    },
+    {
+      "numero": "8",
+      "descricao": "Capacitação complementar por meio de aulas internas sobre o mercado financeiro",
+      "tarefas_realizadas": "Participação em aulas ministradas por profissionais do banco, com absorção de conteúdos técnicos e práticos sobre o funcionamento do mercado",
+      "papel_exercido": "Aluna",
+      "duracao": "Todo o período do estágio (05/05 - 29/08)",
+      "comentarios": "Foi uma oportunidade incrível de contato com o core business do banco, ampliando horizontes sobre o setor financeiro",
+      "aprendizados": "Compreensão mais ampla sobre o mercado financeiro, possibilidades de carreira e aplicação prática dos conceitos no dia a dia"
+    },
+    {
+      "numero": "9",
+      "descricao": "Participação em eventos internos e palestras do banco para desenvolvimento de networking e aprendizado",
+      "tarefas_realizadas": "Assistir a palestras de diferentes executivos e especialistas, inclusive do André Esteves, além de interagir com profissionais de diversas áreas para entender seus papéis e oportunidades",
+      "papel_exercido": "Participante",
+      "duracao": "Todo o período do estágio (05/05 - 29/08)",
+      "comentarios": "Atividade essencial para ampliar contatos dentro da organização e ter novas perspectivas sobre diferentes áreas do banco",
+      "aprendizados": "Fortalecimento do networking, conhecimento sobre a cultura do banco e desenvolvimento de visão mais estratégica sobre o setor"
+    },
+    {
+      "numero": "10",
+      "descricao": "Documentação das demandas técnicas desenvolvidas ao longo do estágio",
+      "tarefas_realizadas": "Documentar demandas concluídas, detalhando objetivos, impactos, requisitos e contexto das entregas",
+      "papel_exercido": "Desenvolvedora de software",
+      "duracao": "Todo o período do estágio (05/05 - 29/08)",
+      "comentarios": "Uma prática importante para a passagem de conhecimento e compreensão da sua demanda",
+      "aprendizados": "Importância da documentação para a organização do time, clareza das demandas e continuidade do trabalho"
+    }
+  ],
+  "conclusao": "Apesar de ter aprendido muitas habilidades técnicas como vistas na atividades 1 e 5, o estágio me proporcionou um desenvolvimento incrível e impressionante das minhas soft skills e habilidades de liderança. Além disso, entrar em contato com o mundo corporativo e com o mercado financeiro abriu a minha mente em relação a possíveis futuros para a minha carreira e minha vida. Eu gostei muito de toda a minha experiência no banco e saio dele sabendo me comunicar de uma forma muito melhor, assumir diversas responsabilidades ao mesmo tempo e dar conta delas, conseguir apresentar a mim e ao meu trabalho agregando mais valor, saber lidar com outras pessoas de uma forma mais apropriada, pensar criticamente sobre tudo que eu faço, valorizar ganhos a longo prazo, aprender a lidar com um fluxo e ambiente de trabalho, trabalhar em equipe de forma eficiente e também a pensar fora da caixa em relação às minhas escolhas. Foi um período extremamente amadurecedor e que fez toda a diferença na minha vida, até para me mostrar quais caminhos eu posso seguir e o que combina mais com o que eu quero."
+}

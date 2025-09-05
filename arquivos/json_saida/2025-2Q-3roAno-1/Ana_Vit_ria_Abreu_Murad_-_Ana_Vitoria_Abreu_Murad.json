@@ -1,0 +1,80 @@
+{
+  "estagiario": {
+    "nome_completo": "Ana Vitória Abreu Murad",
+    "nusp": "14613160",
+    "curso": "Engenharia de Computação",
+    "telefone": "+55 (38) 99943-7419",
+    "email": "anavitoriamurad@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Lucas Henna Sallaberry",
+    "telefone": "+55 (11) 99629-9382",
+    "email": "lucas.sallaberry@virtualisurg.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "Virtual Cirurgia Ltda",
+    "cnpj": "42.539.183/0001-68",
+    "periodo_inicio": "05 de Maio",
+    "periodo_fim": "05 de Setembro",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "576 horas"
+  },
+  "sobre_empresa": "A VirtualiSurg é uma empresa de tecnologia que desenvolve soluções imersivas de treinamento e simulação, utilizando realidade virtual, aumentada e inteligência artificial para capacitar profissionais da área de medicina em ambientes seguros e interativos.\n\nO estágio foi realizado na área de desenvolvimento front-end, responsável por criar e manter interfaces e dashboards em React, integrando-as a APIs e colaborando com as equipes de design e back-end.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Criação de componentes novos com React e SCSS",
+      "tarefas_realizadas": "Desenvolvimento de componentes reutilizáveis, estilização utilizando SCSS modular, integração com funcionalidades já existentes na aplicação",
+      "papel_exercido": "Desenvolvimento front-end, implementação de interface e estilos",
+      "duracao": "65 horas",
+      "comentarios": "Contribuiu para padronizar e otimizar a base de componentes, aumentando a consistência visual do sistema",
+      "aprendizados": "Boas práticas de componentização, organização de estilos SCSS, e uso de props para aumentar a flexibilidade de componentes"
+    },
+    {
+      "numero": "2",
+      "descricao": "Criação de novas páginas com React",
+      "tarefas_realizadas": "Implementação de rotas, layout, integração com componentes e consumo de APIs",
+      "papel_exercido": "Desenvolvimento front-end e integração de dados/UI",
+      "duracao": "165 horas",
+      "comentarios": "Páginas integradas ao fluxo principal, com atenção a performance e carregamento",
+      "aprendizados": "React Router, renderização condicional e otimização de carregamento"
+    },
+    {
+      "numero": "3",
+      "descricao": "Testes automatizados com Jest e React Testing Library (com MSW para mocks)",
+      "tarefas_realizadas": "Testes unitários e de integração; mocks de API; simulação de autenticação JWT",
+      "papel_exercido": "Garantia de segurança e estabilidade do sistema",
+      "duracao": "98 horas",
+      "comentarios": "Aumento da cobertura e redução de risco de regressões",
+      "aprendizados": "MSW para interceptação HTTP, simulação de JWT, padrões de testes em React"
+    },
+    {
+      "numero": "4",
+      "descricao": "Pesquisa sobre exportação de documentos e compartilhamento de dashboard",
+      "tarefas_realizadas": "Estudo de exportação PDF/CSV, geração de gráficos em alta resolução para impressão",
+      "papel_exercido": "Pesquisa técnica e prototipagem",
+      "duracao": "65 horas",
+      "comentarios": "Definição de stack para exportação com foco em qualidade visual",
+      "aprendizados": "Chart.js, chartjs-node-canvas, técnicas de exportação e automação"
+    },
+    {
+      "numero": "5",
+      "descricao": "Criação de nova dashboard interativa",
+      "tarefas_realizadas": "Layout com cards, gráficos (Pie/Bar), filtros e exportação de dados",
+      "papel_exercido": "Desenvolvimento front-end e integração visual",
+      "duracao": "131 horas",
+      "comentarios": "Otimizações de performance e usabilidade",
+      "aprendizados": "Integração de múltiplos componentes, responsividade e organização de estado"
+    },
+    {
+      "numero": "6",
+      "descricao": "Refatoração de componentes para melhorar navegação/UX",
+      "tarefas_realizadas": "Separação entre navegação e conteúdo, revisão de rotas e estrutura do código",
+      "papel_exercido": "Refatoração e manutenção",
+      "duracao": "52 horas",
+      "comentarios": "Código mais escalável e navegação mais fluida",
+      "aprendizados": "Arquitetura de rotas, desacoplamento de componentes e boas práticas de UX"
+    }
+  ],
+  "conclusao": "O estágio proporcionou o desenvolvimento de habilidades técnicas avançadas em React, incluindo criação de componentes, gerenciamento de estado, testes automatizados e integração com APIs. Também houve aprendizado na construção de dashboards interativos e exportação de dados em múltiplos formatos. A experiência fortaleceu a capacidade de resolver problemas de forma prática, além de aprimorar a organização, o planejamento de tarefas e o trabalho em equipe. Por fim, o estágio contribuiu para compreender melhor boas práticas de desenvolvimento e entregar soluções de qualidade dentro dos prazos estabelecidos."
+}

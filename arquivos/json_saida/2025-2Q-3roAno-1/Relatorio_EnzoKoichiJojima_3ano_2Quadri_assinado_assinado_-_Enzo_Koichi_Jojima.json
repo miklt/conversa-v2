@@ -1,0 +1,35 @@
+{
+  "estagiario": {
+    "nome_completo": "Enzo Koichi Jojima",
+    "nusp": "14568285",
+    "curso": "Engenharia de Computação",
+    "telefone": "(11) 94355-9577",
+    "email": "enzo.jojima@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Giulia Moura",
+    "telefone": "(14) 99838-5434",
+    "email": "Giulia.Moura@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "Banco BTG Pactual S.A. – SP",
+    "cnpj": "30.306294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "680h"
+  },
+  "sobre_empresa": "O BTG Pactual é considerado o maior banco de investimentos da América Latina e um dos maiores do Brasil. Atua em diversas áreas do mercado financeiro, como Wealth Management, Asset Management, Sales & Trading, Investment Banking e outras. O DNA do banco centra-se em um Partnership Meritocrático, no qual os empregados têm a possibilidade de ascensão à posição de sócio do negócio. Esse modelo de negócio cria solo fértil para um trabalho mais focado no cliente, no longo prazo e na excelência, dado que a prosperidade do negócio também seria a prosperidade do colaborador.\n\nO banco atua em diversos outros países, principalmente na América Latina (Brasil, Chile, Colômbia, México, Argentina e Peru), mas não se restringe a isso, com escritórios também nos EUA, Reino Unido e Portugal.\n\nO estágio foi realizado na unidade do Pátio Victor Malzoni, do 9° ao 15° andar na Av. Brig. Faria Lima, 3477 - Itaim Bibi, São Paulo capital. Atuei no setor de IT-FTS, responsável pelo FronTrade System, sistema que centraliza todas as trades que ocorrem no banco e é voltado para uso interno de outras áreas como Operações e a Mesa. Mais especificamente, atuei na parte de FEEs (taxas) do sistema.\n\nEsse setor de IT é voltado ao desenvolvimento de features internas, isto é, sistemas que visam viabilizar, melhorar, automatizar e facilitar a atuação do próprio setor de IT e de outros setores do banco.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Sistema de cadastro de regras de repasse (spreads). Sistema que possibilita o cadastro e consumo de regras de repasse baseadas em data de início, tipo, modalidade, valor, status e outros campos opcionais e disponibilizadas por meio de um Client, bem como por endpoints numa API REST e uma página WEB.",
+      "tarefas_realizadas": "1. Criação de um sistema em .NET em C# para a realização de operações CRUD fortemente tipadas e padronizadas para uma API REST, com sistema simples de autorização e implementação de testes unitários;\n2. Criação de tabelas em um banco Aurora PostgreSQL para comportar as diferentes operações;\n3. Desenvolvimento de uma SPA em React para ser a interface entre usuário e sistema, permitindo cadastro de spreads individualmente ou a partir de arquivos .xlsx, além de permitir controle e edição sobre os spreads;\n4. Criação de um Client na forma de uma biblioteca que permite consumo direto da API REST de maneira fortemente tipada a partir de chamadas de métodos;",
+      "papel_exercido": "Desenvolvedor Full Stack (Frontend e Backend)",
+      "duracao": "4 meses",
+      "comentarios": "Foi muito bom ter começado e terminado um único projeto durante o período de estágio pois isso possibilitou ver na prática como é o passo a passo do desenvolvimento de uma feature, desde a descrição dos requisitos, passando por desenvolvimento, testes, refatoração e implementação. Esse é um processo muito visto durante a graduação, mas na prática a complexidade é muito maior, e ver isso é muito importante para a nossa formação.",
+      "aprendizados": "Aprendizados gerais:\na. Uso de git para desenvolvimento em equipe;\nb. Desenvolvimento e organização de um projeto;\nc. Uso introdutório de plataformas de DevOps (Azure), Cloud (AWS, Docker), entre outras.\n\nDetalhes dos aprendizados por tarefa disponíveis no relatório original."
+    }
+  ],
+  "conclusao": "A experiência prática de diversos conceitos vistos em sala de aula e a vivência de como realmente funciona o ambiente de trabalho foram extremamente positivas e acredito que serão essenciais para a minha formação profissional. O tempo de estágio foi muito bem aproveitado, com inúmeros aprendizados, tanto em habilidades técnicas quanto interpessoais, que podem ser e são aplicados diariamente num ambiente profissional."
+}

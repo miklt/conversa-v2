@@ -1,0 +1,80 @@
+{
+  "estagiario": {
+    "nome_completo": "Gabriel Soares da Silva",
+    "nusp": "11808234",
+    "curso": "Engenharia de Computação",
+    "telefone": "(11) 98141 8341",
+    "email": "gabrielldasilva969@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Lucas Araujo Picazio",
+    "telefone": "+55 11 33833993",
+    "email": "lucas.picazio@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A. - SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05 de Maio",
+    "periodo_fim": "29 de Agosto",
+    "carga_horaria_semanal": "30 horas",
+    "carga_horaria_total": "420 horas (14 semanas)"
+  },
+  "sobre_empresa": "O BTG Pactual é o maior banco de investimentos da América Latina, atuando em investimentos, gestão de recursos, wealth management, serviços de crédito, entre outros. Entre os valores que o banco prioriza estão dedicação, responsabilidade, sustentabilidade e inconformismo, visando gerar resultados consistentes enquanto contribui de forma positiva para iniciativas sociais e ambientais.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Desenvolvimento de uma ferramenta para gerenciar feature flags, possibilitando o controle dinâmico de funcionalidades em produção, com ativação e desativação de recursos. O projeto incluiu a construção da interface em React e do backend em ASP.NET para controle e persistência de dados.",
+      "tarefas_realizadas": "● Desenvolvimento de API em ASP.NET para gerenciamento de feature flags;\n● Criação de interface gráfica em React para configuração das flags;\n● Implementação da integração entre API e frontend;\n● Elaboração de documentação técnica do sistema.",
+      "papel_exercido": "Responsável pela implementação e testes da funcionalidade",
+      "duracao": "2 semanas (semanas 1 e 2)",
+      "comentarios": "Minha primeira experiência prática com desenvolvimento full-stack. Foi um projeto inicial desafiador, pois ainda estava me adaptando ao novo ambiente de trabalho e às práticas da empresa.",
+      "aprendizados": "● ASP.NET Core: Desenvolvimento de APIs robustas e escaláveis;\n● React.js: Criação de interfaces dinâmicas e responsivas;\n● Integração de APIs REST: Comunicação eficiente entre frontend e backend;\n● Documentação técnica: Importância da clareza para manutenção do código."
+    },
+    {
+      "numero": "2",
+      "descricao": "Melhorias do sistema de controle de acessos do portal FTS, com foco em usabilidade e performance.",
+      "tarefas_realizadas": "● Implementação de melhorias gráficas e correção de bugs em inúmeras telas de controle de acessos;\n● Otimização de performance em endpoints da API;\n● Padronização da interface das telas;\n● Desenvolvimento de interface gráfica de clonagem de acessos;\n● Criação de telas para visualização otimizada de acessos do usuário;",
+      "papel_exercido": "Responsável por melhorias de UX/UI e otimização de backend, trabalhando diretamente com correção de bugs e análise de performance.",
+      "duracao": "5 semanas (semana 3 e semanas 9 à 12)",
+      "comentarios": "Demandou atenção aos detalhes e capacidade de trabalhar com múltiplas frentes simultaneamente para entregar diversas melhorias.",
+      "aprendizados": "● Otimização de performance: Técnicas de envios simultâneos para melhorar o carregamento de respostas de APIs;\n● Design de interfaces: Princípios de UX/UI para melhor experiência do usuário;\n● Padronização de componentes: Consistência visual e reutilização de código;\n● Debugging: Uso de metodologias e ferramentas para resolução de bugs gráficos e de performance."
+    },
+    {
+      "numero": "3",
+      "descricao": "Desenvolvimento de sistema de parametrização utilizando estruturas JSONB do PostgreSQL para armazenamento flexível de diversos tipos de parâmetros utilizados por outros times.",
+      "tarefas_realizadas": "● Estudo e implementação de estruturas JSONB no PostgreSQL;\n● Desenvolvimento de API para gerenciamento de parâmetros;\n● Uso de ferramentas de migrations do EF Core;\n● Criação de interface de usuário para criação e edição de parâmetros;\n● Implementação de integração frontend-backend;\n● Documentação do sistema.",
+      "papel_exercido": "Desenvolvedor full-stack, atuando na implementação técnica de novas soluções.",
+      "duracao": "3 semanas (semanas 4 à 6)",
+      "comentarios": "Exigiu autonomia para pesquisa e estudo das documentações de tecnologias não conhecidas anteriormente.",
+      "aprendizados": "● Uso Estruturas JSON do PostgreSQL para armazenamento de dados não-estruturados;\n● Consulta de documentação para trabalhar com novos tipos de estruturas de dados;\n● Aplicação de inúmeros componentes da biblioteca do DevExpress;\n● Uso das ferramentas de migrações do EF Core, que permitiram refletir modificações feitas nos bancos de dados de forma simples e rápida."
+    },
+    {
+      "numero": "4",
+      "descricao": "Implementação de sistema de controle de acessos para parâmetros, permitindo definir permissões específicas de edição e criação por usuários e grupos de usuários.",
+      "tarefas_realizadas": "● Modelagem e criação de tabelas para controle de acessos a parâmetros;\n● Desenvolvimento de endpoints específicos na API de acessos;\n● Implementação de nova tela para realizar a integração entre as APIs de acessos e parâmetros;\n● Modificação do pacote NuGet de interface de parâmetros para incluir novos testes unitários.",
+      "papel_exercido": "Desenvolvedor full-stack com responsabilidades em arquitetura de banco de dados, participando da modelagem e implementação de soluções de segurança e integração com o frontend.",
+      "duracao": "3 semanas (semanas 7 à 9)",
+      "comentarios": "Exigiu adaptação à um novo tipo de arquitetura de projetos, além de compreensão de conceitos de segurança e capacidade de integração com sistemas existentes.",
+      "aprendizados": "● Modelagem de banco de dados: Aplicação de estruturas adequadas para controle de acessos;\n● APIs RESTful: Padrões para desenvolvimento de endpoints consistentes;\n● Pacotes NuGet: Criação e modificação de bibliotecas reutilizáveis;\n● Processos para criação/edição de tabelas: Padrões seguidos pelo banco para fazer alterações em ambientes de produção;\n● Segurança: Implementação de controles de acesso."
+    },
+    {
+      "numero": "5",
+      "descricao": "Migração completa de sistema legado de parâmetros para nova arquitetura, incluindo modernização da interface e otimização de performance.",
+      "tarefas_realizadas": "● Remoção de restrições aplicados à criação de novos parâmetros para aceitar a migração de estruturas dados antigos;\n● Desenvolvimento de novas visões e telas que auxiliam o usuário à visualizar o conteúdos contido nos parâmetros;\n● Extração de grandes volumes de dados de bases antigas;\n● Criação de endpoints para criações em lote;\n● Implementação de melhorias de performance na API;\n● Atualização do pacote NuGet de interface de parâmetros para incluir novas funcionalidades;\n● Atualizações na documentação técnica do projeto de parametrização.",
+      "papel_exercido": "Desenvolvedor full-stack responsável pela migração do sistema, realizando atividades de frontend, backend e banco de dados.",
+      "duracao": "3 semanas (semanas 12, 13 e 14)",
+      "comentarios": "Atividade que exigiu precisão e planejamento cuidadoso para evitar perdas, ou migrações de dados.",
+      "aprendizados": "● Migração de dados: Estratégias para transição segura entre sistemas;\n● Otimização SQL: Técnicas para consultas mais eficientes e obtenção de dados formatados no padrão desejado;\n● Operações em lote: Processamentos de grandes volumes de dados;\n● Modernização de sistemas: Abordagens para atualização de códigos legados;\n● Entendimento maior das funcionalidades do DevExpress, incluindo como as consultas são feitas e como dados são agrupados em cada requisição;\n● Implementação de novas estruturas customizadas para aceitar novos tipos de requisição a partir das estruturas utilizadas pelo DevExpress em ASP .NET."
+    },
+    {
+      "numero": "6",
+      "descricao": "Desenvolvimento inicial de novas funcionalidades de controle de autenticação de usuários para o portal FTS.",
+      "tarefas_realizadas": "● Criação da interface gráfica para controle de usuários;\n● Modelagem e implementação de tabela de permissões;\n● Desenvolvimento de API para gerenciamento de permissões.",
+      "papel_exercido": "Responsável pela implementação do novo controle de permissões do sistema de autenticação.",
+      "duracao": "2 semanas (semanas 13 e 14)",
+      "comentarios": "Trabalho inicial que demandou adaptação e compreensão à uma arquitetura de código completamente nova das anteriores.",
+      "aprendizados": "● Controle de permissões: Gerenciamento privilégios de usuários\n● Interfaces administrativas: Design focado em usabilidade com acessos controlados\n● Entendimento e uso dos tokens de OAuth do Azure e JWT para controlar acessos."
+    }
+  ],
+  "conclusao": "O período de estágio representou uma jornada de muito aprendizado e desafios constantes, contribuindo para meu desenvolvimento técnico e relacional. Participei no desenvolvimento de soluções para outras equipes e aprendi sobre sistemas de infraestrutura robustos que atendem milhares de usuários. O trabalho colaborativo no desenvolvimento de integrações foi especialmente enriquecedor para minhas competências de comunicação.\n\nTecnicamente, fui exposto a novas arquiteturas de software e apliquei conhecimentos acadêmicos em situações reais. Um dos maiores desafios foi trabalhar com software existente, exigindo adaptação constante em projetos complexos. Observei também a importância de priorizar tempo e recursos, aprendendo a identificar tarefas críticas e distribuir esforços eficientemente. Além disso, aprendi sobre governança corporativa e tratamento de dados sensíveis, adquirindo perspectiva mais madura sobre desenvolvimento corporativo.\n\nA experiência foi muito agradável. O ambiente colaborativo e a oportunidade de contribuir para soluções reais tornaram os dias proveitosos. Sinto que aprendi algo novo todos os dias, ainda mais quando realizava atividades mais complexas. A sensação de fazer diferença, combinada com o apoio da equipe e exposição a tecnologias atuais, criou uma experiência transformadora que influenciará positivamente minha carreira."
+}

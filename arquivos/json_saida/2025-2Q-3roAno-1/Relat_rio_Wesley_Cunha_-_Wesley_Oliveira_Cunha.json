@@ -1,0 +1,62 @@
+{
+  "estagiario": {
+    "nome_completo": "Wesley Oliveira Cunha",
+    "nusp": "14612367",
+    "curso": "Engenharia de Computação",
+    "telefone": "11968028710",
+    "email": "wesleyocunha137@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Leonardo Mendes Carvalho",
+    "telefone": "11953317400",
+    "email": "Leonardo-m.carvalho@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A.",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "30 horas nos primeiros 2 meses e 40 horas nos últimos 2 meses",
+    "carga_horaria_total": "598 horas"
+  },
+  "sobre_empresa": "O BTG Pactual é um dos maiores bancos de investimentos da América Latina, com atuação destacada nos segmentos de Investment Banking, Asset Management, Wealth Management, Corporate Lending, Sales & Trading e serviços para pessoas físicas através da plataforma digital. Fundado em 1983 no Brasil, o banco se consolidou como uma referência em soluções financeiras inovadoras e com forte presença internacional, com escritórios em diversas cidades ao redor do mundo.\n\nReconhecido por seu perfil empreendedor, o BTG Pactual combina solidez financeira com uma cultura de partnership, na qual os sócios estão diretamente envolvidos na gestão do negócio, o que garante alinhamento de interesses e foco em resultados de longo prazo. A instituição é listada na B3 (sob o ticker BPAC11) e tem se destacado também pelo crescimento da sua atuação no varejo digital, oferecendo produtos financeiros como investimentos, crédito e serviços bancários por meio de sua plataforma.\n\nA área onde atuei foi o FTS (Front Trade System), sistema que dá suporte a todo o ciclo de negociação do banco, conectando as mesas de operações ao restante da estrutura de risco e operações. Ele registra todas as ordens realizadas no front office, aplica regras de risco e compliance em tempo real e integra essas informações com os sistemas de back office, responsáveis pela conciliação, liquidação e contabilidade. No meu caso, trabalhei especificamente com o setor de Derivativos, produto dentro do FTS que envolve a negociação e o controle desses instrumentos financeiros.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Criação e adaptação de queries para implementação de dashboards, permitindo que a equipe e outras áreas visualizem de forma mais ágil e intuitiva informações relevantes para o negócio",
+      "tarefas_realizadas": "Desenvolvimento e adaptação de queries SQL, aprendizado e aplicação prática de recursos no Grafana, configuração de painéis e integração com diferentes fontes de dados em colaboração com a equipe",
+      "papel_exercido": "Responsável pelo desenvolvimento e adaptação de queries para atender às demandas da equipe, além da implementação das visualizações no Grafana. Colaborei com a equipe na integração dos dados e contei com orientações do gestor para alinhamento das tarefas e validação dos resultados",
+      "duracao": "2 meses",
+      "comentarios": "Por ser a primeira atividade do estágio, essa experiência ampliou significativamente minha visão sobre o potencial das tecnologias utilizadas, especialmente em relação à análise e visualização de dados. Gostei bastante de contribuir e acompanhar o progresso da tarefa",
+      "aprendizados": "Aprofundei meus conhecimentos em SQL e no uso de sistemas gerenciadores de banco de dados que empregam diferentes variações da linguagem, como PostgreSQL e SQL Server. Além disso, aprimorei meus conhecimentos sobre bancos de dados relacionais e adquiri domínio no uso do Grafana, tendo inclusive realizado um curso para ampliar minhas habilidades nessa ferramenta"
+    },
+    {
+      "numero": "2",
+      "descricao": "Desenvolvimento e automação de um sistema de alertas via requisição HTTP, integrando o Grafana ao Microsoft Teams por meio do Power Automate",
+      "tarefas_realizadas": "Configuração do Grafana para envio de alertas por meio de webhook, criação e ajuste de contact points, definição e gerenciamento de alert rules (incluindo estabelecimento de condições para acionamento ou não do alerta, vinculação às queries correspondentes e definição do período de avaliação do status do alerta), utilização do Power Automate para receber e processar o payload em formato JSON, aplicação de filtros e formatações para gerar mensagens personalizadas, e configuração de um endpoint no Microsoft Teams para receber e exibir as notificações de forma automatizada",
+      "papel_exercido": "Responsável por desenvolver e implementar a automação de alertas, configurando o Grafana para envio via webhook, criando fluxos no Power Automate para tratamento do payload em JSON e integração com o Microsoft Teams, com suporte pontual para ajustes de permissões e configuração inicial do webhook",
+      "duracao": "1 mês",
+      "comentarios": "Essa atividade foi particularmente interessante, pois foi a primeira vez que trabalhei diretamente com o formato JSON e pude entender como estruturar o conteúdo para o envio de mensagens. Configurar filtros no Power Automate para processar os payloads foi desafiador; precisei aprimorar meus conhecimentos em expressões regulares (regex) e aprender a construir filtros dinâmicos na ferramenta. No fim, a experiência foi bastante satisfatória, tanto pelo aprendizado quanto pelos resultados alcançados",
+      "aprendizados": "Aprofundei meus conhecimentos sobre as funcionalidades de alertas do Grafana, incluindo configuração de contact points, alert rules, webhooks e requisições HTTP com payload. Aprendi a criar fluxos automatizados no Power Automate e a filtrar/tratar dados no formato JSON para compor mensagens eficientes. Também desenvolvi habilidades para integrar diferentes ferramentas corporativas, conectando Grafana, Power Automate e Microsoft Teams por meio de endpoints configurados especificamente para o recebimento e entrega dos alertas"
+    },
+    {
+      "numero": "3",
+      "descricao": "Desenvolvimento de uma aplicação em Python para extração, tratamento e consulta de dados a partir de um arquivo Excel, realizando integração com banco de dados e exportando os resultados para um novo arquivo Excel",
+      "tarefas_realizadas": "Implementação de script em Python utilizando as bibliotecas dotenv para gerenciamento seguro de credenciais e variáveis de ambiente, pandas para leitura e manipulação dos dados do arquivo Excel, sqlalchemy para conexão e execução de queries no banco de dados, e os para operações de sistema. O programa lê as linhas do arquivo Excel contendo grande volume de dados, extrai colunas específicas e armazena seus valores em uma lista. Em seguida, essa lista é convertida para o formato de tuplas (utilizando a biblioteca ast quando necessário), possibilitando a execução de uma query que retorna dados com base nos IDs extraídos. Por fim, os resultados obtidos são exportados para um novo arquivo Excel",
+      "papel_exercido": "Responsável por desenvolver todo o script em Python, desde a leitura e filtragem dos dados no Excel até a formatação dos parâmetros para consulta no banco, execução da query e exportação do resultado para um novo arquivo. Também foi responsável por configurar o uso de variáveis de ambiente para conexão segura e pela integração entre as diferentes bibliotecas utilizadas",
+      "duracao": "2 dias",
+      "comentarios": "Essa atividade foi importante para reforçar meus conhecimentos em manipulação de dados com pandas e na execução de queries com sqlalchemy. Trabalhar com listas, tuplas e formatação de parâmetros para consultas SQL exigiu atenção aos detalhes para evitar erros de sintaxe e problemas de compatibilidade. Além disso, foi a primeira vez que implementei a leitura de variáveis de ambiente com dotenv e utilizei a biblioteca ast para conversão segura de dados, o que ampliou minha experiência no desenvolvimento de scripts mais robustos e seguros",
+      "aprendizados": "Aprofundei meu conhecimento em integração entre Python, arquivos Excel e bancos de dados. Melhorei minhas habilidades no uso das bibliotecas pandas, sqlalchemy, dotenv, ast e os. Também desenvolvi maior atenção ao fluxo de manipulação de dados, desde a leitura e filtragem até a execução de consultas parametrizadas e exportação dos resultados"
+    },
+    {
+      "numero": "4",
+      "descricao": "Diagnóstico e depuração de funcionalidades de uma aplicação .NET com API desenvolvida em C#, com análise de erros diretamente nas interfaces e telas do sistema, implementação de correções de código e ajustes na tratativa de exceções para otimizar o fluxo de uso e fornecer mensagens mais claras e amigáveis ao usuário",
+      "tarefas_realizadas": "Configuração do ambiente de desenvolvimento local, com auxílio na clonagem do repositório via git fork e na instalação de dependências como o DevExpress. Estudo do projeto para compreender o fluxo de funcionamento de funções e processos internos utilizados pela empresa. Realização de testes para reproduzir falhas, análise de erros por meio de interfaces e telas da aplicação, implementação de melhorias na tratativa de exceções, substituindo mensagens técnicas por respostas mais claras e amigáveis para o usuário, e ajustes na lógica da aplicação para prevenir recorrência de erros",
+      "papel_exercido": "Responsável por preparar o ambiente para execução do projeto, compreender o funcionamento das funções relacionadas às falhas, realizar depuração de código e análise de erros a partir das interfaces e telas da aplicação .NET com API em C#, reproduzir cenários de erro, implementar melhorias na experiência do usuário e corrigir bugs identificados no processo",
+      "duracao": "1 mês",
+      "comentarios": "Essa atividade foi essencial para reforçar minha habilidade em depuração de aplicações, especialmente na análise de erros a partir de interfaces e telas do sistema. A investigação exigiu atenção aos detalhes, paciência para testes repetidos e capacidade de interpretar mensagens técnicas para transformá-las em comunicações claras para o usuário. Além disso, contribuiu para aprimorar meu raciocínio lógico e eficiência na identificação da causa raiz de problemas",
+      "aprendizados": "Melhorei minhas habilidades de depuração, o que me deu mais confiança para realizar esse tipo de tarefa. Desenvolvi competências em análise e resolução de bugs, testes funcionais e melhoria de feedback ao usuário. Também aprimorei meu entendimento sobre a configuração de ambientes de desenvolvimento, execução local de projetos e utilização de bibliotecas corporativas como o DevExpress e tecnologias como C# e .NET"
+    }
+  ],
+  "conclusao": "Durante o período de estágio, tive a oportunidade de atuar em diferentes frentes do desenvolvimento e manutenção de sistemas, o que me proporcionou um bom aprendizado. As atividades que fiz envolveram desde a criação e adaptação de queries SQL para implementação de dashboards no Grafana, passando pela automação de alertas integrando diferentes ferramentas corporativas, pelo desenvolvimento de scripts em Python para manipulação e integração de dados, até o diagnóstico e depuração de funcionalidades críticas em uma aplicação .NET com API em C#.\n\nAo longo dessas experiências, aprimorei minhas habilidades técnicas em linguagens e ferramentas como SQL, Grafana, Power Automate, Python (pandas, sqlalchemy, dotenv, ast e os), C# com .NET e DevExpress. Também desenvolvi competências na análise de fluxos internos de sistemas, interpretação de mensagens de erro, identificação de causas raiz e implementação de soluções eficazes.\n\nAlém disso, o estágio contribuiu muito para meu crescimento profissional, fortalecendo minha capacidade de trabalhar em equipe, seguir boas práticas de programação e manter uma comunicação clara e objetiva com colegas e gestores. Cada atividade representou um desafio diferente, que exigiu adaptação, pesquisa e aplicação prática de novos conhecimentos, ampliando minha confiança para atuar em projetos reais."
+}

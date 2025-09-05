@@ -1,0 +1,98 @@
+{
+  "estagiario": {
+    "nome_completo": "Pedro Guilherme Croitor da Cruz",
+    "nusp": "13685002",
+    "curso": "Engenharia da Computação",
+    "telefone": "11 984031734",
+    "email": "pedrocroitor@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Daniel Azambuja",
+    "telefone": "11 956596632",
+    "email": "daniel.azambuja@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A. - SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "5 de Maio",
+    "periodo_fim": "29 de Agosto",
+    "carga_horaria_semanal": "30 Horas",
+    "carga_horaria_total": "390 Horas (13 semanas)"
+  },
+  "sobre_empresa": "O BTG Pactual é uma instituição financeira de destaque na América Latina, reconhecida por sua atuação no segmento de banco de investimentos e pela presença em diversos mercados internacionais. Fundado em 1983, o banco oferece um portfólio abrangente de serviços, incluindo gestão de recursos, assessoria em fusões e aquisições, operações no mercado de capitais, crédito corporativo, tesouraria e soluções de investimento voltadas a clientes institucionais, corporativos e de alta renda. Durante o período de estágio, foi possível vivenciar um ambiente profissional altamente dinâmico e orientado para a performance, caracterizado pela cooperação entre as equipes e pelo elevado padrão de qualidade nas entregas.\n\nO setor no qual realizei meu estágio denomina-se MARS (Managerial Accounting Risk System), que, em português, corresponde a Sistema de Risco Contábil Gerencial. Trata-se de um produto de tecnologia voltado para o recebimento e processamento de dados de contratos e posições registradas e consolidadas por outros times e áreas do banco. A partir dessas informações, o MARS realiza o tratamento e a consolidação de dados, de forma a fornecer insumos estratégicos para áreas como Finance e Mesa de Investimentos, permitindo avaliar a qualidade de aquisições e transações já realizadas, bem como subsidiar futuras tomadas de decisão. Em particular, estive alocado na frente de Crédito do MARS, responsável por gerir e processar informações relacionadas a produtos de crédito em geral, como, por exemplo, operações de empréstimo, relatórios e reports para esses produtos.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Implementação de uma nova coluna no Mars Desktop, produto do MARS que exibe as posições de contratos boletados. A funcionalidade adicionada, na aba Portfolio, realiza a conversão do valor Notional sempre que a moeda do contrato (Notional Currency) for diferente da moeda da entidade legal (Legal Entity Currency).",
+      "tarefas_realizadas": "• Configuração do ambiente no Microsoft Visual Studio\n• Utilização de ferramentas como DevExtreme para execução do Mars Desktop.\n• Desenvolvimento em linguagem C#.",
+      "papel_exercido": "Responsável pela implementação da coluna de conversão de moeda na aba Portfolio do Mars Desktop",
+      "duracao": "1ª semana",
+      "comentarios": "Primeira tarefa designada, com o objetivo de familiarizar-se com o padrão de codificação da equipe e com a linguagem C#.",
+      "aprendizados": "• Boas práticas de programação\n• Comunicação e alinhamento com a equipe.\n• Utilização de novas ferramentas e ambientes de desenvolvimento."
+    },
+    {
+      "numero": "2",
+      "descricao": "Expansão da funcionalidade desenvolvida na Atividade 1 para a aba Calculated do Mars Desktop. Essa aba, amplamente utilizada pelo time de Finance, funciona como um registro instantâneo (\"foto\") das posições, possibilitando acesso mais rápido às informações dos produtos de crédito.",
+      "tarefas_realizadas": "• Configuração de ambiente no Microsoft Visual Studio\n• Utilização das ferramentas DevExtreme para execução do Mars Desktop.\n• Desenvolvimento em linguagem C#.",
+      "papel_exercido": "Implementação da coluna de conversão de moeda na aba Calculated do Mars Desktop.",
+      "duracao": "1ª a 2ª semana",
+      "comentarios": "Essa atividade apresentou maior complexidade em comparação à anterior, exigindo modificações em um número maior de arquivos e um aprofundamento na arquitetura do Mars Desktop.",
+      "aprendizados": "• Boas práticas de programação\n• Comunicação e alinhamento com a equipe.\n• Utilização de novas ferramentas e ambientes de desenvolvimento."
+    },
+    {
+      "numero": "3",
+      "descricao": "Implementação de um filtro de acesso no report Counterparty Exposure By Channel, já existente no Mars Web. Este report é utilizado por diferentes áreas do banco para identificar por qual canal o cliente ingressou, como PME, Necton, B2B, B2C, entre outros.",
+      "tarefas_realizadas": "• Modificação na API de controle de acesso do report\n• Decodificação e tratamento de Tokens JWT\n• Familiarização de criação de roles pelo portal Azure\n• Configuração de acesso ao Mars Web por meio da AWS.",
+      "papel_exercido": "Garantir que cada grupo de usuários visualize apenas as colunas referentes ao canal sob sua responsabilidade.",
+      "duracao": "3ª a 4ª semana",
+      "comentarios": "Primeiro contato com o desenvolvimento de reports no Mars Web e com códigos implementados por outros membros da equipe, o que aumentou a necessidade de interação e alinhamento com o time.",
+      "aprendizados": "• Estrutura do Back-end dos relatórios de crédito no Mars Web.\n• Comunicação e colaboração com outros times do banco.\n• Compreensão da arquitetura do código.\n• Introdução ao banco de dados S3 da AWS."
+    },
+    {
+      "numero": "4",
+      "descricao": "Criação de um novo report para o time de Finance chamado \"Pme Actual Cash\" no caso o report era voltado para o pessoal de PME (Pequenas e médias empresas). Neste report era apresentado valores números sobre situação atual de contratos, separando na tela de forma intuitiva os produtos através de uma divisão de \"Products\" e \"Books\", arquitetura interna de divisão do time para separar contratos.",
+      "tarefas_realizadas": "• Implementação do front-end utilizando Angular (componentes, services e integração com API).\n• Criação da API para o report, incluindo desenvolvimento do controller.\n• Integração com pipelines de cluster para execução de testes de alto volume.\n• Configuração de acessos e permissões no ambiente AWS para disponibilização do report.\n• Implementação e ajustes para garantir desempenho e estabilidade na consulta de dados.",
+      "papel_exercido": "Responsável pelo desenvolvimento integral da solução, desde a concepção da interface até a publicação e testes, garantindo que o report atendesse aos requisitos funcionais e de desempenho definidos pelo time.",
+      "duracao": "5ª a 8ª semana",
+      "comentarios": "Foi o primeiro desenvolvimento completo de um report que realizei no MARS Web, o que me permitiu aplicar conhecimentos de diferentes tecnologias de forma integrada. Essa atividade exigiu maior autonomia, organização e contato frequente com outros times para validação de requisitos e acesso a dados.",
+      "aprendizados": "• Desenvolvimento full stack de relatórios no MARS Web.\n• Integração entre front-end Angular e APIs internas.\n• Boas práticas de criação de controllers.\n• Uso de pipelines de cluster para testes em larga escala.\n• Configuração e gerenciamento de acessos no ambiente AWS."
+    },
+    {
+      "numero": "5",
+      "descricao": "Realização de ajustes e melhorias em funcionalidades desenvolvidas anteriormente, incluindo alterações na conversão de moeda no Mars Desktop (abas Portfólio e Calculated) e correções no report criado na Atividade 4. No Mars Desktop, a lógica de conversão foi modificada para considerar a functional currency em vez da legal entity, além de ajustes na arquitetura de código para reposicionar adequadamente as colunas criadas. No report, foram realizadas correções para eliminar contratos duplicados e implementação de um filtro adicional para exibir produtos ONSHORE ou OFFSHORE, considerando que BRL corresponde a ONSHORE e qualquer outra moeda a OFFSHORE.",
+      "tarefas_realizadas": "• Alteração da lógica de conversão de moeda no Mars Desktop (abas Portfólio e Calculated).\n• Ajustes na arquitetura de código C# para realocação das colunas no Mars Desktop.\n• Correção de duplicidades no report desenvolvido.\n• Implementação de filtro de classificação ONSHORE/OFFSHORE baseado na functional currency.\n• Testes e validação para garantir integridade dos dados após as alterações.",
+      "papel_exercido": "Responsável por identificar, implementar e testar as alterações necessárias para corrigir falhas e aprimorar funcionalidades já em produção ou em fase de testes.",
+      "duracao": "8ª a 9ª semana",
+      "comentarios": "Esta atividade exigiu um entendimento aprofundado de código previamente desenvolvido, tanto por mim quanto por outros membros do time, demandando atenção à arquitetura existente e à consistência dos dados apresentados para diferentes áreas do banco.",
+      "aprendizados": "• Refatoração e manutenção de código existente.\n• Aplicação de boas práticas na organização e arquitetura de código C#.\n• Análise e correção de inconsistências de dados em reports.\n• Implementação de filtros condicionais com base em critérios de negócio."
+    },
+    {
+      "numero": "6",
+      "descricao": "Implementação de melhorias significativas no report Head Count Breakdown, que exibe, para diversas Desks de C&S, os nomes das pessoas alocadas em cada mês, incluindo registros históricos desde dezembro de 2024. Antes da alteração, a atualização mensal dependia do carregamento manual de um arquivo Excel contendo os nomes, desks e movimentações. A modificação realizada permitiu que as alterações fossem feitas diretamente na interface do report, com a possibilidade de clicar no botão de salvar para atualizar os dados. Também foi adicionada a funcionalidade de inclusão de novas desks e novas pessoas diretamente pela tela.",
+      "tarefas_realizadas": "• Alterações no front-end para permitir edição e inclusão de dados diretamente na interface.\n• Atualizações no service e no component Angular para tratar a lógica de atualização e inclusão.\n• Criação de um novo endpoint no controller para salvar alterações no back-end.\n• Ajustes no builder para gerar o report do mês atual com a mesma estrutura do mês anterior.\n• Testes de funcionalidade e validação para garantir a integridade das informações editadas.",
+      "papel_exercido": "Responsável por implementar, integrar e testar as novas funcionalidades de edição direta, garantindo que o report pudesse ser atualizado sem a necessidade de processos manuais externos.",
+      "duracao": "10ª a 12ª semana",
+      "comentarios": "Essa atividade trouxe um ganho significativo de eficiência para o processo de atualização do Head Count Breakdown, reduzindo a dependência de arquivos externos e tornando o fluxo de trabalho mais ágil e seguro.",
+      "aprendizados": "• Implementação de funcionalidades interativas no front-end com Angular.\n• Criação e integração de endpoints no back-end.\n• Melhoria de processos internos com foco em usabilidade e produtividade.\n• Manutenção da consistência de dados entre meses no report."
+    },
+    {
+      "numero": "7",
+      "descricao": "O report POS Financing Counterparty apresentava lentidão significativa devido ao grande volume de dados processados. Para otimizar sua execução, foi implementada uma melhoria na criação de tasks e subtasks, permitindo que o processamento fosse segmentado por bookId. Para isso, foi criado um novo metadado contendo os bookIds com maior volume de contratos. A lógica foi adaptada para criar uma subtask específica para cada bookId listado no metadado e outra subtask única para todos os demais contratos não pertencentes a esses bookIds.",
+      "tarefas_realizadas": "• Criação de metadado para armazenar bookIds de alto volume.\n• Alteração na lógica de geração de tasks e subtasks no controller e no builder.\n• Implementação da separação de processamento por bookId.\n• Testes em cluster para validação de desempenho com grandes volumes de dados.",
+      "papel_exercido": "Responsável pela concepção e implementação da solução de particionamento por bookId, visando otimizar o desempenho do report.",
+      "duracao": "13ª semana",
+      "comentarios": "A melhoria resultou em ganhos significativos de desempenho, reduzindo o tempo de execução e aumentando a eficiência no processamento do report.",
+      "aprendizados": "• Otimização de processamento de dados em relatórios de grande volume.\n• Criação e utilização de metadados para controle de lógica de negócio.\n• Boas práticas de particionamento de tarefas.\n• Testes e validação de desempenho em ambientes de cluster."
+    },
+    {
+      "numero": "8",
+      "descricao": "Implementação de ajustes no processamento de canais nos reports, devido à inclusão de subcanais enviados por outro time do banco. A alteração consistiu em adaptar o código SQL utilizado na geração das subtasks, de forma a incluir os novos subcanais relevantes e filtrar aqueles que não deveriam ser consumidos.",
+      "tarefas_realizadas": "• Utilização do DBeaver para análise e manipulação de dados no banco.\n• Alteração de consultas SQL para inclusão de subcanais nos reports de canais.\n• Implementação de filtros para exclusão de subcanais indesejados.\n• Testes para garantir que apenas os subcanais corretos fossem considerados no processamento.",
+      "papel_exercido": "Responsável por adaptar a lógica SQL dos reports para contemplar novos subcanais, mantendo a integridade e relevância dos dados processados.",
+      "duracao": "14ª semana",
+      "comentarios": "Essa atividade demandou entendimento da estrutura de dados dos reports de canais e integração com informações enviadas por outros times, reforçando a importância da consistência na ingestão de dados.",
+      "aprendizados": "• Manipulação de dados em banco via DBeaver.\n• Ajuste de consultas SQL para integração de novas fontes de dados.\n• Implementação de filtros para controle de ingestão de dados.\n• Colaboração intertimes para alinhamento de requisitos."
+    }
+  ],
+  "conclusao": "O estágio proporcionou uma experiência enriquecedora, permitindo-me vivenciar de forma prática o funcionamento de um ambiente corporativo dinâmico e desafiador. Tive a oportunidade de interagir com profissionais altamente capacitados e sempre solícitos, cujo conhecimento e disposição em compartilhar experiências foram fundamentais para o meu desenvolvimento. Além disso, adquiri competências técnicas valiosas, ampliando minha visão sobre processos e metodologias aplicados no setor. Essa vivência não apenas contribuiu para o aprimoramento das minhas habilidades, como também reforçou meu entusiasmo em seguir aprendendo e evoluindo profissionalmente."
+}

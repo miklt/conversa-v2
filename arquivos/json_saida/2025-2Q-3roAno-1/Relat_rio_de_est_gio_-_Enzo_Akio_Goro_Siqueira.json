@@ -1,0 +1,107 @@
+{
+  "estagiario": {
+    "nome_completo": "Enzo Akio Goro Siqueira",
+    "nusp": "13553825",
+    "curso": "Engenharia da Computação",
+    "telefone": "(11) 99566-3050",
+    "email": "enzoakiogoro@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Luan Lameirinhas",
+    "telefone": "(21) 97439-3737",
+    "email": "Luan.lameirinhas@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "Banco BTG Pactual S.A – SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "De 05/05/2025 a 07/07/2025: 30h; de 08/07/2025 a 29/08/2025: 40h",
+    "carga_horaria_total": "582 horas"
+  },
+  "sobre_empresa": "O BTG Pactual é o maior banco de investimentos da América Latina e tem como essência o modelo de Partnership Meritocrático, que valoriza agilidade, foco no cliente, excelência, autonomia e visão de longo prazo. A cultura do BTG se apoia em pilares como a gestão horizontal, o empreendedorismo, a meritocracia e o capital intelectual, que reforçam a importância da colaboração e da autonomia para gerar resultados consistentes e sustentáveis.\n\nDurante meu estágio, fiz parte do time de Cartões-Pré, que é encarregado de toda a parte desde a emissão do cartão até o envio ao cliente, englobando também os processos de migração de plano contratado para o cartão.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Implementação de memória cache em tokens",
+      "tarefas_realizadas": "Implementação de memória cache, utilizando a biblioteca Caffeine do Java, em mais de 20 repositórios, diminuindo consideravelmente a quantidade de chamadas para a recuperação do token na AWS.",
+      "papel_exercido": null,
+      "duracao": "2 semanas",
+      "comentarios": "Apesar da implementação ser a mesma em cada um dos repositórios, o trabalho foi muito proveitoso no sentido de me apresentar os diversos microsserviços utilizados pela empresa, além de me introduzir todo o mecanismo de deploy e verificação de funcionalidade através do Datadog e do Mordekaiser.",
+      "aprendizados": "• Utilização da biblioteca Caffeine do Java para memória cache\n• Execução de pipelines no Jenkins para subida de projetos\n• Fazer requisições HTTP a APIs utilizando o Postman\n• Funcionamento do framework SpringBoot\n• Conhecimento geral de Kotlin\n• Análise de Logs utilizando o Mordekaiser\n• Utilização do Rancher para checar status de pods"
+    },
+    {
+      "numero": "2",
+      "descricao": "Alteração da categoria \"Outros\" no resumo da fatura",
+      "tarefas_realizadas": "• Recategorização de diversas transações que antes eram lançadas como \"Outros\" no resumo da fatura\n• Descrição das transações dentro da categoria outros\n• Renomeação de uma categoria no resumo da fatura\n• Criação da subcategoria \"Outras mensalidades\"",
+      "papel_exercido": null,
+      "duracao": "1 mês",
+      "comentarios": "Essa atividade me proporcionou conhecimentos sobre os fluxos entre os microsserviços do BTG, além da arquitetura dos próprios repositórios.",
+      "aprendizados": "• Conhecimentos gerais de Kotlin\n• Conhecimento do fluxo de microsserviços do BTG"
+    },
+    {
+      "numero": "3",
+      "descricao": "Implementação de uma nova API para o time de segurança",
+      "tarefas_realizadas": "• Versionamento de um endpoint para a adição de um novo campo",
+      "papel_exercido": null,
+      "duracao": "1 semana",
+      "comentarios": "A pedido da equipe de segurança, recriei um endpoint adicionando um novo campo na requisição, fazendo com que o usuário precise enviar tal informação antes de receber o dado requisitado.",
+      "aprendizados": "• Parsing de objetos no formato Json através da biblioteca Gson do Java\n• Utilização de APIs do BTG para obter dados\n• Funcionamento de novos fluxos de microsserviços"
+    },
+    {
+      "numero": "4",
+      "descricao": "Bug fix da oferta de limite na contratação do segundo cartão de um cliente",
+      "tarefas_realizadas": "• Tratamento de um bug durante a contratação de um segundo cartão na conta de um usuário, mais especificamente na oferta do novo limite",
+      "papel_exercido": null,
+      "duracao": "1 semana",
+      "comentarios": "O bug consistia no cálculo do novo limite ofertado para o usuário durante a contratação de um segundo cartão, que em alguns casos podia levar a um erro na jornada de contratação, caso fosse dado um input inválido.",
+      "aprendizados": "• Funcionamento do fluxo de limites do BTG\n• Correção de bugs em Kotlin"
+    },
+    {
+      "numero": "5",
+      "descricao": "Subida de repositórios para ambiente DEV",
+      "tarefas_realizadas": "• Subida de 43 repositórios para o ambiente DEV, bem como sua devida configuração através de arquivos yml",
+      "papel_exercido": null,
+      "duracao": "2 semanas",
+      "comentarios": "A fim de permitir o teste de novos recursos sem prejudicar o trabalho da equipe de Quality Assurance (QA), foi configurado um novo ambiente, o ambiente de DEV, e para isso foi necessário a subida de todos os repositórios utilizados no nosso time lá. Apesar de a princípio ser uma tarefa trivial, cada repositório apresentava uma peculiaridade de configuração diferente, que impossibilitava o código de rodar caso não configurado de maneira correta. Após diversas análises nos logs de erro dos pods nos rancher, os erros foram corrigidos um a um, e todos os repositórios foram lançados.",
+      "aprendizados": "• Configuração de filas SQS\n• Configuração de Kafka\n• Análise de bugs através de logs no Rancher\n• Configuração do uso de memória de uma aplicação"
+    },
+    {
+      "numero": "6",
+      "descricao": "Implementação de fila SQS",
+      "tarefas_realizadas": "• Implementação de uma fila SQS que lê direto de um SNS sem a passagem por uma Lambda\n• Implementação da filtragem realizada pela Lambda dentro do próprio código",
+      "papel_exercido": null,
+      "duracao": "3 dias",
+      "comentarios": "A tarefa consistiu em analisar o código em Python da Lambda e passá-lo para Kotlin no repositório final, removendo a necessidade do uso da Lambda. Isso permitiu a implementação de uma DLQ e permite que mensagens que não tenham sido tratadas propriamente sejam analisadas e reprocessadas.",
+      "aprendizados": "• Implementação de filas SQS\n• Interpretação de código Python"
+    },
+    {
+      "numero": "7",
+      "descricao": "Bug fix na migração de cartão virtual no fluxo de mudança de plano do cartão",
+      "tarefas_realizadas": "• Tratamento de bug na migração do cartão virtual durante a migração de plano do cartão",
+      "papel_exercido": null,
+      "duracao": "3 dias",
+      "comentarios": "O cartão virtual não migrava durante a mudança de plano do cartão, e foram necessários ajustes no banco de dados para que funcionasse devidamente",
+      "aprendizados": "• Utilização do padrão de design Command do Gang Of Four na prática (visto na disciplina MAC0321 – LabOO)\n• Utilização do DBeaver para acesso a bancos de dados\n• Utilização de SQL para pesquisas no banco de dados"
+    },
+    {
+      "numero": "8",
+      "descricao": "Filtro de palavras ofensivas no nome do cartão",
+      "tarefas_realizadas": "• Reconhecimento de palavras ofensivas no campo do nome do cartão durante a contratação do serviço pelo cliente",
+      "papel_exercido": null,
+      "duracao": "n/a",
+      "comentarios": "Foi estudado o funcionamento de um sistema de black list, que detecta palavras ofensivas e impede o procedimento do fluxo. Apesar de todo sistema do tipo ser passível de falhas, isso diminui a quantidade de cartões que tenham sua confecção negada devido a palavras indevidas.",
+      "aprendizados": "• Criação de tabelas em banco de dados\n• Uso de regex para analisar padrões em textos"
+    },
+    {
+      "numero": "9",
+      "descricao": "Análise de filas no Datadog",
+      "tarefas_realizadas": "• Análise de filas DLQ, cujas notificações de novas mensagens são exibidas no Datadog\n• Tratamento de bugs indicados pelas mensagens nas DLQs",
+      "papel_exercido": null,
+      "duracao": "n/a",
+      "comentarios": "No meu setor, cada dia da semana é designado uma pessoa do time o tratamento das filas do Datadog. Após um tempo na empresa, fiquei responsável por isso durante um dos dias. O tratamento de cada um depende muito de caso a caso, sendo necessárias diversas ferramentas para analisar o motivo da mensagem ter caído em DLQ.",
+      "aprendizados": "• Uso do Datadog para obter informações\n• Análise de bugs diversos"
+    }
+  ],
+  "conclusao": "Durante meu estágio no BTG Pactual, tive a oportunidade de aplicar, na prática, os conhecimentos obtidos na faculdade, especialmente em MAC0321 – LabOO e PCS3623 – Banco de Dados, atuando na correção de bugs e na implementação de melhorias em sistemas backend.\n\nAdquiri experiência no uso de ferramentas modernas aplicadas no mercado de trabalho de um Engenheiro de Computação, como Jenkins (automação de pipelines), Mordekaiser (análise de logs), Grafana (monitoramento e visualização de dados), Rancher e Docker (orquestração de containers), DBeaver (gerenciamento de banco de dados), Datadog (análise de métricas), GitHub (controle de versionamento) e diversos serviços da AWS, com destaque para SQS e SNS. Além disso, trabalhei com a linguagem Kotlin e o framework Spring Boot para o desenvolvimento de aplicações web.\n\nO estágio me proporcionou uma vivência concreta do ambiente corporativo, incluindo a compreensão das responsabilidades e expectativas associadas ao trabalho em equipe. Tive contato também com as práticas de programação, que vão além da implementação das funcionalidades, visando a manutenção e a escalabilidade.\n\nNo fim, sinto que evoluí muito tanto profissionalmente quanto pessoalmente, adquirindo mais confiança para seguir na carreira de Engenharia de Computação e desempenhar um papel ativo na construção de soluções que contribuam para uma sociedade melhor."
+}

@@ -1,0 +1,53 @@
+{
+  "estagiario": {
+    "nome_completo": "Daniel Henrique Braga da Silva",
+    "nusp": "14565431",
+    "curso": "Engenharia de Computação - Quadrimestral",
+    "telefone": "61 983692340",
+    "email": "danielhenriquebraga@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Guilherme Andriotti Momesso",
+    "telefone": "14 997322537",
+    "email": "Guilherme.Momesso@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BTG Pactual S.A",
+    "cnpj": "30306294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "600 horas (15 semanas)"
+  },
+  "sobre_empresa": "O BTG Pactual é um banco de investimentos brasileiro fundado em 1983, hoje o maior da América Latina. Atua em serviços financeiros complexos como investment banking, gestão de ativos e fortunas, crédito corporativo e trading. Seu modelo de governança orientado por sócios, cultura meritocrática e expansão internacional o destacam. Em 2024, apresentou forte desempenho financeiro e mira crescer globalmente no setor de commodities e gestão de patrimônio.\n\nEstagiei na unidade Portfolio Management, responsável por fornecer serviços de monitoramento de carteira de investimentos, performance e pelo desenvolvimento de sistemas para Asset Management. Em minha equipe, fui responsável por desenvolver sistemas de precificação de ativos.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Desenvolvimento de API REST com integração a serviços de mensagens assíncronas (Amazon SQS)",
+      "tarefas_realizadas": "Durante o processo de onboarding no estágio, foi proposto o desenvolvimento de uma API RESTful com funcionalidades CRUD, integrando-a a um worker responsável por consumir mensagens de uma fila Amazon SQS. O objetivo foi compreender o funcionamento de serviços assíncronos e sua aplicação em arquiteturas distribuídas.",
+      "papel_exercido": "• Planejamento e implementação de uma API REST no padrão CRUD para gerenciamento de usuários;\n• Integração da API com banco de dados relacional PostgreSQL;\n• Desenvolvimento de um worker service responsável por consumir e processar mensagens provenientes de filas Amazon SQS;\n• Estruturação de rotinas assíncronas utilizando async/await para garantir escalabilidade e desempenho;",
+      "duracao": "4 semanas",
+      "comentarios": "A atividade serviu como ponto de partida para a inserção do estagiário na cultura de desenvolvimento da empresa, além de proporcionar o contato prático com tecnologias e práticas amplamente utilizadas em ambientes produtivos modernos, como mensageria, arquitetura assíncrona e microserviços.",
+      "aprendizados": "• Funcionamento de APIs RESTful e práticas de boas implementações;\n• Integração de aplicações com banco de dados PostgreSQL utilizando .NET 8;\n• Utilização de Amazon SQS para comunicação assíncrona entre sistemas;\n• Benefícios e motivos técnicos do uso de tarefas assíncronas (async/await) em aplicações com alta demanda de I/O;\n• Consolidação de conhecimentos práticos em C# e na plataforma .NET 8, com foco em soluções escaláveis e performáticas."
+    },
+    {
+      "numero": "2",
+      "descricao": "Implementação de funcionalidade para cálculo da posição consolidada de portfólio em fundos de investimento",
+      "tarefas_realizadas": "• Estudo de conceitos fundamentais sobre fundos de investimento e seus indicadores financeiros como patrimônio líquido, valor de cota e variação diária (lucros e prejuízos);\n• Integração com APIs internas do banco, por meio de clients padronizados, para coleta de dados essenciais ao cálculo da posição de portfólio;\n• Validação da lógica implementada por meio de testes e revisão com membros da equipe técnica.",
+      "papel_exercido": "O estagiário atuou como desenvolvedor backend, sendo responsável por entender os requisitos de negócio, adaptar-se à arquitetura já existente e desenvolver componentes de cálculo de forma integrada aos sistemas legados. Trabalhou com autonomia na análise das APIs e na construção das soluções, com apoio da equipe para validações técnicas e funcionais.",
+      "duracao": "5 semanas",
+      "comentarios": "Esta atividade exigiu do estagiário uma maior compreensão do contexto de negócio e integração com sistemas internos complexos, além da capacidade de trabalhar com pacotes corporativos e seguir convenções arquiteturais estabelecidas. Representou um avanço em termos de complexidade técnica e alinhamento com o domínio financeiro.",
+      "aprendizados": "• Conceitos fundamentais sobre fundos de investimento e composição de portfólios;\n• Criação de componentes encapsulados e reutilizáveis, respeitando boas práticas de arquitetura orientada a objetos;\n• Domínio mais aprofundado de recursos e ferramentas disponíveis no .NET 8 aplicadas ao desenvolvimento corporativo;"
+    },
+    {
+      "numero": "3",
+      "descricao": "Implementação de funcionalidade para cálculo em tempo real do preço de portfólios investidos em fundos",
+      "tarefas_realizadas": "• Estudo da composição da cota live de fundos de investimento, incluindo o uso de patrimônio líquido, valor de cota e variação diária como base de cálculo;\n• Implementação da lógica para armazenamento dos dados processados no Redis, garantindo disponibilidade e desempenho na recuperação do preço live;\n• Testes funcionais e validação da consistência dos dados calculados e armazenados;\n• Uso de classes de calendário para identificação correta do último dia útil anterior, respeitando os calendários específicos de cada fundo.",
+      "papel_exercido": "O estagiário atuou como desenvolvedor backend com foco em dados financeiros em tempo real, sendo responsável por implementar uma nova funcionalidade dentro da infraestrutura de workers já existente. Buscou compreender ferramentas como Redis e lidar com regras de negócio específicas do setor de investimentos.",
+      "duracao": "5 semanas",
+      "comentarios": "Esta atividade representou um avanço significativo em termos de complexidade técnica e integração com ferramentas de alto desempenho. Exigiu conhecimento de lógica financeira aplicada em tempo real e domínio do uso de dados de mercado.",
+      "aprendizados": "• Composição da cota live de fundos de investimento e suas variáveis de entrada;\n• Criação de tarefas assíncronas agendadas (Task) dentro de workers existentes;\n• Aplicação de lógicas baseadas em calendários financeiros para correta manipulação de datas (como identificação de dias úteis anteriores);\n• Fortalecimento de conhecimentos em C#, .NET 8, mensageria assíncrona e arquitetura orientada a serviços;\n• Funcionamento e uso do Redis como banco de dados de alta performance para armazenamento de dados."
+    }
+  ],
+  "conclusao": "O estágio representou uma etapa fundamental no meu desenvolvimento profissional e acadêmico, proporcionando uma vivência prática intensa em um ambiente técnico exigente e conectado ao mercado financeiro. Ao longo do período, pude aplicar conhecimentos prévios e, sobretudo, expandi-los significativamente, tanto do ponto de vista técnico quanto comportamental.\n\nDo ponto de vista técnico, aprofundei minha experiência com tecnologias essenciais ao desenvolvimento backend moderno, com destaque para o ecossistema .NET 8, integração de APIs REST, consumo de filas com Amazon SQS, manipulação de dados com Redis, uso de bancos de dados relacionais (PostgreSQL) e o desenvolvimento de workers assíncronos. Em paralelo, aprendi a trabalhar com ferramentas e pacotes proprietários da empresa, compreendendo a importância de seguir padrões arquiteturais estabelecidos e de manter a consistência do código em ambientes corporativos.\n\nAlém disso, o estágio me permitiu compreender melhor a dinâmica do mercado financeiro, especialmente no contexto de fundos de investimento e portfólios, o que foi essencial para o desenvolvimento das funcionalidades de cálculo de posição e de cota live. Esse entendimento foi construído através da leitura de documentações internas, contato com especialistas da área e análise dos dados manipulados nas aplicações."
+}

@@ -1,0 +1,80 @@
+{
+  "estagiario": {
+    "nome_completo": "Paulo José Cardoso Racy Ferreira",
+    "nusp": "11916666",
+    "curso": "Engenharia da computação",
+    "telefone": "(11)94633-2232",
+    "email": "paulojcrferreira@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Nicolas Gutierrez Ferreira Da Silva Pereira",
+    "telefone": "(11)4632-7362",
+    "email": "Nicolas.Pereira@nuclea.com.br"
+  },
+  "estagio": {
+    "razao_social_empresa": "CIP S.A",
+    "cnpj": "44.393.564/0001-07",
+    "periodo_inicio": "02 de junho de 2025",
+    "periodo_fim": "29 de agosto de 2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "440"
+  },
+  "sobre_empresa": "A empresa na qual o estágio foi realizado, a Núclea, é uma empresa que atua no setor financeiro, oferecendo soluções tecnológicas para bancos, fintechs e instituições de crédito, relacionadas primariamente a pagamentos por boleto e crédito.\n\nA unidade está situada na Av. Brig. Faria Lima, e possui um ambiente adequado para o trabalho de centenas de pessoas. O setor em que fui alocado é responsável pela sustentação e desenvolvimento de diversos sistemas, alguns dos quais são responsáveis por garantir a confiabilidade e auditabilidade do mercado financeiro e a privacidade do tratamento de dados em sistemas financeiros nacionais.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Participação em Reuniões Técnicas",
+      "tarefas_realizadas": "participação em dailies, plannings e reviews, além de refinamentos técnicos e de negócio",
+      "papel_exercido": "Colaborador ativo, acompanhando o andamento das tarefas e dando sugestões quando possível",
+      "duracao": "atividade contínua durante todo o período de estágio, com duração aproximada de 5 horas semanais",
+      "comentarios": "Importante para aprender o funcionamento de equipes e o valor da comunicação em uma equipe, principalmente da escuta e de se fazer ouvir para entregas mais assertivas",
+      "aprendizados": "Habilidades de comunicação, técnicas de colaboração e metodologia ágil"
+    },
+    {
+      "numero": "2",
+      "descricao": "Consultas e mudanças na base de dados",
+      "tarefas_realizadas": "Criação e revisão de scripts para modificar dados; ajustes no Helix IT Service Management (ITSM)",
+      "papel_exercido": "Colaborador, atuando sob supervisão na criação e revisão de scripts, com foco em aprendizado prático de SQL, Bash e gestão de dados",
+      "duracao": "Atividade pontual, com duração média de 1 hora semanal",
+      "comentarios": "A criação dos scripts exigiu muita atenção aos detalhes e validação",
+      "aprendizados": "Aprimorei conhecimentos em SQL e Bash, além de conhecimentos sobre o funcionamento de bancos de dados em ambientes corporativos"
+    },
+    {
+      "numero": "3",
+      "descricao": "Atualização XSD",
+      "tarefas_realizadas": "Alteração dos padrões de validação de arquivos XML conforme mudanças nas regras de CNPJ, validação dos novos arquivos XSD",
+      "papel_exercido": "Estagiário responsável por apoiar na atualização dos arquivos XSD, aplicando conhecimentos adquiridos sobre regras de negócio e validação de dados",
+      "duracao": "Atividade frequente no período final do estágio, com duração de aproximadamente 15 horas semanais",
+      "comentarios": "A atividade exigiu entendimento das regras de negócio e da estrutura dos arquivos",
+      "aprendizados": "Aprendi sobre XSD, XML e como regras de negócio são aplicadas no desenvolvimento de códigos"
+    },
+    {
+      "numero": "4",
+      "descricao": "Automação de processos com Python",
+      "tarefas_realizadas": "Criação de script em Python que gera arquivos XML de teste a partir de templates e dados em JSON",
+      "papel_exercido": "Desenvolvedor, responsável pela automação e melhoria de processos",
+      "duracao": "Atividade desenvolvida ao longo de algumas semanas, com duração total de aproximadamente 15 horas",
+      "comentarios": "A automação reduziu significativamente o tempo de testes e aumentou a confiabilidade",
+      "aprendizados": "Aprendi sobre automação com Python, manipulação de XML e uso de JSON para testes estruturados, além da documentação de soluções"
+    },
+    {
+      "numero": "5",
+      "descricao": "Programação em par",
+      "tarefas_realizadas": "Revisão e alteração de textos em site desenvolvido com Angular",
+      "papel_exercido": "Colaborador em programação em par, focado em revisão e ajustes",
+      "duracao": "Atividade realizada em sessões específicas de desenvolvimento, duração de aproximadamente 5 horas",
+      "comentarios": "A troca de conhecimento com a desenvolvedora foi muito enriquecedora",
+      "aprendizados": "Aprendi sobre front end, práticas de desenvolvimento colaborativo e revisão de código"
+    },
+    {
+      "numero": "6",
+      "descricao": "Participação na criação de mudanças",
+      "tarefas_realizadas": "Registro e organização de mudanças para ambientes de desenvolvimento e produção",
+      "papel_exercido": "Estagiário encarregado de apoiar na criação de mudanças no Helix ITSM, contribuindo para a organização dos processos de deploy e controle de ambientes",
+      "duracao": "Atividade recorrente durante o estágio, duração de aproximadamente 3 horas semanais",
+      "comentarios": "A atividade exigiu atenção aos detalhes e entendimento básico dos fluxos de deploy",
+      "aprendizados": "Aprendi sobre gestão de mudanças, controle de ambientes e uso do Helix ITSM"
+    }
+  ],
+  "conclusao": "Durante o período de estágio, tive a oportunidade de atuar em diversas frentes técnicas e operacionais que contribuíram significativamente para meu desenvolvimento profissional. As atividades realizadas, como participação em reuniões ágeis, automação de processos, manipulação de dados, programação em par e apoio na gestão de mudanças proporcionaram uma vivência integrada ao dia a dia de um time de tecnologia em uma empresa do setor financeiro.\n\nO ambiente exigente favoreceu o aprendizado contínuo, especialmente no que diz respeito à colaboração em equipe, entendimento de processos ágeis, uso de ferramentas como Helix ITSM, AWS, GitHub, Jira, Confluence, e aplicação de linguagens de programação como Python, SQL e Bash. Além disso, o contato com tecnologias como XSD e Angular ampliou minha visão sobre desenvolvimento de software e validação de dados.\n\nMais do que apenas habilidades técnicas, o estágio me ensinou sobre soft skills, como responsabilidade, organização e comunicação dentro de um contexto corporativo. A convivência com profissionais experientes e a cultura de aprendizado constante foram fundamentais para minha evolução."
+}

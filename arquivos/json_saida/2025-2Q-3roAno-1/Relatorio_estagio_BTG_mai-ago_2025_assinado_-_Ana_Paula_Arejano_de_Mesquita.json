@@ -1,0 +1,62 @@
+{
+  "estagiario": {
+    "nome_completo": "Ana Paula Arejano de Mesquita",
+    "nusp": "13680289",
+    "curso": "Engenharia de Computação",
+    "telefone": "(67) 999552709",
+    "email": "aparejano@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Rafael Carmo",
+    "telefone": "(11) 98191-9243",
+    "email": "rafael.carmo@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "Banco BTG Pactual S.A.",
+    "cnpj": "30.306.294/0001-45",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "30h",
+    "carga_horaria_total": "456"
+  },
+  "sobre_empresa": "O estágio foi realizado no BTG Pactual, um banco de investimentos de grande porte, referência na América Latina, que atua em diversas áreas do mercado financeiro, incluindo Investment Banking, Asset Management, Wealth Management e Sales & Trading.\n\nA atividade do estágio ocorreu no setor de Equities e Derivatives BO (Backoffice), mais especificamente no time de Solutions IR, responsável, entre outras funções, pela criação e manutenção de sites de relação com investidores.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Desenvolvimento de uma plataforma interna para gestão de sites e documentos de clientes.",
+      "tarefas_realizadas": "Implementação do backend em C# e .NET, linguagem e framework com os quais não tinha experiência prévia.\n\nDesenvolvimento do frontend em React, tecnologia com a qual já possuía conhecimento, mas que foi aplicada de forma mais avançada neste projeto.\n\nCriação de funcionalidades de onboarding de sites, gestão de categorias de documentos, associação de categorias por site e controle em tempo real dos documentos dos clientes.",
+      "papel_exercido": "Atuei como desenvolvedora full-stack, responsável tanto pela parte de backend quanto pela de frontend.",
+      "duracao": "Primeiros meses do estágio",
+      "comentarios": "Este foi o projeto central do estágio, que me exigiu aprendizado rápido em backend para entregar uma solução robusta.",
+      "aprendizados": "Desenvolvimento em .NET e C#, boas práticas em integração entre frontend e backend, além de aprofundamento em modelagem de dados e organização de sistemas full-stack."
+    },
+    {
+      "numero": "2",
+      "descricao": "Migração de sites para a nova API.",
+      "tarefas_realizadas": "Migração de três sites de clientes que rodavam sobre uma API legada em Go para a nova API desenvolvida em .NET.\n\nIntegração desses sites à plataforma criada, permitindo a gestão em tempo real de documentos.",
+      "papel_exercido": "Responsável por adaptar e migrar os sites para a nova infraestrutura.",
+      "duracao": "Após a estabilização da primeira versão da plataforma",
+      "comentarios": "A migração trouxe maior unificação dos processos e reduziu a dependência de sistemas herdados.",
+      "aprendizados": "Ganhei experiência em migração tecnológica, integração de sistemas legados e boas práticas em APIs modernas."
+    },
+    {
+      "numero": "3",
+      "descricao": "Evolução contínua da plataforma com base em feedbacks dos usuários.",
+      "tarefas_realizadas": "Implementação de melhorias de usabilidade, como ordenação alfabética, busca por link do documento e uso de tags.\n\nDesenvolvimento de funcionalidade para ocultar/restaurar documentos nos sites.",
+      "papel_exercido": "Desenvolvedora responsável por coletar feedbacks e implementar melhorias.",
+      "duracao": "Após a plataforma entrar em uso pela equipe",
+      "comentarios": "A rápida resposta às necessidades do time resultou em elogios e na adoção mais fluida da plataforma.",
+      "aprendizados": "Aprimorei competências em desenvolvimento iterativo, aplicação de feedbacks e melhoria da experiência do usuário."
+    },
+    {
+      "numero": "4",
+      "descricao": "Suporte ao time e manutenção de sites/documentos.",
+      "tarefas_realizadas": "Correção de problemas pontuais em sites e documentos.\n\nSuporte técnico ao time.",
+      "papel_exercido": "Suporte técnico e operacional.",
+      "duracao": "Ao longo de todo o estágio",
+      "comentarios": "Fui reconhecida pela agilidade e eficiência durante o período de release de resultados, em que fiz as alterações necessárias no site de um cliente de forma rápida.",
+      "aprendizados": "Desenvolvi habilidades de resolução rápida de problemas e gestão de prioridades."
+    }
+  ],
+  "conclusao": "O estágio no BTG Pactual foi fundamental para meu desenvolvimento profissional e acadêmico. Foi a primeira vez que trabalhei diretamente com backend, utilizando C# e .NET, o que me proporcionou uma curva de aprendizado intensa e a oportunidade de consolidar minha formação como desenvolvedora full-stack.\n\nNo frontend, pude aprofundar meus conhecimentos em React, aplicando boas práticas e desenvolvendo funcionalidades voltadas à usabilidade e à experiência do usuário. Além disso, tive contato direto com sistemas legados em Go (Golang), tanto no processo de migração de sites quanto na manutenção de um endpoint, o que ampliou minha visão sobre integração de tecnologias distintas e sobre os desafios da evolução de sistemas em ambiente corporativo.\n\nDe forma geral, o estágio me permitiu desenvolver competências técnicas sólidas, como modelagem de dados, integração de APIs e manutenção de sistemas complexos, mas também habilidades interpessoais, como trabalho em equipe, comunicação, escuta ativa de feedbacks e gestão de prioridades.\n\nTrata-se, portanto, de uma experiência extremamente enriquecedora, que contribuiu de maneira decisiva para minha formação como engenheira de computação e futura profissional da área de tecnologia."
+}

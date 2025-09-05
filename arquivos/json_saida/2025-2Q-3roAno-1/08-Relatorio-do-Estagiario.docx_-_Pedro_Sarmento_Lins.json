@@ -1,0 +1,62 @@
+{
+  "estagiario": {
+    "nome_completo": "Pedro Sarmento Lins",
+    "nusp": "14603627",
+    "curso": "Engenharia de Computação",
+    "telefone": "(11) 992819572",
+    "email": "pedrolins@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Vitor Faria",
+    "telefone": null,
+    "email": "vfaria@amazon.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "AMAZON SERVICOS DE VAREJO DO BRASIL LTDA.",
+    "cnpj": "15.436.940/0020-68",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40hrs semanais",
+    "carga_horaria_total": "656 horas"
+  },
+  "sobre_empresa": "Meu estágio foi na Amazon, conglomerado de tecnologia que opera nas indústrias de varejo, cloud computing, dispositivos eletrônicos e logística. Estagiei especificamente no setor de pagamentos, dentro da org de Digital Payments in Emerging Mkts (DEP), na equipe responsável na implementação e manutenção do processamento de pagamentos da marketplace do Brasil incluindo cartão de crédito, PIX, cartão Amazon, pontos Livelo, BNPL, boleto, entre outros produtos financeiros como parcelamento com e sem juros e outras iniciativas.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Projeto de atualização de sistemas críticos de processamento de pagamentos e implementação de processos automatizados",
+      "tarefas_realizadas": "- Migração de sistemas de JDK8 para JDK17\n- Implementação de pipelines CI/CD\n- Aprimoramento de frameworks de teste",
+      "papel_exercido": "Desenvolvedor júnior",
+      "duracao": "0,5 meses",
+      "comentarios": "Atividade crucial para modernização da infraestrutura da empresa",
+      "aprendizados": "Práticas de migração de sistemas legados e automação de processos"
+    },
+    {
+      "numero": "2",
+      "descricao": "Desenvolvimento e melhorias no sistema de pagamentos",
+      "tarefas_realizadas": "- Implementação de funcionalidade card-on-file\n- Integração com novos parceiros de pagamento\n- Otimização do sistema de detecção de fraudes",
+      "papel_exercido": "Desenvolvedor de software",
+      "duracao": "1,5 meses",
+      "comentarios": "Projeto permitiu contato direto com sistemas críticos de negócio",
+      "aprendizados": "Desenvolvimento de sistemas de pagamento e segurança"
+    },
+    {
+      "numero": "3",
+      "descricao": "Desenvolvimento de recursos para área de marketing",
+      "tarefas_realizadas": "- Implementação de sistema de anúncios\n- Execução de testes end-to-end\n- Desenvolvimento de sistemas de monitoramento",
+      "papel_exercido": "Desenvolvedor full-stack",
+      "duracao": "1 mês",
+      "comentarios": "Projeto integrou múltiplas áreas de negócio",
+      "aprendizados": "Integração de sistemas e desenvolvimento full-stack"
+    },
+    {
+      "numero": "4",
+      "descricao": "Contribuição no desenvolvimento de plataforma de análise de feedback",
+      "tarefas_realizadas": "- Desenvolvimento de sistemas de processamento de dados\n- Correção de bugs e otimização de performance\n- Implementação de processos de onboarding",
+      "papel_exercido": "Desenvolvedor de software",
+      "duracao": "1,5 meses",
+      "comentarios": "Introdução a tecnologias de IA/ML em ambiente empresarial",
+      "aprendizados": "Desenvolvimento de sistemas de IA/ML e processamento de dados"
+    }
+  ],
+  "conclusao": "Aprendizado: O estágio proporcionou experiência prática significativa em desenvolvimento de software empresarial, incluindo:\n- Desenvolvimento em diversas linguagens de programação e tecnologias cloud (AWS)\n- Implementação de CI/CD e práticas DevOps\n- Experiência com sistemas de pagamento em larga escala\n- Trabalho em equipes multifuncionais\n- Desenvolvimento de habilidades técnicas e profissionais\n- Exposição a práticas modernas de desenvolvimento de software\n- Compreensão de processos empresariais e impacto de tecnologia"
+}

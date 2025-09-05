@@ -1,0 +1,44 @@
+{
+  "estagiario": {
+    "nome_completo": "André Takeshi Ito",
+    "nusp": "14558422",
+    "curso": "Engenharia da Computação",
+    "telefone": "11955006999",
+    "email": "Andre.ito@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Fernando Henrique Bessa Marinho",
+    "telefone": "21968864108",
+    "email": "Fernando.Bessa@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "Banco BTG Pactual S.A.",
+    "cnpj": "30.306.294/0001-45",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40hrs",
+    "carga_horaria_total": "600hrs"
+  },
+  "sobre_empresa": "O BTG Pactual é uma instituição financeira de grande porte, reconhecida nacional e internacionalmente por sua atuação no mercado de investimentos, gestão de recursos e serviços bancários. Com foco em inovação, eficiência e excelência no atendimento, o banco busca constantemente oferecer soluções financeiras completas, alinhadas às necessidades de seus clientes, sejam eles pessoas físicas, empresas ou investidores institucionais.\n\nDurante o período de estágio, atuei na unidade responsável pelo setor de Billing, área encarregada dos processos relacionados à cobrança e pagamentos, com ênfase no gerenciamento de transações e liquidação financeira de cartões. Nesse setor, desempenhei funções de desenvolvimento backend, participando da implementação, manutenção e otimização de sistemas e serviços que garantem a confiabilidade e agilidade nas operações de pagamento. Essa experiência permitiu contato direto com tecnologias e práticas amplamente utilizadas no mercado, além de proporcionar um aprendizado significativo sobre o funcionamento interno de sistemas financeiros complexos.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Provisionamento do ambiente de desenvolvimento (DEV) para substituir a utilização do ambiente UAT nos testes, garantindo maior segurança e integridade no processo de homologação",
+      "tarefas_realizadas": "Execução de pipelines no Jenkins para diversos microserviços.\nAjuste de links e endpoints para apontar para o ambiente DEV de outros microserviços.\nConfiguração do banco de dados PostgreSQL para acesso no ambiente DEV.\nUtilização do Rancher para gerenciamento de pods e recursos.\nConfiguração e manipulação de containers utilizando Kubernetes e Docker.\nCriação e configuração de filas SQS, FIFO e uso do Kafka no ambiente DEV.\nImplementação de filas FIFO e SQS para garantir a ordem e consistência das mensagens.",
+      "papel_exercido": "Desenvolvedor backend, atuando na configuração e disponibilização do ambiente de desenvolvimento para a equipe",
+      "duracao": "2 a 3 semanas",
+      "comentarios": "A atividade foi de grande importância para a melhoria do fluxo de testes e para a redução de riscos, permitindo que funcionalidades fossem validadas em um ambiente seguro e adequado antes de chegar ao ambiente de homologação ou produção.",
+      "aprendizados": "Conhecimento aprofundado em banco de dados e organização de schemas, configuração e gerenciamento de ambientes, utilização do Jenkins para automação de pipelines, uso do Rancher para gestão de pods, além de noções práticas de Kubernetes e Docker."
+    },
+    {
+      "numero": "2",
+      "descricao": "Melhoria dos registros de log no repositório, visando facilitar o monitoramento e a análise durante a execução das aplicações",
+      "tarefas_realizadas": "Utilização da ferramenta Mordekaiser para visualização e análise de logs.\nInserção de pontos de log estratégicos durante a execução do repositório para melhorar a rastreabilidade e depuração.\nAjuste do formato e conteúdo das mensagens de log para maior clareza e objetividade.",
+      "papel_exercido": "Desenvolvedor backend, responsável pela otimização do fluxo de logs e suporte à observabilidade do sistema",
+      "duracao": "3 dias",
+      "comentarios": "A melhoria dos logs contribuiu para maior eficiência na detecção de erros e na análise do comportamento da aplicação, otimizando o trabalho de desenvolvimento e suporte.",
+      "aprendizados": "Domínio do uso da ferramenta Mordekaiser para análise de logs, melhores práticas de implementação de registros em sistemas backend e importância da observabilidade para a manutenção e evolução de sistemas."
+    }
+  ],
+  "conclusao": "Durante o período de estágio no BTG Pactual, tive a oportunidade de desenvolver habilidades técnicas e ampliar significativamente meu conhecimento em desenvolvimento backend e infraestrutura de sistemas. As atividades realizadas proporcionaram aprendizado prático em diversos aspectos, desde configuração de ambientes e otimização de queries até implementação de endpoints e padronização de logs e mensagens de erro.\n\nAlém disso, adquiri experiência no uso de ferramentas essenciais para o desenvolvimento e operação de sistemas modernos, como Jenkins para automação de pipelines, Rancher e Docker para orquestração de containers, Mordekaiser para análise de logs, GitHub para controle de versão, e DBeaver para gerenciamento de bancos de dados. Também aprofundei meus conhecimentos em mensageria e processamento assíncrono utilizando SQS, SNS e Kafka, bem como no uso do DynamoDB para persistência de dados.\n\nO estágio permitiu, ainda, compreender melhor a importância da organização de ambientes, boas práticas de desenvolvimento, padronização de códigos e testes, além de oferecer visão prática de fluxos de negócio e processamento de dados críticos para o setor financeiro. Essas experiências consolidaram minha formação técnica, aumentando minha capacidade de atuar de forma produtiva e segura em projetos complexos de backend."
+}

@@ -1,0 +1,80 @@
+{
+  "estagiario": {
+    "nome_completo": "André Dias Silva Terra",
+    "nusp": "13648765",
+    "curso": "Engenharia de Computação",
+    "telefone": "11991011409",
+    "email": "andre.terra@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Wagner Rodrigo Dantas dos Santos",
+    "telefone": "79988795804",
+    "email": "wagner.dantas@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A - SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "5/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40 horas",
+    "carga_horaria_total": "600 horas"
+  },
+  "sobre_empresa": "Realizei meu estágio no BTG Pactual, que é um banco que oferece diversas soluções financeiras. Atuei no setor de IT Banking, na área de cartões com foco em faturas.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Pagamento de faturas lastreado em investimentos",
+      "tarefas_realizadas": "Fui responsável por diversas atividades nesse projeto, como as seguintes: fluxo que dado o valor do novo limite do cliente entende qual oferta iremos o oferecer; montagem dos parâmetros de tela para o frontend; antecipação de valores pendentes para fatura em cenários de cancelamento de cartão; CRUD's para tabelas do projeto; testes unitários e resolução de bugs durante o desenvolvimento.",
+      "papel_exercido": "Desenvolvedor Backend",
+      "duracao": "2,5 meses",
+      "comentarios": "Fui introduzido num projeto relevante para equipe e para o banco e entendi como é feito um desenvolvimento em larga escala. Também tive contato com as demandas da equipe de produtos.",
+      "aprendizados": "Kotlin, Spring Boot, Rest Api's, integrações com AWS, padrão microsserviços, arquitetura para um grande projeto, testes unitários, debug via logs, funcionamento de faturas e cartões de crédito, entre outros."
+    },
+    {
+      "numero": "2",
+      "descricao": "Melhoria de performance cache cognito",
+      "tarefas_realizadas": "Implementação de cache com expiração dinâmica dado valor passado pelo cognito da AWS, em vários serviços. Com isso, reduzimos o gasto com essa ferramenta da AWS.",
+      "papel_exercido": "Desenvolvedor Backend",
+      "duracao": "3 semanas",
+      "comentarios": null,
+      "aprendizados": "Kotlin, Spring Boot, Rest Api's, integrações com AWS, funcionamento de cache, debug via logs, ferramenta COGNITO, entre outros."
+    },
+    {
+      "numero": "3",
+      "descricao": "Filtro no detalhes do extrato da fatura",
+      "tarefas_realizadas": "Implementação de um filtro via nome do \"merchant\". Com isso, facilitamos a busca de gastos em determinada fatura.",
+      "papel_exercido": "Desenvolvedor Backend",
+      "duracao": "2 semanas",
+      "comentarios": null,
+      "aprendizados": "Kotlin, Spring Boot, Rest Api's e funcionamento de faturas."
+    },
+    {
+      "numero": "4",
+      "descricao": "Valor remanescente da fatura fixo no portal do banco",
+      "tarefas_realizadas": "Fixação do valor remanescente da fatura para valor do dia do fechamento. Anteriormente ele era atualizado conforme os pagamentos dessa fatura, o que dificultava o entendimento de certas situações para atendentes do banco. Para isso tive de criar novos endpoints e tabelas.",
+      "papel_exercido": "Desenvolvedor Backend",
+      "duracao": "2 semanas",
+      "comentarios": null,
+      "aprendizados": "Kotlin, Spring Boot, CRUD, Rest Api's e funcionamento de faturas."
+    },
+    {
+      "numero": "5",
+      "descricao": "Subida de microsserviços para o ambiente de DEV",
+      "tarefas_realizadas": "Estabilizar os microsserviços no novo ambiente de DEV. Para isso, tive de resolver inúmeros problemas, como: falta de configurações no novo ambiente, criação de filas SQS, aumento da disponibilidade de CPU e memória, entre outros.",
+      "papel_exercido": "Desenvolvedor Backend",
+      "duracao": "2 semanas",
+      "comentarios": null,
+      "aprendizados": "Kotlin, Spring Boot, AWS, Rancher e Jenkins."
+    },
+    {
+      "numero": "6",
+      "descricao": "Resolução de bugs em produção",
+      "tarefas_realizadas": "resolvi alguns bugs que estavam ocorrendo em produção, como: funcionalidade desabilitada para certo parceiro, cache cognito não funcional para aplicações reativas, débito automático não funcional, entre outros.",
+      "papel_exercido": "Desenvolvedor Backend",
+      "duracao": "4 memes",
+      "comentarios": "A duração foi de 4 meses pois sempre estive disponível para resolução de bugs em produção.",
+      "aprendizados": "Kotlin, Spring Boot, AWS, estratégias de DEBUG, regras de negócio, entre outros."
+    }
+  ],
+  "conclusao": "Aprendi como funciona o desenvolvimento de software de um projeto de larga escala, ou seja, como sua arquitetura é planejada. Melhorei minhas habilidades técnicas enquanto engenheiro de computação, com foco em Kotlin/Spring Boot. Também aprendi as regras de negócio relacionadas a cartão de crédito e faturas."
+}

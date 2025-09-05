@@ -1,0 +1,53 @@
+{
+  "estagiario": {
+    "nome_completo": "Vinícius Yshimine Terra",
+    "nusp": "5306726",
+    "curso": "Engenharia (Habilitação: de Computação) - integral",
+    "telefone": "(11)99383-1674",
+    "email": "vinicius_terra@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Rafael Alves de Mello Almada",
+    "telefone": "(11)95075-0244",
+    "email": "Rafael.Almada@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "BANCO BTG PACTUAL S.A. - SP",
+    "cnpj": "30.306.294/0002-26",
+    "periodo_inicio": "05 de maio de 2025",
+    "periodo_fim": "29 de agosto de 2025",
+    "carga_horaria_semanal": "40h",
+    "carga_horaria_total": "680h"
+  },
+  "sobre_empresa": "O BTG Pactual é um banco de investimentos latino-americano, com foco em Wealth Management, Corporate & Investment Banking, e Asset Management. Ele oferece serviços financeiros para pessoas físicas e jurídicas, incluindo investimentos, soluções para empresas, gestão de ativos e assessoria financeira. O banco também atua no mercado de capitais e possui uma plataforma de investimentos digitais no Brasil e no exterior.\n\nO estágio foi realizado na unidade Solutions - Portfolio Management, setor dedicado ao desenvolvimento de diversas soluções tecnológicas, muitas delas voltadas a dar suporte às mesas do banco. Essas mesas são formadas por equipes responsáveis pela gestão de diversos fundos de investimento da instituição.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Projeto Introdutório em Frontend - Projeto inicial realizado no início do estágio, com foco em aprender a stack utilizada pela equipe e adotar as boas práticas de desenvolvimento do time por meio da criação de um jogo simples utilizando o framework Angular. O projeto escolhido foi uma versão simplificada de Pokémon.",
+      "tarefas_realizadas": "● Planejamento e implementação da estrutura geral do jogo, com organização de rotas e componentes no Angular.\n● Consumo da PokéAPI para obter dados de Pokémon em tempo real, incluindo nome, tipo e imagens.\n● Utilização de componentes do Orquestra (biblioteca de componentes usada pelo time) para interface e interação com o usuário.\n● Implementação de lógica para batalhas simples, seleção de Pokémon e exibição de informações dinâmicas.\n● Adoção das boas práticas da equipe, como padronização de código, organização de pastas e convenções de nomenclatura.",
+      "papel_exercido": "Desenvolvedor Frontend",
+      "duracao": "Aproximadamente 3 semanas, no início do estágio",
+      "comentarios": null,
+      "aprendizados": "Fundamentos do framework Angular, consumo de APIs REST, uso de bibliotecas internas (Orquestra), boas práticas de versionamento com Git e Azure DevOps"
+    },
+    {
+      "numero": "2",
+      "descricao": "Desenvolvimento Frontend - Desenvolvimento da tela Carteiras Defasadas, cujo objetivo é apresentar dados da Indústria de Fundos, com foco na alocação de ativos, a partir das informações disponibilizadas pela CVM. A tela foi composta por três abas: Filtragem por Gestora e Fundo, Filtragem por Emissor e Ativo, e Visão de Alocação por Gestora.",
+      "tarefas_realizadas": "● Implementação da estrutura geral da tela e suas abas.\n● Criação de componentes reutilizáveis para tabelas, filtros e elementos visuais, utilizando as bibliotecas Orquestra e DevExtreme.\n● Desenvolvimento de um service para consumir os endpoints da API, responsável por enviar requisições e receber os dados para cada aba da tela.\n● Implementação dos filtros dinâmicos para as abas, permitindo que o usuário filtre as buscas por gestora, fundo, emissor e ativo conforme o caso.\n● Tratamento e formatação visual dos dados recebidos da API para exibição adequada nas tabelas.",
+      "papel_exercido": "Desenvolvedor Frontend",
+      "duracao": "Aproximadamente 2 a 3 meses, de forma não contínua, com desenvolvimento disperso ao longo do estágio devido a pausas para atender demandas no backend",
+      "comentarios": "Esta atividade representou a maior parte das responsabilidades do estágio, sendo central para o desenvolvimento do projeto",
+      "aprendizados": "Princípios de desenvolvimento frontend, utilização do framework Angular, linguagem TypeScript, Consumo de APIs REST através de services, versionamento de código com Git e Azure DevOps"
+    },
+    {
+      "numero": "3",
+      "descricao": "Desenvolvimento Backend - Adição e implementação de novos endpoints na API consumida pelo frontend da tela Carteiras Defasadas, para fornecer dados filtráveis e dinâmicos sobre as posições dos fundos. Desenvolvimento de funcionalidades para exportação de dados via frontend e envio por e-mail.",
+      "tarefas_realizadas": "- Desenvolvimento de consultas em PostgreSQL para obter dados diretamente do banco de dados, considerando diferentes critérios de filtro.\n- Criação de requests e métodos em C# .NET que comportassem múltiplos parâmetros de filtro (como gestora, fundo, emissor e ativo).\n- Desenvolvimento da lógica backend para exportação dos dados da tela em formato adequado (.csv compactado em um .zip) e disparo do envio por e-mail ao usuário, utilizando sistema pré-existente",
+      "papel_exercido": "Desenvolvedor Backend",
+      "duracao": "Cerca de 2 a 3 meses, com desenvolvimento realizado de forma intercalada e dispersa ao longo do estágio",
+      "comentarios": null,
+      "aprendizados": "Desenvolvimento em C# .NET, padrões de projeto (interface/implementação, decorator), consultas SQL em PostgreSQL"
+    }
+  ],
+  "conclusao": "O estágio no BTG Pactual proporcionou uma experiência abrangente no desenvolvimento de soluções tecnológicas direcionadas ao mercado financeiro. A atuação direta no desenvolvimento frontend e backend da tela Carteiras Defasadas possibilitou o aprimoramento de habilidades técnicas essenciais, incluindo o uso do framework Angular, TypeScript, consumo de APIs REST, elaboração de consultas SQL, aplicação de boas práticas e padrões de projeto em C# .NET no backend, além da utilização de ferramentas de versionamento (Git e Azure DevOps).\n\nAlém do desenvolvimento técnico, o estágio contribuiu significativamente para o aprimoramento de soft skills essenciais, como trabalho em equipe, comunicação eficaz e gestão do tempo. A vivência em um ambiente profissional dinâmico reforçou a importância da colaboração e da organização."
+}

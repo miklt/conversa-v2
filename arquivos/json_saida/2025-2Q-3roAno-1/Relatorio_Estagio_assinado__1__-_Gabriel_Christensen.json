@@ -1,0 +1,71 @@
+{
+  "estagiario": {
+    "nome_completo": "Gabriel Christensen",
+    "nusp": "14571293",
+    "curso": "Engenharia de Computação",
+    "telefone": "(11) 99986-8321",
+    "email": "gabriel.christensen2019@usp.br"
+  },
+  "supervisor": {
+    "nome_completo": "Gilson Modesto Ferreira",
+    "telefone": "(21) 98985-5242",
+    "email": "Gilson.ferreira@btgpactual.com"
+  },
+  "estagio": {
+    "razao_social_empresa": "Banco BTG PACTUAL S.A. – SP",
+    "cnpj": "30306294/0002-26",
+    "periodo_inicio": "05/05/2025",
+    "periodo_fim": "29/08/2025",
+    "carga_horaria_semanal": "40h",
+    "carga_horaria_total": "560h"
+  },
+  "sobre_empresa": "O BTG Pactual é um dos maiores bancos de investimento da América Latina, atuando nos segmentos de Investment Banking, Wealth Management, Asset Management e Banking. Fundado em 1983, o banco se destaca por sua presença internacional, forte cultura de performance e foco em soluções financeiras personalizadas para clientes institucionais, corporativos e individuais de alta renda. Sua estratégia combina inovação, solidez financeira e uma abordagem orientada a resultados, sendo referência no mercado financeiro brasileiro e internacional.\n\nO estágio foi realizado na equipe de Banking, dentro da área de Tecnologia, no prédio Brazilian Financial Center, localizado na Avenida Paulista, em São Paulo. Nesse endereço também está sediado o Banco Pan, controlado pelo BTG Pactual, o que possibilita um ambiente integrado entre diferentes frentes de negócios do grupo. A atuação na área de tecnologia da equipe de Banking envolveu suporte, desenvolvimento e aprimoramento de sistemas e processos que sustentam as operações bancárias.",
+  "atividades_realizadas": [
+    {
+      "numero": "1",
+      "descricao": "Criação de monitores, via Terraform, para o Datadog de serviços do Portal do Cliente. O Portal do Cliente é uma plataforma que unifica as operações de banking e investimentos, permitindo que o cliente acesse todas as funcionalidades em um único ambiente digital.",
+      "tarefas_realizadas": "- Implementação de monitores no Datadog utilizando scripts Terraform.\n- Configuração de alertas para detectar falhas e anomalias nas requisições dos serviços.\n- Integração dos monitores aos canais de notificação da equipe.\n- Testes de funcionamento e validação das configurações.",
+      "papel_exercido": "Responsável pela configuração técnica dos monitores e implementação das regras de alerta, garantindo que a equipe fosse informada de erros e instabilidades.",
+      "duracao": "1 semana",
+      "comentarios": "A implementação dos monitores contribuiu para maior visibilidade e proatividade no tratamento de falhas, reduzindo o tempo de resposta da equipe.",
+      "aprendizados": "Aprofundamento no uso de ferramentas de monitoramento (Datadog) e infraestrutura (Terraform), além de maior entendimento sobre a arquitetura de serviços do Portal do Cliente."
+    },
+    {
+      "numero": "2",
+      "descricao": "Desenvolvimento do endpoint de login para o Portal FIDC, utilizando Kotlin com Spring Boot, incluindo o mapeamento no gateway de segurança.",
+      "tarefas_realizadas": "- Implementação do endpoint de login.\n- Integração com o gateway de segurança para autenticação.\n- Validação de credenciais e retorno de tokens de sessão.\n- Testes de funcionamento com Postman e Swagger.",
+      "papel_exercido": "Desenvolvedor backend responsável por implementar e integrar a funcionalidade de login ao fluxo de segurança da aplicação.",
+      "duracao": "4 semanas",
+      "comentarios": "A funcionalidade de login foi a base para todas as demais interações do portal, garantindo autenticação segura para usuários.",
+      "aprendizados": "Experiência prática no desenvolvimento de APIs seguras, integração com gateways e boas práticas de autenticação."
+    },
+    {
+      "numero": "3",
+      "descricao": "Implementação da verificação em duas etapas (2FA) no Portal FIDC, utilizando serviço de tickets por e-mail como camada adicional de segurança.",
+      "tarefas_realizadas": "- Implementação do fluxo de envio e validação de códigos por e-mail.\n- Integração com o backend e gateway de segurança.\n- Garantia de compatibilidade com diferentes provedores de e-mail.\n- Testes de funcionamento e integração com o login.",
+      "papel_exercido": "Responsável por desenvolver e integrar a autenticação em duas etapas, garantindo maior proteção de acesso ao portal.",
+      "duracao": "3 semanas",
+      "comentarios": "A funcionalidade elevou o nível de segurança do sistema, prevenindo acessos não autorizados mesmo em casos de credenciais comprometidas.",
+      "aprendizados": "Aprimoramento em práticas de segurança e autenticação multifator, além de integração de serviços externos ao backend."
+    },
+    {
+      "numero": "4",
+      "descricao": "Desenvolvimento da etapa de seleção de relacionamentos FIDC no Portal, permitindo que o usuário escolha qual relação deseja visualizar e operar.",
+      "tarefas_realizadas": "- Implementação da busca de todas as relações FIDC do usuário autenticado.\n- Criação do fluxo de seleção da relação desejada.\n- Salvamento da sessão com o relacionamento escolhido.\n- Testes e ajustes para garantir a integridade da sessão.",
+      "papel_exercido": "Desenvolvedor backend responsável por criar o fluxo de seleção e persistência das relações FIDC do usuário.",
+      "duracao": "4 semanas",
+      "comentarios": "Essa etapa foi essencial para a personalização da experiência do usuário no portal.",
+      "aprendizados": "Consolidação de conhecimento em manipulação de sessões, integração com banco de dados e otimização de consultas."
+    },
+    {
+      "numero": "5",
+      "descricao": "Criação de mocks de serviços para o fluxo de primeiro acesso da plataforma FIDC, permitindo o avanço do desenvolvimento frontend antes da finalização do backend definitivo.",
+      "tarefas_realizadas": "- Implementação de endpoints mockados simulando o comportamento esperado do backend.\n- Mapeamento dos mocks no gateway para acesso pelo frontend.\n- Garantia de compatibilidade com o contrato de API esperado pela equipe de frontend.\n- Testes e ajustes para facilitar o trabalho de integração.",
+      "papel_exercido": "Responsável por prover soluções temporárias para permitir a continuidade do desenvolvimento do frontend.",
+      "duracao": "1 semana",
+      "comentarios": "Essa estratégia evitou atrasos no cronograma e manteve a produtividade da equipe de frontend.",
+      "aprendizados": "Experiência com criação de mocks, entendimento de contratos de API e colaboração entre times frontend e backend."
+    }
+  ],
+  "conclusao": "O estágio no BTG Pactual foi uma oportunidade única para desenvolver, na prática, conhecimentos que até então estavam restritos ao campo acadêmico ou teórico. Ao longo desse período, pude trabalhar em um ambiente que utiliza tecnologias modernas e padrões de alto nível, o que me permitiu aprender sobre arquitetura de microsserviços, clean code e aprofundar meu domínio em Kotlin, Java e Spring Boot. Também ganhei familiaridade com ferramentas essenciais no dia a dia da área, como Datadog, Kubernetes, Terraform, Postman e Swagger, além de ter contato direto com conceitos de programação reativa, que ampliaram minha visão sobre desenvolvimento backend.\n\nMais do que as habilidades técnicas, o estágio me ajudou a crescer no lado humano da profissão. A necessidade de interagir com diferentes equipes me ensinou a importância da comunicação clara e objetiva, especialmente quando várias frentes de trabalho precisam evoluir em paralelo. Também aprendi a lidar com prazos, prioridades e imprevistos, mantendo a postura adequada em um ambiente corporativo exigente e dinâmico.\n\nEssa experiência foi, sem dúvida, um marco na minha formação. Sinto que saio dela mais preparado, tanto tecnicamente quanto profissionalmente, para enfrentar novos desafios e contribuir de forma mais efetiva em projetos futuros, especialmente no setor financeiro, onde qualidade, segurança e eficiência são indispensáveis."
+}
