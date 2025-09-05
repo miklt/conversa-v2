@@ -30,6 +30,8 @@ This is a conversational system that allows users to query and analyze internshi
 - Frontend chat interface (React/Vite)
 - Enhanced query processing with LLM integration
 - Real-time chat session management
+- **Advanced query understanding** for complex questions
+- **Multi-agent system** for comprehensive responses
 
 ## Important Data Conventions
 
@@ -99,24 +101,83 @@ Example: `2025-2Q-3roAno-1` means:
   - [x] Format responses with context
 - [x] Test all API endpoints
 
-### Phase 4: Frontend Development ⏳
+### Phase 4: Enhanced Chat System with Multi-Agent Architecture ⏳
+
+#### Current Limitations:
+- Simple keyword matching for intent detection
+- No semantic understanding of questions
+- Cannot answer complex queries requiring data aggregation
+- Limited to pre-defined query patterns
+
+#### Target Capabilities:
+The system should answer questions like:
+- "Quais empresas trabalham com C#?" → Search across all reports for C# mentions
+- "Que empresas usam métodos ágeis?" → Find Scrum, Kanban, Agile methodologies
+- "Qual é o aprendizado mais comum dos alunos no primeiro estágio?" → Analyze 'aprendizados' field across ordinal_estagio=1
+- "O que devo estudar para me candidatar ao Banco BTG?" → Aggregate skills/technologies from BTG reports
+- "Quais são os desafios mais comuns em estágios de backend?" → Analyze 'comentarios' and 'conclusao' fields
+
+#### Proposed Multi-Agent Architecture:
+
+```
+User Query → [Intent Analyzer Agent]
+                ↓
+         [Query Router]
+         ↙     ↓     ↘
+[Data Agent] [Search Agent] [Aggregation Agent]
+      ↓           ↓              ↓
+[Response Generator Agent] ← [Context Manager]
+                ↓
+         [Privacy Filter]
+                ↓
+           User Response
+```
+
+**Agent Responsibilities:**
+1. **Intent Analyzer**: Uses LLM to understand query intent and extract entities
+2. **Query Router**: Decides which agents to activate based on query type
+3. **Data Agent**: Direct database queries for specific data
+4. **Search Agent**: Semantic search using embeddings + keyword search
+5. **Aggregation Agent**: Complex data analysis and summarization
+6. **Context Manager**: Maintains conversation context and relevant data
+7. **Response Generator**: Uses LLM to create natural, comprehensive responses
+
+#### Implementation Plan:
+
+- [ ] Create enhanced intent detection using LLM (GPT-4 or Claude)
+- [ ] Implement semantic search combining embeddings + term matching
+- [ ] Build aggregation queries for common patterns:
+  - [ ] Technologies by company
+  - [ ] Learning outcomes by internship order
+  - [ ] Common challenges by area
+  - [ ] Skills requirements by company
+- [ ] Create agent orchestration system
+- [ ] Implement conversation memory/context
+- [ ] Add response quality validation
+- [ ] Test with real user queries
+
+### Phase 5: Frontend Development ⏳
 
 - [ ] Initialize React + Vite project
 - [ ] Create chat UI components:
   - [ ] Message input
   - [ ] Message history
   - [ ] Typing indicators
+  - [ ] Source citations display
 - [ ] Implement API client for backend communication
 - [ ] Add response formatting and markdown support
 - [ ] Create loading and error states
+- [ ] Add conversation export functionality
 
-### Phase 5: Testing & Refinement ⏳
+### Phase 6: Testing & Refinement ⏳
 
-- [ ] Create test dataset with known queries/answers
-- [ ] Implement integration tests
+- [ ] Create comprehensive test dataset with real user queries
+- [ ] Implement integration tests for multi-agent system
 - [ ] Test privacy filters thoroughly
 - [ ] Optimize embedding generation and search
-- [ ] Fine-tune response generation
+- [ ] Fine-tune LLM prompts for better responses
+- [ ] A/B testing with different agent configurations
+- [ ] Performance benchmarking (response time, accuracy)
 
 ## Database Schema
 
