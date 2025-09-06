@@ -102,7 +102,7 @@ class RelatorioEmbedding(Base):
     
     # Vector embedding
     embedding = Column(Vector(1536))  # OpenAI ada-002 dimension
-    modelo = Column(String(50), default='text-embedding-3-small')
+    modelo = Column(String(50), default='gemini-embedding-001')
     
     # Timestamps
     created_at = Column(DateTime, default=datetime.utcnow)

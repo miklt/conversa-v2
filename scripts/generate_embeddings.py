@@ -16,12 +16,16 @@ from backend.app.models.models import Relatorio, RelatorioEmbedding
 from backend.app.core.config import settings
 from openai import OpenAI
 from dotenv import load_dotenv
-
+from google import genai
+from google.genai import types
 # Load environment variables
 load_dotenv()
 
 # Initialize OpenAI client
-client = OpenAI(api_key=settings.OPENAI_API_KEY)
+#client = OpenAI(api_key=settings.OPENAI_API_KEY)
+
+client = genai.Client()
+
 
 
 def extract_atividades_text(atividades: List[Dict]) -> str:
@@ -61,17 +65,35 @@ def generate_embedding(text: str, max_retries: int = 3) -> Optional[List[float]]
     for attempt in range(max_retries):
         try:
             # Truncate text if too long (OpenAI has token limits)
-            max_chars = 8000  # Conservative limit
+            max_chars = 18000  # Conservative limit
             if len(text) > max_chars:
                 text = text[:max_chars] + "..."
             
-            response = client.embeddings.create(
-                model="text-embedding-3-small",  # Cheaper and faster model
-                input=text,
-                dimensions=1536  # Match our database schema
-            )
+            # response = client.embeddings.create(
+            #     model="text-embedding-3-small",  # Cheaper and faster model
+            #     input=text,
+            #     dimensions=1536  # Match our database schema
+            #         config=types.EmbedContentConfig(output_dimensionality=768)
+
+            # )
             
-            return response.data[0].embedding
+            # return response.data[0].embedding
+
+            result = client.models.embed_content(
+                model='gemini-embedding-001',
+                contents=text,
+                config=types.EmbedContentConfig(
+                    output_dimensionality=1536,
+                    task_type="retrieval_document",
+                    title="Document chunk"
+                    )
+                )
+            
+        ## google ai embedding:
+            if result.embeddings:
+                print('tamanho embedding', len(result.embeddings[0].values) if result.embeddings else None)
+                return result.embeddings[0].values
+
             
         except Exception as e:
             if attempt < max_retries - 1:
@@ -126,14 +148,13 @@ def process_report_embeddings(session, report: Relatorio) -> Dict[str, bool]:
     for secao, conteudo in sections_to_process:
         print(f"      Generating embedding for '{secao}'...")
         embedding = generate_embedding(conteudo)
-        
         if embedding:
             embedding_obj = RelatorioEmbedding(
                 relatorio_id=report.id,
                 secao=secao,
                 conteudo=conteudo[:5000],  # Store truncated content
                 embedding=embedding,
-                modelo='text-embedding-3-small'
+                modelo='gemini-embedding-001'
             )
             session.add(embedding_obj)
             results[secao] = True
@@ -211,15 +232,15 @@ def generate_all_embeddings():
 
 def main():
     """Main function"""
-    if not settings.OPENAI_API_KEY:
-        print("❌ OPENAI_API_KEY not found in environment variables!")
+    if not settings.GEMINI_API_KEY:
+        print("❌ GEMINI_API_KEY not found in environment variables!")
         print("Please set it in your .env file")
         return
     
     print("=" * 60)
     print("EMBEDDING GENERATION SCRIPT")
     print("=" * 60)
-    print("Using OpenAI model: text-embedding-3-small")
+    print("Using OpenAI model: gemini-embedding-001")
     print("Embedding dimensions: 1536")
     print("=" * 60 + "\n")
     
