@@ -16,8 +16,5 @@ uvicorn[standard]==0.35.0
 pydantic==2.11.7
 pydantic-settings==2.10.1
 
-# Utils
-python-dotenv==1.1.1
-python-multipart==0.0.20
-google-genai==1.33.0
+pydantic-ai==1.0.7
 
