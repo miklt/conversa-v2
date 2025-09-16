@@ -70,6 +70,7 @@ agent = Agent(
 # Agent for intent analysis
 intent_agent = Agent(
     model,
+    result_type=AdvancedQueryIntent,
     system_prompt="""
     You are an expert at analyzing user queries about internship data.
     Your task is to extract the intent from user questions and map them to database queries.
@@ -94,12 +95,8 @@ intent_agent = Agent(
     - year_filter: Year mentioned?
     - limit: How many results (default 10)
     - query_description: Clear description of the query
-
-    Return your analysis as a JSON object with these exact field names.
     """
 )
-
-
 async def get_top_technologies(db: Session, tipo: str, year: Optional[int] = None, limit: int = 10) -> DBQueryResult:
     """Get top technologies by type and optionally filtered by year"""
     # Map user-friendly types to database enum values
@@ -243,66 +240,21 @@ async def get_total_reports_count(db: Session, year: Optional[int] = None) -> in
 
 
 async def analyze_query_intent(message: str) -> AdvancedQueryIntent:
-    """Analyze user query intent using enhanced keyword-based analysis"""
-    # Enhanced keyword-based parsing
-    message_lower = message.lower()
-
-    # Extract main topic
-    main_topic = "general"
-    if any(word in message_lower for word in ['framework', 'linguagem', 'tecnologia', 'ferramenta', 'plataforma', 'banco']):
-        main_topic = "technology"
-    elif any(word in message_lower for word in ['empresa', 'company']):
-        main_topic = "company"
-    elif any(word in message_lower for word in ['estatistica', 'total', 'quantos', 'quantas']):
-        main_topic = "statistics"
-
-    # Extract technology type
-    technology_type = None
-    if 'framework' in message_lower:
-        technology_type = "FRAMEWORK"
-    elif any(word in message_lower for word in ['linguagem', 'programação', 'language']):
-        technology_type = "LINGUAGEM"
-    elif 'ferramenta' in message_lower or 'tool' in message_lower:
-        technology_type = "FERRAMENTA"
-    elif 'plataforma' in message_lower or 'platform' in message_lower:
-        technology_type = "PLATAFORMA"
-    elif any(word in message_lower for word in ['banco', 'database', 'dados']):
-        technology_type = "BANCO_DADOS"
-
-    # Extract company filter - improved detection
-    company_filter = None
-    if any(word in message_lower for word in ['btg', 'pactual']):
-        company_filter = "BTG"
-    elif 'cip' in message_lower or 'centro de informação' in message_lower:
-        company_filter = "CIP"
-    elif 'virtual' in message_lower:
-        company_filter = "Virtual Cirurgia"
-
-    # Extract year filter
-    year_filter = None
-    import re
-    year_match = re.search(r'\b(20\d{2})\b', message_lower)
-    if year_match:
-        year_filter = int(year_match.group(1))
-
-    # Special case: if we have both technology type and company, it's a specific query
-    if technology_type and company_filter:
-        main_topic = "technology"
-
-    return AdvancedQueryIntent(
-        main_topic=main_topic,
-        technology_type=technology_type,
-        company_filter=company_filter,
-        year_filter=year_filter,
-        limit=10,
-        query_description=message
-    )
-
-
-async def search_general(db: Session, query_description: str, limit: int = 10) -> DBQueryResult:
-    """General search based on query description"""
-    # This is a fallback - could be enhanced with more sophisticated search
-    return await get_top_companies(db, limit=limit)
+    """Analyze user query intent using LLM"""
+    try:
+        result = await intent_agent.run(message)
+        return result.data
+    except Exception as e:
+        print(f"Error analyzing intent: {e}")
+        # Fallback to basic intent analysis
+        return AdvancedQueryIntent(
+            main_topic="general",
+            technology_type=None,
+            company_filter=None,
+            year_filter=None,
+            limit=10,
+            query_description="General query about internship data"
+        )
 
 
 async def execute_complex_query(db: Session, intent: AdvancedQueryIntent) -> DBQueryResult:
@@ -434,84 +386,45 @@ async def search_general(db: Session, query_description: str, limit: int = 10) -
 
 
 async def process_chat_message(message: str, db: Session) -> ChatResponse:
-    """Process a chat message using LLM-based intent analysis"""
+    """Process a chat message using database queries directly"""
     try:
-        # Analyze query intent using LLM
-        intent = await analyze_query_intent(message)
+        # Simple keyword-based routing for now
+        message_lower = message.lower()
 
-        print(f"Analyzed intent: {intent}")
+        if 'linguagem' in message_lower or 'programação' in message_lower or 'language' in message_lower:
+            # Get top programming languages
+            result = await get_top_technologies(db, 'LINGUAGEM', limit=5)
+            if result.data:
+                response_text = "As linguagens de programação mais utilizadas são:\n"
+                for i, item in enumerate(result.data[:5], 1):
+                    response_text += f"{i}. {item['technology'].title()} ({item['count']} relatórios)\n"
+                return ChatResponse(response=response_text, confidence=0.9)
 
-        # Execute appropriate query based on intent
-        result = await execute_complex_query(db, intent)
+        elif 'empresa' in message_lower or 'company' in message_lower:
+            # Get top companies
+            result = await get_top_companies(db, limit=5)
+            if result.data:
+                response_text = "As empresas com mais estagiários são:\n"
+                for i, item in enumerate(result.data[:5], 1):
+                    response_text += f"{i}. {item['company']} ({item['count']} estagiários)\n"
+                return ChatResponse(response=response_text, confidence=0.9)
 
-        # Format response based on intent and results
-        if not result.data:
-            return ChatResponse(
-                response="Desculpe, não encontrei dados para essa consulta. Tente reformular sua pergunta.",
-                confidence=0.2
-            )
-
-        # Format response based on query type
-        if intent.main_topic == "technology" and intent.company_filter:
-            # Response for "frameworks used at BTG" type queries
-            tech_type_name = {
-                'FRAMEWORK': 'frameworks',
-                'LINGUAGEM': 'linguagens de programação',
-                'FERRAMENTA': 'ferramentas',
-                'PLATAFORMA': 'plataformas',
-                'BANCO_DADOS': 'bancos de dados'
-            }.get(intent.technology_type, intent.technology_type.lower())
-
-            company_display = intent.company_filter.title()
-            if 'btg' in intent.company_filter.lower():
-                company_display = 'BTG Pactual'
-
-            response_text = f"Os {tech_type_name} mais utilizados na {company_display} são:\n"
-            for i, item in enumerate(result.data[:intent.limit], 1):
-                response_text += f"{i}. {item['technology'].title()} ({item['count']} relatórios)\n"
-
-            return ChatResponse(response=response_text, confidence=0.95)
-
-        elif intent.main_topic == "technology":
-            # Response for general technology queries
-            tech_type_name = {
-                'FRAMEWORK': 'frameworks',
-                'LINGUAGEM': 'linguagens de programação',
-                'FERRAMENTA': 'ferramentas',
-                'PLATAFORMA': 'plataformas',
-                'BANCO_DADOS': 'bancos de dados'
-            }.get(intent.technology_type, intent.technology_type.lower())
-
-            response_text = f"As {tech_type_name} mais utilizadas são:\n"
-            for i, item in enumerate(result.data[:intent.limit], 1):
-                response_text += f"{i}. {item['technology'].title()} ({item['count']} relatórios)\n"
-
-            return ChatResponse(response=response_text, confidence=0.9)
-
-        elif intent.main_topic == "company":
-            # Response for company queries
-            response_text = "As empresas com mais estagiários são:\n"
-            for i, item in enumerate(result.data[:intent.limit], 1):
-                response_text += f"{i}. {item['company']} ({item['count']} estagiários)\n"
-
-            return ChatResponse(response=response_text, confidence=0.9)
-
-        elif intent.main_topic == "statistics":
-            # Response for statistics
-            total = result.data[0]['value'] if result.data else 0
-            response_text = f"Temos um total de {total} relatórios de estágio no sistema."
-            if intent.year_filter:
-                response_text += f" (filtrado para o ano {intent.year_filter})"
-
-            return ChatResponse(response=response_text, confidence=0.9)
+        elif 'framework' in message_lower:
+            # Get top frameworks
+            result = await get_top_technologies(db, 'FRAMEWORK', limit=5)
+            if result.data:
+                response_text = "Os frameworks mais utilizados são:\n"
+                for i, item in enumerate(result.data[:5], 1):
+                    response_text += f"{i}. {item['technology'].title()} ({item['count']} relatórios)\n"
+                return ChatResponse(response=response_text, confidence=0.9)
 
         # Default fallback
         return ChatResponse(
-            response="Desculpe, não entendi sua pergunta completamente. Você pode perguntar sobre:\n"
-                    "- Tecnologias usadas em empresas específicas\n"
+            response="Desculpe, não entendi sua pergunta. Você pode perguntar sobre:\n"
                     "- Linguagens de programação mais usadas\n"
                     "- Empresas que oferecem mais estágios\n"
-                    "- Estatísticas gerais dos relatórios",
+                    "- Frameworks mais populares\n"
+                    "- Estatísticas gerais",
             confidence=0.3
         )
 
