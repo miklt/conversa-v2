@@ -31,6 +31,7 @@ class AdvancedQueryIntent(BaseModel):
     year_filter: Optional[int] = Field(description="Year filter if mentioned")
     limit: int = Field(default=10, description="Number of results to return")
     query_description: str = Field(description="Natural language description of what the user wants")
+    order_by_usage: str = Field(default="desc", description="Order by usage: 'desc' for most used, 'asc' for least used")
 
 
 class DBQueryResult(BaseModel):
@@ -100,7 +101,7 @@ intent_agent = Agent(
 )
 
 
-async def get_top_technologies(db: Session, tipo: str, year: Optional[int] = None, limit: int = 10) -> DBQueryResult:
+async def get_top_technologies(db: Session, tipo: str, year: Optional[int] = None, limit: int = 10, order_by_usage: str = "desc") -> DBQueryResult:
     """Get top technologies by type and optionally filtered by year"""
     # Map user-friendly types to database enum values
     type_mapping = {
@@ -134,6 +135,9 @@ async def get_top_technologies(db: Session, tipo: str, year: Optional[int] = Non
 
     where_clause = " AND ".join(filters) if filters else "1=1"
 
+    # Determine order direction
+    order_direction = "DESC" if order_by_usage == "desc" else "ASC"
+
     sql = f"""
         SELECT tt.termo_normalizado, COUNT(DISTINCT rt.relatorio_id) as count
         FROM relatorio_termos rt
@@ -141,7 +145,7 @@ async def get_top_technologies(db: Session, tipo: str, year: Optional[int] = Non
         JOIN relatorios r ON r.id = rt.relatorio_id
         WHERE tt.tipo = :tipo AND {where_clause}
         GROUP BY tt.termo_normalizado
-        ORDER BY count DESC
+        ORDER BY count {order_direction}
         LIMIT :limit
     """
 
@@ -155,8 +159,8 @@ async def get_top_technologies(db: Session, tipo: str, year: Optional[int] = Non
     return DBQueryResult(data=data, total_count=len(data))
 
 
-async def get_top_companies(db: Session, year: Optional[int] = None, limit: int = 10) -> DBQueryResult:
-    """Get companies with most interns, optionally filtered by year with name normalization"""
+async def get_top_companies(db: Session, year: Optional[int] = None, limit: int = 10, order_by_usage: str = "desc") -> DBQueryResult:
+    """Get companies with most/least interns, optionally filtered by year with name normalization"""
     filters = []
     params = {}
 
@@ -165,6 +169,9 @@ async def get_top_companies(db: Session, year: Optional[int] = None, limit: int 
         params['year'] = year
 
     where_clause = " AND ".join(filters) if filters else "1=1"
+
+    # Determine order direction
+    order_direction = "DESC" if order_by_usage == "desc" else "ASC"
 
     # Query with company name normalization using SQL CASE statements
     sql = f"""
@@ -182,7 +189,7 @@ async def get_top_companies(db: Session, year: Optional[int] = None, limit: int 
         FROM relatorios
         WHERE empresa_razao_social IS NOT NULL AND {where_clause}
         GROUP BY normalized_company
-        ORDER BY count DESC
+        ORDER BY count {order_direction}
         LIMIT :limit
     """
 
@@ -285,6 +292,11 @@ async def analyze_query_intent(message: str) -> AdvancedQueryIntent:
     if year_match:
         year_filter = int(year_match.group(1))
 
+    # Extract order by usage (most/least used)
+    order_by_usage = "desc"  # default to most used
+    if 'menos' in message_lower:
+        order_by_usage = "asc"
+
     # Special case: if we have both technology type and company, it's a specific query
     if technology_type and company_filter:
         main_topic = "technology"
@@ -295,7 +307,8 @@ async def analyze_query_intent(message: str) -> AdvancedQueryIntent:
         company_filter=company_filter,
         year_filter=year_filter,
         limit=10,
-        query_description=message
+        query_description=message,
+        order_by_usage=order_by_usage
     )
 
 
@@ -311,18 +324,18 @@ async def execute_complex_query(db: Session, intent: AdvancedQueryIntent) -> DBQ
         if intent.main_topic == "technology" and intent.technology_type and intent.company_filter:
             # Query: "What frameworks are used at BTG?"
             return await get_technologies_by_company_and_type(
-                db, intent.company_filter, intent.technology_type, intent.year_filter, intent.limit
+                db, intent.company_filter, intent.technology_type, intent.year_filter, intent.limit, intent.order_by_usage
             )
 
         elif intent.main_topic == "technology" and intent.technology_type:
             # Query: "What are the most used frameworks?"
             return await get_top_technologies(
-                db, intent.technology_type, intent.year_filter, intent.limit
+                db, intent.technology_type, intent.year_filter, intent.limit, intent.order_by_usage
             )
 
         elif intent.main_topic == "company":
-            # Query: "Which companies have the most interns?"
-            return await get_top_companies(db, intent.year_filter, intent.limit)
+            # Query: "Which companies have the most/least interns?"
+            return await get_top_companies(db, intent.year_filter, intent.limit, intent.order_by_usage)
 
         elif intent.main_topic == "statistics":
             # General statistics
@@ -346,7 +359,8 @@ async def get_technologies_by_company_and_type(
     company_name: str,
     technology_type: str,
     year: Optional[int] = None,
-    limit: int = 10
+    limit: int = 10,
+    order_by_usage: str = "desc"
 ) -> DBQueryResult:
     """Get technologies of specific type used at a specific company"""
     # Map user-friendly types to database enum values
@@ -406,6 +420,9 @@ async def get_technologies_by_company_and_type(
     if filters:
         where_clause += " AND " + " AND ".join(filters)
 
+    # Determine order direction
+    order_direction = "DESC" if order_by_usage == "desc" else "ASC"
+
     sql = f"""
         SELECT tt.termo_normalizado, COUNT(DISTINCT rt.relatorio_id) as count
         FROM relatorio_termos rt
@@ -413,7 +430,7 @@ async def get_technologies_by_company_and_type(
         JOIN relatorios r ON r.id = rt.relatorio_id
         WHERE tt.tipo = :tipo{where_clause}
         GROUP BY tt.termo_normalizado
-        ORDER BY count DESC
+        ORDER BY count {order_direction}
         LIMIT :limit
     """
 
@@ -431,6 +448,38 @@ async def search_general(db: Session, query_description: str, limit: int = 10) -
     """General search based on query description"""
     # This is a fallback - could be enhanced with more sophisticated search
     return await get_top_companies(db, limit=limit)
+
+
+async def validate_response_adequacy(intent: AdvancedQueryIntent, response: str) -> bool:
+    """Validate if the response is adequate to the original query"""
+    query_lower = intent.query_description.lower()
+    response_lower = response.lower()
+
+    # Check for "menos" queries
+    if 'menos' in query_lower:
+        if intent.main_topic == "company":
+            # For company queries with "menos", response should contain "menos estagiários"
+            if "menos estagiários" not in response_lower:
+                return False
+        elif intent.main_topic == "technology":
+            # For technology queries with "menos", response should contain "menos utilizad"
+            if "menos utilizad" not in response_lower:
+                return False
+
+    # Check for year filters
+    if intent.year_filter:
+        if str(intent.year_filter) not in response:
+            return False
+
+    # Check for company filters
+    if intent.company_filter:
+        company_display = intent.company_filter.title()
+        if 'btg' in intent.company_filter.lower():
+            company_display = 'BTG Pactual'
+        if company_display.lower() not in response_lower:
+            return False
+
+    return True
 
 
 async def process_chat_message(message: str, db: Session) -> ChatResponse:
@@ -452,6 +501,7 @@ async def process_chat_message(message: str, db: Session) -> ChatResponse:
             )
 
         # Format response based on query type
+        response = None
         if intent.main_topic == "technology" and intent.company_filter:
             # Response for "frameworks used at BTG" type queries
             tech_type_name = {
@@ -466,7 +516,10 @@ async def process_chat_message(message: str, db: Session) -> ChatResponse:
             if 'btg' in intent.company_filter.lower():
                 company_display = 'BTG Pactual'
 
-            response_text = f"Os {tech_type_name} mais utilizados na {company_display} são:\n"
+            # Determine if it's most or least used
+            usage_text = "mais utilizados" if intent.order_by_usage == "desc" else "menos utilizados"
+
+            response_text = f"Os {tech_type_name} {usage_text} na {company_display} são:\n"
             for i, item in enumerate(result.data[:intent.limit], 1):
                 response_text += f"{i}. {item['technology'].title()} ({item['count']} relatórios)\n"
 
@@ -482,7 +535,10 @@ async def process_chat_message(message: str, db: Session) -> ChatResponse:
                 'BANCO_DADOS': 'bancos de dados'
             }.get(intent.technology_type, intent.technology_type.lower())
 
-            response_text = f"As {tech_type_name} mais utilizadas são:\n"
+            # Determine if it's most or least used
+            usage_text = "mais utilizadas" if intent.order_by_usage == "desc" else "menos utilizadas"
+
+            response_text = f"As {tech_type_name} {usage_text} são:\n"
             for i, item in enumerate(result.data[:intent.limit], 1):
                 response_text += f"{i}. {item['technology'].title()} ({item['count']} relatórios)\n"
 
@@ -490,7 +546,8 @@ async def process_chat_message(message: str, db: Session) -> ChatResponse:
 
         elif intent.main_topic == "company":
             # Response for company queries
-            response_text = "As empresas com mais estagiários são:\n"
+            usage_text = "mais" if intent.order_by_usage == "desc" else "menos"
+            response_text = f"As empresas com {usage_text} estagiários são:\n"
             for i, item in enumerate(result.data[:intent.limit], 1):
                 response_text += f"{i}. {item['company']} ({item['count']} estagiários)\n"
 
@@ -506,7 +563,7 @@ async def process_chat_message(message: str, db: Session) -> ChatResponse:
             return ChatResponse(response=response_text, confidence=0.9)
 
         # Default fallback
-        return ChatResponse(
+        response = ChatResponse(
             response="Desculpe, não entendi sua pergunta completamente. Você pode perguntar sobre:\n"
                     "- Tecnologias usadas em empresas específicas\n"
                     "- Linguagens de programação mais usadas\n"
@@ -514,6 +571,13 @@ async def process_chat_message(message: str, db: Session) -> ChatResponse:
                     "- Estatísticas gerais dos relatórios",
             confidence=0.3
         )
+
+        # Validate response adequacy
+        if hasattr(response, 'response') and not await validate_response_adequacy(intent, response.response):
+            print(f"Warning: Response may not be adequate to query. Intent: {intent}")
+            # Could add corrective logic here in the future
+
+        return response
 
     except Exception as e:
         print(f"Error in process_chat_message: {e}")
