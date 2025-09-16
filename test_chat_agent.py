@@ -17,9 +17,9 @@ async def test_chat_agent():
     db = next(get_db())
     
     try:
-                # Test query about programming languages
+                        # Test query about programming languages
         #message = "Qual é a linguagem de programação mais usada?"
-        message = "Qual é a empresa com menos estagiários em 2025?"
+        message = "Quais são as atividades de estagiários no Itaú?"
         
         print(f"Testing query: {message}")
         

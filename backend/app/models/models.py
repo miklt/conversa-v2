@@ -101,7 +101,7 @@ class RelatorioEmbedding(Base):
     conteudo = Column(Text, nullable=False)
     
     # Vector embedding
-    embedding = Column(Vector(1536))  # OpenAI ada-002 dimension
+    embedding = Column(Vector(1536)) # Assuming 1536-dimensional embeddings
     modelo = Column(String(50), default='gemini-embedding-001')
     
     # Timestamps
