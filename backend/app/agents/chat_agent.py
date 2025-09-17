@@ -33,6 +33,7 @@ class AdvancedQueryIntent(BaseModel):
     limit: int = Field(default=10, description="Number of results to return")
     query_description: str = Field(description="Natural language description of what the user wants")
     order_by_usage: str = Field(default="desc", description="Order by usage: 'desc' for most used, 'asc' for least used")
+    specific_technology: Optional[str] = Field(description="Specific technology mentioned for reverse search")
 
 
 class DBQueryResult(BaseModel):
@@ -335,6 +336,59 @@ async def analyze_query_intent(message: str) -> AdvancedQueryIntent:
     elif any(word in message_lower for word in ['banco', 'database', 'dados']):
         technology_type = "BANCO_DADOS"
 
+    # Extract specific technology mentioned (for reverse search)
+    specific_technology = None
+    technology_keywords = {
+        'java': 'Java',
+        'javascript': 'JavaScript',
+        'js': 'JavaScript',
+        'python': 'Python',
+        'csharp': 'C#',
+        'c#': 'C#',
+        'cpp': 'C++',
+        'c++': 'C++',
+        'go': 'Go',
+        'golang': 'Go',
+        'rust': 'Rust',
+        'kotlin': 'Kotlin',
+        'swift': 'Swift',
+        'php': 'PHP',
+        'ruby': 'Ruby',
+        'r': 'R',
+        'sql': 'SQL',
+        'matlab': 'MATLAB',
+        'scala': 'Scala',
+        'react': 'React',
+        'angular': 'Angular',
+        'vue': 'Vue',
+        'django': 'Django',
+        'flask': 'Flask',
+        'fastapi': 'FastAPI',
+        'spring': 'Spring',
+        'dotnet': 'dotnet',
+        '.net': '.NET',
+        'nodejs': 'Node.js',
+        'node': 'Node.js',
+        'git': 'Git',
+        'docker': 'Docker',
+        'kubernetes': 'Kubernetes',
+        'aws': 'AWS',
+        'azure': 'Azure',
+        'gcp': 'GCP',
+        'postgresql': 'PostgreSQL',
+        'mysql': 'MySQL',
+        'mongodb': 'MongoDB'
+    }
+
+    # Look for technology mentions in the query - prioritize longer, more specific terms
+    # Sort technology keys by length (longest first) to avoid substring matches
+    sorted_tech_keys = sorted(technology_keywords.keys(), key=len, reverse=True)
+
+    for tech_key in sorted_tech_keys:
+        if tech_key in message_lower:
+            specific_technology = technology_keywords[tech_key]
+            break
+
     # Extract company filter - improved detection
     company_filter = None
 
@@ -357,16 +411,23 @@ async def analyze_query_intent(message: str) -> AdvancedQueryIntent:
             company_name = re.sub(r'\s+', ' ', company_name)
             # Avoid common words that might be mistaken for companies
             common_words = ['empresa', 'empresas', 'sistema', 'projeto', 'trabalho', 'estagio', 'estágio', 'atividades', 'linguagem', 'framework', 'sao']
-            if company_name.lower() not in common_words and len(company_name) > 2:
+            # Also avoid technology names that might be mistaken for companies
+            tech_names = set(technology_keywords.values())
+            if (company_name.lower() not in common_words and
+                company_name not in tech_names and
+                len(company_name) > 2):
                 company_filter = company_name
 
-        # Pattern 2: Look for company names in the sentence
+        # Pattern 2: Look for company names in the sentence (but avoid technology names)
         if not company_filter:
             # Find sequences of capitalized words
             words = re.findall(r'\b[A-Z][a-zA-Z]+\b', message)
             for i, word in enumerate(words):
                 # Skip common words
                 if word.lower() in ['qual', 'quais', 'como', 'onde', 'quando', 'por', 'que', 'na', 'no', 'em', 'do', 'da', 'dos', 'das', 'um', 'uma', 'uns', 'umas', 'sao', 'atividade', 'atividades']:
+                    continue
+                # Skip technology names
+                if word in technology_keywords.values():
                     continue
                 # If we find a capitalized word that's not at the beginning and not a common preposition
                 if i > 0 and len(word) > 2:
@@ -388,6 +449,12 @@ async def analyze_query_intent(message: str) -> AdvancedQueryIntent:
     if technology_type and company_filter:
         main_topic = "technology"
 
+    # Special case: if we have a specific technology mentioned and the query is about companies/enterprises
+    # This indicates a reverse search (technology -> companies)
+    if (specific_technology and
+        any(word in message_lower for word in ['empresa', 'empresas', 'company', 'companies', 'trabalha', 'usa', 'usam', 'utiliza', 'utilizam'])):
+        main_topic = "reverse_technology"
+
     return AdvancedQueryIntent(
         main_topic=main_topic,
         technology_type=technology_type,
@@ -395,7 +462,8 @@ async def analyze_query_intent(message: str) -> AdvancedQueryIntent:
         year_filter=year_filter,
         limit=10,
         query_description=message,
-        order_by_usage=order_by_usage
+        order_by_usage=order_by_usage,
+        specific_technology=specific_technology
     )
 
 
@@ -631,6 +699,12 @@ async def execute_complex_query(db: Session, intent: AdvancedQueryIntent) -> DBQ
                 db, intent.technology_type, intent.year_filter, intent.limit, intent.order_by_usage
             )
 
+        elif intent.main_topic == "reverse_technology" and intent.specific_technology:
+            # Query: "Which companies use Java?"
+            return await get_companies_by_technology(
+                db, intent.specific_technology, intent.year_filter, intent.limit, intent.order_by_usage
+            )
+
         elif intent.main_topic == "company":
             # Query: "Which companies have the most/least interns?"
             return await get_top_companies(db, intent.year_filter, intent.limit, intent.order_by_usage)
@@ -767,6 +841,58 @@ async def get_technologies_by_company_and_type(
     rows = result.fetchall()
 
     data = [{'technology': row[0], 'count': row[1]} for row in rows]
+
+    return DBQueryResult(data=data, total_count=len(data))
+
+
+async def get_companies_by_technology(
+    db: Session,
+    technology: str,
+    year: Optional[int] = None,
+    limit: int = 10,
+    order_by_usage: str = "desc"
+) -> DBQueryResult:
+    """Get companies that use a specific technology, ordered by usage frequency"""
+    filters = []
+    params = {}
+
+    if year:
+        filters.append("r.ano = :year")
+        params['year'] = year
+
+    where_clause = " AND ".join(filters) if filters else "1=1"
+
+    # Determine order direction
+    order_direction = "DESC" if order_by_usage == "desc" else "ASC"
+
+    # Query with company name normalization using SQL CASE statements
+    sql = f"""
+        SELECT
+            CASE
+                WHEN r.empresa_razao_social ILIKE '%btg pactual%' THEN 'BANCO BTG PACTUAL S.A.'
+                WHEN r.empresa_razao_social ILIKE '%btg%' THEN 'BANCO BTG PACTUAL S.A.'
+                WHEN r.empresa_razao_social ILIKE '%cip%' THEN 'CIP - CENTRO DE INFORMAÇÃO E PROCESSAMENTO'
+                WHEN r.empresa_razao_social ILIKE '%centro de informação%' THEN 'CIP - CENTRO DE INFORMAÇÃO E PROCESSAMENTO'
+                WHEN r.empresa_razao_social ILIKE '%virtual cirurgia%' THEN 'VIRTUAL CIRURGIA'
+                WHEN r.empresa_razao_social ILIKE '%virtual%' THEN 'VIRTUAL CIRURGIA'
+                ELSE r.empresa_razao_social
+            END as normalized_company,
+            COUNT(DISTINCT rt.relatorio_id) as report_count
+        FROM relatorio_termos rt
+        JOIN termos_tecnicos tt ON tt.id = rt.termo_id
+        JOIN relatorios r ON r.id = rt.relatorio_id
+        WHERE tt.termo_normalizado ILIKE :tech AND {where_clause}
+        GROUP BY normalized_company
+        ORDER BY report_count {order_direction}
+        LIMIT :limit
+    """
+
+    params.update({'tech': f'%{technology}%', 'limit': limit})
+
+    result = db.execute(text(sql), params)
+    rows = result.fetchall()
+
+    data = [{'company': row[0], 'count': row[1]} for row in rows]
 
     return DBQueryResult(data=data, total_count=len(data))
 
@@ -936,12 +1062,28 @@ async def process_chat_message(message: str, db: Session) -> ChatResponse:
 
             return ChatResponse(response=response_text, confidence=0.85)
 
-        elif intent.main_topic == "statistics":
-            # Response for statistics
-            total = result.data[0]['value'] if result.data else 0
-            response_text = f"Temos um total de {total} relatórios de estágio no sistema."
-            if intent.year_filter:
-                response_text += f" (filtrado para o ano {intent.year_filter})"
+        elif intent.main_topic == "reverse_technology":
+            # Response for reverse technology queries (companies that use a specific technology)
+            if not result.data:
+                tech_name = intent.specific_technology or "tecnologia especificada"
+                return ChatResponse(
+                    response=f"Desculpe, não encontrei empresas que utilizam {tech_name}.",
+                    confidence=0.3
+                )
+
+            tech_name = intent.specific_technology or "tecnologia"
+            usage_text = "mais" if intent.order_by_usage == "desc" else "menos"
+
+            response_text = f"🏢 **Empresas que utilizam {tech_name}**\n\n"
+            response_text += f"As empresas com {usage_text} relatórios mencionando {tech_name} são:\n\n"
+
+            for i, item in enumerate(result.data[:intent.limit], 1):
+                company_name = item['company']
+                count = item['count']
+                response_text += f"{i}. {company_name} ({count} relatório{'s' if count > 1 else ''})\n"
+
+            if result.total_count > intent.limit:
+                response_text += f"\n... e mais {result.total_count - intent.limit} empresas"
 
             return ChatResponse(response=response_text, confidence=0.9)
 
