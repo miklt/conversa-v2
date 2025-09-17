@@ -415,61 +415,197 @@ async def get_total_reports_count(db: Session, year: Optional[int] = None) -> in
     return count
 
 
-async def analyze_activities_patterns(activities_content: List[str]) -> Dict[str, Any]:
-    """Analisa padrões nas atividades usando LLM"""
+async def get_technologies_from_activities_content(db: Session, activities_content: List[str], company_name: Optional[str] = None) -> List[Dict[str, Any]]:
+    """Busca tecnologias reais do banco de dados baseadas no conteúdo das atividades com busca aprimorada"""
+    try:
+        import re
+
+        # Get all technologies from the database
+        technologies_query = db.query(TermoTecnico).all()
+
+        # Create a mapping of technology names to their data
+        tech_mapping = {}
+        for tech in technologies_query:
+            termo_lower = tech.termo.lower().strip()
+            if termo_lower not in tech_mapping:
+                tech_mapping[termo_lower] = tech
+
+        # Count occurrences in the activities content using word boundaries
+        tech_counts = {}
+        all_content = " ".join(activities_content).lower()
+
+        # Special handling for single-character terms that are prone to false positives
+        problematic_terms = {'r', 'go', 'ai', 'ml', 'js', 'ts', 'c#'}
+
+        for tech_name, tech_obj in tech_mapping.items():
+            tech_name_lower = tech_name.lower().strip()
+
+            # Skip problematic single-letter terms unless they appear as standalone words
+            if tech_name_lower in problematic_terms and len(tech_name_lower) <= 2:
+                # For these terms, require word boundaries and check context
+                pattern = r'\b' + re.escape(tech_name_lower) + r'\b'
+                matches = re.findall(pattern, all_content, re.IGNORECASE)
+                count = len(matches)
+
+                # Additional validation for very short terms
+                if count > 0 and len(tech_name_lower) == 1:
+                    # For single letters, be very strict - only count if it's clearly a programming language reference
+                    context_patterns = [
+                        r'\blinguagem\s+' + re.escape(tech_name_lower) + r'\b',
+                        r'\bprogramação\s+em\s+' + re.escape(tech_name_lower) + r'\b',
+                        r'\bdesenvolvimento\s+em\s+' + re.escape(tech_name_lower) + r'\b',
+                        r'\bcódigo\s+' + re.escape(tech_name_lower) + r'\b',
+                        r'\bscript\s+' + re.escape(tech_name_lower) + r'\b'
+                    ]
+                    valid_context = any(re.search(pattern, all_content, re.IGNORECASE) for pattern in context_patterns)
+                    if not valid_context:
+                        count = 0
+            else:
+                # For longer terms, use word boundaries to avoid substring matches
+                if len(tech_name_lower) > 2:
+                    pattern = r'\b' + re.escape(tech_name_lower) + r'\b'
+                    matches = re.findall(pattern, all_content, re.IGNORECASE)
+                    count = len(matches)
+                else:
+                    # For 2-3 letter terms, be more careful
+                    pattern = r'\b' + re.escape(tech_name_lower) + r'\b'
+                    matches = re.findall(pattern, all_content, re.IGNORECASE)
+                    count = len(matches)
+
+                    # Additional check: ensure it's not part of a larger word
+                    if count > 0:
+                        # Check if this term appears in contexts that suggest it's a technology
+                        tech_contexts = [
+                            'desenvolvimento', 'programação', 'linguagem', 'tecnologia',
+                            'framework', 'biblioteca', 'ferramenta', 'plataforma',
+                            'banco', 'dados', 'sistema', 'aplicação', 'projeto'
+                        ]
+                        has_tech_context = any(context in all_content for context in tech_contexts)
+                        if not has_tech_context:
+                            count = max(0, count - 2)  # Reduce count if no tech context
+
+            if count > 0:
+                tech_counts[tech_obj.termo] = {
+                    'technology': tech_obj.termo,
+                    'category': tech_obj.tipo.value if hasattr(tech_obj.tipo, 'value') else str(tech_obj.tipo),
+                    'count': count,
+                    'normalized': tech_obj.termo_normalizado
+                }
+
+        # Sort by count and return top technologies
+        sorted_techs = sorted(tech_counts.values(), key=lambda x: x['count'], reverse=True)
+
+        # Filter out technologies with very low counts that might be false positives
+        filtered_techs = []
+        for tech in sorted_techs:
+            # For very short terms, require higher confidence
+            if len(tech['technology'].strip()) <= 2 and tech['count'] < 2:
+                continue
+            # For longer terms, accept lower counts
+            elif len(tech['technology'].strip()) > 2 and tech['count'] < 1:
+                continue
+            filtered_techs.append(tech)
+
+        return filtered_techs[:15]  # Limit to top 15 to avoid noise
+
+    except Exception as e:
+        print(f"Error getting technologies from database: {e}")
+        import traceback
+        traceback.print_exc()
+        return []
+
+
+async def perform_llm_analysis(prompt: str) -> str:
+    """Realiza análise usando LLM (placeholder para futura implementação)"""
+    try:
+        # For now, return a basic analysis
+        # TODO: Integrate with actual LLM service
+        return "Análise realizada baseada nos padrões identificados no conteúdo das atividades."
+
+    except Exception as e:
+        print(f"Error in LLM analysis: {e}")
+        return "Análise não disponível no momento."
+
+
+async def analyze_activities_patterns(db: Session, activities_content: List[str], company_name: Optional[str] = None) -> Dict[str, Any]:
+    """Analisa padrões nas atividades usando dados do banco e LLM"""
     if not activities_content:
         return {"error": "No activities content to analyze"}
 
-    # Aggregate content (limit to avoid token limits)
-    aggregated_content = "\n\n".join(activities_content[:15])  # Limit to 15 activities
-
     try:
-        # Use the intent agent to analyze patterns
+        # Primeiro, buscar tecnologias reais do banco de dados
+        technologies_data = await get_technologies_from_activities_content(db, activities_content, company_name)
+
+        # Aggregate content (limit to avoid token limits)
+        aggregated_content = "\n\n".join(activities_content[:15])  # Limit to 15 activities
+
+        # Use LLM for sophisticated analysis
         analysis_prompt = f"""
-        Analise estas atividades de estágio em uma empresa e identifique os padrões principais:
+        Analise estas atividades de estágio e identifique os padrões principais:
 
         ATIVIDADES:
         {aggregated_content}
 
-        IDENTIFIQUE:
-        1. Principais tipos de atividades (desenvolvimento, análise, manutenção, etc.)
-        2. Tecnologias e ferramentas mais mencionadas
-        3. Responsabilidades mais comuns dos estagiários
-        4. Padrões de trabalho observados
+        TECNOLOGIAS ENCONTRADAS NO BANCO:
+        {', '.join([f"{tech['technology']} ({tech['count']} ocorrências)" for tech in technologies_data[:10]])}
 
-        Seja conciso e foque nos padrões mais relevantes.
+        IDENTIFIQUE:
+        1. Principais tipos de atividades (desenvolvimento, análise, manutenção, testes, documentação, etc.)
+        2. Padrões de responsabilidade dos estagiários
+        3. Nível de complexidade das tarefas
+        4. Habilidades técnicas mais demandadas
+
+        Seja específico e baseie sua análise nos dados fornecidos. Foque nos padrões mais relevantes.
         """
 
-        # For now, create a basic analysis from the content
-        # TODO: Integrate with actual LLM for better analysis
+        # Use the intent agent for analysis
+        try:
+            # For now, we'll create a structured analysis based on the data
+            # TODO: Replace with actual LLM call when available
+            llm_analysis = await perform_llm_analysis(analysis_prompt)
+        except Exception as e:
+            print(f"LLM analysis failed, using fallback: {e}")
+            llm_analysis = "Análise baseada nos dados dos relatórios de estágio."
 
-        # Extract some basic patterns
+        # Extract activity types from content
         all_content = " ".join(activities_content).lower()
-
-        technologies = []
-        if 'python' in all_content: technologies.append('Python')
-        if 'java' in all_content: technologies.append('Java')
-        if 'javascript' in all_content or 'js' in all_content: technologies.append('JavaScript')
-        if 'c#' in all_content or 'csharp' in all_content: technologies.append('.NET/C#')
-        if 'react' in all_content: technologies.append('React')
-        if 'angular' in all_content: technologies.append('Angular')
-        if 'sql' in all_content: technologies.append('SQL')
-        if 'aws' in all_content or 'amazon' in all_content: technologies.append('AWS')
-        if 'docker' in all_content: technologies.append('Docker')
-        if 'git' in all_content: technologies.append('Git')
-
         activities_types = []
-        if 'desenvolvimento' in all_content or 'development' in all_content: activities_types.append('Desenvolvimento')
-        if 'manutenção' in all_content or 'maintenance' in all_content: activities_types.append('Manutenção')
-        if 'teste' in all_content or 'test' in all_content: activities_types.append('Testes')
-        if 'análise' in all_content or 'analysis' in all_content: activities_types.append('Análise')
-        if 'documentação' in all_content or 'documentation' in all_content: activities_types.append('Documentação')
+
+        # More comprehensive activity type detection
+        activity_patterns = {
+            'Desenvolvimento': ['desenvolvimento', 'development', 'programação', 'coding', 'implementação', 'criação'],
+            'Manutenção': ['manutenção', 'maintenance', 'correção', 'bug', 'fix', 'atualização'],
+            'Testes': ['teste', 'test', 'testing', 'qa', 'qualidade', 'validação'],
+            'Análise': ['análise', 'analysis', 'analisar', 'estudo', 'pesquisa', 'investigação'],
+            'Documentação': ['documentação', 'documentation', 'docs', 'manual', 'especificação'],
+            'Suporte': ['suporte', 'support', 'ajuda', 'assistência', 'técnico'],
+            'Integração': ['integração', 'integration', 'api', 'serviço', 'conexão'],
+            'Otimização': ['otimização', 'optimization', 'performance', 'melhoria', 'refatoração']
+        }
+
+        for activity_type, keywords in activity_patterns.items():
+            if any(keyword in all_content for keyword in keywords):
+                activities_types.append(activity_type)
+
+        # Get top technologies
+        top_technologies = [tech['technology'] for tech in technologies_data[:8]]
+
+        # Create comprehensive analysis
+        analysis_parts = []
+        if activities_types:
+            analysis_parts.append(f"Atividades envolvem principalmente {', '.join(activities_types[:3])}")
+        if top_technologies:
+            analysis_parts.append(f"Tecnologias principais: {', '.join(top_technologies[:5])}")
+
+        comprehensive_analysis = ". ".join(analysis_parts) if analysis_parts else "Análise das atividades realizada com base nos dados disponíveis."
 
         return {
             "total_activities": len(activities_content),
-            "technologies_found": technologies[:8],  # Top 8
+            "technologies_found": top_technologies,
             "activity_types": activities_types,
-            "analysis": f"Atividades envolvem principalmente {', '.join(activities_types[:3])}. Tecnologias: {', '.join(technologies[:5])}"
+            "analysis": comprehensive_analysis,
+            "llm_insights": llm_analysis,
+            "technology_details": technologies_data[:10]  # Include detailed tech data
         }
 
     except Exception as e:
@@ -762,7 +898,7 @@ async def process_chat_message(message: str, db: Session) -> ChatResponse:
                 )
 
             # Analyze patterns (basic for now)
-            analysis = await analyze_activities_patterns(activities_content)
+            analysis = await analyze_activities_patterns(db, activities_content, intent.company_filter)
 
             # Handle company display
             if intent.company_filter:
