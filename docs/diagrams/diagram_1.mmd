@@ -1,0 +1,48 @@
+flowchart LR
+    subgraph Data
+        A[Arquivos JSON<br/>arquivos/json_saida/*]
+    end
+
+    subgraph ETL
+        B[import_json_to_db.py<br/>Extrai metadados<br/>Cria registros em 'relatorios']
+        C[generate_embeddings.py<br/>Gera embeddings 1536d<br/>para seções]
+    end
+
+    subgraph DB[PostgreSQL + pgvector]
+        D[(relatorios<br/>JSONB + metadados)]
+        E[(relatorio_embeddings<br/>Vector 1536)]
+        F[(termos_tecnicos)]
+        G[(relatorio_termos)]
+        H[(chat_sessions, chat_messages)]
+    end
+
+    subgraph API[FastAPI]
+        I[chat.py<br/>POST /api/v1/chat]
+        J[reports.py<br/>POST /search<br/>GET /:id]
+        K[stats.py<br/>POST /<br/>GET /summary]
+        L[PrivacyFilter]
+        M[VectorSearchService]
+    end
+
+    subgraph Agents
+        N[chat_agent.py<br/>Pydantic AI Agent<br/>Analyze Intent -> Query]
+    end
+
+    A --> B --> D
+    D --> C --> E
+
+    I --> N
+    N -->|SQL/Vector| D
+    N -->|Vector| E
+    N --> M
+    J --> M --> D
+    M --> E
+    I --> L
+    J --> L
+
+    classDef db fill:#f5faff,stroke:#4c77b6,stroke-width:1px;
+    classDef api fill:#f8fff5,stroke:#5b8c4a,stroke-width:1px;
+    classDef etl fill:#fffaf5,stroke:#b67a4c,stroke-width:1px;
+    class D,E,F,G,H db;
+    class I,J,K,L,M api;
+    class B,C etl;

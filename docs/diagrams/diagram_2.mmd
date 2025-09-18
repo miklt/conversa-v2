@@ -1,0 +1,49 @@
+erDiagram
+    relatorios ||--o{ relatorio_embeddings : possui
+    relatorios ||--o{ relatorio_termos : referencia
+    termos_tecnicos ||--o{ relatorio_termos : normaliza
+
+    relatorios {
+        int id PK
+        jsonb json_completo
+        int ano
+        enum periodo
+        enum ano_academico
+        int ordinal_estagio
+        enum curso
+        varchar empresa_razao_social
+        varchar empresa_cnpj
+        varchar folder_origin
+        varchar arquivo_origem
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    relatorio_embeddings {
+        int id PK
+        int relatorio_id FK
+        varchar secao
+        text conteudo
+        vector_1536 embedding
+        varchar modelo
+        timestamp created_at
+    }
+
+    termos_tecnicos {
+        int id PK
+        varchar termo
+        enum tipo
+        varchar termo_normalizado
+        text descricao
+        json sinonimos
+        timestamp created_at
+    }
+
+    relatorio_termos {
+        int relatorio_id PK, FK
+        int termo_id PK, FK
+        varchar secao PK
+        int frequencia
+        text contexto
+        timestamp created_at
+    }

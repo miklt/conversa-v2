@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Modelo de Componentes</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Modelo de Componentes</h1>
+</header>
+<h1 id="conversa-estágios--modelo-de-componentes-do-backend">Conversa
+Estágios — Modelo de Componentes do Backend</h1>
+<p>Este documento apresenta o modelo de componentes do backend,
+cobrindo: ETL, geração de embeddings, persistência em PostgreSQL
+(pgvector), fluxo de requisições, funcionamento dos agentes e resposta
+via FastAPI.</p>
+<p>Sumário</p>
+<ul>
+<li>Visão geral dos componentes</li>
+<li>Diagrama de componentes</li>
+<li>ETL e ingestão de dados</li>
+<li>Geração e uso de embeddings</li>
+<li>Persistência e esquema de dados (PostgreSQL + pgvector)</li>
+<li>Serviços e API (FastAPI)</li>
+<li>Agentes (Pydantic AI) e fluxo de decisão</li>
+<li>Diagramas de sequência (ETL e Consulta)</li>
+<li>Runbook (como executar)</li>
+<li>Próximos passos</li>
+</ul>
+<h2 id="1-visão-geral-dos-componentes">1) Visão geral dos
+componentes</h2>
+<ul>
+<li>ETL/Ingestão
+<ul>
+<li>scripts/init_database.py: inicializa banco e extensão pgvector;
+popula termos técnicos.</li>
+<li>scripts/import_json_to_db.py: importa JSONs de relatórios
+(arquivos/json_saida/*) e extrai metadados.</li>
+</ul></li>
+<li>Embeddings
+<ul>
+<li>scripts/generate_embeddings.py: gera embeddings
+(gemini-embedding-001) e persiste em relatorio_embeddings
+(Vector(1536)).</li>
+<li>backend/app/services/vector_search.py: busca semântica via operador
+&lt;-&gt; do pgvector.</li>
+</ul></li>
+<li>Persistência (SQLAlchemy + PostgreSQL + pgvector)
+<ul>
+<li>Tabelas: relatorios, relatorio_embeddings, termos_tecnicos,
+relatorio_termos, chat_sessions, chat_messages.</li>
+</ul></li>
+<li>API e Serviços (FastAPI)
+<ul>
+<li>backend/main.py: app FastAPI, CORS, health, routers.</li>
+<li>backend/app/api/chat.py: POST /api/v1/chat — orquestra agente e
+retorna ChatResponse.</li>
+<li>backend/app/api/reports.py: POST /api/v1/reports/search — busca
+(termos/semântica + filtros); GET /api/v1/reports/{id} com filtro de
+privacidade.</li>
+<li>backend/app/api/stats.py: POST /api/v1/stats — estatísticas
+agregadas; GET /api/v1/stats/summary.</li>
+<li>backend/app/services/privacy_filter.py: sanitiza PII em
+textos/JSONs.</li>
+</ul></li>
+<li>Agentes
+<ul>
+<li>backend/app/agents/chat_agent.py: Pydantic AI Agent (OpenAIModel
+quando OPENAI_API_KEY setado; fallback TestModel). Faz análise de
+intenção (keywords), monta consultas SQL/semânticas, compõe
+resposta.</li>
+</ul></li>
+</ul>
+<h2 id="2-diagrama-de-componentes">2) Diagrama de componentes</h2>
+<pre class="mermaid"><code>flowchart LR
+    subgraph Data
+        A[Arquivos JSON\narquivos/json_saida/*]
+    end
+
+    subgraph ETL
+        B[import_json_to_db.py\nExtrai metadados\nCria registros em &#39;relatorios&#39;]
+        C[generate_embeddings.py\nGera embeddings 1536d\npara seções]
+    end
+
+    subgraph DB[PostgreSQL + pgvector]
+        D[(relatorios\nJSONB + metadados)]
+        E[(relatorio_embeddings\nVector(1536))]
+        F[(termos_tecnicos)]
+        G[(relatorio_termos)]
+        H[(chat_sessions, chat_messages)]
+    end
+
+    subgraph API[FastAPI]
+        I[/chat.py\nPOST /api/v1/chat/]
+        J[/reports.py\nPOST /search\nGET /{id}]
+        K[/stats.py\nPOST /\nGET /summary]
+        L[PrivacyFilter]
+        M[VectorSearchService]
+    end
+
+    subgraph Agents
+        N[chat_agent.py\nPydantic AI Agent\nAnalyze Intent -&gt; Query]
+    end
+
+    A --&gt; B --&gt; D
+    D --&gt; C --&gt; E
+
+    I --&gt; N
+    N --&gt;|SQL/Vector| D
+    N --&gt;|Vector| E
+    N --&gt; M
+    J --&gt; M --&gt; D
+    M --&gt; E
+    I --&gt; L
+    J --&gt; L
+
+    classDef db fill:#f5faff,stroke:#4c77b6,stroke-width:1px;
+    classDef api fill:#f8fff5,stroke:#5b8c4a,stroke-width:1px;
+    classDef etl fill:#fffaf5,stroke:#b67a4c,stroke-width:1px;
+    class D,E,F,G,H db;
+    class I,J,K,L,M api;
+    class B,C etl;</code></pre>
+<h2 id="3-etl-e-ingestão-de-dados">3) ETL e ingestão de dados</h2>
+<ul>
+<li>scripts/init_database.py
+<ul>
+<li>Cria DB (se não existir), habilita extensão pgvector (CREATE
+EXTENSION IF NOT EXISTS vector), cria tabelas via SQLAlchemy
+Metadata.</li>
+<li>Popula termos_tecnicos (linguagens, frameworks, ferramentas,
+plataformas, bancos de dados, técnicas e tipos de projeto) com
+normalização termo_normalizado.</li>
+</ul></li>
+<li>scripts/import_json_to_db.py
+<ul>
+<li>Varre arquivos/json_saida/<folder>/*.json.</li>
+<li>Extrai metadados do nome da pasta (padrão 2025-2Q-3roAno-1): ano,
+periodo (Enum 1Q/2Q/3Q/1S/2S), ano_academico (2°, 3°, 4°, 5°),
+ordinal_estagio.</li>
+<li>Determina curso (Computação quadrimestral; Elétrica semestral;
+fallback por campo no JSON).</li>
+<li>Persiste em relatorios.json_completo (JSONB) + colunas de metadados
+e empresa (razao_social, cnpj). Evita duplicados por
+arquivo_origem/folder_origin.</li>
+</ul></li>
+</ul>
+<p>Observação: O ETL de PDF-&gt;JSON está fora deste repositório; aqui
+assumimos JSONs já gerados.</p>
+<h2 id="4-geração-e-uso-de-embeddings">4) Geração e uso de
+embeddings</h2>
+<ul>
+<li>scripts/generate_embeddings.py
+<ul>
+<li>Concatena conteúdo por seção:
+<ul>
+<li>sobre_empresa (texto livre)</li>
+<li>atividades_realizadas (descrição, tarefas, papel, aprendizados,
+comentários)</li>
+<li>conclusao</li>
+</ul></li>
+<li>Gera embeddings usando Google GenAI (gemini-embedding-001) com
+dimensionalidade 1536 e grava em relatorio_embeddings: (relatorio_id,
+secao, conteudo truncado, embedding Vector(1536), modelo).</li>
+</ul></li>
+<li>backend/app/services/vector_search.py
+<ul>
+<li>Busca semântica via SQL raw com operador &lt;-&gt; (menor distância
+= mais similar); converte distância em similaridade 1/(1+distância)
+quando necessário.</li>
+<li>Suporta filtros (ano, curso, período, empresa) e também busca por
+termos técnicos via tabelas normalizadas
+(relatorio_termos/termos_tecnicos).</li>
+</ul></li>
+</ul>
+<h2 id="5-persistência-e-esquema-postgresql--pgvector">5) Persistência e
+esquema (PostgreSQL + pgvector)</h2>
+<p>Principais tabelas (SQLAlchemy, backend/app/models/models.py):</p>
+<ul>
+<li>relatorios
+<ul>
+<li>json_completo (JSONB), ano, periodo (Enum), ano_academico (Enum),
+ordinal_estagio, curso (Enum), empresa_razao_social, empresa_cnpj,
+folder_origin, arquivo_origem, timestamps.</li>
+<li>Relacionamentos: embeddings, termos.</li>
+</ul></li>
+<li>relatorio_embeddings
+<ul>
+<li>relatorio_id (FK), secao, conteudo (Text), embedding Vector(1536),
+modelo, created_at.</li>
+</ul></li>
+<li>termos_tecnicos e relatorio_termos
+<ul>
+<li>normalização de termos e relacionamento N:N com relatórios (inclui
+secao e frequencia/contexto).</li>
+</ul></li>
+<li>chat_sessions e chat_messages
+<ul>
+<li>suporte para histórico de conversas (opcional no fluxo atual).</li>
+</ul></li>
+</ul>
+<p>Diagrama lógico (simplificado):</p>
+<pre class="mermaid"><code>erDiagram
+    relatorios ||--o{ relatorio_embeddings : possui
+    relatorios ||--o{ relatorio_termos : referencia
+    termos_tecnicos ||--o{ relatorio_termos : normaliza
+
+    relatorios {
+        int id PK
+        jsonb json_completo
+        int ano
+        enum periodo
+        enum ano_academico
+        int ordinal_estagio
+        enum curso
+        varchar empresa_razao_social
+        varchar empresa_cnpj
+        varchar folder_origin
+        varchar arquivo_origem
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    relatorio_embeddings {
+        int id PK
+        int relatorio_id FK
+        varchar secao
+        text conteudo
+        vector(1536) embedding
+        varchar modelo
+        timestamp created_at
+    }
+
+    termos_tecnicos {
+        int id PK
+        varchar termo
+        enum tipo
+        varchar termo_normalizado
+        text descricao
+        json sinonimos
+        timestamp created_at
+    }
+
+    relatorio_termos {
+        int relatorio_id PK, FK
+        int termo_id PK, FK
+        varchar secao PK
+        int frequencia
+        text contexto
+        timestamp created_at
+    }</code></pre>
+<h2 id="6-serviços-e-api-fastapi">6) Serviços e API (FastAPI)</h2>
+<ul>
+<li>backend/main.py
+<ul>
+<li>Registra routers: /api/v1/chat, /api/v1/reports, /api/v1/stats;
+CORS; health check; valida conexão com DB no startup.</li>
+</ul></li>
+<li>/api/v1/chat (backend/app/api/chat.py)
+<ul>
+<li>POST /. Entrada: ChatRequest. Aciona process_chat_message(...) do
+agente e retorna ChatResponse.</li>
+</ul></li>
+<li>/api/v1/reports (backend/app/api/reports.py)
+<ul>
+<li>POST /search: faz matching por termos técnicos (termos_tecnicos)
+e/ou fallback por ILIKE no JSON/texto, com filtros (ano, curso). Usa
+VectorSearchService quando aplicável.</li>
+<li>GET /{id}: retorna relatório com filtro de privacidade
+(PrivacyFilter.filter_report_data).</li>
+</ul></li>
+<li>/api/v1/stats (backend/app/api/stats.py)
+<ul>
+<li>POST /: métricas como top_technologies, top_companies,
+reports_by_year/course, technologies_by_type etc.</li>
+<li>GET /summary: agregados rápidos (total_reports, por ano/curso).</li>
+</ul></li>
+<li>Privacy: backend/app/services/privacy_filter.py — remove e-mails,
+telefones, CPF e reduz dados pessoais do bloco
+estagiario/supervisor.</li>
+</ul>
+<h2 id="7-agentes-pydantic-ai-e-fluxo-de-decisão">7) Agentes (Pydantic
+AI) e fluxo de decisão</h2>
+<ul>
+<li>backend/app/agents/chat_agent.py
+<ul>
+<li>Model: OpenAIModel('gpt-4o-mini') quando OPENAI_API_KEY presente;
+caso contrário, TestModel (mock) para desenvolvimento.</li>
+<li>analyze_query_intent(message): análise por keywords
+(technology/company/statistics/activities, tipo de tecnologia, empresa,
+ano, "menos" -&gt; ordenação ascendente, e detecção de tecnologia
+específica para busca reversa).</li>
+<li>execute_complex_query(db, intent): encaminha para funções
+especializadas:
+<ul>
+<li>get_top_technologies, get_top_companies, get_companies_by_technology
+(reversa), get_activities_by_company (usa conteúdo de embeddings por
+secao), search_general.</li>
+</ul></li>
+<li>analyze_activities_patterns: agrega atividades, cruza com termos
+técnicos do DB e produz análise sintética (placeholder de LLM para
+insights adicionais).</li>
+<li>Garante privacidade e formata respostas com confiança (confidence
+score).</li>
+</ul></li>
+</ul>
+<h2 id="8-diagramas-de-sequência">8) Diagramas de sequência</h2>
+<p>8.1) ETL (Ingestão + Embeddings)</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant SRC as JSON Source
+    participant IMP as import_json_to_db.py
+    participant DB as PostgreSQL+pgvector
+    participant EMB as generate_embeddings.py
+
+    SRC-&gt;&gt;IMP: JSONs em arquivos/json_saida/*
+    IMP-&gt;&gt;DB: INSERT em relatorios (JSONB + metadados)
+    loop por relatório
+      EMB-&gt;&gt;DB: SELECT relatorio
+      EMB-&gt;&gt;DB: INSERT relatorio_embeddings (secao, Vector(1536))
+    end</code></pre>
+<p>8.2) Consulta via Chat</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant FE as Frontend/Cliente
+    participant API as FastAPI /api/v1/chat
+    participant AG as chat_agent.py
+    participant VS as VectorSearchService
+    participant DB as PostgreSQL+pgvector
+    participant PF as PrivacyFilter
+
+    FE-&gt;&gt;API: POST /api/v1/chat { message }
+    API-&gt;&gt;AG: process_chat_message(message, db)
+    AG-&gt;&gt;AG: analyze_query_intent(message)
+    alt technology/company/stats/activities
+        AG-&gt;&gt;DB: SQL (agregações/joins)
+        AG-&gt;&gt;VS: (opcional) busca semântica
+        VS-&gt;&gt;DB: SELECT ... ORDER BY embedding &lt;-&gt; query
+        DB--&gt;&gt;AG: resultados
+    end
+    AG-&gt;&gt;PF: filter_response_text(resposta)
+    API--&gt;&gt;FE: ChatResponse { response, confidence }</code></pre>
+<h2 id="9-runbook-como-executar">9) Runbook (como executar)</h2>
+<p>Pré-requisitos</p>
+<ul>
+<li>Docker (para Postgres com pgvector) ou Postgres local com extensão
+vector instalada.</li>
+<li>Python 3.10+</li>
+<li>Variáveis .env (opcional): DATABASE_URL, OPENAI_API_KEY (se quiser
+usar LLM real), GEMINI_API_KEY (para embeddings, se for gerar
+novamente).</li>
+</ul>
+<p>Passos</p>
+<ol type="1">
+<li>Subir Postgres com pgvector
+<ul>
+<li>docker-compose up -d</li>
+</ul></li>
+<li>Inicializar banco e termos técnicos
+<ul>
+<li>python scripts/init_database.py</li>
+</ul></li>
+<li>Importar relatórios JSON
+<ul>
+<li>python scripts/import_json_to_db.py</li>
+</ul></li>
+<li>(Opcional) Gerar embeddings
+<ul>
+<li>python scripts/generate_embeddings.py</li>
+</ul></li>
+<li>Rodar a API
+<ul>
+<li>uvicorn backend.main:app --reload --port 8000</li>
+</ul></li>
+</ol>
+<p>Conversões (Markdown -&gt; PDF/PPTX) usando pandoc</p>
+<ul>
+<li>PDF: pandoc docs/ModeloComponentes.md -o docs/ModeloComponentes.pdf
+--from gfm -V geometry:margin=1in</li>
+<li>PPTX: pandoc docs/ModeloComponentes.md -o
+docs/ModeloComponentes.pptx --from gfm</li>
+</ul>
+<p>Observação: É necessário ter pandoc instalado (brew install pandoc no
+macOS) e, para PDF via LaTeX, um engine como BasicTeX/MacTeX.</p>
+<h2 id="10-próximos-passos">10) Próximos passos</h2>
+<ul>
+<li>Implementar geração de embedding via serviço configurável (flag para
+OpenAI/Gemini) e retries/observabilidade estruturados.</li>
+<li>Ampliar VectorSearchService para busca híbrida (termos + vetores) e
+ajustar normalização de termos.</li>
+<li>Adicionar testes de integração para o fluxo completo do agente (já
+há testes para DB/pgvector).</li>
+<li>Adicionar cache para consultas frequentes e paginação para
+listagens.</li>
+<li>Evoluir análise de intenção para LLM grounded com validação e
+toolformer (ou usar regex+grammars mais robustas).</li>
+</ul>
+</body>
+</html>
