@@ -19,7 +19,8 @@ async def test_chat_agent():
     try:
                         # Test query about programming languages
         #message = "Qual é a linguagem de programação mais usada?"
-        message = "Quais são as tecnologias mais usada no btg?"
+        message = "Quais são as linguagens mais usadas no btg?"
+#        message = "Quais são as empresas com mais estagiários?"
         
         print(f"Testing query: {message}")
         

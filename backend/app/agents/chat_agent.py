@@ -314,9 +314,9 @@ async def analyze_query_intent(message: str) -> AdvancedQueryIntent:
 
     # Extract main topic
     main_topic = "general"
-    if any(word in message_lower for word in ['framework', 'linguagem', 'tecnologia', 'ferramenta', 'plataforma', 'banco']):
+    if any(word in message_lower for word in ['framework', 'frameworks', 'linguagem', 'linguagens', 'tecnologia', 'tecnologias', 'ferramenta', 'ferramentas', 'plataforma', 'plataformas', 'banco', 'bancos']):
         main_topic = "technology"
-    elif any(word in message_lower for word in ['empresa', 'company']):
+    elif any(word in message_lower for word in ['empresa', 'empresas', 'company']):
         main_topic = "company"
     elif any(word in message_lower for word in ['estatistica', 'total', 'quantos', 'quantas']):
         main_topic = "statistics"
@@ -325,15 +325,15 @@ async def analyze_query_intent(message: str) -> AdvancedQueryIntent:
 
     # Extract technology type
     technology_type = None
-    if 'framework' in message_lower:
+    if any(word in message_lower for word in ['framework', 'frameworks']):
         technology_type = "FRAMEWORK"
-    elif any(word in message_lower for word in ['linguagem', 'programação', 'language']):
+    elif any(word in message_lower for word in ['linguagem', 'linguagens', 'programação', 'language']):
         technology_type = "LINGUAGEM"
-    elif 'ferramenta' in message_lower or 'tool' in message_lower:
+    elif any(word in message_lower for word in ['ferramenta', 'ferramentas', 'tool', 'tools']):
         technology_type = "FERRAMENTA"
-    elif 'plataforma' in message_lower or 'platform' in message_lower:
+    elif any(word in message_lower for word in ['plataforma', 'plataformas', 'platform']):
         technology_type = "PLATAFORMA"
-    elif any(word in message_lower for word in ['banco', 'database', 'dados']):
+    elif any(word in message_lower for word in ['banco', 'bancos', 'database', 'dados']):
         technology_type = "BANCO_DADOS"
 
     # Extract specific technology mentioned (for reverse search)
@@ -385,9 +385,18 @@ async def analyze_query_intent(message: str) -> AdvancedQueryIntent:
     sorted_tech_keys = sorted(technology_keywords.keys(), key=len, reverse=True)
 
     for tech_key in sorted_tech_keys:
-        if tech_key in message_lower:
-            specific_technology = technology_keywords[tech_key]
-            break
+        # For very short terms (1-2 characters), use word boundaries to avoid false positives
+        if len(tech_key) <= 2:
+            import re
+            pattern = r'\b' + re.escape(tech_key) + r'\b'
+            if re.search(pattern, message_lower):
+                specific_technology = technology_keywords[tech_key]
+                break
+        else:
+            # For longer terms, simple substring match is sufficient
+            if tech_key in message_lower:
+                specific_technology = technology_keywords[tech_key]
+                break
 
     # Extract company filter - improved detection
     company_filter = None
