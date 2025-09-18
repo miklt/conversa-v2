@@ -74,31 +74,57 @@ agent = Agent(
 intent_agent = Agent(
     model,
     system_prompt="""
-    You are an expert at analyzing user queries about internship data.
-    Your task is to extract the intent from user questions and map them to database queries.
+    Você é um especialista em análise de consultas sobre dados de estágio de estudantes de Engenharia Elétrica da USP.
+    Sua tarefa é extrair a intenção de perguntas dos usuários e mapeá-las para consultas no banco de dados.
 
-    Available technology types in the database:
-    - LINGUAGEM: Programming languages (Python, Java, C++, etc.)
-    - FRAMEWORK: Frameworks (React, Angular, Django, etc.)
-    - FERRAMENTA: Tools (Git, Docker, VS Code, etc.)
-    - PLATAFORMA: Platforms (AWS, Azure, Linux, etc.)
-    - BANCO_DADOS: Databases (PostgreSQL, MySQL, MongoDB, etc.)
+    TIPOS DE TECNOLOGIA DISPONÍVEIS:
+    - LINGUAGEM: Linguagens de programação (Python, Java, JavaScript, C++, Go, R, SQL, etc.)
+    - FRAMEWORK: Frameworks (React, Angular, Django, Flask, Spring, etc.)
+    - FERRAMENTA: Ferramentas (Git, Docker, VS Code, Jenkins, etc.)
+    - PLATAFORMA: Plataformas (AWS, Azure, Linux, Windows, etc.)
+    - BANCO_DADOS: Bancos de dados (PostgreSQL, MySQL, MongoDB, etc.)
 
-    Common companies in the data:
-    - BTG Pactual (various spellings)
+    EMPRESAS COMUNS NO BANCO:
+    - BTG Pactual (várias grafias: "BTG", "btg pactual", "banco btg")
     - CIP (Centro de Informação e Processamento)
     - Virtual Cirurgia
-    - And many others
+    - Everify Opus Software
+    - Amazon
+    - E muitas outras
 
-    Extract:
-    - main_topic: What is the user asking about?
-    - technology_type: Which technology category?
-    - company_filter: Specific company mentioned?
-    - year_filter: Year mentioned?
-    - limit: How many results (default 10)
-    - query_description: Clear description of the query
+    TIPOS DE CONSULTA PRINCIPAIS:
+    1. "technology" + company_filter: "Quais linguagens são usadas na BTG?"
+    2. "technology" + technology_type: "Quais são as linguagens mais usadas?"
+    3. "reverse_technology": "Quais empresas usam Python?"
+    4. "company": "Quais empresas têm mais estagiários?"
+    5. "activities": "O que fazem os estagiários na CIP?"
+    6. "statistics": "Quantos relatórios temos?"
 
-    Return your analysis as a JSON object with these exact field names.
+    DETECÇÃO DE REVERSE_TECHNOLOGY:
+    Uma consulta é "reverse_technology" quando:
+    - Menciona uma tecnologia específica (Java, Python, React, etc.)
+    - E pergunta sobre empresas que a utilizam
+    - Palavras-chave: "empresas que usam", "onde se usa", "quais empresas trabalham com"
+
+    REGRAS IMPORTANTES:
+    1. Para tecnologias curtas (R, Go, C), use apenas se aparecem como palavras isoladas
+    2. Diferencie entre consultas diretas e reverse:
+       - "Linguagens na BTG" → technology + company_filter
+       - "Empresas que usam Python" → reverse_technology
+    3. Detecte plurais: linguagem/linguagens, framework/frameworks
+    4. Para "tecnologias" genérico, use technology_type=None
+
+    RESPONDA SEMPRE EM JSON com os campos exatos:
+    {
+        "main_topic": "technology|reverse_technology|company|activities|statistics|general",
+        "technology_type": "LINGUAGEM|FRAMEWORK|FERRAMENTA|PLATAFORMA|BANCO_DADOS|null",
+        "company_filter": "nome_da_empresa|null",
+        "year_filter": "ano|null",
+        "limit": 10,
+        "query_description": "descrição_clara_da_consulta",
+        "order_by_usage": "desc|asc",
+        "specific_technology": "tecnologia_mencionada|null"
+    }
     """
 )
 
@@ -308,6 +334,89 @@ async def get_activities_by_company(
 
 
 async def analyze_query_intent(message: str) -> AdvancedQueryIntent:
+    """Analyze user query intent using the LLM-based intent agent with fallback"""
+    try:
+        # For now, we'll use a hybrid approach: LLM + keyword validation
+        # This ensures reliability while leveraging LLM capabilities
+        
+        # First, use the keyword-based fallback as a baseline
+        baseline_intent = await analyze_query_intent_fallback(message)
+        
+        # Try to enhance with LLM analysis
+        try:
+            result = await intent_agent.run(f"""
+            Analise esta consulta sobre estágios e corrija/melhore esta análise inicial:
+            
+            CONSULTA: "{message}"
+            
+            ANÁLISE INICIAL:
+            - main_topic: {baseline_intent.main_topic}
+            - technology_type: {baseline_intent.technology_type}
+            - company_filter: {baseline_intent.company_filter}
+            - specific_technology: {baseline_intent.specific_technology}
+            
+            Retorne apenas um JSON válido com os campos corrigidos/melhorados:
+            {{
+                "main_topic": "valor",
+                "technology_type": "valor",
+                "company_filter": "valor", 
+                "year_filter": "valor",
+                "limit": 10,
+                "query_description": "valor",
+                "order_by_usage": "desc",
+                "specific_technology": "valor"
+            }}
+            """)
+            
+            # Parse the JSON response
+            import json
+            response_text = str(result.data) if hasattr(result, 'data') else str(result)
+            
+            # Try to extract and parse JSON
+            start_idx = response_text.find('{')
+            end_idx = response_text.rfind('}') + 1
+            
+            if start_idx != -1 and end_idx > start_idx:
+                json_str = response_text[start_idx:end_idx]
+                parsed_data = json.loads(json_str)
+                
+                # Create enhanced intent with LLM improvements
+                enhanced_intent = AdvancedQueryIntent(
+                    main_topic=parsed_data.get('main_topic', baseline_intent.main_topic),
+                    technology_type=parsed_data.get('technology_type') if parsed_data.get('technology_type') != 'null' else baseline_intent.technology_type,
+                    company_filter=parsed_data.get('company_filter') if parsed_data.get('company_filter') != 'null' else baseline_intent.company_filter,
+                    year_filter=parsed_data.get('year_filter') if parsed_data.get('year_filter') != 'null' else baseline_intent.year_filter,
+                    limit=parsed_data.get('limit', 10),
+                    query_description=parsed_data.get('query_description', message),
+                    order_by_usage=parsed_data.get('order_by_usage', 'desc'),
+                    specific_technology=parsed_data.get('specific_technology') if parsed_data.get('specific_technology') != 'null' else baseline_intent.specific_technology
+                )
+                
+                print(f"✅ LLM enhanced intent analysis successful")
+                return enhanced_intent
+                
+        except Exception as llm_error:
+            print(f"⚠️ LLM enhancement failed, using baseline: {llm_error}")
+            
+        # Return the reliable baseline intent
+        return baseline_intent
+            
+    except Exception as e:
+        print(f"❌ Error in intent analysis: {e}")
+        # Final fallback - create a basic intent with all required fields
+        return AdvancedQueryIntent(
+            main_topic="general",
+            technology_type=None,
+            company_filter=None,
+            year_filter=None,
+            limit=10,
+            query_description=message,
+            order_by_usage="desc",
+            specific_technology=None
+        )
+
+
+async def analyze_query_intent_fallback(message: str) -> AdvancedQueryIntent:
     """Analyze user query intent using enhanced keyword-based analysis"""
     # Enhanced keyword-based parsing
     message_lower = message.lower()
@@ -387,7 +496,6 @@ async def analyze_query_intent(message: str) -> AdvancedQueryIntent:
     for tech_key in sorted_tech_keys:
         # For very short terms (1-2 characters), use word boundaries to avoid false positives
         if len(tech_key) <= 2:
-            import re
             pattern = r'\b' + re.escape(tech_key) + r'\b'
             if re.search(pattern, message_lower):
                 specific_technology = technology_keywords[tech_key]
@@ -495,8 +603,6 @@ async def get_total_reports_count(db: Session, year: Optional[int] = None) -> in
 async def get_technologies_from_activities_content(db: Session, activities_content: List[str], company_name: Optional[str] = None) -> List[Dict[str, Any]]:
     """Busca tecnologias reais do banco de dados baseadas no conteúdo das atividades com busca aprimorada"""
     try:
-        import re
-
         # Get all technologies from the database
         technologies_query = db.query(TermoTecnico).all()
 
