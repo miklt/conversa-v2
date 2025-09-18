@@ -293,12 +293,74 @@ npm run dev
 
 ## Key Implementation Details
 
-### Query Processing Flow
+### Current Query Processing Flow
 
 1. **User Query** → Parse intent and extract key terms
 2. **Vector Search** → Find relevant report sections using embeddings
 3. **Filter & Aggregate** → Apply privacy filters and aggregate data
 4. **Response Generation** → Format natural language response with context
+
+### Enhanced Query Patterns (To Be Implemented)
+
+#### Pattern 1: Company-Technology Mapping
+```sql
+-- "Quais empresas trabalham com C#?"
+SELECT DISTINCT r.empresa_razao_social, 
+       COUNT(DISTINCT r.id) as report_count,
+       STRING_AGG(DISTINCT r.ano::text, ', ') as years
+FROM relatorios r
+JOIN relatorio_termos rt ON r.id = rt.relatorio_id
+JOIN termos_tecnicos tt ON tt.id = rt.termo_id
+WHERE tt.termo_normalizado = 'csharp'
+GROUP BY r.empresa_razao_social
+ORDER BY report_count DESC;
+```
+
+#### Pattern 2: Learning Outcomes Analysis
+```python
+# "Qual é o aprendizado mais comum no primeiro estágio?"
+def analyze_learning_outcomes(db, ordinal_estagio=1):
+    reports = db.query(Relatorio).filter_by(
+        ordinal_estagio=ordinal_estagio
+    ).all()
+    
+    learnings = []
+    for report in reports:
+        for activity in report.json_completo.get('atividades_realizadas', []):
+            if activity.get('aprendizados'):
+                learnings.append(activity['aprendizados'])
+    
+    # Use LLM to summarize and find patterns
+    return summarize_with_llm(learnings)
+```
+
+#### Pattern 3: Company Skills Requirements
+```python
+# "O que devo estudar para o BTG?"
+def get_company_requirements(db, company_name):
+    # Get all technologies used at company
+    tech_query = db.execute(text("""
+        SELECT tt.termo_normalizado, tt.tipo, 
+               COUNT(DISTINCT r.id) as frequency
+        FROM relatorios r
+        JOIN relatorio_termos rt ON r.id = rt.relatorio_id
+        JOIN termos_tecnicos tt ON tt.id = rt.termo_id
+        WHERE r.empresa_razao_social ILIKE :company
+        GROUP BY tt.termo_normalizado, tt.tipo
+        ORDER BY frequency DESC
+    """), {"company": f"%{company_name}%"})
+    
+    # Analyze activities and learnings
+    reports = db.query(Relatorio).filter(
+        Relatorio.empresa_razao_social.ilike(f"%{company_name}%")
+    ).all()
+    
+    return {
+        "technologies": tech_query.fetchall(),
+        "common_activities": extract_common_activities(reports),
+        "required_skills": extract_skills_from_learnings(reports)
+    }
+```
 
 ### Privacy Implementation
 
