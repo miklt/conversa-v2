@@ -126,7 +126,7 @@ async def get_top_technologies(db: Session, tipo: str, year: Optional[int] = Non
         'database': 'BANCO_DADOS'
     }
 
-    db_tipo = type_mapping.get(tipo.lower(), tipo.upper())
+    db_tipo = type_mapping.get(tipo.lower() if tipo else '', tipo.upper() if tipo else 'LINGUAGEM')
 
     filters = []
     params = {}
@@ -693,6 +693,12 @@ async def execute_complex_query(db: Session, intent: AdvancedQueryIntent) -> DBQ
                 db, intent.company_filter, intent.technology_type, intent.year_filter, intent.limit, intent.order_by_usage
             )
 
+        elif intent.main_topic == "technology" and intent.company_filter and not intent.technology_type:
+            # Query: "What technologies are used at BTG?" (general technologies at a company)
+            return await get_all_technologies_by_company(
+                db, intent.company_filter, intent.year_filter, intent.limit, intent.order_by_usage
+            )
+
         elif intent.main_topic == "technology" and intent.technology_type:
             # Query: "What are the most used frameworks?"
             return await get_top_technologies(
@@ -755,6 +761,72 @@ async def execute_complex_query(db: Session, intent: AdvancedQueryIntent) -> DBQ
         return DBQueryResult(data=[], total_count=0)
 
 
+async def get_all_technologies_by_company(
+    db: Session,
+    company_name: str,
+    year: Optional[int] = None,
+    limit: int = 10,
+    order_by_usage: str = "desc"
+) -> DBQueryResult:
+    """Get all technologies used at a specific company (not filtered by type)"""
+    # Normalize company name for matching
+    company_patterns = {
+        'btg': ['%btg pactual%', '%btg%'],
+        'cip': ['%cip%', '%centro de informação%'],
+        'virtual': ['%virtual cirurgia%', '%virtual%']
+    }
+
+    company_conditions = []
+    for key, patterns in company_patterns.items():
+        if key.lower() in company_name.lower():
+            company_conditions.extend(patterns)
+            break
+    else:
+        # If no specific pattern, use the company name directly
+        company_conditions = [f'%{company_name}%']
+
+    # Build WHERE clause for company matching
+    company_where_parts = []
+    for pattern in company_conditions:
+        company_where_parts.append(f"r.empresa_razao_social ILIKE '{pattern}'")
+
+    company_where = " OR ".join(company_where_parts)
+
+    filters = []
+    params = {}
+
+    if year:
+        filters.append("r.ano = :year")
+        params['year'] = year
+
+    where_clause = f" AND ({company_where})"
+    if filters:
+        where_clause += " AND " + " AND ".join(filters)
+
+    # Determine order direction
+    order_direction = "DESC" if order_by_usage == "desc" else "ASC"
+
+    sql = f"""
+        SELECT tt.termo_normalizado, COUNT(DISTINCT rt.relatorio_id) as count
+        FROM relatorio_termos rt
+        JOIN termos_tecnicos tt ON tt.id = rt.termo_id
+        JOIN relatorios r ON r.id = rt.relatorio_id
+        WHERE 1=1{where_clause}
+        GROUP BY tt.termo_normalizado
+        ORDER BY count {order_direction}
+        LIMIT :limit
+    """
+
+    params.update({'limit': limit})
+
+    result = db.execute(text(sql), params)
+    rows = result.fetchall()
+
+    data = [{'technology': row[0], 'count': row[1]} for row in rows]
+
+    return DBQueryResult(data=data, total_count=len(data))
+
+
 async def get_technologies_by_company_and_type(
     db: Session,
     company_name: str,
@@ -785,7 +857,7 @@ async def get_technologies_by_company_and_type(
         'database': 'BANCO_DADOS'
     }
 
-    db_tipo = type_mapping.get(technology_type.lower(), technology_type.upper())
+    db_tipo = type_mapping.get(technology_type.lower() if technology_type else '', technology_type.upper() if technology_type else 'LINGUAGEM')
 
     # Normalize company name for matching
     company_patterns = {
@@ -962,7 +1034,7 @@ async def process_chat_message(message: str, db: Session) -> ChatResponse:
                 'FERRAMENTA': 'ferramentas',
                 'PLATAFORMA': 'plataformas',
                 'BANCO_DADOS': 'bancos de dados'
-            }.get(intent.technology_type, intent.technology_type.lower())
+            }.get(intent.technology_type, intent.technology_type.lower() if intent.technology_type else 'tecnologias')
 
             company_display = intent.company_filter.title()
             if 'btg' in intent.company_filter.lower():
@@ -985,7 +1057,7 @@ async def process_chat_message(message: str, db: Session) -> ChatResponse:
                 'FERRAMENTA': 'ferramentas',
                 'PLATAFORMA': 'plataformas',
                 'BANCO_DADOS': 'bancos de dados'
-            }.get(intent.technology_type, intent.technology_type.lower())
+            }.get(intent.technology_type, intent.technology_type.lower() if intent.technology_type else 'tecnologias')
 
             # Determine if it's most or least used
             usage_text = "mais utilizadas" if intent.order_by_usage == "desc" else "menos utilizadas"
