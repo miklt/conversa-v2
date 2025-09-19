@@ -17,6 +17,30 @@
   text-align: center;
 }
 
+.verify-header {
+  margin-bottom: 1.5rem;
+}
+
+.verify-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.verify-logo-poli,
+.verify-logo-pcs {
+  height: 40px;
+  width: auto;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.verify-logo-poli:hover,
+.verify-logo-pcs:hover {
+  opacity: 1;
+}
+
 .verify-content {
   display: flex;
   flex-direction: column;
@@ -161,6 +185,15 @@
   
   .verify-container {
     padding: 1.5rem;
+  }
+  
+  .verify-logos {
+    gap: 0.5rem;
+  }
+  
+  .verify-logo-poli,
+  .verify-logo-pcs {
+    height: 32px;
   }
   
   .success-icon,

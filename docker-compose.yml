@@ -1,6 +1,7 @@
 version: '3.8'
 
 services:
+  # PostgreSQL Database
   postgres:
     image: pgvector/pgvector:pg16
     container_name: conversa-postgres
@@ -19,6 +20,62 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    restart: unless-stopped
+
+  # Backend API
+  backend:
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: conversa-backend
+    environment:
+      # Database
+      DATABASE_URL: postgresql://conversa_user:conversa_senha_2024@postgres:5432/conversa_estagios
+      
+      # Application
+      DEBUG: "False"
+      SECRET_KEY: ${SECRET_KEY:-your0vert0very-secret-key-change-in-production-min-32-chars}
+      
+      # Authentication
+      ACCESS_TOKEN_EXPIRE_MINUTES: 1440
+      MAGIC_TOKEN_EXPIRE_MINUTES: 15
+      
+      # Email Configuration
+      FROM_NAME: "Conversa Estágios"
+      SMTP_SERVER: ${SMTP_SERVER:-smtp.gmail.com}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_USERNAME: ${SMTP_USERNAME}
+      SMTP_PASSWORD: ${SMTP_PASSWORD}
+      FROM_EMAIL: ${FROM_EMAIL}
+      
+      # Frontend URL
+      FRONTEND_URL: http://localhost
+      
+      # API Keys
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  # Frontend
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: conversa-frontend
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+    environment:
+      - VITE_API_URL=http://localhost:8000
     restart: unless-stopped
 
 volumes:

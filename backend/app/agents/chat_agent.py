@@ -48,7 +48,9 @@ if not api_key:
     from pydantic_ai.models.test import TestModel
     model = TestModel()
 else:
-    model = OpenAIModel('gpt-4o-mini', api_key=api_key)
+    # Set the API key as environment variable for OpenAI
+    os.environ['OPENAI_API_KEY'] = api_key
+    model = OpenAIModel('gpt-4o-mini')
 
 agent = Agent(
     model,
@@ -392,11 +394,10 @@ async def analyze_query_intent(message: str) -> AdvancedQueryIntent:
                     specific_technology=parsed_data.get('specific_technology') if parsed_data.get('specific_technology') != 'null' else baseline_intent.specific_technology
                 )
                 
-                print(f"✅ LLM enhanced intent analysis successful")
                 return enhanced_intent
                 
         except Exception as llm_error:
-            print(f"⚠️ LLM enhancement failed, using baseline: {llm_error}")
+            pass
             
         # Return the reliable baseline intent
         return baseline_intent
@@ -1126,8 +1127,6 @@ async def process_chat_message(message: str, db: Session) -> ChatResponse:
     try:
         # Analyze query intent using LLM
         intent = await analyze_query_intent(message)
-
-        print(f"Analyzed intent: {intent}")
 
         # Execute appropriate query based on intent
         result = await execute_complex_query(db, intent)

@@ -103,7 +103,10 @@ export const ChatInterface: React.FC = () => {
     <div className="chat-container">
       <div className="chat-header">
         <div className="header-content">
-          <BotIcon />
+          <div className="header-logos">
+            <img src="/logo_poli.png" alt="Escola Politécnica USP" className="logo-poli" />
+            <img src="/logo_pcs.png" alt="PCS - Engenharia de Computação" className="logo-pcs" />
+          </div>
           <div className="header-text">
             <h1>Conversa Estágios</h1>
             <p>Pergunte sobre relatórios de estágio</p>

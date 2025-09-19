@@ -48,6 +48,12 @@ export function VerifyTokenPage() {
     return (
       <div className="verify-page">
         <div className="verify-container">
+          <div className="verify-header">
+            <div className="verify-logos">
+              <img src="/logo_poli.png" alt="Escola Politécnica USP" className="verify-logo-poli" />
+              <img src="/logo_pcs.png" alt="PCS - Engenharia de Computação" className="verify-logo-pcs" />
+            </div>
+          </div>
           <div className="verify-content">
             <div className="loading-spinner"></div>
             <h2>Verificando acesso...</h2>
@@ -62,6 +68,12 @@ export function VerifyTokenPage() {
     return (
       <div className="verify-page">
         <div className="verify-container">
+          <div className="verify-header">
+            <div className="verify-logos">
+              <img src="/logo_poli.png" alt="Escola Politécnica USP" className="verify-logo-poli" />
+              <img src="/logo_pcs.png" alt="PCS - Engenharia de Computação" className="verify-logo-pcs" />
+            </div>
+          </div>
           <div className="verify-content success">
             <div className="success-icon">✅</div>
             <h2>Acesso confirmado!</h2>
@@ -79,6 +91,12 @@ export function VerifyTokenPage() {
     return (
       <div className="verify-page">
         <div className="verify-container">
+          <div className="verify-header">
+            <div className="verify-logos">
+              <img src="/logo_poli.png" alt="Escola Politécnica USP" className="verify-logo-poli" />
+              <img src="/logo_pcs.png" alt="PCS - Engenharia de Computação" className="verify-logo-pcs" />
+            </div>
+          </div>
           <div className="verify-content error">
             <div className="error-icon">❌</div>
             <h2>Erro na verificação</h2>

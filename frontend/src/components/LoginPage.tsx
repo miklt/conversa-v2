@@ -42,6 +42,10 @@ export function LoginPage() {
     <div className="login-page">
       <div className="login-container">
         <div className="login-header">
+          <div className="login-logos">
+            <img src="/logo_poli.png" alt="Escola Politécnica USP" className="login-logo-poli" />
+            <img src="/logo_pcs.png" alt="PCS - Engenharia de Computação" className="login-logo-pcs" />
+          </div>
           <h1>Conversa Estágios</h1>
           <p>Sistema de Consulta de Relatórios de Estágio - USP</p>
         </div>
