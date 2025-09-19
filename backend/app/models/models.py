@@ -191,3 +191,54 @@ class ChatMessage(Base):
     
     # Relationships
     session = relationship("ChatSession", back_populates="messages")
+
+
+class User(Base):
+    """Users table for authentication"""
+    __tablename__ = 'users'
+    
+    id = Column(Integer, primary_key=True)
+    email = Column(String(255), unique=True, nullable=False)
+    
+    # User info
+    full_name = Column(String(255))
+    is_active = Column(Integer, default=1)  # 1 for active, 0 for inactive
+    
+    # Timestamps
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    last_login = Column(DateTime)
+    
+    # Relationships
+    magic_tokens = relationship("MagicToken", back_populates="user", cascade="all, delete-orphan")
+    
+    # Constraints - only @usp.br emails allowed
+    __table_args__ = (
+        CheckConstraint("email LIKE '%@usp.br'", name='check_usp_email'),
+    )
+
+
+class MagicToken(Base):
+    """Magic tokens for authentication"""
+    __tablename__ = 'magic_tokens'
+    
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey('users.id', ondelete='CASCADE'), nullable=False)
+    
+    # Token details
+    token = Column(String(255), unique=True, nullable=False)  # Hashed token
+    expires_at = Column(DateTime, nullable=False)
+    used_at = Column(DateTime)  # When token was used
+    
+    # Creation metadata
+    created_at = Column(DateTime, default=datetime.utcnow)
+    ip_address = Column(String(45))  # Support IPv6
+    user_agent = Column(Text)
+    
+    # Relationships
+    user = relationship("User", back_populates="magic_tokens")
+    
+    # Constraints
+    __table_args__ = (
+        CheckConstraint('expires_at > created_at', name='check_expires_after_creation'),
+    )
