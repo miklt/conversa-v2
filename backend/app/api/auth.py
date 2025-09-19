@@ -1,11 +1,14 @@
 """
 Authentication API endpoints
 """
-from datetime import timedelta
+from datetime import timedelta, datetime
 from typing import Optional
+import logging
 
 from fastapi import APIRouter, Depends, HTTPException, status, Request
 from sqlalchemy.orm import Session
+
+logger = logging.getLogger(__name__)
 
 from backend.app.db.database import get_db
 from backend.app.core.auth import (
@@ -13,7 +16,8 @@ from backend.app.core.auth import (
     create_magic_token, 
     get_user_by_email, 
     create_user,
-    verify_and_use_magic_token
+    verify_and_use_magic_token,
+    verify_magic_token_with_details
 )
 from backend.app.core.dependencies import get_current_user, get_client_ip, get_user_agent
 from backend.app.core.config import settings
@@ -25,7 +29,8 @@ from backend.app.schemas.schemas import (
     TokenResponse,
     UserResponse,
     CurrentUser,
-    ErrorResponse
+    ErrorResponse,
+    TokenErrorType
 )
 
 
@@ -107,19 +112,48 @@ async def verify_magic_token(
     """
     Verify magic token and return JWT access token.
     """
-    user = verify_and_use_magic_token(db, verify_request.token)
+    token_preview = verify_request.token[:8] + "..." if len(verify_request.token) > 8 else verify_request.token
+    logger.info(f"=== MAGIC TOKEN VERIFICATION START ===")
+    logger.info(f"Received token: {token_preview} (length: {len(verify_request.token)})")
+    
+    # Check if token format looks correct
+    if len(verify_request.token) < 40:  # tokens should be longer
+        logger.warning(f"Token seems too short: {len(verify_request.token)} characters")
+    
+    # Use detailed verification to get specific error information
+    user, error_type = verify_magic_token_with_details(db, verify_request.token)
     
     if not user:
+        # Create specific error messages based on the failure type
+        if error_type == TokenErrorType.ALREADY_USED:
+            error_message = "Este link já foi usado e não é mais válido. Para acessar novamente, volte à página de login e solicite um novo link. Um novo email será enviado automaticamente."
+            logger.warning(f"Token verification failed - token already used")
+        elif error_type == TokenErrorType.EXPIRED:
+            error_message = "Este link expirou. Solicite um novo link de acesso na página de login."
+            logger.warning(f"Token verification failed - token expired") 
+        elif error_type == TokenErrorType.NOT_FOUND:
+            error_message = "Link inválido. Verifique se copiou o link completo ou solicite um novo na página de login."
+            logger.warning(f"Token verification failed - token not found")
+        else:
+            error_message = "Token inválido ou expirado. Solicite um novo link de acesso na página de login."
+            logger.warning(f"Token verification failed - unknown error")
+            
+        logger.info(f"=== MAGIC TOKEN VERIFICATION END (FAILED: {error_type}) ===")
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid or expired magic token"
+            detail=error_message
         )
     
     if not user.is_active:
+        logger.warning(f"Token verification failed - user {user.email} is not active")
+        logger.info(f"=== MAGIC TOKEN VERIFICATION END (INACTIVE USER) ===")
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="User account is inactive"
+            detail="Conta de usuário está inativa. Entre em contato com o suporte."
         )
+    
+    logger.info(f"Token verified successfully for user: {user.email}")
+    logger.info(f"=== MAGIC TOKEN VERIFICATION END (SUCCESS) ===")
     
     # Create JWT access token
     access_token_expires = timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
@@ -221,3 +255,32 @@ async def refresh_token(
         expires_in=settings.ACCESS_TOKEN_EXPIRE_MINUTES * 60,  # Convert to seconds
         user=user_response
     )
+
+
+@router.post(
+    "/logout",
+    responses={
+        200: {"description": "Successfully logged out"},
+        401: {"model": ErrorResponse, "description": "Not authenticated"}
+    }
+)
+async def logout(
+    current_user: CurrentUser = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """
+    Logout current user and invalidate all their magic tokens.
+    This provides better security by ensuring complete session cleanup.
+    """
+    from backend.app.models.models import MagicToken
+    
+    # Invalidate all unused magic tokens for this user
+    # This ensures if user has pending magic tokens, they're all cleared
+    db.query(MagicToken).filter(
+        MagicToken.user_id == current_user.id,
+        MagicToken.used_at.is_(None)
+    ).update({"used_at": datetime.utcnow()})
+    
+    db.commit()
+    
+    return {"message": "Successfully logged out", "email": current_user.email}

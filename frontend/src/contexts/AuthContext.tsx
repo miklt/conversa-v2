@@ -77,10 +77,18 @@ export function AuthProvider({ children }: AuthProviderProps) {
     }
   };
 
-  const logout = () => {
-    authService.clearAuth();
-    setToken(null);
-    setUser(null);
+  const logout = async () => {
+    try {
+      // Call backend logout to invalidate tokens
+      await authService.logout();
+    } catch (error) {
+      console.error('Logout error:', error);
+    } finally {
+      // Always clear local auth data
+      authService.clearAuth();
+      setToken(null);
+      setUser(null);
+    }
   };
 
   const isAuthenticated = !!(token && user);

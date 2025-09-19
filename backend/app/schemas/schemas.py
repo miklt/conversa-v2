@@ -14,6 +14,14 @@ class ChatRole(str, Enum):
     SYSTEM = "system"
 
 
+class TokenErrorType(str, Enum):
+    """Magic token error types"""
+    INVALID = "invalid"
+    EXPIRED = "expired"
+    ALREADY_USED = "already_used"
+    NOT_FOUND = "not_found"
+
+
 class ChatMessage(BaseModel):
     """Chat message model"""
     role: ChatRole

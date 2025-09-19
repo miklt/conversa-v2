@@ -3,16 +3,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: white;
   padding: 1rem;
 }
 
 .verify-container {
   background: white;
-  border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
+  padding: 3rem;
+  max-width: 600px;
   width: 100%;
   text-align: center;
 }
@@ -30,7 +30,7 @@
 
 .verify-logo-poli,
 .verify-logo-pcs {
-  height: 40px;
+  height: 48px;
   width: auto;
   opacity: 0.8;
   transition: opacity 0.2s ease;
@@ -50,7 +50,7 @@
 
 .verify-content h2 {
   color: #2d3748;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 0;
 }
 
@@ -58,6 +58,7 @@
   color: #4a5568;
   margin: 0;
   line-height: 1.5;
+  font-size: 1.1rem;
 }
 
 /* Loading State */
@@ -127,6 +128,7 @@
   color: #c53030;
   font-weight: 500;
   margin: 1rem 0;
+  font-size: 1rem;
 }
 
 .error-actions {
@@ -137,7 +139,7 @@
   background: linear-gradient(135deg, #3182ce 0%, #2c5282 100%);
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 0.875rem 1.5rem;
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
@@ -161,13 +163,13 @@
 
 .error-help h3 {
   color: #2d3748;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 0 0 0.5rem 0;
 }
 
 .error-help ul {
   color: #4a5568;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin: 0;
   padding-left: 1.2rem;
 }
@@ -175,6 +177,7 @@
 .error-help li {
   margin-bottom: 0.25rem;
   line-height: 1.4;
+  font-size: 1rem;
 }
 
 /* Responsive */

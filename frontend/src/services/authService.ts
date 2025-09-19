@@ -61,6 +61,16 @@ export const authService = {
     return response.data;
   },
 
+  // Logout user (call backend to invalidate tokens)
+  async logout(): Promise<void> {
+    try {
+      await api.post('/auth/logout');
+    } catch (error) {
+      // Even if backend call fails, we still clear local storage
+      console.warn('Backend logout failed, clearing local auth anyway:', error);
+    }
+  },
+
   // Store token and user info
   setAuth(tokenResponse: TokenResponse) {
     localStorage.setItem('accessToken', tokenResponse.access_token);
