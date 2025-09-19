@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     DEBUG: bool = os.getenv("DEBUG", "True").lower() == "true"
     
     # CORS
-    CORS_ORIGINS: list = ["http://localhost:5173", "http://localhost:3000","https://estagiosv2.pcs.usp.br",'http://localhost']
+    CORS_ORIGINS: list = ["http://localhost:5173", "http://localhost:3000","https://estagiosv2.pcs.usp.br",'http://localhost','http://200.144.245.12:50100','http://localhost:50100']
     
     # Authentication
     SECRET_KEY: str = os.getenv("SECRET_KEY", "your-secret-key-change-in-production")
