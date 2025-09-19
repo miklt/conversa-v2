@@ -11,7 +11,7 @@ services:
       POSTGRES_DB: conversa_estagios
       PGDATA: /var/lib/postgresql/data/pgdata
     ports:
-      - "5432:5432"
+      - "35432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./scripts/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
@@ -51,7 +51,7 @@ services:
       FROM_EMAIL: ${FROM_EMAIL}
       
       # Frontend URL
-      FRONTEND_URL: http://localhost
+      FRONTEND_URL: http://200.144.245.12:50100
       
       # API Keys
       GEMINI_API_KEY: ${GEMINI_API_KEY}
