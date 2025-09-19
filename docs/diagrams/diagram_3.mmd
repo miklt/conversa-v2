@@ -1,0 +1,12 @@
+sequenceDiagram
+    participant SRC as JSON Source
+    participant IMP as import_json_to_db.py
+    participant DB as PostgreSQL+pgvector
+    participant EMB as generate_embeddings.py
+
+    SRC->>IMP: JSONs em arquivos/json_saida/*
+    IMP->>DB: INSERT em relatorios (JSONB + metadados)
+    loop por relatório
+      EMB->>DB: SELECT relatorio
+      EMB->>DB: INSERT relatorio_embeddings (secao, Vector(1536))
+    end

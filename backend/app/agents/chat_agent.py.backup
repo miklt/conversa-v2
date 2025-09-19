@@ -1,0 +1,438 @@
+"""
+Pydantic AI Agent for Chat System
+"""
+from pydantic_ai import Agent, RunContext
+from pydantic_ai.models.openai import OpenAIModel
+from pydantic import BaseModel, Field
+from typing import List, Dict, Any, Optional
+import os
+from sqlalchemy.orm import Session
+from sqlalchemy import text, func
+
+from backend.app.db.database import get_db
+from backend.app.schemas.schemas import ChatResponse
+from backend.app.services.privacy_filter import PrivacyFilter
+from backend.app.models.models import Relatorio, RelatorioTermo, TermoTecnico
+
+
+class QueryIntent(BaseModel):
+    """Intent extracted from user query"""
+    query_type: str = Field(description="Type of query: technology, company, statistics, general")
+    focus: Optional[str] = Field(description="Specific focus: programming_language, framework, etc.")
+    year: Optional[int] = Field(description="Year filter if mentioned")
+    keywords: List[str] = Field(description="Technical keywords mentioned")
+
+
+class AdvancedQueryIntent(BaseModel):
+    """Advanced intent analysis for complex queries"""
+    main_topic: str = Field(description="Main topic: technology, company, statistics, general")
+    technology_type: Optional[str] = Field(description="Type of technology: LINGUAGEM, FRAMEWORK, FERRAMENTA, etc.")
+    company_filter: Optional[str] = Field(description="Specific company mentioned in query")
+    year_filter: Optional[int] = Field(description="Year filter if mentioned")
+    limit: int = Field(default=10, description="Number of results to return")
+    query_description: str = Field(description="Natural language description of what the user wants")
+
+
+class DBQueryResult(BaseModel):
+    """Result from database query"""
+    data: List[Dict[str, Any]] = Field(description="Query results")
+    total_count: int = Field(description="Total number of records")
+
+
+# Initialize the agent with OpenAI model
+api_key = os.getenv('OPENAI_API_KEY')
+if not api_key:
+    from pydantic_ai.models.test import TestModel
+    model = TestModel()
+else:
+    model = OpenAIModel('gpt-4o-mini', api_key=api_key)
+
+agent = Agent(
+    model,
+    system_prompt="""
+    You are a helpful assistant that answers questions about internship reports from Electrical Engineering students.
+    You have access to a database with internship data and can query it to provide accurate information.
+
+    Available data:
+    - Internship reports with company info, activities, technologies used
+    - Technical terms categorized by type (LINGUAGEM, FRAMEWORK, FERRAMENTA, etc.)
+    - Report-term relationships showing which technologies were used in each report
+
+    When answering:
+    - Always be factual and base answers on the data
+    - Respect privacy - never reveal personal information
+    - Provide context and sources when possible
+    - Use the available tools to query the database
+    - Format responses clearly and helpfully
+    """
+)
+
+# Agent for intent analysis
+intent_agent = Agent(
+    model,
+    result_type=AdvancedQueryIntent,
+    system_prompt="""
+    You are an expert at analyzing user queries about internship data.
+    Your task is to extract the intent from user questions and map them to database queries.
+
+    Available technology types in the database:
+    - LINGUAGEM: Programming languages (Python, Java, C++, etc.)
+    - FRAMEWORK: Frameworks (React, Angular, Django, etc.)
+    - FERRAMENTA: Tools (Git, Docker, VS Code, etc.)
+    - PLATAFORMA: Platforms (AWS, Azure, Linux, etc.)
+    - BANCO_DADOS: Databases (PostgreSQL, MySQL, MongoDB, etc.)
+
+    Common companies in the data:
+    - BTG Pactual (various spellings)
+    - CIP (Centro de Informação e Processamento)
+    - Virtual Cirurgia
+    - And many others
+
+    Extract:
+    - main_topic: What is the user asking about?
+    - technology_type: Which technology category?
+    - company_filter: Specific company mentioned?
+    - year_filter: Year mentioned?
+    - limit: How many results (default 10)
+    - query_description: Clear description of the query
+    """
+)
+async def get_top_technologies(db: Session, tipo: str, year: Optional[int] = None, limit: int = 10) -> DBQueryResult:
+    """Get top technologies by type and optionally filtered by year"""
+    # Map user-friendly types to database enum values
+    type_mapping = {
+        'linguagem': 'LINGUAGEM',
+        'linguagens': 'LINGUAGEM',
+        'programming': 'LINGUAGEM',
+        'language': 'LINGUAGEM',
+        'framework': 'FRAMEWORK',
+        'frameworks': 'FRAMEWORK',
+        'ferramenta': 'FERRAMENTA',
+        'ferramentas': 'FERRAMENTA',
+        'tool': 'FERRAMENTA',
+        'tools': 'FERRAMENTA',
+        'plataforma': 'PLATAFORMA',
+        'plataformas': 'PLATAFORMA',
+        'platform': 'PLATAFORMA',
+        'platforms': 'PLATAFORMA',
+        'banco_dados': 'BANCO_DADOS',
+        'banco': 'BANCO_DADOS',
+        'database': 'BANCO_DADOS'
+    }
+
+    db_tipo = type_mapping.get(tipo.lower(), tipo.upper())
+
+    filters = []
+    params = {}
+
+    if year:
+        filters.append("r.ano = :year")
+        params['year'] = year
+
+    where_clause = " AND ".join(filters) if filters else "1=1"
+
+    sql = f"""
+        SELECT tt.termo_normalizado, COUNT(DISTINCT rt.relatorio_id) as count
+        FROM relatorio_termos rt
+        JOIN termos_tecnicos tt ON tt.id = rt.termo_id
+        JOIN relatorios r ON r.id = rt.relatorio_id
+        WHERE tt.tipo = :tipo AND {where_clause}
+        GROUP BY tt.termo_normalizado
+        ORDER BY count DESC
+        LIMIT :limit
+    """
+
+    params.update({'tipo': db_tipo, 'limit': limit})
+
+    result = db.execute(text(sql), params)
+    rows = result.fetchall()
+
+    data = [{'technology': row[0], 'count': row[1]} for row in rows]
+
+    return DBQueryResult(data=data, total_count=len(data))
+
+
+async def get_top_companies(db: Session, year: Optional[int] = None, limit: int = 10) -> DBQueryResult:
+    """Get companies with most interns, optionally filtered by year with name normalization"""
+    filters = []
+    params = {}
+
+    if year:
+        filters.append("ano = :year")
+        params['year'] = year
+
+    where_clause = " AND ".join(filters) if filters else "1=1"
+
+    # Query with company name normalization using SQL CASE statements
+    sql = f"""
+        SELECT
+            CASE
+                WHEN empresa_razao_social ILIKE '%btg pactual%' THEN 'BANCO BTG PACTUAL S.A.'
+                WHEN empresa_razao_social ILIKE '%btg%' THEN 'BANCO BTG PACTUAL S.A.'
+                WHEN empresa_razao_social ILIKE '%cip%' THEN 'CIP - CENTRO DE INFORMAÇÃO E PROCESSAMENTO'
+                WHEN empresa_razao_social ILIKE '%centro de informação%' THEN 'CIP - CENTRO DE INFORMAÇÃO E PROCESSAMENTO'
+                WHEN empresa_razao_social ILIKE '%virtual cirurgia%' THEN 'VIRTUAL CIRURGIA'
+                WHEN empresa_razao_social ILIKE '%virtual%' THEN 'VIRTUAL CIRURGIA'
+                ELSE empresa_razao_social
+            END as normalized_company,
+            COUNT(*) as count
+        FROM relatorios
+        WHERE empresa_razao_social IS NOT NULL AND {where_clause}
+        GROUP BY normalized_company
+        ORDER BY count DESC
+        LIMIT :limit
+    """
+
+    params['limit'] = limit
+
+    result = db.execute(text(sql), params)
+    rows = result.fetchall()
+
+    data = [{'company': row[0], 'count': row[1]} for row in rows]
+
+    return DBQueryResult(data=data, total_count=len(data))
+
+
+async def search_reports_by_technology(db: Session, technology: str, year: Optional[int] = None, limit: int = 5) -> DBQueryResult:
+    """Find reports that mention a specific technology"""
+    filters = []
+    params = {}
+
+    if year:
+        filters.append("r.ano = :year")
+        params['year'] = year
+
+    where_clause = " AND ".join(filters) if filters else "1=1"
+
+    sql = f"""
+        SELECT DISTINCT r.empresa_razao_social, r.ano, r.periodo, r.ano_academico
+        FROM relatorios r
+        JOIN relatorio_termos rt ON r.id = rt.relatorio_id
+        JOIN termos_tecnicos tt ON tt.id = rt.termo_id
+        WHERE tt.termo_normalizado ILIKE :tech AND {where_clause}
+        ORDER BY r.ano DESC, r.empresa_razao_social
+        LIMIT :limit
+    """
+
+    params.update({'tech': f'%{technology}%', 'limit': limit})
+
+    result = db.execute(text(sql), params)
+    rows = result.fetchall()
+
+    data = [{
+        'company': row[0],
+        'year': row[1],
+        'period': row[2],
+        'academic_year': row[3]
+    } for row in rows]
+
+    return DBQueryResult(data=data, total_count=len(data))
+
+
+async def get_total_reports_count(db: Session, year: Optional[int] = None) -> int:
+    """Get total number of reports, optionally filtered by year"""
+    if year:
+        count = db.query(func.count(Relatorio.id)).filter(Relatorio.ano == year).scalar()
+    else:
+        count = db.query(func.count(Relatorio.id)).scalar()
+
+    return count
+
+
+async def analyze_query_intent(message: str) -> AdvancedQueryIntent:
+    """Analyze user query intent using LLM"""
+    try:
+        result = await intent_agent.run(message)
+        return result.data
+    except Exception as e:
+        print(f"Error analyzing intent: {e}")
+        # Fallback to basic intent analysis
+        return AdvancedQueryIntent(
+            main_topic="general",
+            technology_type=None,
+            company_filter=None,
+            year_filter=None,
+            limit=10,
+            query_description="General query about internship data"
+        )
+
+
+async def execute_complex_query(db: Session, intent: AdvancedQueryIntent) -> DBQueryResult:
+    """Execute complex database query based on analyzed intent"""
+    try:
+        if intent.main_topic == "technology" and intent.technology_type and intent.company_filter:
+            # Query: "What frameworks are used at BTG?"
+            return await get_technologies_by_company_and_type(
+                db, intent.company_filter, intent.technology_type, intent.year_filter, intent.limit
+            )
+
+        elif intent.main_topic == "technology" and intent.technology_type:
+            # Query: "What are the most used frameworks?"
+            return await get_top_technologies(
+                db, intent.technology_type, intent.year_filter, intent.limit
+            )
+
+        elif intent.main_topic == "company":
+            # Query: "Which companies have the most interns?"
+            return await get_top_companies(db, intent.year_filter, intent.limit)
+
+        elif intent.main_topic == "statistics":
+            # General statistics
+            total = await get_total_reports_count(db, intent.year_filter)
+            return DBQueryResult(
+                data=[{"statistic": "total_reports", "value": total}],
+                total_count=1
+            )
+
+        else:
+            # Fallback to general search
+            return await search_general(db, intent.query_description, intent.limit)
+
+    except Exception as e:
+        print(f"Error executing complex query: {e}")
+        return DBQueryResult(data=[], total_count=0)
+
+
+async def get_technologies_by_company_and_type(
+    db: Session,
+    company_name: str,
+    technology_type: str,
+    year: Optional[int] = None,
+    limit: int = 10
+) -> DBQueryResult:
+    """Get technologies of specific type used at a specific company"""
+    # Map user-friendly types to database enum values
+    type_mapping = {
+        'linguagem': 'LINGUAGEM',
+        'linguagens': 'LINGUAGEM',
+        'programming': 'LINGUAGEM',
+        'language': 'LINGUAGEM',
+        'framework': 'FRAMEWORK',
+        'frameworks': 'FRAMEWORK',
+        'ferramenta': 'FERRAMENTA',
+        'ferramentas': 'FERRAMENTA',
+        'tool': 'FERRAMENTA',
+        'tools': 'FERRAMENTA',
+        'plataforma': 'PLATAFORMA',
+        'plataformas': 'PLATAFORMA',
+        'platform': 'PLATAFORMA',
+        'platforms': 'PLATAFORMA',
+        'banco_dados': 'BANCO_DADOS',
+        'banco': 'BANCO_DADOS',
+        'database': 'BANCO_DADOS'
+    }
+
+    db_tipo = type_mapping.get(technology_type.lower(), technology_type.upper())
+
+    # Normalize company name for matching
+    company_patterns = {
+        'btg': ['%btg pactual%', '%btg%'],
+        'cip': ['%cip%', '%centro de informação%'],
+        'virtual': ['%virtual cirurgia%', '%virtual%']
+    }
+
+    company_conditions = []
+    for key, patterns in company_patterns.items():
+        if key.lower() in company_name.lower():
+            company_conditions.extend(patterns)
+            break
+    else:
+        # If no specific pattern, use the company name directly
+        company_conditions = [f'%{company_name}%']
+
+    # Build WHERE clause for company matching
+    company_where_parts = []
+    for pattern in company_conditions:
+        company_where_parts.append(f"r.empresa_razao_social ILIKE '{pattern}'")
+
+    company_where = " OR ".join(company_where_parts)
+
+    filters = []
+    params = {}
+
+    if year:
+        filters.append("r.ano = :year")
+        params['year'] = year
+
+    where_clause = f" AND ({company_where})"
+    if filters:
+        where_clause += " AND " + " AND ".join(filters)
+
+    sql = f"""
+        SELECT tt.termo_normalizado, COUNT(DISTINCT rt.relatorio_id) as count
+        FROM relatorio_termos rt
+        JOIN termos_tecnicos tt ON tt.id = rt.termo_id
+        JOIN relatorios r ON r.id = rt.relatorio_id
+        WHERE tt.tipo = :tipo{where_clause}
+        GROUP BY tt.termo_normalizado
+        ORDER BY count DESC
+        LIMIT :limit
+    """
+
+    params.update({'tipo': db_tipo, 'limit': limit})
+
+    result = db.execute(text(sql), params)
+    rows = result.fetchall()
+
+    data = [{'technology': row[0], 'count': row[1]} for row in rows]
+
+    return DBQueryResult(data=data, total_count=len(data))
+
+
+async def search_general(db: Session, query_description: str, limit: int = 10) -> DBQueryResult:
+    """General search based on query description"""
+    # This is a fallback - could be enhanced with more sophisticated search
+    return await get_top_companies(db, limit=limit)
+
+
+async def process_chat_message(message: str, db: Session) -> ChatResponse:
+    """Process a chat message using database queries directly"""
+    try:
+        # Simple keyword-based routing for now
+        message_lower = message.lower()
+
+        if 'linguagem' in message_lower or 'programação' in message_lower or 'language' in message_lower:
+            # Get top programming languages
+            result = await get_top_technologies(db, 'LINGUAGEM', limit=5)
+            if result.data:
+                response_text = "As linguagens de programação mais utilizadas são:\n"
+                for i, item in enumerate(result.data[:5], 1):
+                    response_text += f"{i}. {item['technology'].title()} ({item['count']} relatórios)\n"
+                return ChatResponse(response=response_text, confidence=0.9)
+
+        elif 'empresa' in message_lower or 'company' in message_lower:
+            # Get top companies
+            result = await get_top_companies(db, limit=5)
+            if result.data:
+                response_text = "As empresas com mais estagiários são:\n"
+                for i, item in enumerate(result.data[:5], 1):
+                    response_text += f"{i}. {item['company']} ({item['count']} estagiários)\n"
+                return ChatResponse(response=response_text, confidence=0.9)
+
+        elif 'framework' in message_lower:
+            # Get top frameworks
+            result = await get_top_technologies(db, 'FRAMEWORK', limit=5)
+            if result.data:
+                response_text = "Os frameworks mais utilizados são:\n"
+                for i, item in enumerate(result.data[:5], 1):
+                    response_text += f"{i}. {item['technology'].title()} ({item['count']} relatórios)\n"
+                return ChatResponse(response=response_text, confidence=0.9)
+
+        # Default fallback
+        return ChatResponse(
+            response="Desculpe, não entendi sua pergunta. Você pode perguntar sobre:\n"
+                    "- Linguagens de programação mais usadas\n"
+                    "- Empresas que oferecem mais estágios\n"
+                    "- Frameworks mais populares\n"
+                    "- Estatísticas gerais",
+            confidence=0.3
+        )
+
+    except Exception as e:
+        print(f"Error in process_chat_message: {e}")
+        import traceback
+        traceback.print_exc()
+        return ChatResponse(
+            response="Desculpe, houve um erro ao processar sua pergunta. Tente novamente.",
+            confidence=0.1
+        )

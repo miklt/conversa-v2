@@ -1,0 +1,19 @@
+sequenceDiagram
+    participant FE as Frontend/Cliente
+    participant API as FastAPI /api/v1/chat
+    participant AG as chat_agent.py
+    participant VS as VectorSearchService
+    participant DB as PostgreSQL+pgvector
+    participant PF as PrivacyFilter
+
+    FE->>API: POST /api/v1/chat { message }
+    API->>AG: process_chat_message(message, db)
+    AG->>AG: analyze_query_intent(message)
+    alt technology/company/stats/activities
+        AG->>DB: SQL (agregações/joins)
+        AG->>VS: (opcional) busca semântica
+        VS->>DB: SELECT ... ORDER BY embedding <-> query
+        DB-->>AG: resultados
+    end
+    AG->>PF: filter_response_text(resposta)
+    API-->>FE: ChatResponse { response, confidence }

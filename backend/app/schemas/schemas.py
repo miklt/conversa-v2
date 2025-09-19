@@ -1,7 +1,7 @@
 """
 Pydantic schemas for API requests and responses
 """
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, EmailStr, validator
 from typing import List, Optional, Dict, Any
 from datetime import datetime
 from enum import Enum
@@ -12,6 +12,14 @@ class ChatRole(str, Enum):
     USER = "user"
     ASSISTANT = "assistant"
     SYSTEM = "system"
+
+
+class TokenErrorType(str, Enum):
+    """Magic token error types"""
+    INVALID = "invalid"
+    EXPIRED = "expired"
+    ALREADY_USED = "already_used"
+    NOT_FOUND = "not_found"
 
 
 class ChatMessage(BaseModel):
@@ -144,3 +152,118 @@ class ErrorResponse(BaseModel):
     error: str
     detail: Optional[str] = None
     code: Optional[str] = None
+
+
+# Authentication Schemas
+
+class MagicLinkRequest(BaseModel):
+    """Request for magic link"""
+    email: EmailStr = Field(..., description="Email address (must be @usp.br domain)")
+    
+    @validator('email')
+    def validate_usp_email(cls, v):
+        if not v.endswith('@usp.br'):
+            raise ValueError('Email must be from @usp.br domain')
+        return v
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "email": "joao.silva@usp.br"
+            }
+        }
+
+
+class MagicLinkResponse(BaseModel):
+    """Magic link response"""
+    message: str
+    email: str
+    expires_in_minutes: int
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "message": "Magic link enviado para seu email",
+                "email": "joao.silva@usp.br",
+                "expires_in_minutes": 15
+            }
+        }
+
+
+class VerifyTokenRequest(BaseModel):
+    """Verify magic token request"""
+    token: str = Field(..., description="Magic token from email")
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "token": "abc123def456ghi789"
+            }
+        }
+
+
+class TokenResponse(BaseModel):
+    """JWT token response"""
+    access_token: str
+    token_type: str = "Bearer"
+    expires_in: int
+    user: "UserResponse"
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+                "token_type": "Bearer",
+                "expires_in": 86400,
+                "user": {
+                    "id": 1,
+                    "email": "joao.silva@usp.br",
+                    "full_name": "João Silva",
+                    "is_active": True,
+                    "created_at": "2025-01-01T00:00:00Z"
+                }
+            }
+        }
+
+
+class UserResponse(BaseModel):
+    """User response schema"""
+    id: int
+    email: str
+    full_name: Optional[str] = None
+    is_active: bool
+    created_at: datetime
+    last_login: Optional[datetime] = None
+    
+    class Config:
+        from_attributes = True
+        json_schema_extra = {
+            "example": {
+                "id": 1,
+                "email": "joao.silva@usp.br",
+                "full_name": "João Silva",
+                "is_active": True,
+                "created_at": "2025-01-01T00:00:00Z",
+                "last_login": "2025-01-01T12:00:00Z"
+            }
+        }
+
+
+class UserCreate(BaseModel):
+    """User creation schema"""
+    email: EmailStr
+    full_name: Optional[str] = None
+    
+    @validator('email')
+    def validate_usp_email(cls, v):
+        if not v.endswith('@usp.br'):
+            raise ValueError('Email must be from @usp.br domain')
+        return v
+
+
+class CurrentUser(BaseModel):
+    """Current authenticated user"""
+    id: int
+    email: str
+    full_name: Optional[str] = None
+    is_active: bool

@@ -16,7 +16,7 @@ from contextlib import asynccontextmanager
 import logging
 
 from backend.app.core.config import settings
-from backend.app.api import chat, reports, stats
+from backend.app.api import chat, reports, stats, auth
 from backend.app.db.database import engine
 from sqlalchemy import text
 
@@ -34,7 +34,7 @@ async def lifespan(app: FastAPI):
     Lifespan context manager for startup and shutdown events
     """
     # Startup
-    logger.info("Starting up Conversa Estágios API...")
+    logger.info("Starting up Bate papo com os Relatórios de Estágio...")
     logger.info(f"Database: {settings.DATABASE_URL.split('@')[-1]}")  # Log DB without password
     
     # Test database connection
@@ -69,6 +69,7 @@ app.add_middleware(
 )
 
 # Include routers
+app.include_router(auth.router, prefix="/api/v1/auth", tags=["authentication"])
 app.include_router(chat.router, prefix="/api/v1/chat", tags=["chat"])
 app.include_router(reports.router, prefix="/api/v1/reports", tags=["reports"])
 app.include_router(stats.router, prefix="/api/v1/stats", tags=["statistics"])
