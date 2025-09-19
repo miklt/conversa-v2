@@ -46,8 +46,8 @@ export function LoginPage() {
             <img src="/logo_poli.png" alt="Escola Politécnica USP" className="login-logo-poli" />
             <img src="/logo_pcs.png" alt="PCS - Engenharia de Computação" className="login-logo-pcs" />
           </div>
-          <h1>Conversa Estágios</h1>
-          <p>Sistema de Consulta de Relatórios de Estágio - USP</p>
+          <h1>Bate papo com os Relatórios de Estágio</h1>
+          <p>Sistema de Consulta de Relatórios de Estágio - POLI - PCS</p>
         </div>
 
         <div className="login-form-container">

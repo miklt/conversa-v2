@@ -43,7 +43,7 @@ services:
       MAGIC_TOKEN_EXPIRE_MINUTES: 15
       
       # Email Configuration
-      FROM_NAME: "Conversa Estágios"
+      FROM_NAME: "Bate papo com os Relatórios de Estágio"
       SMTP_SERVER: ${SMTP_SERVER:-smtp.gmail.com}
       SMTP_PORT: ${SMTP_PORT:-587}
       SMTP_USERNAME: ${SMTP_USERNAME}

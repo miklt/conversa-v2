@@ -112,7 +112,7 @@ class EmailService:
         <html>
         <head>
             <meta charset="utf-8">
-            <title>Acesso ao Conversa Estágios</title>
+            <title>Acesso ao Bate papo com os Relatórios de Estágio</title>
             <style>
                 body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
                 .container { max-width: 600px; margin: 0 auto; padding: 20px; }
@@ -134,14 +134,14 @@ class EmailService:
         <body>
             <div class="container">
                 <div class="header">
-                    <h1>Conversa Estágios</h1>
+                    <h1>Bate papo com os Relatórios de Estágio</h1>
                     <p>Sistema de Consulta de Relatórios de Estágio</p>
                 </div>
                 
                 <div class="content">
                     <h2>Olá, {{ name }}!</h2>
                     
-                    <p>Você solicitou acesso ao sistema <strong>Conversa Estágios</strong>. 
+                    <p>Você solicitou acesso ao sistema <strong>Bate papo com os Relatórios de Estágio</strong>. 
                     Clique no botão abaixo para fazer login:</p>
                     
                     <div style="text-align: center;">

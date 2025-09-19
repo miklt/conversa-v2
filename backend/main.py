@@ -34,7 +34,7 @@ async def lifespan(app: FastAPI):
     Lifespan context manager for startup and shutdown events
     """
     # Startup
-    logger.info("Starting up Conversa Estágios API...")
+    logger.info("Starting up Bate papo com os Relatórios de Estágio...")
     logger.info(f"Database: {settings.DATABASE_URL.split('@')[-1]}")  # Log DB without password
     
     # Test database connection

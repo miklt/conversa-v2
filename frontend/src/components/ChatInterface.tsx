@@ -108,7 +108,7 @@ export const ChatInterface: React.FC = () => {
             <img src="/logo_pcs.png" alt="PCS - Engenharia de Computação" className="logo-pcs" />
           </div>
           <div className="header-text">
-            <h1>Conversa Estágios</h1>
+            <h1>Bate papo com os Relatórios de Estágio</h1>
             <p>Pergunte sobre relatórios de estágio</p>
           </div>
           

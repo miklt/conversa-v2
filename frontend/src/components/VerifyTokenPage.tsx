@@ -79,7 +79,7 @@ export function VerifyTokenPage() {
             <h2>Acesso confirmado!</h2>
             <p>Você será redirecionado para o chat em instantes...</p>
             <div className="success-details">
-              <p>Bem-vindo ao sistema Conversa Estágios!</p>
+              <p>Bem-vindo ao Bate papo com os Relatórios de Estágio!</p>
             </div>
           </div>
         </div>
