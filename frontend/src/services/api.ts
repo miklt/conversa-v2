@@ -14,7 +14,7 @@ declare global {
 // Helper to read Vite env vars with an optional fallback
 export const getEnv = (key: keyof ImportMetaEnv, fallback?: string) =>
   (import.meta.env[key as string] as string | undefined) ?? fallback;
-const API_BASE_URL = (import.meta.env?.VITE_API_URL as string) || 'http://backend:8000/api/v1';
+const API_BASE_URL = (import.meta.env?.VITE_API_URL as string) || 'http://200.144.245.12:8000/api/v1';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
