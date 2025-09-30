@@ -1275,11 +1275,10 @@ async def process_chat_message(message: str, db: Session) -> ChatResponse:
 
         # Default fallback
         response = ChatResponse(
-            response="Desculpe, não entendi sua pergunta completamente. Você pode perguntar sobre:\n"
-                    "- Tecnologias usadas em empresas específicas\n"
-                    "- Linguagens de programação mais usadas\n"
-                    "- Empresas que oferecem mais estágios\n"
-                    "- Estatísticas gerais dos relatórios",
+            response="Desculpe, não entendi sua pergunta completamente. Você pode estruturar sua pergunta da seguinte forma:\n"
+                    "- Que|Qual <linguagens|frameworks|plataformas> são usadas em <geral|empresa específica>? \n"
+                    "- Que|Qual <empresa específica> usa <linguagens|frameworks|plataformas> ?\n"
+                    "- Qual <Empresa|linguagem|frameworks|plataformas> é a mais popular?\n",
             confidence=0.3
         )
 

@@ -133,15 +133,19 @@ export const ChatInterface: React.FC = () => {
         {messages.length === 0 && (
           <div className="welcome-message">
             <BotIcon />
-            <h2>Olá! Eu sou o Estagios IA</h2>
-            <p>Posso ajudá-lo a encontrar informações sobre relatórios de estágio. Pergunte sobre empresas, tecnologias, atividades ou estatísticas!</p>
+            <h2>Olá! Eu sou o Ambiente de Respostas de Estágios</h2>
+            <p>Posso ajudá-lo a encontrar informações sobre relatórios de estágio do PCS. </p>
+            <ul>
+              <li>Você pode encontrar informação sobre os seguintes tópicos: linguagens, frameworks e plataformas em geral</li>
+              <li>Você pode filtrar essas informações por empresas</li>
+              </ul>
             <div className="example-questions">
               <h3>Exemplos de perguntas:</h3>
               <ul>
                 <li>"Quais são as linguagens mais usadas?"</li>
-                <li>"Empresas que usam Python"</li>
-                <li>"O que fazem os estagiários na BTG?"</li>
-                <li>"Frameworks mais populares"</li>
+                <li>"Quais são os frameworks mais usados na Virtual Cirurgia?</li>
+                <li>"Que empresas usam Java?"</li>
+                <li>"Quais empresas tem mais estagiários?</li>
               </ul>
             </div>
           </div>
