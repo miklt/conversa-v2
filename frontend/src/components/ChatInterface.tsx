@@ -134,9 +134,9 @@ export const ChatInterface: React.FC = () => {
           <div className="welcome-message">
             <BotIcon />
             <h2>Olá! Eu sou o Ambiente de Respostas de Estágios</h2>
-            <p>Posso ajudá-lo a encontrar informações sobre relatórios de estágio do PCS. </p>
+            <p>Posso ajudá-lo a encontrar informações encontradas nos relatórios de estágio do PCS. </p>
             <ul>
-              <li>Você pode encontrar informação sobre os seguintes tópicos: linguagens, frameworks e plataformas em geral</li>
+              <li>Você pode encontrar informação sobre os seguintes tópicos: linguagens, frameworks, bancos de dados e plataformas em geral</li>
               <li>Você pode filtrar essas informações por empresas</li>
               </ul>
             <div className="example-questions">
@@ -146,6 +146,7 @@ export const ChatInterface: React.FC = () => {
                 <li>"Quais são os frameworks mais usados na Virtual Cirurgia?</li>
                 <li>"Que empresas usam Java?"</li>
                 <li>"Quais empresas tem mais estagiários?</li>
+                <li>"Quais bancos de dados são mais utilizados?"</li>
               </ul>
             </div>
           </div>

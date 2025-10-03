@@ -84,7 +84,7 @@ intent_agent = Agent(
     - FRAMEWORK: Frameworks (React, Angular, Django, Flask, Spring, etc.)
     - FERRAMENTA: Ferramentas (Git, Docker, VS Code, Jenkins, etc.)
     - PLATAFORMA: Plataformas (AWS, Azure, Linux, Windows, etc.)
-    - BANCO_DADOS: Bancos de dados (PostgreSQL, MySQL, MongoDB, etc.)
+    - BANCO_DADOS: Bancos de dados (PostgreSQL, MySQL, MongoDB, Redis, etc.)
 
     EMPRESAS COMUNS NO BANCO:
     - BTG Pactual (várias grafias: "BTG", "btg pactual", "banco btg")
@@ -129,6 +129,46 @@ intent_agent = Agent(
     }
     """
 )
+
+
+# --- Dynamic technology keywords mapping from database ---
+import threading
+
+_tech_keywords_cache = None
+_tech_keywords_lock = threading.Lock()
+
+def load_technology_keywords(db: Session) -> dict:
+    """
+    Loads technology keywords mapping from the termos_tecnicos table, including synonyms.
+    Returns a dict mapping all lowercased terms and synonyms to their normalized name.
+    """
+    global _tech_keywords_cache
+    with _tech_keywords_lock:
+        if _tech_keywords_cache is not None:
+            return _tech_keywords_cache
+        mapping = {}
+        termos = db.query(TermoTecnico).all()
+        for termo in termos:
+            # Main term
+            mapping[termo.termo.lower().strip()] = termo.termo_normalizado
+            # Normalized term
+            mapping[termo.termo_normalizado.lower().strip()] = termo.termo_normalizado
+            # Synonyms (if any)
+            if termo.sinonimos:
+                if isinstance(termo.sinonimos, list):
+                    for syn in termo.sinonimos:
+                        if isinstance(syn, str):
+                            mapping[syn.lower().strip()] = termo.termo_normalizado
+                elif isinstance(termo.sinonimos, str):
+                    # Sometimes stored as comma-separated string
+                    for syn in termo.sinonimos.split(","):
+                        mapping[syn.lower().strip()] = termo.termo_normalizado
+        _tech_keywords_cache = mapping
+        return mapping
+
+def get_technology_keywords(db: Session) -> dict:
+    """Get the cached technology keywords mapping, loading if needed."""
+    return load_technology_keywords(db)
 
 
 async def get_top_technologies(db: Session, tipo: str, year: Optional[int] = None, limit: int = 10, order_by_usage: str = "desc") -> DBQueryResult:
@@ -335,14 +375,14 @@ async def get_activities_by_company(
     return DBQueryResult(data=data, total_count=len(data))
 
 
-async def analyze_query_intent(message: str) -> AdvancedQueryIntent:
+async def analyze_query_intent(message: str, db: Session) -> AdvancedQueryIntent:
     """Analyze user query intent using the LLM-based intent agent with fallback"""
     try:
         # For now, we'll use a hybrid approach: LLM + keyword validation
         # This ensures reliability while leveraging LLM capabilities
         
         # First, use the keyword-based fallback as a baseline
-        baseline_intent = await analyze_query_intent_fallback(message)
+        baseline_intent = await analyze_query_intent_fallback(message, db)
         
         # Try to enhance with LLM analysis
         try:
@@ -417,7 +457,7 @@ async def analyze_query_intent(message: str) -> AdvancedQueryIntent:
         )
 
 
-async def analyze_query_intent_fallback(message: str) -> AdvancedQueryIntent:
+async def analyze_query_intent_fallback(message: str, db: Session) -> AdvancedQueryIntent:
     """Analyze user query intent using enhanced keyword-based analysis"""
     # Enhanced keyword-based parsing
     message_lower = message.lower()
@@ -448,48 +488,7 @@ async def analyze_query_intent_fallback(message: str) -> AdvancedQueryIntent:
 
     # Extract specific technology mentioned (for reverse search)
     specific_technology = None
-    technology_keywords = {
-        'java': 'Java',
-        'javascript': 'JavaScript',
-        'js': 'JavaScript',
-        'python': 'Python',
-        'csharp': 'C#',
-        'c#': 'C#',
-        'cpp': 'C++',
-        'c++': 'C++',
-        'go': 'Go',
-        'golang': 'Go',
-        'rust': 'Rust',
-        'kotlin': 'Kotlin',
-        'swift': 'Swift',
-        'php': 'PHP',
-        'ruby': 'Ruby',
-        'r': 'R',
-        'sql': 'SQL',
-        'matlab': 'MATLAB',
-        'scala': 'Scala',
-        'react': 'React',
-        'angular': 'Angular',
-        'vue': 'Vue',
-        'django': 'Django',
-        'flask': 'Flask',
-        'fastapi': 'FastAPI',
-        'spring': 'Spring',
-        'dotnet': 'dotnet',
-        '.net': '.NET',
-        'nodejs': 'Node.js',
-        'node': 'Node.js',
-        'git': 'Git',
-        'docker': 'Docker',
-        'kubernetes': 'Kubernetes',
-        'aws': 'AWS',
-        'azure': 'Azure',
-        'gcp': 'GCP',
-        'postgresql': 'PostgreSQL',
-        'mysql': 'MySQL',
-        'mongodb': 'MongoDB'
-    }
-
+    technology_keywords = get_technology_keywords(db)
     # Look for technology mentions in the query - prioritize longer, more specific terms
     # Sort technology keys by length (longest first) to avoid substring matches
     sorted_tech_keys = sorted(technology_keywords.keys(), key=len, reverse=True)
@@ -1126,7 +1125,7 @@ async def process_chat_message(message: str, db: Session) -> ChatResponse:
     """Process a chat message using LLM-based intent analysis"""
     try:
         # Analyze query intent using LLM
-        intent = await analyze_query_intent(message)
+        intent = await analyze_query_intent(message, db)
 
         # Execute appropriate query based on intent
         result = await execute_complex_query(db, intent)
