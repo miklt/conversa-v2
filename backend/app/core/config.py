@@ -38,6 +38,7 @@ class Settings(BaseSettings):
     SMTP_PASSWORD: str = os.getenv("SMTP_PASSWORD", "")
     FROM_EMAIL: str = os.getenv("FROM_EMAIL", "noreply@example.com")
     FROM_NAME: str = os.getenv("FROM_NAME", "Conversa Estágios")
+    VITE_API_URL: str = os.getenv("VITE_API_URL", "http://localhost:8000/api/v1")
     
     # Frontend URL for magic links
     FRONTEND_URL: str = os.getenv("FRONTEND_URL", "http://localhost:5173")

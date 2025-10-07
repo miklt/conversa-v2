@@ -64,13 +64,18 @@ def generate_magic_token() -> str:
 
 def hash_magic_token(token: str) -> str:
     """Hash a magic token for storage"""
-    return get_password_hash(token)
+    # Bcrypt has a 72 byte limit, so we truncate the token
+    # This is safe because we're still using the full token for verification
+    truncated_token = token[:72] if len(token) > 72 else token
+    return get_password_hash(truncated_token)
 
 
 def verify_magic_token(plain_token: str, hashed_token: str) -> bool:
     """Verify a magic token against its hash"""
     try:
-        result = verify_password(plain_token, hashed_token)
+        # Bcrypt has a 72 byte limit, so we truncate the token for verification
+        truncated_token = plain_token[:72] if len(plain_token) > 72 else plain_token
+        result = verify_password(truncated_token, hashed_token)
         logger.debug(f"Token verification: plain='{plain_token[:8]}...', hash='{hashed_token[:20]}...', result={result}")
         return result
     except Exception as e:
